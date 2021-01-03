@@ -1,6 +1,8 @@
 #include "ConnectionPool.h"
 #include "../utils/catch_all.h"
 
+#include <plog/Log.h>
+
 ConnectionPool::ConnectionWrapper::ConnectionWrapper(std::shared_ptr<ConnectionPool> parent, conn_ptr conn)
     : m_parent(std::move(parent))
     , m_conn(std::move(conn))
@@ -37,7 +39,7 @@ auto ConnectionPool::AcquireConnection(std::chrono::steady_clock::duration timeo
         const auto conn_it = m_free_connections.begin();
         if (conn_it == std::end(m_free_connections))
         {
-            std::cout << "TOMARA INFROM EDIK IF YOU SEE THIS IN LOG\n";
+            PLOG_ERROR <<  "get_conn called with m_free_connections.empty()";
             return {};
         }
         const auto res = *conn_it;
@@ -55,7 +57,7 @@ auto ConnectionPool::AcquireConnection(std::chrono::steady_clock::duration timeo
     {
         return ConnectionWrapper(shared_from_this(), get_conn());
     }
-     std::cout << "no connection for more than 5 seconds\n";
+     PLOG_ERROR << "no connection for more than 5 seconds\n";
      return ConnectionWrapper{};
 }
 

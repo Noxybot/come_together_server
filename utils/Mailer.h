@@ -1,20 +1,23 @@
 #pragma once
 
-#include "../grpc/come_together.pb.h"
+#include "MailerInteface.h"
 
 #include <map>
 #include <mutex>
 #include <string_view>
 #include <string>
 
-namespace CT = ComeTogether;
-
-class Mailer
+class Mailer : public MailerInterface
 {
     std::mutex m_mtx;
     std::map<std::string, std::string> m_tokens;
+    const std::string m_from;
+    const std::string m_login;
+    const std::string m_password;
     public:
-    explicit Mailer(const std::string& from);
-    void SendToken(const std::string& to_email);
-    CT::verify_token_response::result VerifyToken(const std::string& email, const std::string& token);
+    explicit Mailer(std::string from, std::string login, std::string password);
+    CT::ask_token_response_result SendToken(const std::string& to_email) override;
+    CT::verify_token_response_result VerifyToken(const std::string& email, const std::string& token) override;
+private:
+    bool SendTokenImpl(std::string to, std::string token);
 };

@@ -41,3 +41,8 @@ private:
 	};
 	caller_interface* m_caller;
 };
+
+#undef PP_CAT
+#undef PP_CAT_I
+#undef PP_CAT_II
+#undef UNIQUE_NAME

@@ -6,10 +6,12 @@
 class FileManager
 {
     std::map<std::string, std::string> m_cache;
-    mutable std::mutex m_mtx;
+    std::mutex m_mtx;
+    const std::string m_folder;
 public:
+    explicit FileManager(std::string folder);
     //returns random file_name
-    explicit FileManager();
     std::string SaveFile(const std::string& image);
     std::string GetFile(const std::string& file_name);
+    bool AddFileToCache(const std::string& file_name);
 };

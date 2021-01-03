@@ -61,32 +61,32 @@ MainEndpoint::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_SubscribeToEvents_(MainEndpoint_method_names[13], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
-::grpc::Status MainEndpoint::Stub::AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::ComeTogether::empty* response) {
+::grpc::Status MainEndpoint::Stub::AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::ComeTogether::ask_token_response* response) {
   return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_AskToken_, context, request, response);
 }
 
-void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::empty* response, std::function<void(::grpc::Status)> f) {
+void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_AskToken_, context, request, response, std::move(f));
 }
 
-void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::empty* response, std::function<void(::grpc::Status)> f) {
+void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, std::function<void(::grpc::Status)> f) {
   ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_AskToken_, context, request, response, std::move(f));
 }
 
-void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::empty* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_AskToken_, context, request, response, reactor);
 }
 
-void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::empty* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+void MainEndpoint::Stub::experimental_async::AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
   ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_AskToken_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::ComeTogether::empty>* MainEndpoint::Stub::AsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::ComeTogether::empty>::Create(channel_.get(), cq, rpcmethod_AskToken_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>* MainEndpoint::Stub::AsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::ComeTogether::ask_token_response>::Create(channel_.get(), cq, rpcmethod_AskToken_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::ComeTogether::empty>* MainEndpoint::Stub::PrepareAsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::ComeTogether::empty>::Create(channel_.get(), cq, rpcmethod_AskToken_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>* MainEndpoint::Stub::PrepareAsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::ComeTogether::ask_token_response>::Create(channel_.get(), cq, rpcmethod_AskToken_, context, request, false);
 }
 
 ::grpc::Status MainEndpoint::Stub::VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::ComeTogether::verify_token_response* response) {
@@ -409,11 +409,11 @@ MainEndpoint::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MainEndpoint_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::ComeTogether::ask_token_request, ::ComeTogether::empty>(
+      new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::ComeTogether::ask_token_request, ::ComeTogether::ask_token_response>(
           [](MainEndpoint::Service* service,
              ::grpc_impl::ServerContext* ctx,
              const ::ComeTogether::ask_token_request* req,
-             ::ComeTogether::empty* resp) {
+             ::ComeTogether::ask_token_response* resp) {
                return service->AskToken(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
@@ -551,7 +551,7 @@ MainEndpoint::Service::Service() {
 MainEndpoint::Service::~Service() {
 }
 
-::grpc::Status MainEndpoint::Service::AskToken(::grpc::ServerContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::empty* response) {
+::grpc::Status MainEndpoint::Service::AskToken(::grpc::ServerContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response) {
   (void) context;
   (void) request;
   (void) response;

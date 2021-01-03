@@ -1,93 +1,100 @@
 #include "FileManager.h"
+#include "random.h"
+
 #include <algorithm>
-#include <random>
-#include <fstream>
-#include <vector>
-#include <iostream>
+#include <cassert>
 #include <filesystem>
+#include <fstream>
 
-static const std::string folder = "images/";
-static const std::size_t name_size = 16;
+#include <plog/Log.h>
 
-std::vector<char> charset()
+FileManager::FileManager(std::string folder)
+    : m_folder(std::move(folder))
 {
-    //Change this to suit
-    return std::vector<char>( 
-    {'0','1','2','3','4',
-    '5','6','7','8','9',
-    'A','B','C','D','E','F',
-    'G','H','I','J','K',
-    'L','M','N','O','P',
-    'Q','R','S','T','U',
-    'V','W','X','Y','Z',
-    'a','b','c','d','e','f',
-    'g','h','i','j','k',
-    'l','m','n','o','p',
-    'q','r','s','t','u',
-    'v','w','x','y','z'
-    });
-};    
-
-// given a function that generates a random character,
-// return a string of the requested length
-template <class Functor>
-std::string random_string( size_t length, Functor rand_char )
-{
-    std::string str(length,0);
-    std::generate_n(str.begin(), length, rand_char);
-    return str;
-}
-
- //0) create the character set.
-    //   yes, you can use an array here, 
-    //   but a function is cleaner and more flexible
-const auto ch_set = charset();
-
-//1) create a non-deterministic random number generator      
-std::default_random_engine rng(std::random_device{}());
-
-//2) create a random number "shaper" that will give
-//   us uniformly distributed indices into the character set
-std::uniform_int_distribution<> dist(0, ch_set.size()-1);
-
-//3) create a function that ties them together, to get:
-//   a non-deterministic uniform distribution from the 
-//   character set of your choice.
-char randchar()
-{
-    return ch_set[ dist(rng) ];
-}
-
-FileManager::FileManager()
-{
+    PLOG_ERROR_IF(std::filesystem::exists(folder) && !std::filesystem::is_directory(folder))
+        << "path=" << folder << " exists and is not directory";
     std::filesystem::create_directory(folder);
 }
 
 std::string FileManager::SaveFile(const std::string& file)
 {
-    auto file_name = random_string(name_size, randchar);
-    std::ofstream f {folder + file_name, std::ios_base::binary};
+    const auto file_name = generate_uuid_v4();
+    const auto path_to_file = m_folder + file_name;
+    std::ofstream f {path_to_file, std::ios_base::binary};
+    if (!f.is_open())
+    {
+        LOG_ERROR << "could not open file=" << path_to_file;
+        return {};
+    }
     f << file;
-    std::lock_guard<decltype(m_mtx)> _ {m_mtx};
+    std::lock_guard<decltype(m_mtx)> lock {m_mtx};
     m_cache[file_name] = file;
-    std::cout << "ImageManger: saved file with size=" << file.size() << ", file=" << folder + file_name << std::endl;
+    PLOG_INFO << "saved file with size=" << file.size() << ", file=" << path_to_file;
     return file_name;
 }
 
 std::string FileManager::GetFile(const std::string& file_name)
 {
-    std::lock_guard<decltype(m_mtx)> _ {m_mtx};
-    const auto it = m_cache.find(file_name);
+    std::unique_lock<decltype(m_mtx)> lock {m_mtx};
+    auto it = m_cache.find(file_name);
     std::string res;
+    const auto path_to_file = m_folder + file_name;
     if (it == std::end(m_cache))
     {
-        std::ifstream f {folder + file_name, std::ios_base::binary};
-        res = std::string(std::istreambuf_iterator<char>(f), std::istreambuf_iterator<char>());
+        //do not block cache on disk operation
+        lock.unlock();
+        std::ifstream f {path_to_file, std::ios_base::binary};
+        if (!f.is_open())
+        {
+            LOG_ERROR << "could not open file=" << path_to_file;
+            return res;
+        }
+        res = std::string(std::istreambuf_iterator<char>(f), {});
+        lock.lock();
+        it = m_cache.find(file_name);
+        if (it != std::end(m_cache))
+        {
+            PLOG_INFO << "someone added file=" << path_to_file << " to cache";
+            return it->second;
+        }
         m_cache[file_name] = res;
-        std::cout << "ImageManger: got file from cache\n";
+        PLOG_INFO << "added file to cache, file=" << path_to_file << ", size=" << res.size();
     }
     else
-        res = it->second;
-    std::cout << "ImageManger: got file with size=" << res.size() << ", file=" << folder + file_name << std::endl;
+    {
+         PLOG_INFO << "got file from cache, file=" << path_to_file << ", size=" << it->second.size();
+         res = it->second;
+    }
     return res;
+}
+
+bool FileManager::AddFileToCache(const std::string& file_name)
+{
+    const auto path_to_file = m_folder + file_name;
+    std::unique_lock<decltype(m_mtx)> lock {m_mtx};
+    auto it = m_cache.find(file_name);
+    if (it != std::end(m_cache))
+    {
+        PLOG_INFO << "file=" << path_to_file << " is already in cache";
+        return true;
+    }
+    //do not block cache on disk operation
+    lock.unlock();
+    std::ifstream f { path_to_file, std::ios_base::binary};
+    if (!f.is_open())
+    {
+        LOG_ERROR << "could not open file=" << path_to_file;
+        return false;
+    }
+    std::string content {std::istreambuf_iterator<char>(f), {}};
+    PLOG_INFO << "adding file to cache, file=" << path_to_file << ", size=" << content.size();
+    lock.lock();
+    it = m_cache.find(file_name);
+    if (it != std::end(m_cache))
+    {
+        PLOG_INFO << "someone added file=" << path_to_file << " to cache";
+        return true;
+    }
+    m_cache[file_name] = std::move(content);
+    return true;
 }
