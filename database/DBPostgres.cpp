@@ -136,13 +136,13 @@ std::vector<std::string> DBPostgres::GetAllImagesUuid(const CT::get_images_reque
     pqxx::work work(*conn);
     std::string query;
     std::vector<std::string> result;
-    switch (req.type())
+    switch (req.image_type())
     {
-    case CT::get_images_request_image_type_USER:
+    case CT::get_images_request_type_USER:
         query = fmt::format(QueryManager::Get(Query::GET_ALL_USER_IMAGES),
                 fmt::arg("uuid", work.quote(req.target_uuid())));
         break;
-    case CT::get_images_request_image_type_MARKER:
+    case CT::get_images_request_type_MARKER:
         query = fmt::format(QueryManager::Get(Query::GET_ALL_MARKER_IMAGES),
                 fmt::arg("uuid", work.quote(req.target_uuid())));
         break;

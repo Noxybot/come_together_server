@@ -152,7 +152,7 @@ MainEndpointImpl::~MainEndpointImpl()
     ::grpc::ServerWriter<CT::image>* writer)
 {
     const auto images_uuid = m_db->GetAllImagesUuid(*request);
-    PLOG_INFO_IF(images_uuid.empty()) << "no images for uuid=" << request->target_uuid() << ", req_type=" << request->type();
+    PLOG_INFO_IF(images_uuid.empty()) << "no images for uuid=" << request->target_uuid() << ", req_type=" << request->image_type();
     CT::image img;
     for (const auto& file_name : images_uuid)
     {

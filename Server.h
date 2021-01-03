@@ -6,7 +6,7 @@ class DBInterface;
 class MailerInterface;
 class MainEndpointImpl;
 class UserStorageInterface;
-class FileManager
+class FileManager;
 
 class Server
 {

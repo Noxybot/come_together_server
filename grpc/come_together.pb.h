@@ -285,37 +285,37 @@ inline bool update_info_response_result_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<update_info_response_result>(
     update_info_response_result_descriptor(), name, value);
 }
-enum event_event_type : int {
-  event_event_type_NOT_SET = 0,
-  event_event_type_MARKER_ADDED = 1,
-  event_event_type_MARKER_EDITED = 2,
-  event_event_type_MARKER_DELETED_BY_USER = 3,
-  event_event_type_MARKER_DELETED_BY_TIMEOUT = 4,
-  event_event_type_MESSAGE_ADDED = 5,
-  event_event_type_MESSAGE_EDITED = 6,
-  event_event_type_MESSAGE_DELETED = 7,
-  event_event_type_USER_UPDATED = 8,
-  event_event_type_event_event_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  event_event_type_event_event_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+enum event_type : int {
+  event_type_NOT_SET = 0,
+  event_type_MARKER_ADDED = 1,
+  event_type_MARKER_EDITED = 2,
+  event_type_MARKER_DELETED_BY_USER = 3,
+  event_type_MARKER_DELETED_BY_TIMEOUT = 4,
+  event_type_MESSAGE_ADDED = 5,
+  event_type_MESSAGE_EDITED = 6,
+  event_type_MESSAGE_DELETED = 7,
+  event_type_USER_UPDATED = 8,
+  event_type_event_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  event_type_event_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
-bool event_event_type_IsValid(int value);
-constexpr event_event_type event_event_type_event_type_MIN = event_event_type_NOT_SET;
-constexpr event_event_type event_event_type_event_type_MAX = event_event_type_USER_UPDATED;
-constexpr int event_event_type_event_type_ARRAYSIZE = event_event_type_event_type_MAX + 1;
+bool event_type_IsValid(int value);
+constexpr event_type event_type_type_MIN = event_type_NOT_SET;
+constexpr event_type event_type_type_MAX = event_type_USER_UPDATED;
+constexpr int event_type_type_ARRAYSIZE = event_type_type_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* event_event_type_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* event_type_descriptor();
 template<typename T>
-inline const std::string& event_event_type_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, event_event_type>::value ||
+inline const std::string& event_type_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, event_type>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function event_event_type_Name.");
+    "Incorrect type passed to function event_type_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    event_event_type_descriptor(), enum_t_value);
+    event_type_descriptor(), enum_t_value);
 }
-inline bool event_event_type_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, event_event_type* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<event_event_type>(
-    event_event_type_descriptor(), name, value);
+inline bool event_type_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, event_type* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<event_type>(
+    event_type_descriptor(), name, value);
 }
 enum chat_message_message_content : int {
   chat_message_message_content_NOT_SET = 0,
@@ -371,58 +371,58 @@ inline bool send_chat_message_response_result_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<send_chat_message_response_result>(
     send_chat_message_response_result_descriptor(), name, value);
 }
-enum get_info_request_info_type : int {
-  get_info_request_info_type_NOT_SET = 0,
-  get_info_request_info_type_USER = 1,
-  get_info_request_info_type_MARKER = 2,
-  get_info_request_info_type_CHAT = 3,
-  get_info_request_info_type_get_info_request_info_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  get_info_request_info_type_get_info_request_info_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+enum get_info_request_type : int {
+  get_info_request_type_NOT_SET = 0,
+  get_info_request_type_USER = 1,
+  get_info_request_type_MARKER = 2,
+  get_info_request_type_CHAT = 3,
+  get_info_request_type_get_info_request_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  get_info_request_type_get_info_request_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
-bool get_info_request_info_type_IsValid(int value);
-constexpr get_info_request_info_type get_info_request_info_type_info_type_MIN = get_info_request_info_type_NOT_SET;
-constexpr get_info_request_info_type get_info_request_info_type_info_type_MAX = get_info_request_info_type_CHAT;
-constexpr int get_info_request_info_type_info_type_ARRAYSIZE = get_info_request_info_type_info_type_MAX + 1;
+bool get_info_request_type_IsValid(int value);
+constexpr get_info_request_type get_info_request_type_type_MIN = get_info_request_type_NOT_SET;
+constexpr get_info_request_type get_info_request_type_type_MAX = get_info_request_type_CHAT;
+constexpr int get_info_request_type_type_ARRAYSIZE = get_info_request_type_type_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_info_request_info_type_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_info_request_type_descriptor();
 template<typename T>
-inline const std::string& get_info_request_info_type_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, get_info_request_info_type>::value ||
+inline const std::string& get_info_request_type_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, get_info_request_type>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function get_info_request_info_type_Name.");
+    "Incorrect type passed to function get_info_request_type_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    get_info_request_info_type_descriptor(), enum_t_value);
+    get_info_request_type_descriptor(), enum_t_value);
 }
-inline bool get_info_request_info_type_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, get_info_request_info_type* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<get_info_request_info_type>(
-    get_info_request_info_type_descriptor(), name, value);
+inline bool get_info_request_type_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, get_info_request_type* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<get_info_request_type>(
+    get_info_request_type_descriptor(), name, value);
 }
-enum get_images_request_image_type : int {
-  get_images_request_image_type_NOT_SET = 0,
-  get_images_request_image_type_USER = 1,
-  get_images_request_image_type_MARKER = 2,
-  get_images_request_image_type_get_images_request_image_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  get_images_request_image_type_get_images_request_image_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+enum get_images_request_type : int {
+  get_images_request_type_NOT_SET = 0,
+  get_images_request_type_USER = 1,
+  get_images_request_type_MARKER = 2,
+  get_images_request_type_get_images_request_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  get_images_request_type_get_images_request_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
-bool get_images_request_image_type_IsValid(int value);
-constexpr get_images_request_image_type get_images_request_image_type_image_type_MIN = get_images_request_image_type_NOT_SET;
-constexpr get_images_request_image_type get_images_request_image_type_image_type_MAX = get_images_request_image_type_MARKER;
-constexpr int get_images_request_image_type_image_type_ARRAYSIZE = get_images_request_image_type_image_type_MAX + 1;
+bool get_images_request_type_IsValid(int value);
+constexpr get_images_request_type get_images_request_type_type_MIN = get_images_request_type_NOT_SET;
+constexpr get_images_request_type get_images_request_type_type_MAX = get_images_request_type_MARKER;
+constexpr int get_images_request_type_type_ARRAYSIZE = get_images_request_type_type_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_images_request_image_type_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_images_request_type_descriptor();
 template<typename T>
-inline const std::string& get_images_request_image_type_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, get_images_request_image_type>::value ||
+inline const std::string& get_images_request_type_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, get_images_request_type>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function get_images_request_image_type_Name.");
+    "Incorrect type passed to function get_images_request_type_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    get_images_request_image_type_descriptor(), enum_t_value);
+    get_images_request_type_descriptor(), enum_t_value);
 }
-inline bool get_images_request_image_type_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, get_images_request_image_type* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<get_images_request_image_type>(
-    get_images_request_image_type_descriptor(), name, value);
+inline bool get_images_request_type_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, get_images_request_type* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<get_images_request_type>(
+    get_images_request_type_descriptor(), name, value);
 }
 enum manage_image_request_action : int {
   manage_image_request_action_NOT_SET = 0,
@@ -630,31 +630,31 @@ inline bool marker_info_category_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<marker_info_category>(
     marker_info_category_descriptor(), name, value);
 }
-enum marker_info_marker_type : int {
-  marker_info_marker_type_NOT_SET_MARKER_TYPE = 0,
-  marker_info_marker_type_PRIVATE = 1,
-  marker_info_marker_type_GROUP = 2,
-  marker_info_marker_type_marker_info_marker_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  marker_info_marker_type_marker_info_marker_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+enum marker_info_type : int {
+  marker_info_type_NOT_SET_MARKER_TYPE = 0,
+  marker_info_type_PRIVATE = 1,
+  marker_info_type_GROUP = 2,
+  marker_info_type_marker_info_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  marker_info_type_marker_info_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
-bool marker_info_marker_type_IsValid(int value);
-constexpr marker_info_marker_type marker_info_marker_type_marker_type_MIN = marker_info_marker_type_NOT_SET_MARKER_TYPE;
-constexpr marker_info_marker_type marker_info_marker_type_marker_type_MAX = marker_info_marker_type_GROUP;
-constexpr int marker_info_marker_type_marker_type_ARRAYSIZE = marker_info_marker_type_marker_type_MAX + 1;
+bool marker_info_type_IsValid(int value);
+constexpr marker_info_type marker_info_type_type_MIN = marker_info_type_NOT_SET_MARKER_TYPE;
+constexpr marker_info_type marker_info_type_type_MAX = marker_info_type_GROUP;
+constexpr int marker_info_type_type_ARRAYSIZE = marker_info_type_type_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_marker_type_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_type_descriptor();
 template<typename T>
-inline const std::string& marker_info_marker_type_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, marker_info_marker_type>::value ||
+inline const std::string& marker_info_type_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, marker_info_type>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function marker_info_marker_type_Name.");
+    "Incorrect type passed to function marker_info_type_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    marker_info_marker_type_descriptor(), enum_t_value);
+    marker_info_type_descriptor(), enum_t_value);
 }
-inline bool marker_info_marker_type_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, marker_info_marker_type* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<marker_info_marker_type>(
-    marker_info_marker_type_descriptor(), name, value);
+inline bool marker_info_type_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, marker_info_type* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<marker_info_type>(
+    marker_info_type_descriptor(), name, value);
 }
 enum add_marker_response_result : int {
   add_marker_response_result_NOT_SET = 0,
@@ -2186,65 +2186,65 @@ class event PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-  typedef event_event_type event_type;
-  static constexpr event_type NOT_SET =
-    event_event_type_NOT_SET;
-  static constexpr event_type MARKER_ADDED =
-    event_event_type_MARKER_ADDED;
-  static constexpr event_type MARKER_EDITED =
-    event_event_type_MARKER_EDITED;
-  static constexpr event_type MARKER_DELETED_BY_USER =
-    event_event_type_MARKER_DELETED_BY_USER;
-  static constexpr event_type MARKER_DELETED_BY_TIMEOUT =
-    event_event_type_MARKER_DELETED_BY_TIMEOUT;
-  static constexpr event_type MESSAGE_ADDED =
-    event_event_type_MESSAGE_ADDED;
-  static constexpr event_type MESSAGE_EDITED =
-    event_event_type_MESSAGE_EDITED;
-  static constexpr event_type MESSAGE_DELETED =
-    event_event_type_MESSAGE_DELETED;
-  static constexpr event_type USER_UPDATED =
-    event_event_type_USER_UPDATED;
-  static inline bool event_type_IsValid(int value) {
-    return event_event_type_IsValid(value);
+  typedef event_type type;
+  static constexpr type NOT_SET =
+    event_type_NOT_SET;
+  static constexpr type MARKER_ADDED =
+    event_type_MARKER_ADDED;
+  static constexpr type MARKER_EDITED =
+    event_type_MARKER_EDITED;
+  static constexpr type MARKER_DELETED_BY_USER =
+    event_type_MARKER_DELETED_BY_USER;
+  static constexpr type MARKER_DELETED_BY_TIMEOUT =
+    event_type_MARKER_DELETED_BY_TIMEOUT;
+  static constexpr type MESSAGE_ADDED =
+    event_type_MESSAGE_ADDED;
+  static constexpr type MESSAGE_EDITED =
+    event_type_MESSAGE_EDITED;
+  static constexpr type MESSAGE_DELETED =
+    event_type_MESSAGE_DELETED;
+  static constexpr type USER_UPDATED =
+    event_type_USER_UPDATED;
+  static inline bool type_IsValid(int value) {
+    return event_type_IsValid(value);
   }
-  static constexpr event_type event_type_MIN =
-    event_event_type_event_type_MIN;
-  static constexpr event_type event_type_MAX =
-    event_event_type_event_type_MAX;
-  static constexpr int event_type_ARRAYSIZE =
-    event_event_type_event_type_ARRAYSIZE;
+  static constexpr type type_MIN =
+    event_type_type_MIN;
+  static constexpr type type_MAX =
+    event_type_type_MAX;
+  static constexpr int type_ARRAYSIZE =
+    event_type_type_ARRAYSIZE;
   static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  event_type_descriptor() {
-    return event_event_type_descriptor();
+  type_descriptor() {
+    return event_type_descriptor();
   }
   template<typename T>
-  static inline const std::string& event_type_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, event_type>::value ||
+  static inline const std::string& type_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, type>::value ||
       ::std::is_integral<T>::value,
-      "Incorrect type passed to function event_type_Name.");
-    return event_event_type_Name(enum_t_value);
+      "Incorrect type passed to function type_Name.");
+    return event_type_Name(enum_t_value);
   }
-  static inline bool event_type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      event_type* value) {
-    return event_event_type_Parse(name, value);
+  static inline bool type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      type* value) {
+    return event_type_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTypeFieldNumber = 1,
+    kEventTypeFieldNumber = 1,
     kMInfoFieldNumber = 2,
     kCMessageFieldNumber = 3,
     kUInfoFieldNumber = 4,
   };
-  // .ComeTogether.event.event_type type = 1;
-  void clear_type();
-  ::ComeTogether::event_event_type type() const;
-  void set_type(::ComeTogether::event_event_type value);
+  // .ComeTogether.event.type event_type = 1;
+  void clear_event_type();
+  ::ComeTogether::event_type event_type() const;
+  void set_event_type(::ComeTogether::event_type value);
   private:
-  ::ComeTogether::event_event_type _internal_type() const;
-  void _internal_set_type(::ComeTogether::event_event_type value);
+  ::ComeTogether::event_type _internal_event_type() const;
+  void _internal_set_event_type(::ComeTogether::event_type value);
   public:
 
   // .ComeTogether.marker_info m_info = 2;
@@ -2316,7 +2316,7 @@ class event PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  int type_;
+  int event_type_;
   union DataUnion {
     DataUnion() {}
     ::ComeTogether::marker_info* m_info_;
@@ -3496,38 +3496,38 @@ class get_info_request PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-  typedef get_info_request_info_type info_type;
-  static constexpr info_type NOT_SET =
-    get_info_request_info_type_NOT_SET;
-  static constexpr info_type USER =
-    get_info_request_info_type_USER;
-  static constexpr info_type MARKER =
-    get_info_request_info_type_MARKER;
-  static constexpr info_type CHAT =
-    get_info_request_info_type_CHAT;
-  static inline bool info_type_IsValid(int value) {
-    return get_info_request_info_type_IsValid(value);
+  typedef get_info_request_type type;
+  static constexpr type NOT_SET =
+    get_info_request_type_NOT_SET;
+  static constexpr type USER =
+    get_info_request_type_USER;
+  static constexpr type MARKER =
+    get_info_request_type_MARKER;
+  static constexpr type CHAT =
+    get_info_request_type_CHAT;
+  static inline bool type_IsValid(int value) {
+    return get_info_request_type_IsValid(value);
   }
-  static constexpr info_type info_type_MIN =
-    get_info_request_info_type_info_type_MIN;
-  static constexpr info_type info_type_MAX =
-    get_info_request_info_type_info_type_MAX;
-  static constexpr int info_type_ARRAYSIZE =
-    get_info_request_info_type_info_type_ARRAYSIZE;
+  static constexpr type type_MIN =
+    get_info_request_type_type_MIN;
+  static constexpr type type_MAX =
+    get_info_request_type_type_MAX;
+  static constexpr int type_ARRAYSIZE =
+    get_info_request_type_type_ARRAYSIZE;
   static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  info_type_descriptor() {
-    return get_info_request_info_type_descriptor();
+  type_descriptor() {
+    return get_info_request_type_descriptor();
   }
   template<typename T>
-  static inline const std::string& info_type_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, info_type>::value ||
+  static inline const std::string& type_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, type>::value ||
       ::std::is_integral<T>::value,
-      "Incorrect type passed to function info_type_Name.");
-    return get_info_request_info_type_Name(enum_t_value);
+      "Incorrect type passed to function type_Name.");
+    return get_info_request_type_Name(enum_t_value);
   }
-  static inline bool info_type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      info_type* value) {
-    return get_info_request_info_type_Parse(name, value);
+  static inline bool type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      type* value) {
+    return get_info_request_type_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
@@ -3535,7 +3535,7 @@ class get_info_request PROTOBUF_FINAL :
   enum : int {
     kAccessTokenFieldNumber = 2,
     kTargetUuidFieldNumber = 3,
-    kTypeFieldNumber = 1,
+    kInfoTypeFieldNumber = 1,
   };
   // string access_token = 2;
   void clear_access_token();
@@ -3569,13 +3569,13 @@ class get_info_request PROTOBUF_FINAL :
   std::string* _internal_mutable_target_uuid();
   public:
 
-  // .ComeTogether.get_info_request.info_type type = 1;
-  void clear_type();
-  ::ComeTogether::get_info_request_info_type type() const;
-  void set_type(::ComeTogether::get_info_request_info_type value);
+  // .ComeTogether.get_info_request.type info_type = 1;
+  void clear_info_type();
+  ::ComeTogether::get_info_request_type info_type() const;
+  void set_info_type(::ComeTogether::get_info_request_type value);
   private:
-  ::ComeTogether::get_info_request_info_type _internal_type() const;
-  void _internal_set_type(::ComeTogether::get_info_request_info_type value);
+  ::ComeTogether::get_info_request_type _internal_info_type() const;
+  void _internal_set_info_type(::ComeTogether::get_info_request_type value);
   public:
 
   // @@protoc_insertion_point(class_scope:ComeTogether.get_info_request)
@@ -3587,7 +3587,7 @@ class get_info_request PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr target_uuid_;
-  int type_;
+  int info_type_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
@@ -3909,36 +3909,36 @@ class get_images_request PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-  typedef get_images_request_image_type image_type;
-  static constexpr image_type NOT_SET =
-    get_images_request_image_type_NOT_SET;
-  static constexpr image_type USER =
-    get_images_request_image_type_USER;
-  static constexpr image_type MARKER =
-    get_images_request_image_type_MARKER;
-  static inline bool image_type_IsValid(int value) {
-    return get_images_request_image_type_IsValid(value);
+  typedef get_images_request_type type;
+  static constexpr type NOT_SET =
+    get_images_request_type_NOT_SET;
+  static constexpr type USER =
+    get_images_request_type_USER;
+  static constexpr type MARKER =
+    get_images_request_type_MARKER;
+  static inline bool type_IsValid(int value) {
+    return get_images_request_type_IsValid(value);
   }
-  static constexpr image_type image_type_MIN =
-    get_images_request_image_type_image_type_MIN;
-  static constexpr image_type image_type_MAX =
-    get_images_request_image_type_image_type_MAX;
-  static constexpr int image_type_ARRAYSIZE =
-    get_images_request_image_type_image_type_ARRAYSIZE;
+  static constexpr type type_MIN =
+    get_images_request_type_type_MIN;
+  static constexpr type type_MAX =
+    get_images_request_type_type_MAX;
+  static constexpr int type_ARRAYSIZE =
+    get_images_request_type_type_ARRAYSIZE;
   static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  image_type_descriptor() {
-    return get_images_request_image_type_descriptor();
+  type_descriptor() {
+    return get_images_request_type_descriptor();
   }
   template<typename T>
-  static inline const std::string& image_type_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, image_type>::value ||
+  static inline const std::string& type_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, type>::value ||
       ::std::is_integral<T>::value,
-      "Incorrect type passed to function image_type_Name.");
-    return get_images_request_image_type_Name(enum_t_value);
+      "Incorrect type passed to function type_Name.");
+    return get_images_request_type_Name(enum_t_value);
   }
-  static inline bool image_type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      image_type* value) {
-    return get_images_request_image_type_Parse(name, value);
+  static inline bool type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      type* value) {
+    return get_images_request_type_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
@@ -3947,7 +3947,7 @@ class get_images_request PROTOBUF_FINAL :
     kTargetUuidFieldNumber = 2,
     kAccessTokenFieldNumber = 3,
     kHashFieldNumber = 5,
-    kTypeFieldNumber = 1,
+    kImageTypeFieldNumber = 1,
     kAmountFieldNumber = 4,
     kStartingSequenceNumberFieldNumber = 6,
   };
@@ -3999,13 +3999,13 @@ class get_images_request PROTOBUF_FINAL :
   std::string* _internal_mutable_hash();
   public:
 
-  // .ComeTogether.get_images_request.image_type type = 1;
-  void clear_type();
-  ::ComeTogether::get_images_request_image_type type() const;
-  void set_type(::ComeTogether::get_images_request_image_type value);
+  // .ComeTogether.get_images_request.type image_type = 1;
+  void clear_image_type();
+  ::ComeTogether::get_images_request_type image_type() const;
+  void set_image_type(::ComeTogether::get_images_request_type value);
   private:
-  ::ComeTogether::get_images_request_image_type _internal_type() const;
-  void _internal_set_type(::ComeTogether::get_images_request_image_type value);
+  ::ComeTogether::get_images_request_type _internal_image_type() const;
+  void _internal_set_image_type(::ComeTogether::get_images_request_type value);
   public:
 
   // int32 amount = 4;
@@ -4036,7 +4036,7 @@ class get_images_request PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr target_uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hash_;
-  int type_;
+  int image_type_;
   ::PROTOBUF_NAMESPACE_ID::int32 amount_;
   ::PROTOBUF_NAMESPACE_ID::int32 starting_sequence_number_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -6051,55 +6051,79 @@ class marker_info PROTOBUF_FINAL :
     return marker_info_category_Parse(name, value);
   }
 
-  typedef marker_info_marker_type marker_type;
-  static constexpr marker_type NOT_SET_MARKER_TYPE =
-    marker_info_marker_type_NOT_SET_MARKER_TYPE;
-  static constexpr marker_type PRIVATE =
-    marker_info_marker_type_PRIVATE;
-  static constexpr marker_type GROUP =
-    marker_info_marker_type_GROUP;
-  static inline bool marker_type_IsValid(int value) {
-    return marker_info_marker_type_IsValid(value);
+  typedef marker_info_type type;
+  static constexpr type NOT_SET_MARKER_TYPE =
+    marker_info_type_NOT_SET_MARKER_TYPE;
+  static constexpr type PRIVATE =
+    marker_info_type_PRIVATE;
+  static constexpr type GROUP =
+    marker_info_type_GROUP;
+  static inline bool type_IsValid(int value) {
+    return marker_info_type_IsValid(value);
   }
-  static constexpr marker_type marker_type_MIN =
-    marker_info_marker_type_marker_type_MIN;
-  static constexpr marker_type marker_type_MAX =
-    marker_info_marker_type_marker_type_MAX;
-  static constexpr int marker_type_ARRAYSIZE =
-    marker_info_marker_type_marker_type_ARRAYSIZE;
+  static constexpr type type_MIN =
+    marker_info_type_type_MIN;
+  static constexpr type type_MAX =
+    marker_info_type_type_MAX;
+  static constexpr int type_ARRAYSIZE =
+    marker_info_type_type_ARRAYSIZE;
   static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  marker_type_descriptor() {
-    return marker_info_marker_type_descriptor();
+  type_descriptor() {
+    return marker_info_type_descriptor();
   }
   template<typename T>
-  static inline const std::string& marker_type_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, marker_type>::value ||
+  static inline const std::string& type_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, type>::value ||
       ::std::is_integral<T>::value,
-      "Incorrect type passed to function marker_type_Name.");
-    return marker_info_marker_type_Name(enum_t_value);
+      "Incorrect type passed to function type_Name.");
+    return marker_info_type_Name(enum_t_value);
   }
-  static inline bool marker_type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      marker_type* value) {
-    return marker_info_marker_type_Parse(name, value);
+  static inline bool type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      type* value) {
+    return marker_info_type_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
 
   enum : int {
+    kImagesUuidFieldNumber = 13,
     kCreatorUuidFieldNumber = 6,
     kDisplayNameFieldNumber = 7,
     kUuidFieldNumber = 11,
     kChatUuidFieldNumber = 12,
     kOtherDataJsonFieldNumber = 14,
     kCatFieldNumber = 1,
-    kTypeFieldNumber = 2,
+    kMarkerTypeFieldNumber = 2,
     kFromUnixTimeFieldNumber = 3,
     kToUnixTimeFieldNumber = 4,
     kCreationUnixTimeFieldNumber = 5,
     kLatitudeFieldNumber = 9,
     kLongitudeFieldNumber = 10,
-    kImagesAmountFieldNumber = 13,
   };
+  // repeated string images_uuid = 13;
+  int images_uuid_size() const;
+  private:
+  int _internal_images_uuid_size() const;
+  public:
+  void clear_images_uuid();
+  const std::string& images_uuid(int index) const;
+  std::string* mutable_images_uuid(int index);
+  void set_images_uuid(int index, const std::string& value);
+  void set_images_uuid(int index, std::string&& value);
+  void set_images_uuid(int index, const char* value);
+  void set_images_uuid(int index, const char* value, size_t size);
+  std::string* add_images_uuid();
+  void add_images_uuid(const std::string& value);
+  void add_images_uuid(std::string&& value);
+  void add_images_uuid(const char* value);
+  void add_images_uuid(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& images_uuid() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_images_uuid();
+  private:
+  const std::string& _internal_images_uuid(int index) const;
+  std::string* _internal_add_images_uuid();
+  public:
+
   // string creator_uuid = 6;
   void clear_creator_uuid();
   const std::string& creator_uuid() const;
@@ -6189,13 +6213,13 @@ class marker_info PROTOBUF_FINAL :
   void _internal_set_cat(::ComeTogether::marker_info_category value);
   public:
 
-  // .ComeTogether.marker_info.marker_type type = 2;
-  void clear_type();
-  ::ComeTogether::marker_info_marker_type type() const;
-  void set_type(::ComeTogether::marker_info_marker_type value);
+  // .ComeTogether.marker_info.type marker_type = 2;
+  void clear_marker_type();
+  ::ComeTogether::marker_info_type marker_type() const;
+  void set_marker_type(::ComeTogether::marker_info_type value);
   private:
-  ::ComeTogether::marker_info_marker_type _internal_type() const;
-  void _internal_set_type(::ComeTogether::marker_info_marker_type value);
+  ::ComeTogether::marker_info_type _internal_marker_type() const;
+  void _internal_set_marker_type(::ComeTogether::marker_info_type value);
   public:
 
   // int64 from_unix_time = 3;
@@ -6243,15 +6267,6 @@ class marker_info PROTOBUF_FINAL :
   void _internal_set_longitude(double value);
   public:
 
-  // int32 images_amount = 13;
-  void clear_images_amount();
-  ::PROTOBUF_NAMESPACE_ID::int32 images_amount() const;
-  void set_images_amount(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_images_amount() const;
-  void _internal_set_images_amount(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
   // @@protoc_insertion_point(class_scope:ComeTogether.marker_info)
  private:
   class _Internal;
@@ -6259,19 +6274,19 @@ class marker_info PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> images_uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr creator_uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr display_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr chat_uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr other_data_json_;
   int cat_;
-  int type_;
+  int marker_type_;
   ::PROTOBUF_NAMESPACE_ID::int64 from_unix_time_;
   ::PROTOBUF_NAMESPACE_ID::int64 to_unix_time_;
   ::PROTOBUF_NAMESPACE_ID::int64 creation_unix_time_;
   double latitude_;
   double longitude_;
-  ::PROTOBUF_NAMESPACE_ID::int32 images_amount_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
@@ -7362,24 +7377,24 @@ inline void update_info_response::set_res(::ComeTogether::update_info_response_r
 
 // event
 
-// .ComeTogether.event.event_type type = 1;
-inline void event::clear_type() {
-  type_ = 0;
+// .ComeTogether.event.type event_type = 1;
+inline void event::clear_event_type() {
+  event_type_ = 0;
 }
-inline ::ComeTogether::event_event_type event::_internal_type() const {
-  return static_cast< ::ComeTogether::event_event_type >(type_);
+inline ::ComeTogether::event_type event::_internal_event_type() const {
+  return static_cast< ::ComeTogether::event_type >(event_type_);
 }
-inline ::ComeTogether::event_event_type event::type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.event.type)
-  return _internal_type();
+inline ::ComeTogether::event_type event::event_type() const {
+  // @@protoc_insertion_point(field_get:ComeTogether.event.event_type)
+  return _internal_event_type();
 }
-inline void event::_internal_set_type(::ComeTogether::event_event_type value) {
+inline void event::_internal_set_event_type(::ComeTogether::event_type value) {
   
-  type_ = value;
+  event_type_ = value;
 }
-inline void event::set_type(::ComeTogether::event_event_type value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.event.type)
+inline void event::set_event_type(::ComeTogether::event_type value) {
+  _internal_set_event_type(value);
+  // @@protoc_insertion_point(field_set:ComeTogether.event.event_type)
 }
 
 // .ComeTogether.marker_info m_info = 2;
@@ -8728,24 +8743,24 @@ inline void send_chat_message_response::set_allocated_message_uuid(std::string* 
 
 // get_info_request
 
-// .ComeTogether.get_info_request.info_type type = 1;
-inline void get_info_request::clear_type() {
-  type_ = 0;
+// .ComeTogether.get_info_request.type info_type = 1;
+inline void get_info_request::clear_info_type() {
+  info_type_ = 0;
 }
-inline ::ComeTogether::get_info_request_info_type get_info_request::_internal_type() const {
-  return static_cast< ::ComeTogether::get_info_request_info_type >(type_);
+inline ::ComeTogether::get_info_request_type get_info_request::_internal_info_type() const {
+  return static_cast< ::ComeTogether::get_info_request_type >(info_type_);
 }
-inline ::ComeTogether::get_info_request_info_type get_info_request::type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_request.type)
-  return _internal_type();
+inline ::ComeTogether::get_info_request_type get_info_request::info_type() const {
+  // @@protoc_insertion_point(field_get:ComeTogether.get_info_request.info_type)
+  return _internal_info_type();
 }
-inline void get_info_request::_internal_set_type(::ComeTogether::get_info_request_info_type value) {
+inline void get_info_request::_internal_set_info_type(::ComeTogether::get_info_request_type value) {
   
-  type_ = value;
+  info_type_ = value;
 }
-inline void get_info_request::set_type(::ComeTogether::get_info_request_info_type value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_info_request.type)
+inline void get_info_request::set_info_type(::ComeTogether::get_info_request_type value) {
+  _internal_set_info_type(value);
+  // @@protoc_insertion_point(field_set:ComeTogether.get_info_request.info_type)
 }
 
 // string access_token = 2;
@@ -9108,24 +9123,24 @@ inline get_info_response::DataCase get_info_response::data_case() const {
 
 // get_images_request
 
-// .ComeTogether.get_images_request.image_type type = 1;
-inline void get_images_request::clear_type() {
-  type_ = 0;
+// .ComeTogether.get_images_request.type image_type = 1;
+inline void get_images_request::clear_image_type() {
+  image_type_ = 0;
 }
-inline ::ComeTogether::get_images_request_image_type get_images_request::_internal_type() const {
-  return static_cast< ::ComeTogether::get_images_request_image_type >(type_);
+inline ::ComeTogether::get_images_request_type get_images_request::_internal_image_type() const {
+  return static_cast< ::ComeTogether::get_images_request_type >(image_type_);
 }
-inline ::ComeTogether::get_images_request_image_type get_images_request::type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.type)
-  return _internal_type();
+inline ::ComeTogether::get_images_request_type get_images_request::image_type() const {
+  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.image_type)
+  return _internal_image_type();
 }
-inline void get_images_request::_internal_set_type(::ComeTogether::get_images_request_image_type value) {
+inline void get_images_request::_internal_set_image_type(::ComeTogether::get_images_request_type value) {
   
-  type_ = value;
+  image_type_ = value;
 }
-inline void get_images_request::set_type(::ComeTogether::get_images_request_image_type value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.type)
+inline void get_images_request::set_image_type(::ComeTogether::get_images_request_type value) {
+  _internal_set_image_type(value);
+  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.image_type)
 }
 
 // string target_uuid = 2;
@@ -11007,24 +11022,24 @@ inline void marker_info::set_cat(::ComeTogether::marker_info_category value) {
   // @@protoc_insertion_point(field_set:ComeTogether.marker_info.cat)
 }
 
-// .ComeTogether.marker_info.marker_type type = 2;
-inline void marker_info::clear_type() {
-  type_ = 0;
+// .ComeTogether.marker_info.type marker_type = 2;
+inline void marker_info::clear_marker_type() {
+  marker_type_ = 0;
 }
-inline ::ComeTogether::marker_info_marker_type marker_info::_internal_type() const {
-  return static_cast< ::ComeTogether::marker_info_marker_type >(type_);
+inline ::ComeTogether::marker_info_type marker_info::_internal_marker_type() const {
+  return static_cast< ::ComeTogether::marker_info_type >(marker_type_);
 }
-inline ::ComeTogether::marker_info_marker_type marker_info::type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.type)
-  return _internal_type();
+inline ::ComeTogether::marker_info_type marker_info::marker_type() const {
+  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.marker_type)
+  return _internal_marker_type();
 }
-inline void marker_info::_internal_set_type(::ComeTogether::marker_info_marker_type value) {
+inline void marker_info::_internal_set_marker_type(::ComeTogether::marker_info_type value) {
   
-  type_ = value;
+  marker_type_ = value;
 }
-inline void marker_info::set_type(::ComeTogether::marker_info_marker_type value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.type)
+inline void marker_info::set_marker_type(::ComeTogether::marker_info_type value) {
+  _internal_set_marker_type(value);
+  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.marker_type)
 }
 
 // int64 from_unix_time = 3;
@@ -11375,24 +11390,78 @@ inline void marker_info::set_allocated_chat_uuid(std::string* chat_uuid) {
   // @@protoc_insertion_point(field_set_allocated:ComeTogether.marker_info.chat_uuid)
 }
 
-// int32 images_amount = 13;
-inline void marker_info::clear_images_amount() {
-  images_amount_ = 0;
+// repeated string images_uuid = 13;
+inline int marker_info::_internal_images_uuid_size() const {
+  return images_uuid_.size();
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 marker_info::_internal_images_amount() const {
-  return images_amount_;
+inline int marker_info::images_uuid_size() const {
+  return _internal_images_uuid_size();
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 marker_info::images_amount() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.images_amount)
-  return _internal_images_amount();
+inline void marker_info::clear_images_uuid() {
+  images_uuid_.Clear();
 }
-inline void marker_info::_internal_set_images_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  images_amount_ = value;
+inline std::string* marker_info::add_images_uuid() {
+  // @@protoc_insertion_point(field_add_mutable:ComeTogether.marker_info.images_uuid)
+  return _internal_add_images_uuid();
 }
-inline void marker_info::set_images_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_images_amount(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.images_amount)
+inline const std::string& marker_info::_internal_images_uuid(int index) const {
+  return images_uuid_.Get(index);
+}
+inline const std::string& marker_info::images_uuid(int index) const {
+  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.images_uuid)
+  return _internal_images_uuid(index);
+}
+inline std::string* marker_info::mutable_images_uuid(int index) {
+  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.images_uuid)
+  return images_uuid_.Mutable(index);
+}
+inline void marker_info::set_images_uuid(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.images_uuid)
+  images_uuid_.Mutable(index)->assign(value);
+}
+inline void marker_info::set_images_uuid(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.images_uuid)
+  images_uuid_.Mutable(index)->assign(std::move(value));
+}
+inline void marker_info::set_images_uuid(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  images_uuid_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.images_uuid)
+}
+inline void marker_info::set_images_uuid(int index, const char* value, size_t size) {
+  images_uuid_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.images_uuid)
+}
+inline std::string* marker_info::_internal_add_images_uuid() {
+  return images_uuid_.Add();
+}
+inline void marker_info::add_images_uuid(const std::string& value) {
+  images_uuid_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ComeTogether.marker_info.images_uuid)
+}
+inline void marker_info::add_images_uuid(std::string&& value) {
+  images_uuid_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ComeTogether.marker_info.images_uuid)
+}
+inline void marker_info::add_images_uuid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  images_uuid_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ComeTogether.marker_info.images_uuid)
+}
+inline void marker_info::add_images_uuid(const char* value, size_t size) {
+  images_uuid_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ComeTogether.marker_info.images_uuid)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+marker_info::images_uuid() const {
+  // @@protoc_insertion_point(field_list:ComeTogether.marker_info.images_uuid)
+  return images_uuid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+marker_info::mutable_images_uuid() {
+  // @@protoc_insertion_point(field_mutable_list:ComeTogether.marker_info.images_uuid)
+  return &images_uuid_;
 }
 
 // string other_data_json = 14;
@@ -11778,10 +11847,10 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::update_info_response_result>() {
   return ::ComeTogether::update_info_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::event_event_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::ComeTogether::event_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::event_event_type>() {
-  return ::ComeTogether::event_event_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::event_type>() {
+  return ::ComeTogether::event_type_descriptor();
 }
 template <> struct is_proto_enum< ::ComeTogether::chat_message_message_content> : ::std::true_type {};
 template <>
@@ -11793,15 +11862,15 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::send_chat_message_response_result>() {
   return ::ComeTogether::send_chat_message_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::get_info_request_info_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::ComeTogether::get_info_request_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::get_info_request_info_type>() {
-  return ::ComeTogether::get_info_request_info_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::get_info_request_type>() {
+  return ::ComeTogether::get_info_request_type_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::get_images_request_image_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::ComeTogether::get_images_request_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::get_images_request_image_type>() {
-  return ::ComeTogether::get_images_request_image_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::get_images_request_type>() {
+  return ::ComeTogether::get_images_request_type_descriptor();
 }
 template <> struct is_proto_enum< ::ComeTogether::manage_image_request_action> : ::std::true_type {};
 template <>
@@ -11838,10 +11907,10 @@ template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::marker_info_category>() {
   return ::ComeTogether::marker_info_category_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::marker_info_marker_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::ComeTogether::marker_info_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::marker_info_marker_type>() {
-  return ::ComeTogether::marker_info_marker_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::marker_info_type>() {
+  return ::ComeTogether::marker_info_type_descriptor();
 }
 template <> struct is_proto_enum< ::ComeTogether::add_marker_response_result> : ::std::true_type {};
 template <>

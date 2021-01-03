@@ -630,7 +630,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::ComeTogether::event, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::event, type_),
+  PROTOBUF_FIELD_OFFSET(::ComeTogether::event, event_type_),
   offsetof(::ComeTogether::eventDefaultTypeInternal, m_info_),
   offsetof(::ComeTogether::eventDefaultTypeInternal, c_message_),
   offsetof(::ComeTogether::eventDefaultTypeInternal, u_info_),
@@ -687,7 +687,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, type_),
+  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, info_type_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, access_token_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, target_uuid_),
   ~0u,  // no _has_bits_
@@ -704,7 +704,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, type_),
+  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, image_type_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, target_uuid_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, access_token_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, amount_),
@@ -790,7 +790,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, cat_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, type_),
+  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, marker_type_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, from_unix_time_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, to_unix_time_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, creation_unix_time_),
@@ -800,7 +800,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, longitude_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, uuid_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, chat_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, images_amount_),
+  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, images_uuid_),
   PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, other_data_json_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_request, _internal_metadata_),
@@ -905,142 +905,141 @@ const char descriptor_table_protodef_come_5ftogether_2eproto[] PROTOBUF_SECTION_
   "nse\0226\n\003res\030\001 \001(\0162).ComeTogether.update_i"
   "nfo_response.result\"F\n\006result\022\013\n\007NOT_SET"
   "\020\000\022\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIONS\020\002\022"
-  "\n\n\005OTHER\020\347\007\"\220\003\n\005event\022,\n\004type\030\001 \001(\0162\036.Co"
-  "meTogether.event.event_type\022+\n\006m_info\030\002 "
+  "\n\n\005OTHER\020\347\007\"\212\003\n\005event\022,\n\nevent_type\030\001 \001("
+  "\0162\030.ComeTogether.event.type\022+\n\006m_info\030\002 "
   "\001(\0132\031.ComeTogether.marker_infoH\000\022/\n\tc_me"
   "ssage\030\003 \001(\0132\032.ComeTogether.chat_messageH"
   "\000\022)\n\006u_info\030\004 \001(\0132\027.ComeTogether.user_in"
-  "foH\000\"\307\001\n\nevent_type\022\013\n\007NOT_SET\020\000\022\020\n\014MARK"
-  "ER_ADDED\020\001\022\021\n\rMARKER_EDITED\020\002\022\032\n\026MARKER_"
-  "DELETED_BY_USER\020\003\022\035\n\031MARKER_DELETED_BY_T"
-  "IMEOUT\020\004\022\021\n\rMESSAGE_ADDED\020\005\022\022\n\016MESSAGE_E"
-  "DITED\020\006\022\023\n\017MESSAGE_DELETED\020\007\022\020\n\014USER_UPD"
-  "ATED\020\010B\006\n\004data\"a\n\tchat_info\022\014\n\004uuid\030\001 \001("
-  "\t\022\r\n\005title\030\002 \001(\t\022\031\n\021participants_uuid\030\003 "
-  "\003(\t\022\034\n\024last_visible_message\030\004 \001(\t\"z\n\031get"
-  "_chat_messages_request\022\024\n\014access_token\030\001"
-  " \001(\t\022\021\n\tchat_uuid\030\002 \001(\t\022\021\n\tpage_size\030\003 \001"
-  "(\005\022\023\n\013page_number\030\004 \001(\005\022\014\n\004hash\030\005 \001(\t\"\374\001"
-  "\n\014chat_message\022@\n\014content_type\030\001 \001(\0162*.C"
-  "omeTogether.chat_message.message_content"
-  "\022\023\n\013sender_uuid\030\002 \001(\t\022\016\n\004text\030\003 \001(\tH\000\022\026\n"
-  "\016sent_unix_time\030\004 \001(\003\022\021\n\tchat_uuid\030\005 \001(\t"
-  "\022\027\n\017sequence_number\030\006 \001(\003\022\014\n\004uuid\030\007 \001(\t\""
-  "(\n\017message_content\022\013\n\007NOT_SET\020\000\022\010\n\004TEXT\020"
-  "\001B\t\n\007content\"^\n\031send_chat_message_reques"
-  "t\022\024\n\014access_token\030\001 \001(\t\022+\n\007message\030\002 \001(\013"
-  "2\032.ComeTogether.chat_message\"\212\002\n\032send_ch"
-  "at_message_response\022<\n\003res\030\001 \001(\0162/.ComeT"
-  "ogether.send_chat_message_response.resul"
-  "t\022\036\n\026actual_sequence_number\030\002 \001(\003\022\024\n\014mes"
-  "sage_uuid\030\004 \001(\t\"x\n\006result\022\013\n\007NOT_SET\020\000\022\006"
-  "\n\002OK\020\001\022\027\n\023CHAT_DOES_NOT_EXIST\020\002\022\027\n\023USER_"
-  "DOES_NOT_EXIST\020\003\022\033\n\027INSUFFICIENT_PERMISI"
-  "ONS\020\004\022\n\n\005OTHER\020\347\007\"\257\001\n\020get_info_request\0226"
-  "\n\004type\030\001 \001(\0162(.ComeTogether.get_info_req"
-  "uest.info_type\022\024\n\014access_token\030\002 \001(\t\022\023\n\013"
-  "target_uuid\030\003 \001(\t\"8\n\tinfo_type\022\013\n\007NOT_SE"
-  "T\020\000\022\010\n\004USER\020\001\022\n\n\006MARKER\020\002\022\010\n\004CHAT\020\003\"\236\001\n\021"
-  "get_info_response\022)\n\006u_info\030\001 \001(\0132\027.Come"
-  "Together.user_infoH\000\022+\n\006m_info\030\002 \001(\0132\031.C"
-  "omeTogether.marker_infoH\000\022)\n\006c_info\030\003 \001("
-  "\0132\027.ComeTogether.chat_infoH\000B\006\n\004data\"\353\001\n"
-  "\022get_images_request\0229\n\004type\030\001 \001(\0162+.Come"
-  "Together.get_images_request.image_type\022\023"
-  "\n\013target_uuid\030\002 \001(\t\022\024\n\014access_token\030\003 \001("
-  "\t\022\016\n\006amount\030\004 \001(\005\022\014\n\004hash\030\005 \001(\t\022 \n\030start"
-  "ing_sequence_number\030\006 \001(\005\"/\n\nimage_type\022"
-  "\013\n\007NOT_SET\020\000\022\010\n\004USER\020\001\022\n\n\006MARKER\020\002\"\237\002\n\024m"
-  "anage_image_request\0226\n\003act\030\001 \001(\0162).ComeT"
-  "ogether.manage_image_request.action\022\024\n\014a"
-  "ccess_token\030\002 \001(\t\022\023\n\013target_uuid\030\003 \001(\t\022\017"
-  "\n\005image\030\004 \001(\014H\000\022\024\n\nimage_uuid\030\005 \001(\tH\000\"u\n"
-  "\006action\022\013\n\007NOT_SET\020\000\022\025\n\021UPLOAD_USER_IMAG"
-  "E\020\001\022\025\n\021DELETE_USER_IMAGE\020\002\022\027\n\023UPLOAD_MAR"
-  "KER_IMAGE\020\003\022\027\n\023DELETE_MARKER_IMAGE\020\004B\006\n\004"
-  "data\"\313\001\n\025manage_image_response\0227\n\003res\030\001 "
-  "\001(\0162*.ComeTogether.manage_image_response"
-  ".result\022\022\n\nimage_uuid\030\002 \001(\t\022\035\n\025image_seq"
-  "uence_number\030\003 \001(\005\"F\n\006result\022\013\n\007NOT_SET\020"
-  "\000\022\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIONS\020\002\022\n"
-  "\n\005OTHER\020\347\007\"~\n\rcheck_request\0224\n\ncheck_typ"
-  "e\030\001 \001(\0162 .ComeTogether.check_request.typ"
-  "e\022\014\n\004data\030\002 \001(\t\")\n\004type\022\013\n\007NOT_SET\020\000\022\t\n\005"
-  "EMAIL\020\001\022\t\n\005LOGIN\020\002\"\177\n\016check_response\0220\n\003"
-  "res\030\001 \001(\0162#.ComeTogether.check_response."
-  "result\";\n\006result\022\013\n\007NOT_SET\020\000\022\r\n\tAVAILAB"
-  "LE\020\001\022\t\n\005TAKEN\020\002\022\n\n\005OTHER\020\347\007\"0\n\rlogin_req"
-  "uest\022\r\n\005login\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"\322\001"
-  "\n\016login_response\0220\n\003res\030\001 \001(\0162#.ComeToge"
-  "ther.login_response.result\022%\n\004info\030\002 \001(\013"
-  "2\027.ComeTogether.user_info\022\024\n\014access_toke"
-  "n\030\003 \001(\t\"Q\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\022"
-  "\n\016USER_NOT_FOUND\020\002\022\022\n\016WRONG_PASSWORD\020\003\022\n"
-  "\n\005OTHER\020\347\007\"9\n\020register_request\022%\n\004info\030\001"
-  " \001(\0132\027.ComeTogether.user_info\"\316\001\n\021regist"
-  "er_response\0223\n\003res\030\001 \001(\0162&.ComeTogether."
-  "register_response.result\022\021\n\tuser_uuid\030\002 "
-  "\001(\t\022\024\n\014access_token\030\003 \001(\t\"[\n\006result\022\013\n\007N"
-  "OT_SET\020\000\022\006\n\002OK\020\001\022\027\n\023EMAIL_ALREADY_TAKEN\020"
-  "\002\022\027\n\023LOGIN_ALREADY_TAKEN\020\003\022\n\n\005OTHER\020\347\007\"\236"
-  "\001\n\tuser_info\022\014\n\004uuid\030\001 \001(\t\022\r\n\005email\030\002 \001("
-  "\t\022\r\n\005login\030\003 \001(\t\022\020\n\010password\030\004 \001(\t\022\022\n\nfi"
-  "rst_name\030\005 \001(\t\022\021\n\tlast_name\030\006 \001(\t\022\023\n\013ima"
-  "ges_uuid\030\007 \003(\t\022\027\n\017other_info_json\030\010 \001(\t\""
-  "\231\005\n\013marker_info\022/\n\003cat\030\001 \001(\0162\".ComeToget"
-  "her.marker_info.category\0223\n\004type\030\002 \001(\0162%"
-  ".ComeTogether.marker_info.marker_type\022\026\n"
-  "\016from_unix_time\030\003 \001(\003\022\024\n\014to_unix_time\030\004 "
-  "\001(\003\022\032\n\022creation_unix_time\030\005 \001(\003\022\024\n\014creat"
-  "or_uuid\030\006 \001(\t\022\024\n\014display_name\030\007 \001(\t\022\020\n\010l"
-  "atitude\030\t \001(\001\022\021\n\tlongitude\030\n \001(\001\022\014\n\004uuid"
-  "\030\013 \001(\t\022\021\n\tchat_uuid\030\014 \001(\t\022\025\n\rimages_amou"
-  "nt\030\r \001(\005\022\027\n\017other_data_json\030\016 \001(\t\"\367\001\n\010ca"
-  "tegory\022\013\n\007NOT_SET\020\000\022\013\n\007CYCLING\020\001\022\014\n\010FOOT"
-  "BALL\020\002\022\016\n\nBASKETBALL\020\003\022\013\n\007RUNNING\020\004\022\007\n\003G"
-  "YM\020\005\022\013\n\007GALLERY\020\006\022\r\n\tEXCURSION\020\007\022\013\n\007THEA"
-  "TER\020\010\022\n\n\006CINEMA\020\t\022\007\n\003BAR\020\n\022\016\n\nRESTAURANT"
-  "\020\013\022\016\n\nNIGTH_CLUB\020\014\022\n\n\006HOOKAH\020\r\022\010\n\004CAFE\020\016"
-  "\022\010\n\004WALK\020\017\022\013\n\007CONCERT\020\020\022\t\n\005QUEST\020\021\022\007\n\003ZO"
-  "O\020\022\">\n\013marker_type\022\027\n\023NOT_SET_MARKER_TYP"
-  "E\020\000\022\013\n\007PRIVATE\020\001\022\t\n\005GROUP\020\002\"=\n\022add_marke"
-  "r_request\022\'\n\004info\030\001 \001(\0132\031.ComeTogether.m"
-  "arker_info\"\321\001\n\023add_marker_response\0225\n\003re"
-  "s\030\001 \001(\0162(.ComeTogether.add_marker_respon"
-  "se.result\022\014\n\004uuid\030\002 \001(\t\022\021\n\tchat_uuid\030\003 \001"
-  "(\t\"b\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027TIM"
-  "E_INTERVAL_TOO_SMALL\020\002\022\032\n\026CREATION_TIME_"
-  "OUTDATED\020\003\022\n\n\005OTHER\020\347\0072\221\t\n\014MainEndpoint\022"
-  "O\n\010AskToken\022\037.ComeTogether.ask_token_req"
-  "uest\032 .ComeTogether.ask_token_response\"\000"
-  "\022X\n\013VerifyToken\022\".ComeTogether.verify_to"
-  "ken_request\032#.ComeTogether.verify_token_"
-  "response\"\000\022D\n\005Check\022\033.ComeTogether.check"
-  "_request\032\034.ComeTogether.check_response\"\000"
-  "\022Q\n\014RegisterUser\022\036.ComeTogether.register"
-  "_request\032\037.ComeTogether.register_respons"
-  "e\"\000\022H\n\tLoginUser\022\033.ComeTogether.login_re"
-  "quest\032\034.ComeTogether.login_response\"\000\022R\n"
-  "\tAddMarker\022 .ComeTogether.add_marker_req"
-  "uest\032!.ComeTogether.add_marker_response\""
-  "\000\022J\n\rGetAllMarkers\022\032.ComeTogether.access"
-  "_token\032\031.ComeTogether.marker_info\"\0000\001\022L\n"
-  "\007GetInfo\022\036.ComeTogether.get_info_request"
-  "\032\037.ComeTogether.get_info_response\"\000\022U\n\nU"
-  "pdateInfo\022!.ComeTogether.update_info_req"
-  "uest\032\".ComeTogether.update_info_response"
-  "\"\000\022X\n\013ManageImage\022\".ComeTogether.manage_"
-  "image_request\032#.ComeTogether.manage_imag"
-  "e_response\"\000\022F\n\tGetImages\022 .ComeTogether"
-  ".get_images_request\032\023.ComeTogether.image"
-  "\"\0000\001\022f\n\017SendChatMessage\022\'.ComeTogether.s"
-  "end_chat_message_request\032(.ComeTogether."
-  "send_chat_message_response\"\000\022Z\n\017GetChatM"
-  "essages\022\'.ComeTogether.get_chat_messages"
-  "_request\032\032.ComeTogether.chat_message\"\0000\001"
-  "\022H\n\021SubscribeToEvents\022\032.ComeTogether.acc"
-  "ess_token\032\023.ComeTogether.event\"\0000\001b\006prot"
-  "o3"
+  "foH\000\"\301\001\n\004type\022\013\n\007NOT_SET\020\000\022\020\n\014MARKER_ADD"
+  "ED\020\001\022\021\n\rMARKER_EDITED\020\002\022\032\n\026MARKER_DELETE"
+  "D_BY_USER\020\003\022\035\n\031MARKER_DELETED_BY_TIMEOUT"
+  "\020\004\022\021\n\rMESSAGE_ADDED\020\005\022\022\n\016MESSAGE_EDITED\020"
+  "\006\022\023\n\017MESSAGE_DELETED\020\007\022\020\n\014USER_UPDATED\020\010"
+  "B\006\n\004data\"a\n\tchat_info\022\014\n\004uuid\030\001 \001(\t\022\r\n\005t"
+  "itle\030\002 \001(\t\022\031\n\021participants_uuid\030\003 \003(\t\022\034\n"
+  "\024last_visible_message\030\004 \001(\t\"z\n\031get_chat_"
+  "messages_request\022\024\n\014access_token\030\001 \001(\t\022\021"
+  "\n\tchat_uuid\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\022\023\n\013"
+  "page_number\030\004 \001(\005\022\014\n\004hash\030\005 \001(\t\"\374\001\n\014chat"
+  "_message\022@\n\014content_type\030\001 \001(\0162*.ComeTog"
+  "ether.chat_message.message_content\022\023\n\013se"
+  "nder_uuid\030\002 \001(\t\022\016\n\004text\030\003 \001(\tH\000\022\026\n\016sent_"
+  "unix_time\030\004 \001(\003\022\021\n\tchat_uuid\030\005 \001(\t\022\027\n\017se"
+  "quence_number\030\006 \001(\003\022\014\n\004uuid\030\007 \001(\t\"(\n\017mes"
+  "sage_content\022\013\n\007NOT_SET\020\000\022\010\n\004TEXT\020\001B\t\n\007c"
+  "ontent\"^\n\031send_chat_message_request\022\024\n\014a"
+  "ccess_token\030\001 \001(\t\022+\n\007message\030\002 \001(\0132\032.Com"
+  "eTogether.chat_message\"\212\002\n\032send_chat_mes"
+  "sage_response\022<\n\003res\030\001 \001(\0162/.ComeTogethe"
+  "r.send_chat_message_response.result\022\036\n\026a"
+  "ctual_sequence_number\030\002 \001(\003\022\024\n\014message_u"
+  "uid\030\004 \001(\t\"x\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001"
+  "\022\027\n\023CHAT_DOES_NOT_EXIST\020\002\022\027\n\023USER_DOES_N"
+  "OT_EXIST\020\003\022\033\n\027INSUFFICIENT_PERMISIONS\020\004\022"
+  "\n\n\005OTHER\020\347\007\"\252\001\n\020get_info_request\0226\n\tinfo"
+  "_type\030\001 \001(\0162#.ComeTogether.get_info_requ"
+  "est.type\022\024\n\014access_token\030\002 \001(\t\022\023\n\013target"
+  "_uuid\030\003 \001(\t\"3\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004USER"
+  "\020\001\022\n\n\006MARKER\020\002\022\010\n\004CHAT\020\003\"\236\001\n\021get_info_re"
+  "sponse\022)\n\006u_info\030\001 \001(\0132\027.ComeTogether.us"
+  "er_infoH\000\022+\n\006m_info\030\002 \001(\0132\031.ComeTogether"
+  ".marker_infoH\000\022)\n\006c_info\030\003 \001(\0132\027.ComeTog"
+  "ether.chat_infoH\000B\006\n\004data\"\345\001\n\022get_images"
+  "_request\0229\n\nimage_type\030\001 \001(\0162%.ComeToget"
+  "her.get_images_request.type\022\023\n\013target_uu"
+  "id\030\002 \001(\t\022\024\n\014access_token\030\003 \001(\t\022\016\n\006amount"
+  "\030\004 \001(\005\022\014\n\004hash\030\005 \001(\t\022 \n\030starting_sequenc"
+  "e_number\030\006 \001(\005\")\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004U"
+  "SER\020\001\022\n\n\006MARKER\020\002\"\237\002\n\024manage_image_reque"
+  "st\0226\n\003act\030\001 \001(\0162).ComeTogether.manage_im"
+  "age_request.action\022\024\n\014access_token\030\002 \001(\t"
+  "\022\023\n\013target_uuid\030\003 \001(\t\022\017\n\005image\030\004 \001(\014H\000\022\024"
+  "\n\nimage_uuid\030\005 \001(\tH\000\"u\n\006action\022\013\n\007NOT_SE"
+  "T\020\000\022\025\n\021UPLOAD_USER_IMAGE\020\001\022\025\n\021DELETE_USE"
+  "R_IMAGE\020\002\022\027\n\023UPLOAD_MARKER_IMAGE\020\003\022\027\n\023DE"
+  "LETE_MARKER_IMAGE\020\004B\006\n\004data\"\313\001\n\025manage_i"
+  "mage_response\0227\n\003res\030\001 \001(\0162*.ComeTogethe"
+  "r.manage_image_response.result\022\022\n\nimage_"
+  "uuid\030\002 \001(\t\022\035\n\025image_sequence_number\030\003 \001("
+  "\005\"F\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSU"
+  "FFICIENT_PERMISIONS\020\002\022\n\n\005OTHER\020\347\007\"~\n\rche"
+  "ck_request\0224\n\ncheck_type\030\001 \001(\0162 .ComeTog"
+  "ether.check_request.type\022\014\n\004data\030\002 \001(\t\")"
+  "\n\004type\022\013\n\007NOT_SET\020\000\022\t\n\005EMAIL\020\001\022\t\n\005LOGIN\020"
+  "\002\"\177\n\016check_response\0220\n\003res\030\001 \001(\0162#.ComeT"
+  "ogether.check_response.result\";\n\006result\022"
+  "\013\n\007NOT_SET\020\000\022\r\n\tAVAILABLE\020\001\022\t\n\005TAKEN\020\002\022\n"
+  "\n\005OTHER\020\347\007\"0\n\rlogin_request\022\r\n\005login\030\001 \001"
+  "(\t\022\020\n\010password\030\002 \001(\t\"\322\001\n\016login_response\022"
+  "0\n\003res\030\001 \001(\0162#.ComeTogether.login_respon"
+  "se.result\022%\n\004info\030\002 \001(\0132\027.ComeTogether.u"
+  "ser_info\022\024\n\014access_token\030\003 \001(\t\"Q\n\006result"
+  "\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\022\n\016USER_NOT_FOUND\020"
+  "\002\022\022\n\016WRONG_PASSWORD\020\003\022\n\n\005OTHER\020\347\007\"9\n\020reg"
+  "ister_request\022%\n\004info\030\001 \001(\0132\027.ComeTogeth"
+  "er.user_info\"\316\001\n\021register_response\0223\n\003re"
+  "s\030\001 \001(\0162&.ComeTogether.register_response"
+  ".result\022\021\n\tuser_uuid\030\002 \001(\t\022\024\n\014access_tok"
+  "en\030\003 \001(\t\"[\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022"
+  "\027\n\023EMAIL_ALREADY_TAKEN\020\002\022\027\n\023LOGIN_ALREAD"
+  "Y_TAKEN\020\003\022\n\n\005OTHER\020\347\007\"\236\001\n\tuser_info\022\014\n\004u"
+  "uid\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022\r\n\005login\030\003 \001(\t\022"
+  "\020\n\010password\030\004 \001(\t\022\022\n\nfirst_name\030\005 \001(\t\022\021\n"
+  "\tlast_name\030\006 \001(\t\022\023\n\013images_uuid\030\007 \003(\t\022\027\n"
+  "\017other_info_json\030\010 \001(\t\"\220\005\n\013marker_info\022/"
+  "\n\003cat\030\001 \001(\0162\".ComeTogether.marker_info.c"
+  "ategory\0223\n\013marker_type\030\002 \001(\0162\036.ComeToget"
+  "her.marker_info.type\022\026\n\016from_unix_time\030\003"
+  " \001(\003\022\024\n\014to_unix_time\030\004 \001(\003\022\032\n\022creation_u"
+  "nix_time\030\005 \001(\003\022\024\n\014creator_uuid\030\006 \001(\t\022\024\n\014"
+  "display_name\030\007 \001(\t\022\020\n\010latitude\030\t \001(\001\022\021\n\t"
+  "longitude\030\n \001(\001\022\014\n\004uuid\030\013 \001(\t\022\021\n\tchat_uu"
+  "id\030\014 \001(\t\022\023\n\013images_uuid\030\r \003(\t\022\027\n\017other_d"
+  "ata_json\030\016 \001(\t\"\367\001\n\010category\022\013\n\007NOT_SET\020\000"
+  "\022\013\n\007CYCLING\020\001\022\014\n\010FOOTBALL\020\002\022\016\n\nBASKETBAL"
+  "L\020\003\022\013\n\007RUNNING\020\004\022\007\n\003GYM\020\005\022\013\n\007GALLERY\020\006\022\r"
+  "\n\tEXCURSION\020\007\022\013\n\007THEATER\020\010\022\n\n\006CINEMA\020\t\022\007"
+  "\n\003BAR\020\n\022\016\n\nRESTAURANT\020\013\022\016\n\nNIGTH_CLUB\020\014\022"
+  "\n\n\006HOOKAH\020\r\022\010\n\004CAFE\020\016\022\010\n\004WALK\020\017\022\013\n\007CONCE"
+  "RT\020\020\022\t\n\005QUEST\020\021\022\007\n\003ZOO\020\022\"7\n\004type\022\027\n\023NOT_"
+  "SET_MARKER_TYPE\020\000\022\013\n\007PRIVATE\020\001\022\t\n\005GROUP\020"
+  "\002\"=\n\022add_marker_request\022\'\n\004info\030\001 \001(\0132\031."
+  "ComeTogether.marker_info\"\321\001\n\023add_marker_"
+  "response\0225\n\003res\030\001 \001(\0162(.ComeTogether.add"
+  "_marker_response.result\022\014\n\004uuid\030\002 \001(\t\022\021\n"
+  "\tchat_uuid\030\003 \001(\t\"b\n\006result\022\013\n\007NOT_SET\020\000\022"
+  "\006\n\002OK\020\001\022\033\n\027TIME_INTERVAL_TOO_SMALL\020\002\022\032\n\026"
+  "CREATION_TIME_OUTDATED\020\003\022\n\n\005OTHER\020\347\0072\221\t\n"
+  "\014MainEndpoint\022O\n\010AskToken\022\037.ComeTogether"
+  ".ask_token_request\032 .ComeTogether.ask_to"
+  "ken_response\"\000\022X\n\013VerifyToken\022\".ComeToge"
+  "ther.verify_token_request\032#.ComeTogether"
+  ".verify_token_response\"\000\022D\n\005Check\022\033.Come"
+  "Together.check_request\032\034.ComeTogether.ch"
+  "eck_response\"\000\022Q\n\014RegisterUser\022\036.ComeTog"
+  "ether.register_request\032\037.ComeTogether.re"
+  "gister_response\"\000\022H\n\tLoginUser\022\033.ComeTog"
+  "ether.login_request\032\034.ComeTogether.login"
+  "_response\"\000\022R\n\tAddMarker\022 .ComeTogether."
+  "add_marker_request\032!.ComeTogether.add_ma"
+  "rker_response\"\000\022J\n\rGetAllMarkers\022\032.ComeT"
+  "ogether.access_token\032\031.ComeTogether.mark"
+  "er_info\"\0000\001\022L\n\007GetInfo\022\036.ComeTogether.ge"
+  "t_info_request\032\037.ComeTogether.get_info_r"
+  "esponse\"\000\022U\n\nUpdateInfo\022!.ComeTogether.u"
+  "pdate_info_request\032\".ComeTogether.update"
+  "_info_response\"\000\022X\n\013ManageImage\022\".ComeTo"
+  "gether.manage_image_request\032#.ComeTogeth"
+  "er.manage_image_response\"\000\022F\n\tGetImages\022"
+  " .ComeTogether.get_images_request\032\023.Come"
+  "Together.image\"\0000\001\022f\n\017SendChatMessage\022\'."
+  "ComeTogether.send_chat_message_request\032("
+  ".ComeTogether.send_chat_message_response"
+  "\"\000\022Z\n\017GetChatMessages\022\'.ComeTogether.get"
+  "_chat_messages_request\032\032.ComeTogether.ch"
+  "at_message\"\0000\001\022H\n\021SubscribeToEvents\022\032.Co"
+  "meTogether.access_token\032\023.ComeTogether.e"
+  "vent\"\0000\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_come_5ftogether_2eproto_deps[1] = {
 };
@@ -1077,7 +1076,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_com
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_come_5ftogether_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_come_5ftogether_2eproto = {
-  false, false, descriptor_table_protodef_come_5ftogether_2eproto, "come_together.proto", 6322,
+  false, false, descriptor_table_protodef_come_5ftogether_2eproto, "come_together.proto", 6296,
   &descriptor_table_come_5ftogether_2eproto_once, descriptor_table_come_5ftogether_2eproto_sccs, descriptor_table_come_5ftogether_2eproto_deps, 29, 0,
   schemas, file_default_instances, TableStruct_come_5ftogether_2eproto::offsets,
   file_level_metadata_come_5ftogether_2eproto, 29, file_level_enum_descriptors_come_5ftogether_2eproto, file_level_service_descriptors_come_5ftogether_2eproto,
@@ -1186,11 +1185,11 @@ constexpr update_info_response_result update_info_response::result_MIN;
 constexpr update_info_response_result update_info_response::result_MAX;
 constexpr int update_info_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* event_event_type_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* event_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
   return file_level_enum_descriptors_come_5ftogether_2eproto[4];
 }
-bool event_event_type_IsValid(int value) {
+bool event_type_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -1208,18 +1207,18 @@ bool event_event_type_IsValid(int value) {
 }
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr event_event_type event::NOT_SET;
-constexpr event_event_type event::MARKER_ADDED;
-constexpr event_event_type event::MARKER_EDITED;
-constexpr event_event_type event::MARKER_DELETED_BY_USER;
-constexpr event_event_type event::MARKER_DELETED_BY_TIMEOUT;
-constexpr event_event_type event::MESSAGE_ADDED;
-constexpr event_event_type event::MESSAGE_EDITED;
-constexpr event_event_type event::MESSAGE_DELETED;
-constexpr event_event_type event::USER_UPDATED;
-constexpr event_event_type event::event_type_MIN;
-constexpr event_event_type event::event_type_MAX;
-constexpr int event::event_type_ARRAYSIZE;
+constexpr event_type event::NOT_SET;
+constexpr event_type event::MARKER_ADDED;
+constexpr event_type event::MARKER_EDITED;
+constexpr event_type event::MARKER_DELETED_BY_USER;
+constexpr event_type event::MARKER_DELETED_BY_TIMEOUT;
+constexpr event_type event::MESSAGE_ADDED;
+constexpr event_type event::MESSAGE_EDITED;
+constexpr event_type event::MESSAGE_DELETED;
+constexpr event_type event::USER_UPDATED;
+constexpr event_type event::type_MIN;
+constexpr event_type event::type_MAX;
+constexpr int event::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* chat_message_message_content_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
@@ -1271,11 +1270,11 @@ constexpr send_chat_message_response_result send_chat_message_response::result_M
 constexpr send_chat_message_response_result send_chat_message_response::result_MAX;
 constexpr int send_chat_message_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_info_request_info_type_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_info_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
   return file_level_enum_descriptors_come_5ftogether_2eproto[7];
 }
-bool get_info_request_info_type_IsValid(int value) {
+bool get_info_request_type_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -1288,19 +1287,19 @@ bool get_info_request_info_type_IsValid(int value) {
 }
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr get_info_request_info_type get_info_request::NOT_SET;
-constexpr get_info_request_info_type get_info_request::USER;
-constexpr get_info_request_info_type get_info_request::MARKER;
-constexpr get_info_request_info_type get_info_request::CHAT;
-constexpr get_info_request_info_type get_info_request::info_type_MIN;
-constexpr get_info_request_info_type get_info_request::info_type_MAX;
-constexpr int get_info_request::info_type_ARRAYSIZE;
+constexpr get_info_request_type get_info_request::NOT_SET;
+constexpr get_info_request_type get_info_request::USER;
+constexpr get_info_request_type get_info_request::MARKER;
+constexpr get_info_request_type get_info_request::CHAT;
+constexpr get_info_request_type get_info_request::type_MIN;
+constexpr get_info_request_type get_info_request::type_MAX;
+constexpr int get_info_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_images_request_image_type_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_images_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
   return file_level_enum_descriptors_come_5ftogether_2eproto[8];
 }
-bool get_images_request_image_type_IsValid(int value) {
+bool get_images_request_type_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -1312,12 +1311,12 @@ bool get_images_request_image_type_IsValid(int value) {
 }
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr get_images_request_image_type get_images_request::NOT_SET;
-constexpr get_images_request_image_type get_images_request::USER;
-constexpr get_images_request_image_type get_images_request::MARKER;
-constexpr get_images_request_image_type get_images_request::image_type_MIN;
-constexpr get_images_request_image_type get_images_request::image_type_MAX;
-constexpr int get_images_request::image_type_ARRAYSIZE;
+constexpr get_images_request_type get_images_request::NOT_SET;
+constexpr get_images_request_type get_images_request::USER;
+constexpr get_images_request_type get_images_request::MARKER;
+constexpr get_images_request_type get_images_request::type_MIN;
+constexpr get_images_request_type get_images_request::type_MAX;
+constexpr int get_images_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* manage_image_request_action_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
@@ -1528,11 +1527,11 @@ constexpr marker_info_category marker_info::category_MIN;
 constexpr marker_info_category marker_info::category_MAX;
 constexpr int marker_info::category_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_marker_type_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
   return file_level_enum_descriptors_come_5ftogether_2eproto[16];
 }
-bool marker_info_marker_type_IsValid(int value) {
+bool marker_info_type_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -1544,12 +1543,12 @@ bool marker_info_marker_type_IsValid(int value) {
 }
 
 #if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
-constexpr marker_info_marker_type marker_info::NOT_SET_MARKER_TYPE;
-constexpr marker_info_marker_type marker_info::PRIVATE;
-constexpr marker_info_marker_type marker_info::GROUP;
-constexpr marker_info_marker_type marker_info::marker_type_MIN;
-constexpr marker_info_marker_type marker_info::marker_type_MAX;
-constexpr int marker_info::marker_type_ARRAYSIZE;
+constexpr marker_info_type marker_info::NOT_SET_MARKER_TYPE;
+constexpr marker_info_type marker_info::PRIVATE;
+constexpr marker_info_type marker_info::GROUP;
+constexpr marker_info_type marker_info::type_MIN;
+constexpr marker_info_type marker_info::type_MAX;
+constexpr int marker_info::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* add_marker_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
@@ -3577,7 +3576,7 @@ event::event(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 event::event(const event& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  type_ = from.type_;
+  event_type_ = from.event_type_;
   clear_has_data();
   switch (from.data_case()) {
     case kMInfo: {
@@ -3601,7 +3600,7 @@ event::event(const event& from)
 
 void event::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_event_come_5ftogether_2eproto.base);
-  type_ = 0;
+  event_type_ = 0;
   clear_has_data();
 }
 
@@ -3668,7 +3667,7 @@ void event::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  type_ = 0;
+  event_type_ = 0;
   clear_data();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3681,12 +3680,12 @@ const char* event::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.event.event_type type = 1;
+      // .ComeTogether.event.type event_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_type(static_cast<::ComeTogether::event_event_type>(val));
+          _internal_set_event_type(static_cast<::ComeTogether::event_type>(val));
         } else goto handle_unusual;
         continue;
       // .ComeTogether.marker_info m_info = 2;
@@ -3738,11 +3737,11 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.event.event_type type = 1;
-  if (this->type() != 0) {
+  // .ComeTogether.event.type event_type = 1;
+  if (this->event_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_type(), target);
+      1, this->_internal_event_type(), target);
   }
 
   // .ComeTogether.marker_info m_info = 2;
@@ -3785,10 +3784,10 @@ size_t event::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.event.event_type type = 1;
-  if (this->type() != 0) {
+  // .ComeTogether.event.type event_type = 1;
+  if (this->event_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_event_type());
   }
 
   switch (data_case()) {
@@ -3848,8 +3847,8 @@ void event::MergeFrom(const event& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from.event_type() != 0) {
+    _internal_set_event_type(from._internal_event_type());
   }
   switch (from.data_case()) {
     case kMInfo: {
@@ -3891,7 +3890,7 @@ bool event::IsInitialized() const {
 void event::InternalSwap(event* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(type_, other->type_);
+  swap(event_type_, other->event_type_);
   swap(data_, other->data_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
@@ -5564,7 +5563,7 @@ get_info_request::get_info_request(const get_info_request& from)
     target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_target_uuid(),
       GetArena());
   }
-  type_ = from.type_;
+  info_type_ = from.info_type_;
   // @@protoc_insertion_point(copy_constructor:ComeTogether.get_info_request)
 }
 
@@ -5572,7 +5571,7 @@ void get_info_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_get_info_request_come_5ftogether_2eproto.base);
   access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  type_ = 0;
+  info_type_ = 0;
 }
 
 get_info_request::~get_info_request() {
@@ -5610,7 +5609,7 @@ void get_info_request::Clear() {
 
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  type_ = 0;
+  info_type_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -5622,12 +5621,12 @@ const char* get_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.get_info_request.info_type type = 1;
+      // .ComeTogether.get_info_request.type info_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_type(static_cast<::ComeTogether::get_info_request_info_type>(val));
+          _internal_set_info_type(static_cast<::ComeTogether::get_info_request_type>(val));
         } else goto handle_unusual;
         continue;
       // string access_token = 2;
@@ -5676,11 +5675,11 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.get_info_request.info_type type = 1;
-  if (this->type() != 0) {
+  // .ComeTogether.get_info_request.type info_type = 1;
+  if (this->info_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_type(), target);
+      1, this->_internal_info_type(), target);
   }
 
   // string access_token = 2;
@@ -5733,10 +5732,10 @@ size_t get_info_request::ByteSizeLong() const {
         this->_internal_target_uuid());
   }
 
-  // .ComeTogether.get_info_request.info_type type = 1;
-  if (this->type() != 0) {
+  // .ComeTogether.get_info_request.type info_type = 1;
+  if (this->info_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_info_type());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -5776,8 +5775,8 @@ void get_info_request::MergeFrom(const get_info_request& from) {
   if (from.target_uuid().size() > 0) {
     _internal_set_target_uuid(from._internal_target_uuid());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from.info_type() != 0) {
+    _internal_set_info_type(from._internal_info_type());
   }
 }
 
@@ -5804,7 +5803,7 @@ void get_info_request::InternalSwap(get_info_request* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   target_uuid_.Swap(&other->target_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(type_, other->type_);
+  swap(info_type_, other->info_type_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata get_info_request::GetMetadata() const {
@@ -6223,9 +6222,9 @@ get_images_request::get_images_request(const get_images_request& from)
     hash_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_hash(),
       GetArena());
   }
-  ::memcpy(&type_, &from.type_,
+  ::memcpy(&image_type_, &from.image_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&starting_sequence_number_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(starting_sequence_number_));
+    reinterpret_cast<char*>(&image_type_)) + sizeof(starting_sequence_number_));
   // @@protoc_insertion_point(copy_constructor:ComeTogether.get_images_request)
 }
 
@@ -6234,9 +6233,9 @@ void get_images_request::SharedCtor() {
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&type_, 0, static_cast<size_t>(
+  ::memset(&image_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&starting_sequence_number_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(starting_sequence_number_));
+      reinterpret_cast<char*>(&image_type_)) + sizeof(starting_sequence_number_));
 }
 
 get_images_request::~get_images_request() {
@@ -6276,9 +6275,9 @@ void get_images_request::Clear() {
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   hash_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  ::memset(&type_, 0, static_cast<size_t>(
+  ::memset(&image_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&starting_sequence_number_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(starting_sequence_number_));
+      reinterpret_cast<char*>(&image_type_)) + sizeof(starting_sequence_number_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6290,12 +6289,12 @@ const char* get_images_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.get_images_request.image_type type = 1;
+      // .ComeTogether.get_images_request.type image_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_type(static_cast<::ComeTogether::get_images_request_image_type>(val));
+          _internal_set_image_type(static_cast<::ComeTogether::get_images_request_type>(val));
         } else goto handle_unusual;
         continue;
       // string target_uuid = 2;
@@ -6367,11 +6366,11 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.get_images_request.image_type type = 1;
-  if (this->type() != 0) {
+  // .ComeTogether.get_images_request.type image_type = 1;
+  if (this->image_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      1, this->_internal_type(), target);
+      1, this->_internal_image_type(), target);
   }
 
   // string target_uuid = 2;
@@ -6453,10 +6452,10 @@ size_t get_images_request::ByteSizeLong() const {
         this->_internal_hash());
   }
 
-  // .ComeTogether.get_images_request.image_type type = 1;
-  if (this->type() != 0) {
+  // .ComeTogether.get_images_request.type image_type = 1;
+  if (this->image_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_image_type());
   }
 
   // int32 amount = 4;
@@ -6513,8 +6512,8 @@ void get_images_request::MergeFrom(const get_images_request& from) {
   if (from.hash().size() > 0) {
     _internal_set_hash(from._internal_hash());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from.image_type() != 0) {
+    _internal_set_image_type(from._internal_image_type());
   }
   if (from.amount() != 0) {
     _internal_set_amount(from._internal_amount());
@@ -6551,9 +6550,9 @@ void get_images_request::InternalSwap(get_images_request* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(get_images_request, starting_sequence_number_)
       + sizeof(get_images_request::starting_sequence_number_)
-      - PROTOBUF_FIELD_OFFSET(get_images_request, type_)>(
-          reinterpret_cast<char*>(&type_),
-          reinterpret_cast<char*>(&other->type_));
+      - PROTOBUF_FIELD_OFFSET(get_images_request, image_type_)>(
+          reinterpret_cast<char*>(&image_type_),
+          reinterpret_cast<char*>(&other->image_type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata get_images_request::GetMetadata() const {
@@ -9157,13 +9156,15 @@ class marker_info::_Internal {
 };
 
 marker_info::marker_info(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  images_uuid_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:ComeTogether.marker_info)
 }
 marker_info::marker_info(const marker_info& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      images_uuid_(from.images_uuid_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   creator_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_creator_uuid().empty()) {
@@ -9191,8 +9192,8 @@ marker_info::marker_info(const marker_info& from)
       GetArena());
   }
   ::memcpy(&cat_, &from.cat_,
-    static_cast<size_t>(reinterpret_cast<char*>(&images_amount_) -
-    reinterpret_cast<char*>(&cat_)) + sizeof(images_amount_));
+    static_cast<size_t>(reinterpret_cast<char*>(&longitude_) -
+    reinterpret_cast<char*>(&cat_)) + sizeof(longitude_));
   // @@protoc_insertion_point(copy_constructor:ComeTogether.marker_info)
 }
 
@@ -9204,8 +9205,8 @@ void marker_info::SharedCtor() {
   chat_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   other_data_json_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&cat_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&images_amount_) -
-      reinterpret_cast<char*>(&cat_)) + sizeof(images_amount_));
+      reinterpret_cast<char*>(&longitude_) -
+      reinterpret_cast<char*>(&cat_)) + sizeof(longitude_));
 }
 
 marker_info::~marker_info() {
@@ -9244,14 +9245,15 @@ void marker_info::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  images_uuid_.Clear();
   creator_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   display_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   chat_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   other_data_json_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&cat_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&images_amount_) -
-      reinterpret_cast<char*>(&cat_)) + sizeof(images_amount_));
+      reinterpret_cast<char*>(&longitude_) -
+      reinterpret_cast<char*>(&cat_)) + sizeof(longitude_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9271,12 +9273,12 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           _internal_set_cat(static_cast<::ComeTogether::marker_info_category>(val));
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.marker_info.marker_type type = 2;
+      // .ComeTogether.marker_info.type marker_type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_type(static_cast<::ComeTogether::marker_info_marker_type>(val));
+          _internal_set_marker_type(static_cast<::ComeTogether::marker_info_type>(val));
         } else goto handle_unusual;
         continue;
       // int64 from_unix_time = 3;
@@ -9350,11 +9352,18 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 images_amount = 13;
+      // repeated string images_uuid = 13;
       case 13:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 104)) {
-          images_amount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 106)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_images_uuid();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.images_uuid"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<106>(ptr));
         } else goto handle_unusual;
         continue;
       // string other_data_json = 14;
@@ -9401,11 +9410,11 @@ failure:
       1, this->_internal_cat(), target);
   }
 
-  // .ComeTogether.marker_info.marker_type type = 2;
-  if (this->type() != 0) {
+  // .ComeTogether.marker_info.type marker_type = 2;
+  if (this->marker_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      2, this->_internal_type(), target);
+      2, this->_internal_marker_type(), target);
   }
 
   // int64 from_unix_time = 3;
@@ -9478,10 +9487,14 @@ failure:
         12, this->_internal_chat_uuid(), target);
   }
 
-  // int32 images_amount = 13;
-  if (this->images_amount() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(13, this->_internal_images_amount(), target);
+  // repeated string images_uuid = 13;
+  for (int i = 0, n = this->_internal_images_uuid_size(); i < n; i++) {
+    const auto& s = this->_internal_images_uuid(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "ComeTogether.marker_info.images_uuid");
+    target = stream->WriteString(13, s, target);
   }
 
   // string other_data_json = 14;
@@ -9509,6 +9522,14 @@ size_t marker_info::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // repeated string images_uuid = 13;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(images_uuid_.size());
+  for (int i = 0, n = images_uuid_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      images_uuid_.Get(i));
+  }
 
   // string creator_uuid = 6;
   if (this->creator_uuid().size() > 0) {
@@ -9551,10 +9572,10 @@ size_t marker_info::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_cat());
   }
 
-  // .ComeTogether.marker_info.marker_type type = 2;
-  if (this->type() != 0) {
+  // .ComeTogether.marker_info.type marker_type = 2;
+  if (this->marker_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_marker_type());
   }
 
   // int64 from_unix_time = 3;
@@ -9588,13 +9609,6 @@ size_t marker_info::ByteSizeLong() const {
     total_size += 1 + 8;
   }
 
-  // int32 images_amount = 13;
-  if (this->images_amount() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_images_amount());
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -9626,6 +9640,7 @@ void marker_info::MergeFrom(const marker_info& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  images_uuid_.MergeFrom(from.images_uuid_);
   if (from.creator_uuid().size() > 0) {
     _internal_set_creator_uuid(from._internal_creator_uuid());
   }
@@ -9644,8 +9659,8 @@ void marker_info::MergeFrom(const marker_info& from) {
   if (from.cat() != 0) {
     _internal_set_cat(from._internal_cat());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from.marker_type() != 0) {
+    _internal_set_marker_type(from._internal_marker_type());
   }
   if (from.from_unix_time() != 0) {
     _internal_set_from_unix_time(from._internal_from_unix_time());
@@ -9661,9 +9676,6 @@ void marker_info::MergeFrom(const marker_info& from) {
   }
   if (!(from.longitude() <= 0 && from.longitude() >= 0)) {
     _internal_set_longitude(from._internal_longitude());
-  }
-  if (from.images_amount() != 0) {
-    _internal_set_images_amount(from._internal_images_amount());
   }
 }
 
@@ -9688,14 +9700,15 @@ bool marker_info::IsInitialized() const {
 void marker_info::InternalSwap(marker_info* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  images_uuid_.InternalSwap(&other->images_uuid_);
   creator_uuid_.Swap(&other->creator_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   display_name_.Swap(&other->display_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   chat_uuid_.Swap(&other->chat_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   other_data_json_.Swap(&other->other_data_json_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(marker_info, images_amount_)
-      + sizeof(marker_info::images_amount_)
+      PROTOBUF_FIELD_OFFSET(marker_info, longitude_)
+      + sizeof(marker_info::longitude_)
       - PROTOBUF_FIELD_OFFSET(marker_info, cat_)>(
           reinterpret_cast<char*>(&cat_),
           reinterpret_cast<char*>(&other->cat_));
