@@ -81,6 +81,7 @@ MainEndpointImpl::~MainEndpointImpl()
     if (result.res() == CT::register_response_result_OK)
     {
         auto token = m_user_storage->LoginUser(user_uuid);
+        WaitForEventsSubscriptionAsync();
         result.set_access_token(std::move(token));
     }
 
@@ -101,19 +102,13 @@ MainEndpointImpl::~MainEndpointImpl()
         *response = std::move(result);
         return grpc::Status::OK;
     }
-    assert(!user_uuid.empty());
+    PLOG_ERROR_IF(user_uuid.empty()) << "empty user_uuid";
     const auto user_info = new CT::user_info(m_db->GetUserInfo(user_uuid));
     result.set_allocated_info(user_info);
     auto access_token = m_user_storage->LoginUser(user_uuid);
+    WaitForEventsSubscriptionAsync();
     result.set_access_token(std::move(access_token));
     *response = std::move(result);
-    auto common_call_data = new CommonCallData;
-    common_call_data->ConnectToNewSubscriber([storage = m_user_storage](CommonCallData&& data)
-    {
-        storage->OnNewEventsSubscriber(std::move(data));
-    });
-    RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_token.get(),
-        common_call_data->m_writer.get(), m_cq.get(), m_cq.get(), common_call_data);
     PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
     return grpc::Status::OK;
 }
@@ -121,6 +116,7 @@ MainEndpointImpl::~MainEndpointImpl()
 ::grpc::Status MainEndpointImpl::AddMarker(::grpc::ServerContext* context, const CT::add_marker_request* request,
     CT::add_marker_response* response)
 {
+    const auto res = m_db->AddMarker(request->info());
     return grpc::Status::OK;
 }
 
@@ -180,4 +176,15 @@ void MainEndpointImpl::SubscribeToNewEventsListener(grpc::ServerAsyncWriter<CT::
     ComeTogether::access_token* token, void* tag)
 {
     RequestSubscribeToEvents(ctx, token, writer, m_cq.get(), m_cq.get(), tag);
+}
+
+void MainEndpointImpl::WaitForEventsSubscriptionAsync()
+{
+    auto common_call_data = new CommonCallData;
+    common_call_data->ConnectToNewSubscriber([storage = m_user_storage](CommonCallData&& data)
+    {
+        storage->OnNewEventsSubscriber(std::move(data));
+    });
+    RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_token.get(),
+        common_call_data->m_writer.get(), m_cq.get(), m_cq.get(), common_call_data);
 }

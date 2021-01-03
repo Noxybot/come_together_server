@@ -58,4 +58,6 @@ public:
         ::grpc::ServerWriter<CT::chat_message>* writer) override;
     void SubscribeToNewEventsListener(grpc::ServerAsyncWriter<CT::event>* writer, grpc::ServerContext* ctx,
         ComeTogether::access_token* token, void* tag);
+private:
+    void WaitForEventsSubscriptionAsync();
 };

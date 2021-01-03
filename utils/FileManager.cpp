@@ -13,7 +13,8 @@ FileManager::FileManager(std::string folder)
 {
     PLOG_ERROR_IF(std::filesystem::exists(folder) && !std::filesystem::is_directory(folder))
         << "path=" << folder << " exists and is not directory";
-    std::filesystem::create_directory(folder);
+    PLOG_INFO << "folder=" << folder;
+    //std::filesystem::create_directory(folder);
 }
 
 std::string FileManager::SaveFile(const std::string& file)

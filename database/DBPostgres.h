@@ -17,4 +17,5 @@ public:
     CT::login_response::result LoginUser(const CT::login_request& req, std::string& out_uuid) override;
     CT::user_info GetUserInfo(const std::string& user_uuid) override;
     std::vector<std::string> GetAllImagesUuid(const CT::get_images_request& req) override;
+    std::array<std::string, 2> AddMarker(const CT::marker_info& info) override;
 };

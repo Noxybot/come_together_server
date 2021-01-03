@@ -17,6 +17,11 @@ static constexpr std::string_view GET_ALL_USER_IMAGES =
 "SELECT images_uuid FROM users WHERE uuid = uuid({uuid})";
 static constexpr std::string_view GET_ALL_MARKER_IMAGES =
 "SELECT images_uuid FROM markers WHERE uuid = uuid({uuid})";
+static constexpr std::string_view ADD_MARKER =
+"SELECT add_marker(CAST({category} AS SMALLINT), CAST({type} AS SMALLINT), CAST({from_unix_time} AS BIGINT), \
+CAST({to_unix_time} AS BIGINT), CAST({creation_unix_time} AS BIGINT), \
+uuid({creator_uuid}), {display_name}, \
+CAST({latitude} AS DOUBLE PRECISION), CAST({longitude} AS DOUBLE PRECISION), {other_data_json})";
 
 std::string_view QueryManager::Get(Query type)
 {
@@ -29,6 +34,7 @@ std::string_view QueryManager::Get(Query type)
     case Query::GET_USER_INFO: return GET_USER_INFO;
     case Query::GET_ALL_USER_IMAGES: return GET_ALL_USER_IMAGES;
     case Query::GET_ALL_MARKER_IMAGES: return GET_ALL_MARKER_IMAGES;
+    case Query::ADD_MARKER: return ADD_MARKER;
     case Query::QUERY_COUNT: break;
     default: break;
     }

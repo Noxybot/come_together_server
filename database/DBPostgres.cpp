@@ -7,6 +7,8 @@
 #include <fmt/format.h>
 #include <plog/Log.h>
 
+#include <array>
+
 DBPostgres::DBPostgres(const std::string& connection_string)
     : m_pool(std::make_shared<ConnectionPool>(connection_string, 1))
 {}
@@ -162,3 +164,39 @@ std::vector<std::string> DBPostgres::GetAllImagesUuid(const CT::get_images_reque
     }
     return result;
 }
+
+std::array<std::string, 2> DBPostgres::AddMarker(const CT::marker_info& info)try
+{
+    std::array<std::string, 2> res;
+    const auto conn = m_pool->AcquireConnection();
+    pqxx::work work(*conn);
+    const auto query =
+        fmt::format(QueryManager::Get(Query::ADD_MARKER),
+            fmt::arg("category", info.cat()),
+            fmt::arg("type", info.marker_type()),
+            fmt::arg("from_unix_time", info.from_unix_time()),
+            fmt::arg("to_unix_time", info.to_unix_time()),
+            fmt::arg("creation_unix_time", info.creation_unix_time()),
+            fmt::arg("creator_uuid", work.quote(info.creator_uuid())),
+            fmt::arg("display_name", work.quote(info.display_name())),
+            fmt::arg("latitude", info.latitude()),
+            fmt::arg("longitude", info.longitude()),
+            fmt::arg("other_data_json", work.quote(info.other_data_json())));
+    const auto result = work.exec1(query);
+    work.commit();
+    PLOG_ERROR_IF(info.marker_type() == CT::marker_info_type_PRIVATE && result.size() != 1) << "wrong result from db";
+    PLOG_ERROR_IF(info.marker_type() == CT::marker_info_type_GROUP && result.size() != 1) << "wrong result from db";
+    auto parser = result[0].as_array();
+    auto elem = parser.get_next();
+    auto i = 0u;
+    while (elem.first != pqxx::array_parser::done)
+    {
+        if (i >= 2)
+            break;
+        if (elem.first == pqxx::array_parser::string_value)
+            res[i++] = (std::move(elem.second)); 
+        elem = parser.get_next();
+    }
+    return res;
+}
+CATCH_ALL({})

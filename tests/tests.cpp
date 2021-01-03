@@ -45,33 +45,51 @@ void RUN_ALL_TESTS_IMPL()
         req.set_allocated_info(user_i);
         return req;
     });
-    test<login_response>("Login user OK", &decltype(test_stub)::element_type::LoginUser, []
+    test<add_marker_response>("Add marker", &decltype(test_stub)::element_type::AddMarker, []
     {
-        login_request req;
-        req.set_login("vasya_poopckin");
-        req.set_password("qweASD123");
+        add_marker_request req;
+        auto marker_i = new marker_info;
+        marker_i->set_cat(marker_info_category_BAR);
+        marker_i->set_marker_type(marker_info_type_PRIVATE);
+        const auto time = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+        marker_i->set_from_unix_time(time);
+        marker_i->set_to_unix_time(time);
+        marker_i->set_creation_unix_time(time);
+        marker_i->set_creator_uuid("4b5f5a40-15b6-4e0c-91ad-6b0f729d00fc");
+        marker_i->set_display_name("some marker");
+        marker_i->set_latitude(55.5555);
+        marker_i->set_longitude(44.4444);
+        marker_i->set_other_data_json("{}");
+        req.set_allocated_info(marker_i);
         return req;
-    }, [&](const login_response& res)
-    {
-        grpc::ClientContext ctx;
-        access_token token;
-        auto test_token = res.access_token();
-        token.set_token(test_token);
-        auto client_reader = test_stub->SubscribeToEvents(&ctx, token);
-        event evt;
-        test_stub.reset();
-        while(client_reader->Read(&evt))
-        {
-            PLOG_DEBUG << evt.Utf8DebugString();
-                        //client_reader->Finish();
-            test_stub.reset();
-            break;
-        };
-        
-        //ctx.TryCancel();
-       // client_reader->Finish();
-        PLOG_DEBUG << "TEST FINISHED!!!!!!!!!\n";
     });
+    //test<login_response>("Login user OK", &decltype(test_stub)::element_type::LoginUser, []
+    //{
+    //    login_request req;
+    //    req.set_login("vasya_poopckin");
+    //    req.set_password("qweASD123");
+    //    return req;
+    //}, [&](const login_response& res)
+    //{
+    //    grpc::ClientContext ctx;
+    //    access_token token;
+    //    auto test_token = res.access_token();
+    //    token.set_token(test_token);
+    //    auto client_reader = test_stub->SubscribeToEvents(&ctx, token);
+    //    event evt;
+    //    test_stub.reset();
+    //    while(client_reader->Read(&evt))
+    //    {
+    //        PLOG_DEBUG << evt.Utf8DebugString();
+    //                    //client_reader->Finish();
+    //        test_stub.reset();
+    //        break;
+    //    };
+    //    
+    //    //ctx.TryCancel();
+    //   // client_reader->Finish();
+    //    PLOG_DEBUG << "TEST FINISHED!!!!!!!!!\n";
+    //});
    /* test<login_response>("Login user WRONG PASS", &decltype(test_stub)::element_type::LoginUser, []
     {
         login_request req;
