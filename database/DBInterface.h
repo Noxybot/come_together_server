@@ -1,7 +1,7 @@
 #pragma once
 #include "../grpc/come_together.pb.h"
 
-namespace CT = ComeTogether;
+namespace CT = come_together_grpc;
 
 class DBInterface
 {
@@ -15,4 +15,5 @@ public:
     virtual std::vector<std::string> GetAllImagesUuid(const CT::get_images_request& req) = 0;
     //return 2 uuids for group markers (marker uuid + chat uuid), and one uuid for private markers (marker uuid)
     virtual std::array<std::string, 2> AddMarker(const CT::marker_info& info) = 0;
+    virtual std::vector<CT::marker_info> GetAllMarkers() = 0;
 };

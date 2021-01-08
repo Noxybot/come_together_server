@@ -10,7 +10,7 @@
 #include <vector>
 
 
-namespace CT = ComeTogether;
+namespace CT = come_together_grpc;
 using AsyncUpdatesEndpoint =  CT::MainEndpoint::WithAsyncMethod_SubscribeToEvents<CT::MainEndpoint::Service>;
 class MailerInterface;
 class UserStorageInterface;
@@ -56,8 +56,8 @@ public:
         CT::send_chat_message_response* response) override;
     ::grpc::Status GetChatMessages(::grpc::ServerContext* context, const CT::get_chat_messages_request* request,
         ::grpc::ServerWriter<CT::chat_message>* writer) override;
-    void SubscribeToNewEventsListener(grpc::ServerAsyncWriter<CT::event>* writer, grpc::ServerContext* ctx,
-        ComeTogether::access_token* token, void* tag);
+    ::grpc::Status SendPushToken(::grpc::ServerContext* context, const CT::send_push_token_request* request,
+        CT::send_push_token_response* response) override;
 private:
     void WaitForEventsSubscriptionAsync();
 };

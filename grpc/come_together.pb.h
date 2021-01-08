@@ -48,14 +48,14 @@ struct TableStruct_come_5ftogether_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[29]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[33]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_come_5ftogether_2eproto;
-namespace ComeTogether {
+namespace come_together_grpc {
 class access_token;
 class access_tokenDefaultTypeInternal;
 extern access_tokenDefaultTypeInternal _access_token_default_instance_;
@@ -83,6 +83,12 @@ extern check_requestDefaultTypeInternal _check_request_default_instance_;
 class check_response;
 class check_responseDefaultTypeInternal;
 extern check_responseDefaultTypeInternal _check_response_default_instance_;
+class delete_marker_reponse;
+class delete_marker_reponseDefaultTypeInternal;
+extern delete_marker_reponseDefaultTypeInternal _delete_marker_reponse_default_instance_;
+class delete_marker_request;
+class delete_marker_requestDefaultTypeInternal;
+extern delete_marker_requestDefaultTypeInternal _delete_marker_request_default_instance_;
 class event;
 class eventDefaultTypeInternal;
 extern eventDefaultTypeInternal _event_default_instance_;
@@ -128,6 +134,12 @@ extern send_chat_message_requestDefaultTypeInternal _send_chat_message_request_d
 class send_chat_message_response;
 class send_chat_message_responseDefaultTypeInternal;
 extern send_chat_message_responseDefaultTypeInternal _send_chat_message_response_default_instance_;
+class send_push_token_request;
+class send_push_token_requestDefaultTypeInternal;
+extern send_push_token_requestDefaultTypeInternal _send_push_token_request_default_instance_;
+class send_push_token_response;
+class send_push_token_responseDefaultTypeInternal;
+extern send_push_token_responseDefaultTypeInternal _send_push_token_response_default_instance_;
 class update_info_request;
 class update_info_requestDefaultTypeInternal;
 extern update_info_requestDefaultTypeInternal _update_info_request_default_instance_;
@@ -143,40 +155,99 @@ extern verify_token_requestDefaultTypeInternal _verify_token_request_default_ins
 class verify_token_response;
 class verify_token_responseDefaultTypeInternal;
 extern verify_token_responseDefaultTypeInternal _verify_token_response_default_instance_;
-}  // namespace ComeTogether
+}  // namespace come_together_grpc
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ComeTogether::access_token* Arena::CreateMaybeMessage<::ComeTogether::access_token>(Arena*);
-template<> ::ComeTogether::add_marker_request* Arena::CreateMaybeMessage<::ComeTogether::add_marker_request>(Arena*);
-template<> ::ComeTogether::add_marker_response* Arena::CreateMaybeMessage<::ComeTogether::add_marker_response>(Arena*);
-template<> ::ComeTogether::ask_token_request* Arena::CreateMaybeMessage<::ComeTogether::ask_token_request>(Arena*);
-template<> ::ComeTogether::ask_token_response* Arena::CreateMaybeMessage<::ComeTogether::ask_token_response>(Arena*);
-template<> ::ComeTogether::chat_info* Arena::CreateMaybeMessage<::ComeTogether::chat_info>(Arena*);
-template<> ::ComeTogether::chat_message* Arena::CreateMaybeMessage<::ComeTogether::chat_message>(Arena*);
-template<> ::ComeTogether::check_request* Arena::CreateMaybeMessage<::ComeTogether::check_request>(Arena*);
-template<> ::ComeTogether::check_response* Arena::CreateMaybeMessage<::ComeTogether::check_response>(Arena*);
-template<> ::ComeTogether::event* Arena::CreateMaybeMessage<::ComeTogether::event>(Arena*);
-template<> ::ComeTogether::get_chat_messages_request* Arena::CreateMaybeMessage<::ComeTogether::get_chat_messages_request>(Arena*);
-template<> ::ComeTogether::get_images_request* Arena::CreateMaybeMessage<::ComeTogether::get_images_request>(Arena*);
-template<> ::ComeTogether::get_info_request* Arena::CreateMaybeMessage<::ComeTogether::get_info_request>(Arena*);
-template<> ::ComeTogether::get_info_response* Arena::CreateMaybeMessage<::ComeTogether::get_info_response>(Arena*);
-template<> ::ComeTogether::image* Arena::CreateMaybeMessage<::ComeTogether::image>(Arena*);
-template<> ::ComeTogether::login_request* Arena::CreateMaybeMessage<::ComeTogether::login_request>(Arena*);
-template<> ::ComeTogether::login_response* Arena::CreateMaybeMessage<::ComeTogether::login_response>(Arena*);
-template<> ::ComeTogether::manage_image_request* Arena::CreateMaybeMessage<::ComeTogether::manage_image_request>(Arena*);
-template<> ::ComeTogether::manage_image_response* Arena::CreateMaybeMessage<::ComeTogether::manage_image_response>(Arena*);
-template<> ::ComeTogether::marker_info* Arena::CreateMaybeMessage<::ComeTogether::marker_info>(Arena*);
-template<> ::ComeTogether::register_request* Arena::CreateMaybeMessage<::ComeTogether::register_request>(Arena*);
-template<> ::ComeTogether::register_response* Arena::CreateMaybeMessage<::ComeTogether::register_response>(Arena*);
-template<> ::ComeTogether::send_chat_message_request* Arena::CreateMaybeMessage<::ComeTogether::send_chat_message_request>(Arena*);
-template<> ::ComeTogether::send_chat_message_response* Arena::CreateMaybeMessage<::ComeTogether::send_chat_message_response>(Arena*);
-template<> ::ComeTogether::update_info_request* Arena::CreateMaybeMessage<::ComeTogether::update_info_request>(Arena*);
-template<> ::ComeTogether::update_info_response* Arena::CreateMaybeMessage<::ComeTogether::update_info_response>(Arena*);
-template<> ::ComeTogether::user_info* Arena::CreateMaybeMessage<::ComeTogether::user_info>(Arena*);
-template<> ::ComeTogether::verify_token_request* Arena::CreateMaybeMessage<::ComeTogether::verify_token_request>(Arena*);
-template<> ::ComeTogether::verify_token_response* Arena::CreateMaybeMessage<::ComeTogether::verify_token_response>(Arena*);
+template<> ::come_together_grpc::access_token* Arena::CreateMaybeMessage<::come_together_grpc::access_token>(Arena*);
+template<> ::come_together_grpc::add_marker_request* Arena::CreateMaybeMessage<::come_together_grpc::add_marker_request>(Arena*);
+template<> ::come_together_grpc::add_marker_response* Arena::CreateMaybeMessage<::come_together_grpc::add_marker_response>(Arena*);
+template<> ::come_together_grpc::ask_token_request* Arena::CreateMaybeMessage<::come_together_grpc::ask_token_request>(Arena*);
+template<> ::come_together_grpc::ask_token_response* Arena::CreateMaybeMessage<::come_together_grpc::ask_token_response>(Arena*);
+template<> ::come_together_grpc::chat_info* Arena::CreateMaybeMessage<::come_together_grpc::chat_info>(Arena*);
+template<> ::come_together_grpc::chat_message* Arena::CreateMaybeMessage<::come_together_grpc::chat_message>(Arena*);
+template<> ::come_together_grpc::check_request* Arena::CreateMaybeMessage<::come_together_grpc::check_request>(Arena*);
+template<> ::come_together_grpc::check_response* Arena::CreateMaybeMessage<::come_together_grpc::check_response>(Arena*);
+template<> ::come_together_grpc::delete_marker_reponse* Arena::CreateMaybeMessage<::come_together_grpc::delete_marker_reponse>(Arena*);
+template<> ::come_together_grpc::delete_marker_request* Arena::CreateMaybeMessage<::come_together_grpc::delete_marker_request>(Arena*);
+template<> ::come_together_grpc::event* Arena::CreateMaybeMessage<::come_together_grpc::event>(Arena*);
+template<> ::come_together_grpc::get_chat_messages_request* Arena::CreateMaybeMessage<::come_together_grpc::get_chat_messages_request>(Arena*);
+template<> ::come_together_grpc::get_images_request* Arena::CreateMaybeMessage<::come_together_grpc::get_images_request>(Arena*);
+template<> ::come_together_grpc::get_info_request* Arena::CreateMaybeMessage<::come_together_grpc::get_info_request>(Arena*);
+template<> ::come_together_grpc::get_info_response* Arena::CreateMaybeMessage<::come_together_grpc::get_info_response>(Arena*);
+template<> ::come_together_grpc::image* Arena::CreateMaybeMessage<::come_together_grpc::image>(Arena*);
+template<> ::come_together_grpc::login_request* Arena::CreateMaybeMessage<::come_together_grpc::login_request>(Arena*);
+template<> ::come_together_grpc::login_response* Arena::CreateMaybeMessage<::come_together_grpc::login_response>(Arena*);
+template<> ::come_together_grpc::manage_image_request* Arena::CreateMaybeMessage<::come_together_grpc::manage_image_request>(Arena*);
+template<> ::come_together_grpc::manage_image_response* Arena::CreateMaybeMessage<::come_together_grpc::manage_image_response>(Arena*);
+template<> ::come_together_grpc::marker_info* Arena::CreateMaybeMessage<::come_together_grpc::marker_info>(Arena*);
+template<> ::come_together_grpc::register_request* Arena::CreateMaybeMessage<::come_together_grpc::register_request>(Arena*);
+template<> ::come_together_grpc::register_response* Arena::CreateMaybeMessage<::come_together_grpc::register_response>(Arena*);
+template<> ::come_together_grpc::send_chat_message_request* Arena::CreateMaybeMessage<::come_together_grpc::send_chat_message_request>(Arena*);
+template<> ::come_together_grpc::send_chat_message_response* Arena::CreateMaybeMessage<::come_together_grpc::send_chat_message_response>(Arena*);
+template<> ::come_together_grpc::send_push_token_request* Arena::CreateMaybeMessage<::come_together_grpc::send_push_token_request>(Arena*);
+template<> ::come_together_grpc::send_push_token_response* Arena::CreateMaybeMessage<::come_together_grpc::send_push_token_response>(Arena*);
+template<> ::come_together_grpc::update_info_request* Arena::CreateMaybeMessage<::come_together_grpc::update_info_request>(Arena*);
+template<> ::come_together_grpc::update_info_response* Arena::CreateMaybeMessage<::come_together_grpc::update_info_response>(Arena*);
+template<> ::come_together_grpc::user_info* Arena::CreateMaybeMessage<::come_together_grpc::user_info>(Arena*);
+template<> ::come_together_grpc::verify_token_request* Arena::CreateMaybeMessage<::come_together_grpc::verify_token_request>(Arena*);
+template<> ::come_together_grpc::verify_token_response* Arena::CreateMaybeMessage<::come_together_grpc::verify_token_response>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace ComeTogether {
+namespace come_together_grpc {
 
+enum send_push_token_response_result : int {
+  send_push_token_response_result_NOT_SET = 0,
+  send_push_token_response_result_OK = 1,
+  send_push_token_response_result_USER_NOT_LOGGED_IN = 2,
+  send_push_token_response_result_OTHER = 3,
+  send_push_token_response_result_send_push_token_response_result_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  send_push_token_response_result_send_push_token_response_result_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool send_push_token_response_result_IsValid(int value);
+constexpr send_push_token_response_result send_push_token_response_result_result_MIN = send_push_token_response_result_NOT_SET;
+constexpr send_push_token_response_result send_push_token_response_result_result_MAX = send_push_token_response_result_OTHER;
+constexpr int send_push_token_response_result_result_ARRAYSIZE = send_push_token_response_result_result_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* send_push_token_response_result_descriptor();
+template<typename T>
+inline const std::string& send_push_token_response_result_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, send_push_token_response_result>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function send_push_token_response_result_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    send_push_token_response_result_descriptor(), enum_t_value);
+}
+inline bool send_push_token_response_result_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, send_push_token_response_result* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<send_push_token_response_result>(
+    send_push_token_response_result_descriptor(), name, value);
+}
+enum delete_marker_reponse_result : int {
+  delete_marker_reponse_result_NOT_SET = 0,
+  delete_marker_reponse_result_OK = 1,
+  delete_marker_reponse_result_INSUFFICIENT_PERMISIONS = 2,
+  delete_marker_reponse_result_MARKER_NOT_FOUND = 3,
+  delete_marker_reponse_result_OTHER = 999,
+  delete_marker_reponse_result_delete_marker_reponse_result_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  delete_marker_reponse_result_delete_marker_reponse_result_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool delete_marker_reponse_result_IsValid(int value);
+constexpr delete_marker_reponse_result delete_marker_reponse_result_result_MIN = delete_marker_reponse_result_NOT_SET;
+constexpr delete_marker_reponse_result delete_marker_reponse_result_result_MAX = delete_marker_reponse_result_OTHER;
+constexpr int delete_marker_reponse_result_result_ARRAYSIZE = delete_marker_reponse_result_result_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* delete_marker_reponse_result_descriptor();
+template<typename T>
+inline const std::string& delete_marker_reponse_result_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, delete_marker_reponse_result>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function delete_marker_reponse_result_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    delete_marker_reponse_result_descriptor(), enum_t_value);
+}
+inline bool delete_marker_reponse_result_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, delete_marker_reponse_result* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<delete_marker_reponse_result>(
+    delete_marker_reponse_result_descriptor(), name, value);
+}
 enum ask_token_response_result : int {
   ask_token_response_result_NOT_SET = 0,
   ask_token_response_result_OK = 1,
@@ -687,7 +758,7 @@ inline bool add_marker_response_result_Parse(
 // ===================================================================
 
 class image PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.image) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.image) */ {
  public:
   inline image() : image(nullptr) {}
   virtual ~image();
@@ -776,7 +847,7 @@ class image PROTOBUF_FINAL :
   void InternalSwap(image* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.image";
+    return "come_together_grpc.image";
   }
   protected:
   explicit image(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -844,7 +915,7 @@ class image PROTOBUF_FINAL :
   void _internal_set_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.image)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.image)
  private:
   class _Internal;
 
@@ -860,7 +931,7 @@ class image PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class access_token PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.access_token) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.access_token) */ {
  public:
   inline access_token() : access_token(nullptr) {}
   virtual ~access_token();
@@ -949,7 +1020,7 @@ class access_token PROTOBUF_FINAL :
   void InternalSwap(access_token* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.access_token";
+    return "come_together_grpc.access_token";
   }
   protected:
   explicit access_token(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -990,7 +1061,7 @@ class access_token PROTOBUF_FINAL :
   std::string* _internal_mutable_token();
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.access_token)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.access_token)
  private:
   class _Internal;
 
@@ -1003,8 +1074,676 @@ class access_token PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class send_push_token_request PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.send_push_token_request) */ {
+ public:
+  inline send_push_token_request() : send_push_token_request(nullptr) {}
+  virtual ~send_push_token_request();
+
+  send_push_token_request(const send_push_token_request& from);
+  send_push_token_request(send_push_token_request&& from) noexcept
+    : send_push_token_request() {
+    *this = ::std::move(from);
+  }
+
+  inline send_push_token_request& operator=(const send_push_token_request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline send_push_token_request& operator=(send_push_token_request&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const send_push_token_request& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const send_push_token_request* internal_default_instance() {
+    return reinterpret_cast<const send_push_token_request*>(
+               &_send_push_token_request_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(send_push_token_request& a, send_push_token_request& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(send_push_token_request* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(send_push_token_request* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline send_push_token_request* New() const final {
+    return CreateMaybeMessage<send_push_token_request>(nullptr);
+  }
+
+  send_push_token_request* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<send_push_token_request>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const send_push_token_request& from);
+  void MergeFrom(const send_push_token_request& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(send_push_token_request* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.send_push_token_request";
+  }
+  protected:
+  explicit send_push_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAccessTokenFieldNumber = 1,
+    kPushTokenFieldNumber = 2,
+  };
+  // string access_token = 1;
+  void clear_access_token();
+  const std::string& access_token() const;
+  void set_access_token(const std::string& value);
+  void set_access_token(std::string&& value);
+  void set_access_token(const char* value);
+  void set_access_token(const char* value, size_t size);
+  std::string* mutable_access_token();
+  std::string* release_access_token();
+  void set_allocated_access_token(std::string* access_token);
+  private:
+  const std::string& _internal_access_token() const;
+  void _internal_set_access_token(const std::string& value);
+  std::string* _internal_mutable_access_token();
+  public:
+
+  // string push_token = 2;
+  void clear_push_token();
+  const std::string& push_token() const;
+  void set_push_token(const std::string& value);
+  void set_push_token(std::string&& value);
+  void set_push_token(const char* value);
+  void set_push_token(const char* value, size_t size);
+  std::string* mutable_push_token();
+  std::string* release_push_token();
+  void set_allocated_push_token(std::string* push_token);
+  private:
+  const std::string& _internal_push_token() const;
+  void _internal_set_push_token(const std::string& value);
+  std::string* _internal_mutable_push_token();
+  public:
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.send_push_token_request)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr push_token_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
+class send_push_token_response PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.send_push_token_response) */ {
+ public:
+  inline send_push_token_response() : send_push_token_response(nullptr) {}
+  virtual ~send_push_token_response();
+
+  send_push_token_response(const send_push_token_response& from);
+  send_push_token_response(send_push_token_response&& from) noexcept
+    : send_push_token_response() {
+    *this = ::std::move(from);
+  }
+
+  inline send_push_token_response& operator=(const send_push_token_response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline send_push_token_response& operator=(send_push_token_response&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const send_push_token_response& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const send_push_token_response* internal_default_instance() {
+    return reinterpret_cast<const send_push_token_response*>(
+               &_send_push_token_response_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(send_push_token_response& a, send_push_token_response& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(send_push_token_response* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(send_push_token_response* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline send_push_token_response* New() const final {
+    return CreateMaybeMessage<send_push_token_response>(nullptr);
+  }
+
+  send_push_token_response* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<send_push_token_response>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const send_push_token_response& from);
+  void MergeFrom(const send_push_token_response& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(send_push_token_response* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.send_push_token_response";
+  }
+  protected:
+  explicit send_push_token_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef send_push_token_response_result result;
+  static constexpr result NOT_SET =
+    send_push_token_response_result_NOT_SET;
+  static constexpr result OK =
+    send_push_token_response_result_OK;
+  static constexpr result USER_NOT_LOGGED_IN =
+    send_push_token_response_result_USER_NOT_LOGGED_IN;
+  static constexpr result OTHER =
+    send_push_token_response_result_OTHER;
+  static inline bool result_IsValid(int value) {
+    return send_push_token_response_result_IsValid(value);
+  }
+  static constexpr result result_MIN =
+    send_push_token_response_result_result_MIN;
+  static constexpr result result_MAX =
+    send_push_token_response_result_result_MAX;
+  static constexpr int result_ARRAYSIZE =
+    send_push_token_response_result_result_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  result_descriptor() {
+    return send_push_token_response_result_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& result_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, result>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function result_Name.");
+    return send_push_token_response_result_Name(enum_t_value);
+  }
+  static inline bool result_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      result* value) {
+    return send_push_token_response_result_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResFieldNumber = 1,
+  };
+  // .come_together_grpc.send_push_token_response.result res = 1;
+  void clear_res();
+  ::come_together_grpc::send_push_token_response_result res() const;
+  void set_res(::come_together_grpc::send_push_token_response_result value);
+  private:
+  ::come_together_grpc::send_push_token_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::send_push_token_response_result value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.send_push_token_response)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int res_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
+class delete_marker_request PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.delete_marker_request) */ {
+ public:
+  inline delete_marker_request() : delete_marker_request(nullptr) {}
+  virtual ~delete_marker_request();
+
+  delete_marker_request(const delete_marker_request& from);
+  delete_marker_request(delete_marker_request&& from) noexcept
+    : delete_marker_request() {
+    *this = ::std::move(from);
+  }
+
+  inline delete_marker_request& operator=(const delete_marker_request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline delete_marker_request& operator=(delete_marker_request&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const delete_marker_request& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const delete_marker_request* internal_default_instance() {
+    return reinterpret_cast<const delete_marker_request*>(
+               &_delete_marker_request_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(delete_marker_request& a, delete_marker_request& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(delete_marker_request* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(delete_marker_request* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline delete_marker_request* New() const final {
+    return CreateMaybeMessage<delete_marker_request>(nullptr);
+  }
+
+  delete_marker_request* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<delete_marker_request>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const delete_marker_request& from);
+  void MergeFrom(const delete_marker_request& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(delete_marker_request* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.delete_marker_request";
+  }
+  protected:
+  explicit delete_marker_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAccessTokenFieldNumber = 1,
+    kMarkerUuidFieldNumber = 2,
+  };
+  // string access_token = 1;
+  void clear_access_token();
+  const std::string& access_token() const;
+  void set_access_token(const std::string& value);
+  void set_access_token(std::string&& value);
+  void set_access_token(const char* value);
+  void set_access_token(const char* value, size_t size);
+  std::string* mutable_access_token();
+  std::string* release_access_token();
+  void set_allocated_access_token(std::string* access_token);
+  private:
+  const std::string& _internal_access_token() const;
+  void _internal_set_access_token(const std::string& value);
+  std::string* _internal_mutable_access_token();
+  public:
+
+  // string marker_uuid = 2;
+  void clear_marker_uuid();
+  const std::string& marker_uuid() const;
+  void set_marker_uuid(const std::string& value);
+  void set_marker_uuid(std::string&& value);
+  void set_marker_uuid(const char* value);
+  void set_marker_uuid(const char* value, size_t size);
+  std::string* mutable_marker_uuid();
+  std::string* release_marker_uuid();
+  void set_allocated_marker_uuid(std::string* marker_uuid);
+  private:
+  const std::string& _internal_marker_uuid() const;
+  void _internal_set_marker_uuid(const std::string& value);
+  std::string* _internal_mutable_marker_uuid();
+  public:
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.delete_marker_request)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr marker_uuid_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
+class delete_marker_reponse PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.delete_marker_reponse) */ {
+ public:
+  inline delete_marker_reponse() : delete_marker_reponse(nullptr) {}
+  virtual ~delete_marker_reponse();
+
+  delete_marker_reponse(const delete_marker_reponse& from);
+  delete_marker_reponse(delete_marker_reponse&& from) noexcept
+    : delete_marker_reponse() {
+    *this = ::std::move(from);
+  }
+
+  inline delete_marker_reponse& operator=(const delete_marker_reponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline delete_marker_reponse& operator=(delete_marker_reponse&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const delete_marker_reponse& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const delete_marker_reponse* internal_default_instance() {
+    return reinterpret_cast<const delete_marker_reponse*>(
+               &_delete_marker_reponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(delete_marker_reponse& a, delete_marker_reponse& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(delete_marker_reponse* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(delete_marker_reponse* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline delete_marker_reponse* New() const final {
+    return CreateMaybeMessage<delete_marker_reponse>(nullptr);
+  }
+
+  delete_marker_reponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<delete_marker_reponse>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const delete_marker_reponse& from);
+  void MergeFrom(const delete_marker_reponse& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(delete_marker_reponse* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.delete_marker_reponse";
+  }
+  protected:
+  explicit delete_marker_reponse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef delete_marker_reponse_result result;
+  static constexpr result NOT_SET =
+    delete_marker_reponse_result_NOT_SET;
+  static constexpr result OK =
+    delete_marker_reponse_result_OK;
+  static constexpr result INSUFFICIENT_PERMISIONS =
+    delete_marker_reponse_result_INSUFFICIENT_PERMISIONS;
+  static constexpr result MARKER_NOT_FOUND =
+    delete_marker_reponse_result_MARKER_NOT_FOUND;
+  static constexpr result OTHER =
+    delete_marker_reponse_result_OTHER;
+  static inline bool result_IsValid(int value) {
+    return delete_marker_reponse_result_IsValid(value);
+  }
+  static constexpr result result_MIN =
+    delete_marker_reponse_result_result_MIN;
+  static constexpr result result_MAX =
+    delete_marker_reponse_result_result_MAX;
+  static constexpr int result_ARRAYSIZE =
+    delete_marker_reponse_result_result_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  result_descriptor() {
+    return delete_marker_reponse_result_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& result_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, result>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function result_Name.");
+    return delete_marker_reponse_result_Name(enum_t_value);
+  }
+  static inline bool result_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      result* value) {
+    return delete_marker_reponse_result_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResFieldNumber = 1,
+  };
+  // .come_together_grpc.delete_marker_reponse.result res = 1;
+  void clear_res();
+  ::come_together_grpc::delete_marker_reponse_result res() const;
+  void set_res(::come_together_grpc::delete_marker_reponse_result value);
+  private:
+  ::come_together_grpc::delete_marker_reponse_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::delete_marker_reponse_result value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.delete_marker_reponse)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int res_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
 class ask_token_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.ask_token_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.ask_token_request) */ {
  public:
   inline ask_token_request() : ask_token_request(nullptr) {}
   virtual ~ask_token_request();
@@ -1045,7 +1784,7 @@ class ask_token_request PROTOBUF_FINAL :
                &_ask_token_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    6;
 
   friend void swap(ask_token_request& a, ask_token_request& b) {
     a.Swap(&b);
@@ -1093,7 +1832,7 @@ class ask_token_request PROTOBUF_FINAL :
   void InternalSwap(ask_token_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.ask_token_request";
+    return "come_together_grpc.ask_token_request";
   }
   protected:
   explicit ask_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1134,7 +1873,7 @@ class ask_token_request PROTOBUF_FINAL :
   std::string* _internal_mutable_email();
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.ask_token_request)
  private:
   class _Internal;
 
@@ -1148,7 +1887,7 @@ class ask_token_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class ask_token_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.ask_token_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.ask_token_response) */ {
  public:
   inline ask_token_response() : ask_token_response(nullptr) {}
   virtual ~ask_token_response();
@@ -1189,7 +1928,7 @@ class ask_token_response PROTOBUF_FINAL :
                &_ask_token_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    7;
 
   friend void swap(ask_token_response& a, ask_token_response& b) {
     a.Swap(&b);
@@ -1237,7 +1976,7 @@ class ask_token_response PROTOBUF_FINAL :
   void InternalSwap(ask_token_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.ask_token_response";
+    return "come_together_grpc.ask_token_response";
   }
   protected:
   explicit ask_token_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1296,16 +2035,16 @@ class ask_token_response PROTOBUF_FINAL :
   enum : int {
     kResFieldNumber = 1,
   };
-  // .ComeTogether.ask_token_response.result res = 1;
+  // .come_together_grpc.ask_token_response.result res = 1;
   void clear_res();
-  ::ComeTogether::ask_token_response_result res() const;
-  void set_res(::ComeTogether::ask_token_response_result value);
+  ::come_together_grpc::ask_token_response_result res() const;
+  void set_res(::come_together_grpc::ask_token_response_result value);
   private:
-  ::ComeTogether::ask_token_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::ask_token_response_result value);
+  ::come_together_grpc::ask_token_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::ask_token_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.ask_token_response)
  private:
   class _Internal;
 
@@ -1319,7 +2058,7 @@ class ask_token_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class verify_token_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.verify_token_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.verify_token_request) */ {
  public:
   inline verify_token_request() : verify_token_request(nullptr) {}
   virtual ~verify_token_request();
@@ -1360,7 +2099,7 @@ class verify_token_request PROTOBUF_FINAL :
                &_verify_token_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    8;
 
   friend void swap(verify_token_request& a, verify_token_request& b) {
     a.Swap(&b);
@@ -1408,7 +2147,7 @@ class verify_token_request PROTOBUF_FINAL :
   void InternalSwap(verify_token_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.verify_token_request";
+    return "come_together_grpc.verify_token_request";
   }
   protected:
   explicit verify_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1466,7 +2205,7 @@ class verify_token_request PROTOBUF_FINAL :
   std::string* _internal_mutable_token();
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.verify_token_request)
  private:
   class _Internal;
 
@@ -1481,7 +2220,7 @@ class verify_token_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class verify_token_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.verify_token_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.verify_token_response) */ {
  public:
   inline verify_token_response() : verify_token_response(nullptr) {}
   virtual ~verify_token_response();
@@ -1522,7 +2261,7 @@ class verify_token_response PROTOBUF_FINAL :
                &_verify_token_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    9;
 
   friend void swap(verify_token_response& a, verify_token_response& b) {
     a.Swap(&b);
@@ -1570,7 +2309,7 @@ class verify_token_response PROTOBUF_FINAL :
   void InternalSwap(verify_token_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.verify_token_response";
+    return "come_together_grpc.verify_token_response";
   }
   protected:
   explicit verify_token_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1631,16 +2370,16 @@ class verify_token_response PROTOBUF_FINAL :
   enum : int {
     kResFieldNumber = 1,
   };
-  // .ComeTogether.verify_token_response.result res = 1;
+  // .come_together_grpc.verify_token_response.result res = 1;
   void clear_res();
-  ::ComeTogether::verify_token_response_result res() const;
-  void set_res(::ComeTogether::verify_token_response_result value);
+  ::come_together_grpc::verify_token_response_result res() const;
+  void set_res(::come_together_grpc::verify_token_response_result value);
   private:
-  ::ComeTogether::verify_token_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::verify_token_response_result value);
+  ::come_together_grpc::verify_token_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::verify_token_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.verify_token_response)
  private:
   class _Internal;
 
@@ -1654,7 +2393,7 @@ class verify_token_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class update_info_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.update_info_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.update_info_request) */ {
  public:
   inline update_info_request() : update_info_request(nullptr) {}
   virtual ~update_info_request();
@@ -1701,7 +2440,7 @@ class update_info_request PROTOBUF_FINAL :
                &_update_info_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    10;
 
   friend void swap(update_info_request& a, update_info_request& b) {
     a.Swap(&b);
@@ -1749,7 +2488,7 @@ class update_info_request PROTOBUF_FINAL :
   void InternalSwap(update_info_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.update_info_request";
+    return "come_together_grpc.update_info_request";
   }
   protected:
   explicit update_info_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1825,54 +2564,54 @@ class update_info_request PROTOBUF_FINAL :
   std::string* _internal_mutable_access_token();
   public:
 
-  // .ComeTogether.update_info_request.update_type type = 2;
+  // .come_together_grpc.update_info_request.update_type type = 2;
   void clear_type();
-  ::ComeTogether::update_info_request_update_type type() const;
-  void set_type(::ComeTogether::update_info_request_update_type value);
+  ::come_together_grpc::update_info_request_update_type type() const;
+  void set_type(::come_together_grpc::update_info_request_update_type value);
   private:
-  ::ComeTogether::update_info_request_update_type _internal_type() const;
-  void _internal_set_type(::ComeTogether::update_info_request_update_type value);
+  ::come_together_grpc::update_info_request_update_type _internal_type() const;
+  void _internal_set_type(::come_together_grpc::update_info_request_update_type value);
   public:
 
-  // .ComeTogether.marker_info m_info = 3;
+  // .come_together_grpc.marker_info m_info = 3;
   bool has_m_info() const;
   private:
   bool _internal_has_m_info() const;
   public:
   void clear_m_info();
-  const ::ComeTogether::marker_info& m_info() const;
-  ::ComeTogether::marker_info* release_m_info();
-  ::ComeTogether::marker_info* mutable_m_info();
-  void set_allocated_m_info(::ComeTogether::marker_info* m_info);
+  const ::come_together_grpc::marker_info& m_info() const;
+  ::come_together_grpc::marker_info* release_m_info();
+  ::come_together_grpc::marker_info* mutable_m_info();
+  void set_allocated_m_info(::come_together_grpc::marker_info* m_info);
   private:
-  const ::ComeTogether::marker_info& _internal_m_info() const;
-  ::ComeTogether::marker_info* _internal_mutable_m_info();
+  const ::come_together_grpc::marker_info& _internal_m_info() const;
+  ::come_together_grpc::marker_info* _internal_mutable_m_info();
   public:
   void unsafe_arena_set_allocated_m_info(
-      ::ComeTogether::marker_info* m_info);
-  ::ComeTogether::marker_info* unsafe_arena_release_m_info();
+      ::come_together_grpc::marker_info* m_info);
+  ::come_together_grpc::marker_info* unsafe_arena_release_m_info();
 
-  // .ComeTogether.user_info u_info = 4;
+  // .come_together_grpc.user_info u_info = 4;
   bool has_u_info() const;
   private:
   bool _internal_has_u_info() const;
   public:
   void clear_u_info();
-  const ::ComeTogether::user_info& u_info() const;
-  ::ComeTogether::user_info* release_u_info();
-  ::ComeTogether::user_info* mutable_u_info();
-  void set_allocated_u_info(::ComeTogether::user_info* u_info);
+  const ::come_together_grpc::user_info& u_info() const;
+  ::come_together_grpc::user_info* release_u_info();
+  ::come_together_grpc::user_info* mutable_u_info();
+  void set_allocated_u_info(::come_together_grpc::user_info* u_info);
   private:
-  const ::ComeTogether::user_info& _internal_u_info() const;
-  ::ComeTogether::user_info* _internal_mutable_u_info();
+  const ::come_together_grpc::user_info& _internal_u_info() const;
+  ::come_together_grpc::user_info* _internal_mutable_u_info();
   public:
   void unsafe_arena_set_allocated_u_info(
-      ::ComeTogether::user_info* u_info);
-  ::ComeTogether::user_info* unsafe_arena_release_u_info();
+      ::come_together_grpc::user_info* u_info);
+  ::come_together_grpc::user_info* unsafe_arena_release_u_info();
 
   void clear_data();
   DataCase data_case() const;
-  // @@protoc_insertion_point(class_scope:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.update_info_request)
  private:
   class _Internal;
   void set_has_m_info();
@@ -1888,8 +2627,8 @@ class update_info_request PROTOBUF_FINAL :
   int type_;
   union DataUnion {
     DataUnion() {}
-    ::ComeTogether::marker_info* m_info_;
-    ::ComeTogether::user_info* u_info_;
+    ::come_together_grpc::marker_info* m_info_;
+    ::come_together_grpc::user_info* u_info_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -1899,7 +2638,7 @@ class update_info_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class update_info_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.update_info_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.update_info_response) */ {
  public:
   inline update_info_response() : update_info_response(nullptr) {}
   virtual ~update_info_response();
@@ -1940,7 +2679,7 @@ class update_info_response PROTOBUF_FINAL :
                &_update_info_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    11;
 
   friend void swap(update_info_response& a, update_info_response& b) {
     a.Swap(&b);
@@ -1988,7 +2727,7 @@ class update_info_response PROTOBUF_FINAL :
   void InternalSwap(update_info_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.update_info_response";
+    return "come_together_grpc.update_info_response";
   }
   protected:
   explicit update_info_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2047,16 +2786,16 @@ class update_info_response PROTOBUF_FINAL :
   enum : int {
     kResFieldNumber = 1,
   };
-  // .ComeTogether.update_info_response.result res = 1;
+  // .come_together_grpc.update_info_response.result res = 1;
   void clear_res();
-  ::ComeTogether::update_info_response_result res() const;
-  void set_res(::ComeTogether::update_info_response_result value);
+  ::come_together_grpc::update_info_response_result res() const;
+  void set_res(::come_together_grpc::update_info_response_result value);
   private:
-  ::ComeTogether::update_info_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::update_info_response_result value);
+  ::come_together_grpc::update_info_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::update_info_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.update_info_response)
  private:
   class _Internal;
 
@@ -2070,7 +2809,7 @@ class update_info_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class event PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.event) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.event) */ {
  public:
   inline event() : event(nullptr) {}
   virtual ~event();
@@ -2118,7 +2857,7 @@ class event PROTOBUF_FINAL :
                &_event_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    12;
 
   friend void swap(event& a, event& b) {
     a.Swap(&b);
@@ -2166,7 +2905,7 @@ class event PROTOBUF_FINAL :
   void InternalSwap(event* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.event";
+    return "come_together_grpc.event";
   }
   protected:
   explicit event(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2238,72 +2977,72 @@ class event PROTOBUF_FINAL :
     kCMessageFieldNumber = 3,
     kUInfoFieldNumber = 4,
   };
-  // .ComeTogether.event.type event_type = 1;
+  // .come_together_grpc.event.type event_type = 1;
   void clear_event_type();
-  ::ComeTogether::event_type event_type() const;
-  void set_event_type(::ComeTogether::event_type value);
+  ::come_together_grpc::event_type event_type() const;
+  void set_event_type(::come_together_grpc::event_type value);
   private:
-  ::ComeTogether::event_type _internal_event_type() const;
-  void _internal_set_event_type(::ComeTogether::event_type value);
+  ::come_together_grpc::event_type _internal_event_type() const;
+  void _internal_set_event_type(::come_together_grpc::event_type value);
   public:
 
-  // .ComeTogether.marker_info m_info = 2;
+  // .come_together_grpc.marker_info m_info = 2;
   bool has_m_info() const;
   private:
   bool _internal_has_m_info() const;
   public:
   void clear_m_info();
-  const ::ComeTogether::marker_info& m_info() const;
-  ::ComeTogether::marker_info* release_m_info();
-  ::ComeTogether::marker_info* mutable_m_info();
-  void set_allocated_m_info(::ComeTogether::marker_info* m_info);
+  const ::come_together_grpc::marker_info& m_info() const;
+  ::come_together_grpc::marker_info* release_m_info();
+  ::come_together_grpc::marker_info* mutable_m_info();
+  void set_allocated_m_info(::come_together_grpc::marker_info* m_info);
   private:
-  const ::ComeTogether::marker_info& _internal_m_info() const;
-  ::ComeTogether::marker_info* _internal_mutable_m_info();
+  const ::come_together_grpc::marker_info& _internal_m_info() const;
+  ::come_together_grpc::marker_info* _internal_mutable_m_info();
   public:
   void unsafe_arena_set_allocated_m_info(
-      ::ComeTogether::marker_info* m_info);
-  ::ComeTogether::marker_info* unsafe_arena_release_m_info();
+      ::come_together_grpc::marker_info* m_info);
+  ::come_together_grpc::marker_info* unsafe_arena_release_m_info();
 
-  // .ComeTogether.chat_message c_message = 3;
+  // .come_together_grpc.chat_message c_message = 3;
   bool has_c_message() const;
   private:
   bool _internal_has_c_message() const;
   public:
   void clear_c_message();
-  const ::ComeTogether::chat_message& c_message() const;
-  ::ComeTogether::chat_message* release_c_message();
-  ::ComeTogether::chat_message* mutable_c_message();
-  void set_allocated_c_message(::ComeTogether::chat_message* c_message);
+  const ::come_together_grpc::chat_message& c_message() const;
+  ::come_together_grpc::chat_message* release_c_message();
+  ::come_together_grpc::chat_message* mutable_c_message();
+  void set_allocated_c_message(::come_together_grpc::chat_message* c_message);
   private:
-  const ::ComeTogether::chat_message& _internal_c_message() const;
-  ::ComeTogether::chat_message* _internal_mutable_c_message();
+  const ::come_together_grpc::chat_message& _internal_c_message() const;
+  ::come_together_grpc::chat_message* _internal_mutable_c_message();
   public:
   void unsafe_arena_set_allocated_c_message(
-      ::ComeTogether::chat_message* c_message);
-  ::ComeTogether::chat_message* unsafe_arena_release_c_message();
+      ::come_together_grpc::chat_message* c_message);
+  ::come_together_grpc::chat_message* unsafe_arena_release_c_message();
 
-  // .ComeTogether.user_info u_info = 4;
+  // .come_together_grpc.user_info u_info = 4;
   bool has_u_info() const;
   private:
   bool _internal_has_u_info() const;
   public:
   void clear_u_info();
-  const ::ComeTogether::user_info& u_info() const;
-  ::ComeTogether::user_info* release_u_info();
-  ::ComeTogether::user_info* mutable_u_info();
-  void set_allocated_u_info(::ComeTogether::user_info* u_info);
+  const ::come_together_grpc::user_info& u_info() const;
+  ::come_together_grpc::user_info* release_u_info();
+  ::come_together_grpc::user_info* mutable_u_info();
+  void set_allocated_u_info(::come_together_grpc::user_info* u_info);
   private:
-  const ::ComeTogether::user_info& _internal_u_info() const;
-  ::ComeTogether::user_info* _internal_mutable_u_info();
+  const ::come_together_grpc::user_info& _internal_u_info() const;
+  ::come_together_grpc::user_info* _internal_mutable_u_info();
   public:
   void unsafe_arena_set_allocated_u_info(
-      ::ComeTogether::user_info* u_info);
-  ::ComeTogether::user_info* unsafe_arena_release_u_info();
+      ::come_together_grpc::user_info* u_info);
+  ::come_together_grpc::user_info* unsafe_arena_release_u_info();
 
   void clear_data();
   DataCase data_case() const;
-  // @@protoc_insertion_point(class_scope:ComeTogether.event)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.event)
  private:
   class _Internal;
   void set_has_m_info();
@@ -2319,9 +3058,9 @@ class event PROTOBUF_FINAL :
   int event_type_;
   union DataUnion {
     DataUnion() {}
-    ::ComeTogether::marker_info* m_info_;
-    ::ComeTogether::chat_message* c_message_;
-    ::ComeTogether::user_info* u_info_;
+    ::come_together_grpc::marker_info* m_info_;
+    ::come_together_grpc::chat_message* c_message_;
+    ::come_together_grpc::user_info* u_info_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -2331,7 +3070,7 @@ class event PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class chat_info PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.chat_info) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.chat_info) */ {
  public:
   inline chat_info() : chat_info(nullptr) {}
   virtual ~chat_info();
@@ -2372,7 +3111,7 @@ class chat_info PROTOBUF_FINAL :
                &_chat_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    13;
 
   friend void swap(chat_info& a, chat_info& b) {
     a.Swap(&b);
@@ -2420,7 +3159,7 @@ class chat_info PROTOBUF_FINAL :
   void InternalSwap(chat_info* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.chat_info";
+    return "come_together_grpc.chat_info";
   }
   protected:
   explicit chat_info(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2520,7 +3259,7 @@ class chat_info PROTOBUF_FINAL :
   std::string* _internal_mutable_last_visible_message();
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.chat_info)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.chat_info)
  private:
   class _Internal;
 
@@ -2537,7 +3276,7 @@ class chat_info PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class get_chat_messages_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.get_chat_messages_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.get_chat_messages_request) */ {
  public:
   inline get_chat_messages_request() : get_chat_messages_request(nullptr) {}
   virtual ~get_chat_messages_request();
@@ -2578,7 +3317,7 @@ class get_chat_messages_request PROTOBUF_FINAL :
                &_get_chat_messages_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    14;
 
   friend void swap(get_chat_messages_request& a, get_chat_messages_request& b) {
     a.Swap(&b);
@@ -2626,7 +3365,7 @@ class get_chat_messages_request PROTOBUF_FINAL :
   void InternalSwap(get_chat_messages_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.get_chat_messages_request";
+    return "come_together_grpc.get_chat_messages_request";
   }
   protected:
   explicit get_chat_messages_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2721,7 +3460,7 @@ class get_chat_messages_request PROTOBUF_FINAL :
   void _internal_set_page_number(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.get_chat_messages_request)
  private:
   class _Internal;
 
@@ -2739,7 +3478,7 @@ class get_chat_messages_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class chat_message PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.chat_message) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.chat_message) */ {
  public:
   inline chat_message() : chat_message(nullptr) {}
   virtual ~chat_message();
@@ -2785,7 +3524,7 @@ class chat_message PROTOBUF_FINAL :
                &_chat_message_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    15;
 
   friend void swap(chat_message& a, chat_message& b) {
     a.Swap(&b);
@@ -2833,7 +3572,7 @@ class chat_message PROTOBUF_FINAL :
   void InternalSwap(chat_message* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.chat_message";
+    return "come_together_grpc.chat_message";
   }
   protected:
   explicit chat_message(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2960,13 +3699,13 @@ class chat_message PROTOBUF_FINAL :
   void _internal_set_sequence_number(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // .ComeTogether.chat_message.message_content content_type = 1;
+  // .come_together_grpc.chat_message.message_content content_type = 1;
   void clear_content_type();
-  ::ComeTogether::chat_message_message_content content_type() const;
-  void set_content_type(::ComeTogether::chat_message_message_content value);
+  ::come_together_grpc::chat_message_message_content content_type() const;
+  void set_content_type(::come_together_grpc::chat_message_message_content value);
   private:
-  ::ComeTogether::chat_message_message_content _internal_content_type() const;
-  void _internal_set_content_type(::ComeTogether::chat_message_message_content value);
+  ::come_together_grpc::chat_message_message_content _internal_content_type() const;
+  void _internal_set_content_type(::come_together_grpc::chat_message_message_content value);
   public:
 
   // string text = 3;
@@ -2990,7 +3729,7 @@ class chat_message PROTOBUF_FINAL :
 
   void clear_content();
   ContentCase content_case() const;
-  // @@protoc_insertion_point(class_scope:ComeTogether.chat_message)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.chat_message)
  private:
   class _Internal;
   void set_has_text();
@@ -3019,7 +3758,7 @@ class chat_message PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class send_chat_message_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.send_chat_message_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.send_chat_message_request) */ {
  public:
   inline send_chat_message_request() : send_chat_message_request(nullptr) {}
   virtual ~send_chat_message_request();
@@ -3060,7 +3799,7 @@ class send_chat_message_request PROTOBUF_FINAL :
                &_send_chat_message_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    16;
 
   friend void swap(send_chat_message_request& a, send_chat_message_request& b) {
     a.Swap(&b);
@@ -3108,7 +3847,7 @@ class send_chat_message_request PROTOBUF_FINAL :
   void InternalSwap(send_chat_message_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.send_chat_message_request";
+    return "come_together_grpc.send_chat_message_request";
   }
   protected:
   explicit send_chat_message_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -3150,25 +3889,25 @@ class send_chat_message_request PROTOBUF_FINAL :
   std::string* _internal_mutable_access_token();
   public:
 
-  // .ComeTogether.chat_message message = 2;
+  // .come_together_grpc.chat_message message = 2;
   bool has_message() const;
   private:
   bool _internal_has_message() const;
   public:
   void clear_message();
-  const ::ComeTogether::chat_message& message() const;
-  ::ComeTogether::chat_message* release_message();
-  ::ComeTogether::chat_message* mutable_message();
-  void set_allocated_message(::ComeTogether::chat_message* message);
+  const ::come_together_grpc::chat_message& message() const;
+  ::come_together_grpc::chat_message* release_message();
+  ::come_together_grpc::chat_message* mutable_message();
+  void set_allocated_message(::come_together_grpc::chat_message* message);
   private:
-  const ::ComeTogether::chat_message& _internal_message() const;
-  ::ComeTogether::chat_message* _internal_mutable_message();
+  const ::come_together_grpc::chat_message& _internal_message() const;
+  ::come_together_grpc::chat_message* _internal_mutable_message();
   public:
   void unsafe_arena_set_allocated_message(
-      ::ComeTogether::chat_message* message);
-  ::ComeTogether::chat_message* unsafe_arena_release_message();
+      ::come_together_grpc::chat_message* message);
+  ::come_together_grpc::chat_message* unsafe_arena_release_message();
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.send_chat_message_request)
  private:
   class _Internal;
 
@@ -3176,14 +3915,14 @@ class send_chat_message_request PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
-  ::ComeTogether::chat_message* message_;
+  ::come_together_grpc::chat_message* message_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
 // -------------------------------------------------------------------
 
 class send_chat_message_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.send_chat_message_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.send_chat_message_response) */ {
  public:
   inline send_chat_message_response() : send_chat_message_response(nullptr) {}
   virtual ~send_chat_message_response();
@@ -3224,7 +3963,7 @@ class send_chat_message_response PROTOBUF_FINAL :
                &_send_chat_message_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    17;
 
   friend void swap(send_chat_message_response& a, send_chat_message_response& b) {
     a.Swap(&b);
@@ -3272,7 +4011,7 @@ class send_chat_message_response PROTOBUF_FINAL :
   void InternalSwap(send_chat_message_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.send_chat_message_response";
+    return "come_together_grpc.send_chat_message_response";
   }
   protected:
   explicit send_chat_message_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -3362,16 +4101,16 @@ class send_chat_message_response PROTOBUF_FINAL :
   void _internal_set_actual_sequence_number(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // .ComeTogether.send_chat_message_response.result res = 1;
+  // .come_together_grpc.send_chat_message_response.result res = 1;
   void clear_res();
-  ::ComeTogether::send_chat_message_response_result res() const;
-  void set_res(::ComeTogether::send_chat_message_response_result value);
+  ::come_together_grpc::send_chat_message_response_result res() const;
+  void set_res(::come_together_grpc::send_chat_message_response_result value);
   private:
-  ::ComeTogether::send_chat_message_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::send_chat_message_response_result value);
+  ::come_together_grpc::send_chat_message_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::send_chat_message_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.send_chat_message_response)
  private:
   class _Internal;
 
@@ -3387,7 +4126,7 @@ class send_chat_message_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class get_info_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.get_info_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.get_info_request) */ {
  public:
   inline get_info_request() : get_info_request(nullptr) {}
   virtual ~get_info_request();
@@ -3428,7 +4167,7 @@ class get_info_request PROTOBUF_FINAL :
                &_get_info_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    18;
 
   friend void swap(get_info_request& a, get_info_request& b) {
     a.Swap(&b);
@@ -3476,7 +4215,7 @@ class get_info_request PROTOBUF_FINAL :
   void InternalSwap(get_info_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.get_info_request";
+    return "come_together_grpc.get_info_request";
   }
   protected:
   explicit get_info_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -3569,16 +4308,16 @@ class get_info_request PROTOBUF_FINAL :
   std::string* _internal_mutable_target_uuid();
   public:
 
-  // .ComeTogether.get_info_request.type info_type = 1;
+  // .come_together_grpc.get_info_request.type info_type = 1;
   void clear_info_type();
-  ::ComeTogether::get_info_request_type info_type() const;
-  void set_info_type(::ComeTogether::get_info_request_type value);
+  ::come_together_grpc::get_info_request_type info_type() const;
+  void set_info_type(::come_together_grpc::get_info_request_type value);
   private:
-  ::ComeTogether::get_info_request_type _internal_info_type() const;
-  void _internal_set_info_type(::ComeTogether::get_info_request_type value);
+  ::come_together_grpc::get_info_request_type _internal_info_type() const;
+  void _internal_set_info_type(::come_together_grpc::get_info_request_type value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.get_info_request)
  private:
   class _Internal;
 
@@ -3594,7 +4333,7 @@ class get_info_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class get_info_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.get_info_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.get_info_response) */ {
  public:
   inline get_info_response() : get_info_response(nullptr) {}
   virtual ~get_info_response();
@@ -3642,7 +4381,7 @@ class get_info_response PROTOBUF_FINAL :
                &_get_info_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    19;
 
   friend void swap(get_info_response& a, get_info_response& b) {
     a.Swap(&b);
@@ -3690,7 +4429,7 @@ class get_info_response PROTOBUF_FINAL :
   void InternalSwap(get_info_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.get_info_response";
+    return "come_together_grpc.get_info_response";
   }
   protected:
   explicit get_info_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -3717,63 +4456,63 @@ class get_info_response PROTOBUF_FINAL :
     kMInfoFieldNumber = 2,
     kCInfoFieldNumber = 3,
   };
-  // .ComeTogether.user_info u_info = 1;
+  // .come_together_grpc.user_info u_info = 1;
   bool has_u_info() const;
   private:
   bool _internal_has_u_info() const;
   public:
   void clear_u_info();
-  const ::ComeTogether::user_info& u_info() const;
-  ::ComeTogether::user_info* release_u_info();
-  ::ComeTogether::user_info* mutable_u_info();
-  void set_allocated_u_info(::ComeTogether::user_info* u_info);
+  const ::come_together_grpc::user_info& u_info() const;
+  ::come_together_grpc::user_info* release_u_info();
+  ::come_together_grpc::user_info* mutable_u_info();
+  void set_allocated_u_info(::come_together_grpc::user_info* u_info);
   private:
-  const ::ComeTogether::user_info& _internal_u_info() const;
-  ::ComeTogether::user_info* _internal_mutable_u_info();
+  const ::come_together_grpc::user_info& _internal_u_info() const;
+  ::come_together_grpc::user_info* _internal_mutable_u_info();
   public:
   void unsafe_arena_set_allocated_u_info(
-      ::ComeTogether::user_info* u_info);
-  ::ComeTogether::user_info* unsafe_arena_release_u_info();
+      ::come_together_grpc::user_info* u_info);
+  ::come_together_grpc::user_info* unsafe_arena_release_u_info();
 
-  // .ComeTogether.marker_info m_info = 2;
+  // .come_together_grpc.marker_info m_info = 2;
   bool has_m_info() const;
   private:
   bool _internal_has_m_info() const;
   public:
   void clear_m_info();
-  const ::ComeTogether::marker_info& m_info() const;
-  ::ComeTogether::marker_info* release_m_info();
-  ::ComeTogether::marker_info* mutable_m_info();
-  void set_allocated_m_info(::ComeTogether::marker_info* m_info);
+  const ::come_together_grpc::marker_info& m_info() const;
+  ::come_together_grpc::marker_info* release_m_info();
+  ::come_together_grpc::marker_info* mutable_m_info();
+  void set_allocated_m_info(::come_together_grpc::marker_info* m_info);
   private:
-  const ::ComeTogether::marker_info& _internal_m_info() const;
-  ::ComeTogether::marker_info* _internal_mutable_m_info();
+  const ::come_together_grpc::marker_info& _internal_m_info() const;
+  ::come_together_grpc::marker_info* _internal_mutable_m_info();
   public:
   void unsafe_arena_set_allocated_m_info(
-      ::ComeTogether::marker_info* m_info);
-  ::ComeTogether::marker_info* unsafe_arena_release_m_info();
+      ::come_together_grpc::marker_info* m_info);
+  ::come_together_grpc::marker_info* unsafe_arena_release_m_info();
 
-  // .ComeTogether.chat_info c_info = 3;
+  // .come_together_grpc.chat_info c_info = 3;
   bool has_c_info() const;
   private:
   bool _internal_has_c_info() const;
   public:
   void clear_c_info();
-  const ::ComeTogether::chat_info& c_info() const;
-  ::ComeTogether::chat_info* release_c_info();
-  ::ComeTogether::chat_info* mutable_c_info();
-  void set_allocated_c_info(::ComeTogether::chat_info* c_info);
+  const ::come_together_grpc::chat_info& c_info() const;
+  ::come_together_grpc::chat_info* release_c_info();
+  ::come_together_grpc::chat_info* mutable_c_info();
+  void set_allocated_c_info(::come_together_grpc::chat_info* c_info);
   private:
-  const ::ComeTogether::chat_info& _internal_c_info() const;
-  ::ComeTogether::chat_info* _internal_mutable_c_info();
+  const ::come_together_grpc::chat_info& _internal_c_info() const;
+  ::come_together_grpc::chat_info* _internal_mutable_c_info();
   public:
   void unsafe_arena_set_allocated_c_info(
-      ::ComeTogether::chat_info* c_info);
-  ::ComeTogether::chat_info* unsafe_arena_release_c_info();
+      ::come_together_grpc::chat_info* c_info);
+  ::come_together_grpc::chat_info* unsafe_arena_release_c_info();
 
   void clear_data();
   DataCase data_case() const;
-  // @@protoc_insertion_point(class_scope:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.get_info_response)
  private:
   class _Internal;
   void set_has_u_info();
@@ -3788,9 +4527,9 @@ class get_info_response PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   union DataUnion {
     DataUnion() {}
-    ::ComeTogether::user_info* u_info_;
-    ::ComeTogether::marker_info* m_info_;
-    ::ComeTogether::chat_info* c_info_;
+    ::come_together_grpc::user_info* u_info_;
+    ::come_together_grpc::marker_info* m_info_;
+    ::come_together_grpc::chat_info* c_info_;
   } data_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -3800,7 +4539,7 @@ class get_info_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class get_images_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.get_images_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.get_images_request) */ {
  public:
   inline get_images_request() : get_images_request(nullptr) {}
   virtual ~get_images_request();
@@ -3841,7 +4580,7 @@ class get_images_request PROTOBUF_FINAL :
                &_get_images_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    20;
 
   friend void swap(get_images_request& a, get_images_request& b) {
     a.Swap(&b);
@@ -3889,7 +4628,7 @@ class get_images_request PROTOBUF_FINAL :
   void InternalSwap(get_images_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.get_images_request";
+    return "come_together_grpc.get_images_request";
   }
   protected:
   explicit get_images_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -3999,13 +4738,13 @@ class get_images_request PROTOBUF_FINAL :
   std::string* _internal_mutable_hash();
   public:
 
-  // .ComeTogether.get_images_request.type image_type = 1;
+  // .come_together_grpc.get_images_request.type image_type = 1;
   void clear_image_type();
-  ::ComeTogether::get_images_request_type image_type() const;
-  void set_image_type(::ComeTogether::get_images_request_type value);
+  ::come_together_grpc::get_images_request_type image_type() const;
+  void set_image_type(::come_together_grpc::get_images_request_type value);
   private:
-  ::ComeTogether::get_images_request_type _internal_image_type() const;
-  void _internal_set_image_type(::ComeTogether::get_images_request_type value);
+  ::come_together_grpc::get_images_request_type _internal_image_type() const;
+  void _internal_set_image_type(::come_together_grpc::get_images_request_type value);
   public:
 
   // int32 amount = 4;
@@ -4026,7 +4765,7 @@ class get_images_request PROTOBUF_FINAL :
   void _internal_set_starting_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.get_images_request)
  private:
   class _Internal;
 
@@ -4045,7 +4784,7 @@ class get_images_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class manage_image_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.manage_image_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.manage_image_request) */ {
  public:
   inline manage_image_request() : manage_image_request(nullptr) {}
   virtual ~manage_image_request();
@@ -4092,7 +4831,7 @@ class manage_image_request PROTOBUF_FINAL :
                &_manage_image_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    21;
 
   friend void swap(manage_image_request& a, manage_image_request& b) {
     a.Swap(&b);
@@ -4140,7 +4879,7 @@ class manage_image_request PROTOBUF_FINAL :
   void InternalSwap(manage_image_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.manage_image_request";
+    return "come_together_grpc.manage_image_request";
   }
   protected:
   explicit manage_image_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -4237,13 +4976,13 @@ class manage_image_request PROTOBUF_FINAL :
   std::string* _internal_mutable_target_uuid();
   public:
 
-  // .ComeTogether.manage_image_request.action act = 1;
+  // .come_together_grpc.manage_image_request.action act = 1;
   void clear_act();
-  ::ComeTogether::manage_image_request_action act() const;
-  void set_act(::ComeTogether::manage_image_request_action value);
+  ::come_together_grpc::manage_image_request_action act() const;
+  void set_act(::come_together_grpc::manage_image_request_action value);
   private:
-  ::ComeTogether::manage_image_request_action _internal_act() const;
-  void _internal_set_act(::ComeTogether::manage_image_request_action value);
+  ::come_together_grpc::manage_image_request_action _internal_act() const;
+  void _internal_set_act(::come_together_grpc::manage_image_request_action value);
   public:
 
   // bytes image = 4;
@@ -4286,7 +5025,7 @@ class manage_image_request PROTOBUF_FINAL :
 
   void clear_data();
   DataCase data_case() const;
-  // @@protoc_insertion_point(class_scope:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.manage_image_request)
  private:
   class _Internal;
   void set_has_image();
@@ -4314,7 +5053,7 @@ class manage_image_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class manage_image_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.manage_image_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.manage_image_response) */ {
  public:
   inline manage_image_response() : manage_image_response(nullptr) {}
   virtual ~manage_image_response();
@@ -4355,7 +5094,7 @@ class manage_image_response PROTOBUF_FINAL :
                &_manage_image_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    22;
 
   friend void swap(manage_image_response& a, manage_image_response& b) {
     a.Swap(&b);
@@ -4403,7 +5142,7 @@ class manage_image_response PROTOBUF_FINAL :
   void InternalSwap(manage_image_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.manage_image_response";
+    return "come_together_grpc.manage_image_response";
   }
   protected:
   explicit manage_image_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -4480,13 +5219,13 @@ class manage_image_response PROTOBUF_FINAL :
   std::string* _internal_mutable_image_uuid();
   public:
 
-  // .ComeTogether.manage_image_response.result res = 1;
+  // .come_together_grpc.manage_image_response.result res = 1;
   void clear_res();
-  ::ComeTogether::manage_image_response_result res() const;
-  void set_res(::ComeTogether::manage_image_response_result value);
+  ::come_together_grpc::manage_image_response_result res() const;
+  void set_res(::come_together_grpc::manage_image_response_result value);
   private:
-  ::ComeTogether::manage_image_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::manage_image_response_result value);
+  ::come_together_grpc::manage_image_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::manage_image_response_result value);
   public:
 
   // int32 image_sequence_number = 3;
@@ -4498,7 +5237,7 @@ class manage_image_response PROTOBUF_FINAL :
   void _internal_set_image_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.manage_image_response)
  private:
   class _Internal;
 
@@ -4514,7 +5253,7 @@ class manage_image_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class check_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.check_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.check_request) */ {
  public:
   inline check_request() : check_request(nullptr) {}
   virtual ~check_request();
@@ -4555,7 +5294,7 @@ class check_request PROTOBUF_FINAL :
                &_check_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    23;
 
   friend void swap(check_request& a, check_request& b) {
     a.Swap(&b);
@@ -4603,7 +5342,7 @@ class check_request PROTOBUF_FINAL :
   void InternalSwap(check_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.check_request";
+    return "come_together_grpc.check_request";
   }
   protected:
   explicit check_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -4677,16 +5416,16 @@ class check_request PROTOBUF_FINAL :
   std::string* _internal_mutable_data();
   public:
 
-  // .ComeTogether.check_request.type check_type = 1;
+  // .come_together_grpc.check_request.type check_type = 1;
   void clear_check_type();
-  ::ComeTogether::check_request_type check_type() const;
-  void set_check_type(::ComeTogether::check_request_type value);
+  ::come_together_grpc::check_request_type check_type() const;
+  void set_check_type(::come_together_grpc::check_request_type value);
   private:
-  ::ComeTogether::check_request_type _internal_check_type() const;
-  void _internal_set_check_type(::ComeTogether::check_request_type value);
+  ::come_together_grpc::check_request_type _internal_check_type() const;
+  void _internal_set_check_type(::come_together_grpc::check_request_type value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.check_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.check_request)
  private:
   class _Internal;
 
@@ -4701,7 +5440,7 @@ class check_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class check_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.check_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.check_response) */ {
  public:
   inline check_response() : check_response(nullptr) {}
   virtual ~check_response();
@@ -4742,7 +5481,7 @@ class check_response PROTOBUF_FINAL :
                &_check_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    24;
 
   friend void swap(check_response& a, check_response& b) {
     a.Swap(&b);
@@ -4790,7 +5529,7 @@ class check_response PROTOBUF_FINAL :
   void InternalSwap(check_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.check_response";
+    return "come_together_grpc.check_response";
   }
   protected:
   explicit check_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -4849,16 +5588,16 @@ class check_response PROTOBUF_FINAL :
   enum : int {
     kResFieldNumber = 1,
   };
-  // .ComeTogether.check_response.result res = 1;
+  // .come_together_grpc.check_response.result res = 1;
   void clear_res();
-  ::ComeTogether::check_response_result res() const;
-  void set_res(::ComeTogether::check_response_result value);
+  ::come_together_grpc::check_response_result res() const;
+  void set_res(::come_together_grpc::check_response_result value);
   private:
-  ::ComeTogether::check_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::check_response_result value);
+  ::come_together_grpc::check_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::check_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.check_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.check_response)
  private:
   class _Internal;
 
@@ -4872,7 +5611,7 @@ class check_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class login_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.login_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.login_request) */ {
  public:
   inline login_request() : login_request(nullptr) {}
   virtual ~login_request();
@@ -4913,7 +5652,7 @@ class login_request PROTOBUF_FINAL :
                &_login_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    25;
 
   friend void swap(login_request& a, login_request& b) {
     a.Swap(&b);
@@ -4961,7 +5700,7 @@ class login_request PROTOBUF_FINAL :
   void InternalSwap(login_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.login_request";
+    return "come_together_grpc.login_request";
   }
   protected:
   explicit login_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -5019,7 +5758,7 @@ class login_request PROTOBUF_FINAL :
   std::string* _internal_mutable_password();
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.login_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.login_request)
  private:
   class _Internal;
 
@@ -5034,7 +5773,7 @@ class login_request PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class login_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.login_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.login_response) */ {
  public:
   inline login_response() : login_response(nullptr) {}
   virtual ~login_response();
@@ -5075,7 +5814,7 @@ class login_response PROTOBUF_FINAL :
                &_login_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    26;
 
   friend void swap(login_response& a, login_response& b) {
     a.Swap(&b);
@@ -5123,7 +5862,7 @@ class login_response PROTOBUF_FINAL :
   void InternalSwap(login_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.login_response";
+    return "come_together_grpc.login_response";
   }
   protected:
   explicit login_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -5202,34 +5941,34 @@ class login_response PROTOBUF_FINAL :
   std::string* _internal_mutable_access_token();
   public:
 
-  // .ComeTogether.user_info info = 2;
+  // .come_together_grpc.user_info info = 2;
   bool has_info() const;
   private:
   bool _internal_has_info() const;
   public:
   void clear_info();
-  const ::ComeTogether::user_info& info() const;
-  ::ComeTogether::user_info* release_info();
-  ::ComeTogether::user_info* mutable_info();
-  void set_allocated_info(::ComeTogether::user_info* info);
+  const ::come_together_grpc::user_info& info() const;
+  ::come_together_grpc::user_info* release_info();
+  ::come_together_grpc::user_info* mutable_info();
+  void set_allocated_info(::come_together_grpc::user_info* info);
   private:
-  const ::ComeTogether::user_info& _internal_info() const;
-  ::ComeTogether::user_info* _internal_mutable_info();
+  const ::come_together_grpc::user_info& _internal_info() const;
+  ::come_together_grpc::user_info* _internal_mutable_info();
   public:
   void unsafe_arena_set_allocated_info(
-      ::ComeTogether::user_info* info);
-  ::ComeTogether::user_info* unsafe_arena_release_info();
+      ::come_together_grpc::user_info* info);
+  ::come_together_grpc::user_info* unsafe_arena_release_info();
 
-  // .ComeTogether.login_response.result res = 1;
+  // .come_together_grpc.login_response.result res = 1;
   void clear_res();
-  ::ComeTogether::login_response_result res() const;
-  void set_res(::ComeTogether::login_response_result value);
+  ::come_together_grpc::login_response_result res() const;
+  void set_res(::come_together_grpc::login_response_result value);
   private:
-  ::ComeTogether::login_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::login_response_result value);
+  ::come_together_grpc::login_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::login_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.login_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.login_response)
  private:
   class _Internal;
 
@@ -5237,7 +5976,7 @@ class login_response PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
-  ::ComeTogether::user_info* info_;
+  ::come_together_grpc::user_info* info_;
   int res_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
@@ -5245,7 +5984,7 @@ class login_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class register_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.register_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.register_request) */ {
  public:
   inline register_request() : register_request(nullptr) {}
   virtual ~register_request();
@@ -5286,7 +6025,7 @@ class register_request PROTOBUF_FINAL :
                &_register_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    27;
 
   friend void swap(register_request& a, register_request& b) {
     a.Swap(&b);
@@ -5334,7 +6073,7 @@ class register_request PROTOBUF_FINAL :
   void InternalSwap(register_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.register_request";
+    return "come_together_grpc.register_request";
   }
   protected:
   explicit register_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -5359,39 +6098,39 @@ class register_request PROTOBUF_FINAL :
   enum : int {
     kInfoFieldNumber = 1,
   };
-  // .ComeTogether.user_info info = 1;
+  // .come_together_grpc.user_info info = 1;
   bool has_info() const;
   private:
   bool _internal_has_info() const;
   public:
   void clear_info();
-  const ::ComeTogether::user_info& info() const;
-  ::ComeTogether::user_info* release_info();
-  ::ComeTogether::user_info* mutable_info();
-  void set_allocated_info(::ComeTogether::user_info* info);
+  const ::come_together_grpc::user_info& info() const;
+  ::come_together_grpc::user_info* release_info();
+  ::come_together_grpc::user_info* mutable_info();
+  void set_allocated_info(::come_together_grpc::user_info* info);
   private:
-  const ::ComeTogether::user_info& _internal_info() const;
-  ::ComeTogether::user_info* _internal_mutable_info();
+  const ::come_together_grpc::user_info& _internal_info() const;
+  ::come_together_grpc::user_info* _internal_mutable_info();
   public:
   void unsafe_arena_set_allocated_info(
-      ::ComeTogether::user_info* info);
-  ::ComeTogether::user_info* unsafe_arena_release_info();
+      ::come_together_grpc::user_info* info);
+  ::come_together_grpc::user_info* unsafe_arena_release_info();
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.register_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.register_request)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::ComeTogether::user_info* info_;
+  ::come_together_grpc::user_info* info_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
 // -------------------------------------------------------------------
 
 class register_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.register_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.register_response) */ {
  public:
   inline register_response() : register_response(nullptr) {}
   virtual ~register_response();
@@ -5432,7 +6171,7 @@ class register_response PROTOBUF_FINAL :
                &_register_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    28;
 
   friend void swap(register_response& a, register_response& b) {
     a.Swap(&b);
@@ -5480,7 +6219,7 @@ class register_response PROTOBUF_FINAL :
   void InternalSwap(register_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.register_response";
+    return "come_together_grpc.register_response";
   }
   protected:
   explicit register_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -5575,16 +6314,16 @@ class register_response PROTOBUF_FINAL :
   std::string* _internal_mutable_access_token();
   public:
 
-  // .ComeTogether.register_response.result res = 1;
+  // .come_together_grpc.register_response.result res = 1;
   void clear_res();
-  ::ComeTogether::register_response_result res() const;
-  void set_res(::ComeTogether::register_response_result value);
+  ::come_together_grpc::register_response_result res() const;
+  void set_res(::come_together_grpc::register_response_result value);
   private:
-  ::ComeTogether::register_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::register_response_result value);
+  ::come_together_grpc::register_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::register_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.register_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.register_response)
  private:
   class _Internal;
 
@@ -5600,7 +6339,7 @@ class register_response PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class user_info PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.user_info) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.user_info) */ {
  public:
   inline user_info() : user_info(nullptr) {}
   virtual ~user_info();
@@ -5641,7 +6380,7 @@ class user_info PROTOBUF_FINAL :
                &_user_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    29;
 
   friend void swap(user_info& a, user_info& b) {
     a.Swap(&b);
@@ -5689,7 +6428,7 @@ class user_info PROTOBUF_FINAL :
   void InternalSwap(user_info* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.user_info";
+    return "come_together_grpc.user_info";
   }
   protected:
   explicit user_info(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -5857,7 +6596,7 @@ class user_info PROTOBUF_FINAL :
   std::string* _internal_mutable_other_info_json();
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.user_info)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.user_info)
  private:
   class _Internal;
 
@@ -5878,7 +6617,7 @@ class user_info PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class marker_info PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.marker_info) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.marker_info) */ {
  public:
   inline marker_info() : marker_info(nullptr) {}
   virtual ~marker_info();
@@ -5919,7 +6658,7 @@ class marker_info PROTOBUF_FINAL :
                &_marker_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    30;
 
   friend void swap(marker_info& a, marker_info& b) {
     a.Swap(&b);
@@ -5967,7 +6706,7 @@ class marker_info PROTOBUF_FINAL :
   void InternalSwap(marker_info* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.marker_info";
+    return "come_together_grpc.marker_info";
   }
   protected:
   explicit marker_info(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -6204,22 +6943,22 @@ class marker_info PROTOBUF_FINAL :
   std::string* _internal_mutable_other_data_json();
   public:
 
-  // .ComeTogether.marker_info.category cat = 1;
+  // .come_together_grpc.marker_info.category cat = 1;
   void clear_cat();
-  ::ComeTogether::marker_info_category cat() const;
-  void set_cat(::ComeTogether::marker_info_category value);
+  ::come_together_grpc::marker_info_category cat() const;
+  void set_cat(::come_together_grpc::marker_info_category value);
   private:
-  ::ComeTogether::marker_info_category _internal_cat() const;
-  void _internal_set_cat(::ComeTogether::marker_info_category value);
+  ::come_together_grpc::marker_info_category _internal_cat() const;
+  void _internal_set_cat(::come_together_grpc::marker_info_category value);
   public:
 
-  // .ComeTogether.marker_info.type marker_type = 2;
+  // .come_together_grpc.marker_info.type marker_type = 2;
   void clear_marker_type();
-  ::ComeTogether::marker_info_type marker_type() const;
-  void set_marker_type(::ComeTogether::marker_info_type value);
+  ::come_together_grpc::marker_info_type marker_type() const;
+  void set_marker_type(::come_together_grpc::marker_info_type value);
   private:
-  ::ComeTogether::marker_info_type _internal_marker_type() const;
-  void _internal_set_marker_type(::ComeTogether::marker_info_type value);
+  ::come_together_grpc::marker_info_type _internal_marker_type() const;
+  void _internal_set_marker_type(::come_together_grpc::marker_info_type value);
   public:
 
   // int64 from_unix_time = 3;
@@ -6267,7 +7006,7 @@ class marker_info PROTOBUF_FINAL :
   void _internal_set_longitude(double value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.marker_info)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.marker_info)
  private:
   class _Internal;
 
@@ -6293,7 +7032,7 @@ class marker_info PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class add_marker_request PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.add_marker_request) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.add_marker_request) */ {
  public:
   inline add_marker_request() : add_marker_request(nullptr) {}
   virtual ~add_marker_request();
@@ -6334,7 +7073,7 @@ class add_marker_request PROTOBUF_FINAL :
                &_add_marker_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    31;
 
   friend void swap(add_marker_request& a, add_marker_request& b) {
     a.Swap(&b);
@@ -6382,7 +7121,7 @@ class add_marker_request PROTOBUF_FINAL :
   void InternalSwap(add_marker_request* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.add_marker_request";
+    return "come_together_grpc.add_marker_request";
   }
   protected:
   explicit add_marker_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -6407,39 +7146,39 @@ class add_marker_request PROTOBUF_FINAL :
   enum : int {
     kInfoFieldNumber = 1,
   };
-  // .ComeTogether.marker_info info = 1;
+  // .come_together_grpc.marker_info info = 1;
   bool has_info() const;
   private:
   bool _internal_has_info() const;
   public:
   void clear_info();
-  const ::ComeTogether::marker_info& info() const;
-  ::ComeTogether::marker_info* release_info();
-  ::ComeTogether::marker_info* mutable_info();
-  void set_allocated_info(::ComeTogether::marker_info* info);
+  const ::come_together_grpc::marker_info& info() const;
+  ::come_together_grpc::marker_info* release_info();
+  ::come_together_grpc::marker_info* mutable_info();
+  void set_allocated_info(::come_together_grpc::marker_info* info);
   private:
-  const ::ComeTogether::marker_info& _internal_info() const;
-  ::ComeTogether::marker_info* _internal_mutable_info();
+  const ::come_together_grpc::marker_info& _internal_info() const;
+  ::come_together_grpc::marker_info* _internal_mutable_info();
   public:
   void unsafe_arena_set_allocated_info(
-      ::ComeTogether::marker_info* info);
-  ::ComeTogether::marker_info* unsafe_arena_release_info();
+      ::come_together_grpc::marker_info* info);
+  ::come_together_grpc::marker_info* unsafe_arena_release_info();
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.add_marker_request)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::ComeTogether::marker_info* info_;
+  ::come_together_grpc::marker_info* info_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
 // -------------------------------------------------------------------
 
 class add_marker_response PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComeTogether.add_marker_response) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.add_marker_response) */ {
  public:
   inline add_marker_response() : add_marker_response(nullptr) {}
   virtual ~add_marker_response();
@@ -6480,7 +7219,7 @@ class add_marker_response PROTOBUF_FINAL :
                &_add_marker_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    32;
 
   friend void swap(add_marker_response& a, add_marker_response& b) {
     a.Swap(&b);
@@ -6528,7 +7267,7 @@ class add_marker_response PROTOBUF_FINAL :
   void InternalSwap(add_marker_response* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ComeTogether.add_marker_response";
+    return "come_together_grpc.add_marker_response";
   }
   protected:
   explicit add_marker_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -6623,16 +7362,16 @@ class add_marker_response PROTOBUF_FINAL :
   std::string* _internal_mutable_chat_uuid();
   public:
 
-  // .ComeTogether.add_marker_response.result res = 1;
+  // .come_together_grpc.add_marker_response.result res = 1;
   void clear_res();
-  ::ComeTogether::add_marker_response_result res() const;
-  void set_res(::ComeTogether::add_marker_response_result value);
+  ::come_together_grpc::add_marker_response_result res() const;
+  void set_res(::come_together_grpc::add_marker_response_result value);
   private:
-  ::ComeTogether::add_marker_response_result _internal_res() const;
-  void _internal_set_res(::ComeTogether::add_marker_response_result value);
+  ::come_together_grpc::add_marker_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::add_marker_response_result value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(class_scope:come_together_grpc.add_marker_response)
  private:
   class _Internal;
 
@@ -6661,15 +7400,15 @@ inline void image::clear_data() {
   data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& image::data() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_get:come_together_grpc.image.data)
   return _internal_data();
 }
 inline void image::set_data(const std::string& value) {
   _internal_set_data(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_set:come_together_grpc.image.data)
 }
 inline std::string* image::mutable_data() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.image.data)
   return _internal_mutable_data();
 }
 inline const std::string& image::_internal_data() const {
@@ -6683,28 +7422,28 @@ inline void image::set_data(std::string&& value) {
   
   data_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.image.data)
 }
 inline void image::set_data(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.image.data)
 }
 inline void image::set_data(const void* value,
     size_t size) {
   
   data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.image.data)
 }
 inline std::string* image::_internal_mutable_data() {
   
   return data_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* image::release_data() {
-  // @@protoc_insertion_point(field_release:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_release:come_together_grpc.image.data)
   return data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void image::set_allocated_data(std::string* data) {
@@ -6715,7 +7454,7 @@ inline void image::set_allocated_data(std::string* data) {
   }
   data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.image.data)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.image.data)
 }
 
 // string uuid = 2;
@@ -6723,15 +7462,15 @@ inline void image::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& image::uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.image.uuid)
   return _internal_uuid();
 }
 inline void image::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.image.uuid)
 }
 inline std::string* image::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.image.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& image::_internal_uuid() const {
@@ -6745,28 +7484,28 @@ inline void image::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.image.uuid)
 }
 inline void image::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.image.uuid)
 }
 inline void image::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.image.uuid)
 }
 inline std::string* image::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* image::release_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.image.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void image::set_allocated_uuid(std::string* uuid) {
@@ -6777,7 +7516,7 @@ inline void image::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.image.uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.image.uuid)
 }
 
 // int32 sequence_number = 3;
@@ -6788,7 +7527,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 image::_internal_sequence_number() const {
   return sequence_number_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 image::sequence_number() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.image.sequence_number)
+  // @@protoc_insertion_point(field_get:come_together_grpc.image.sequence_number)
   return _internal_sequence_number();
 }
 inline void image::_internal_set_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6797,7 +7536,7 @@ inline void image::_internal_set_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void image::set_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_sequence_number(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.image.sequence_number)
+  // @@protoc_insertion_point(field_set:come_together_grpc.image.sequence_number)
 }
 
 // -------------------------------------------------------------------
@@ -6809,15 +7548,15 @@ inline void access_token::clear_token() {
   token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& access_token::token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.access_token.token)
   return _internal_token();
 }
 inline void access_token::set_token(const std::string& value) {
   _internal_set_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.access_token.token)
 }
 inline std::string* access_token::mutable_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.access_token.token)
   return _internal_mutable_token();
 }
 inline const std::string& access_token::_internal_token() const {
@@ -6831,28 +7570,28 @@ inline void access_token::set_token(std::string&& value) {
   
   token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.access_token.token)
 }
 inline void access_token::set_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.access_token.token)
 }
 inline void access_token::set_token(const char* value,
     size_t size) {
   
   token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.access_token.token)
 }
 inline std::string* access_token::_internal_mutable_token() {
   
   return token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* access_token::release_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.access_token.token)
   return token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void access_token::set_allocated_token(std::string* token) {
@@ -6863,7 +7602,311 @@ inline void access_token::set_allocated_token(std::string* token) {
   }
   token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.access_token.token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.access_token.token)
+}
+
+// -------------------------------------------------------------------
+
+// send_push_token_request
+
+// string access_token = 1;
+inline void send_push_token_request::clear_access_token() {
+  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& send_push_token_request::access_token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_push_token_request.access_token)
+  return _internal_access_token();
+}
+inline void send_push_token_request::set_access_token(const std::string& value) {
+  _internal_set_access_token(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_push_token_request.access_token)
+}
+inline std::string* send_push_token_request::mutable_access_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_push_token_request.access_token)
+  return _internal_mutable_access_token();
+}
+inline const std::string& send_push_token_request::_internal_access_token() const {
+  return access_token_.Get();
+}
+inline void send_push_token_request::_internal_set_access_token(const std::string& value) {
+  
+  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void send_push_token_request::set_access_token(std::string&& value) {
+  
+  access_token_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.send_push_token_request.access_token)
+}
+inline void send_push_token_request::set_access_token(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.send_push_token_request.access_token)
+}
+inline void send_push_token_request::set_access_token(const char* value,
+    size_t size) {
+  
+  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.send_push_token_request.access_token)
+}
+inline std::string* send_push_token_request::_internal_mutable_access_token() {
+  
+  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* send_push_token_request::release_access_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_push_token_request.access_token)
+  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void send_push_token_request::set_allocated_access_token(std::string* access_token) {
+  if (access_token != nullptr) {
+    
+  } else {
+    
+  }
+  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_push_token_request.access_token)
+}
+
+// string push_token = 2;
+inline void send_push_token_request::clear_push_token() {
+  push_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& send_push_token_request::push_token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_push_token_request.push_token)
+  return _internal_push_token();
+}
+inline void send_push_token_request::set_push_token(const std::string& value) {
+  _internal_set_push_token(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_push_token_request.push_token)
+}
+inline std::string* send_push_token_request::mutable_push_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_push_token_request.push_token)
+  return _internal_mutable_push_token();
+}
+inline const std::string& send_push_token_request::_internal_push_token() const {
+  return push_token_.Get();
+}
+inline void send_push_token_request::_internal_set_push_token(const std::string& value) {
+  
+  push_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void send_push_token_request::set_push_token(std::string&& value) {
+  
+  push_token_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.send_push_token_request.push_token)
+}
+inline void send_push_token_request::set_push_token(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  push_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.send_push_token_request.push_token)
+}
+inline void send_push_token_request::set_push_token(const char* value,
+    size_t size) {
+  
+  push_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.send_push_token_request.push_token)
+}
+inline std::string* send_push_token_request::_internal_mutable_push_token() {
+  
+  return push_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* send_push_token_request::release_push_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_push_token_request.push_token)
+  return push_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void send_push_token_request::set_allocated_push_token(std::string* push_token) {
+  if (push_token != nullptr) {
+    
+  } else {
+    
+  }
+  push_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), push_token,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_push_token_request.push_token)
+}
+
+// -------------------------------------------------------------------
+
+// send_push_token_response
+
+// .come_together_grpc.send_push_token_response.result res = 1;
+inline void send_push_token_response::clear_res() {
+  res_ = 0;
+}
+inline ::come_together_grpc::send_push_token_response_result send_push_token_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::send_push_token_response_result >(res_);
+}
+inline ::come_together_grpc::send_push_token_response_result send_push_token_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_push_token_response.res)
+  return _internal_res();
+}
+inline void send_push_token_response::_internal_set_res(::come_together_grpc::send_push_token_response_result value) {
+  
+  res_ = value;
+}
+inline void send_push_token_response::set_res(::come_together_grpc::send_push_token_response_result value) {
+  _internal_set_res(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_push_token_response.res)
+}
+
+// -------------------------------------------------------------------
+
+// delete_marker_request
+
+// string access_token = 1;
+inline void delete_marker_request::clear_access_token() {
+  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& delete_marker_request::access_token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.delete_marker_request.access_token)
+  return _internal_access_token();
+}
+inline void delete_marker_request::set_access_token(const std::string& value) {
+  _internal_set_access_token(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.delete_marker_request.access_token)
+}
+inline std::string* delete_marker_request::mutable_access_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.delete_marker_request.access_token)
+  return _internal_mutable_access_token();
+}
+inline const std::string& delete_marker_request::_internal_access_token() const {
+  return access_token_.Get();
+}
+inline void delete_marker_request::_internal_set_access_token(const std::string& value) {
+  
+  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void delete_marker_request::set_access_token(std::string&& value) {
+  
+  access_token_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.delete_marker_request.access_token)
+}
+inline void delete_marker_request::set_access_token(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.delete_marker_request.access_token)
+}
+inline void delete_marker_request::set_access_token(const char* value,
+    size_t size) {
+  
+  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.delete_marker_request.access_token)
+}
+inline std::string* delete_marker_request::_internal_mutable_access_token() {
+  
+  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* delete_marker_request::release_access_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.delete_marker_request.access_token)
+  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void delete_marker_request::set_allocated_access_token(std::string* access_token) {
+  if (access_token != nullptr) {
+    
+  } else {
+    
+  }
+  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.delete_marker_request.access_token)
+}
+
+// string marker_uuid = 2;
+inline void delete_marker_request::clear_marker_uuid() {
+  marker_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& delete_marker_request::marker_uuid() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.delete_marker_request.marker_uuid)
+  return _internal_marker_uuid();
+}
+inline void delete_marker_request::set_marker_uuid(const std::string& value) {
+  _internal_set_marker_uuid(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.delete_marker_request.marker_uuid)
+}
+inline std::string* delete_marker_request::mutable_marker_uuid() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.delete_marker_request.marker_uuid)
+  return _internal_mutable_marker_uuid();
+}
+inline const std::string& delete_marker_request::_internal_marker_uuid() const {
+  return marker_uuid_.Get();
+}
+inline void delete_marker_request::_internal_set_marker_uuid(const std::string& value) {
+  
+  marker_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void delete_marker_request::set_marker_uuid(std::string&& value) {
+  
+  marker_uuid_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.delete_marker_request.marker_uuid)
+}
+inline void delete_marker_request::set_marker_uuid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  marker_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.delete_marker_request.marker_uuid)
+}
+inline void delete_marker_request::set_marker_uuid(const char* value,
+    size_t size) {
+  
+  marker_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.delete_marker_request.marker_uuid)
+}
+inline std::string* delete_marker_request::_internal_mutable_marker_uuid() {
+  
+  return marker_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* delete_marker_request::release_marker_uuid() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.delete_marker_request.marker_uuid)
+  return marker_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void delete_marker_request::set_allocated_marker_uuid(std::string* marker_uuid) {
+  if (marker_uuid != nullptr) {
+    
+  } else {
+    
+  }
+  marker_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), marker_uuid,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.delete_marker_request.marker_uuid)
+}
+
+// -------------------------------------------------------------------
+
+// delete_marker_reponse
+
+// .come_together_grpc.delete_marker_reponse.result res = 1;
+inline void delete_marker_reponse::clear_res() {
+  res_ = 0;
+}
+inline ::come_together_grpc::delete_marker_reponse_result delete_marker_reponse::_internal_res() const {
+  return static_cast< ::come_together_grpc::delete_marker_reponse_result >(res_);
+}
+inline ::come_together_grpc::delete_marker_reponse_result delete_marker_reponse::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.delete_marker_reponse.res)
+  return _internal_res();
+}
+inline void delete_marker_reponse::_internal_set_res(::come_together_grpc::delete_marker_reponse_result value) {
+  
+  res_ = value;
+}
+inline void delete_marker_reponse::set_res(::come_together_grpc::delete_marker_reponse_result value) {
+  _internal_set_res(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.delete_marker_reponse.res)
 }
 
 // -------------------------------------------------------------------
@@ -6875,15 +7918,15 @@ inline void ask_token_request::clear_email() {
   email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& ask_token_request::email() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_get:come_together_grpc.ask_token_request.email)
   return _internal_email();
 }
 inline void ask_token_request::set_email(const std::string& value) {
   _internal_set_email(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_set:come_together_grpc.ask_token_request.email)
 }
 inline std::string* ask_token_request::mutable_email() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.ask_token_request.email)
   return _internal_mutable_email();
 }
 inline const std::string& ask_token_request::_internal_email() const {
@@ -6897,28 +7940,28 @@ inline void ask_token_request::set_email(std::string&& value) {
   
   email_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.ask_token_request.email)
 }
 inline void ask_token_request::set_email(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.ask_token_request.email)
 }
 inline void ask_token_request::set_email(const char* value,
     size_t size) {
   
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.ask_token_request.email)
 }
 inline std::string* ask_token_request::_internal_mutable_email() {
   
   return email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* ask_token_request::release_email() {
-  // @@protoc_insertion_point(field_release:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_release:come_together_grpc.ask_token_request.email)
   return email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void ask_token_request::set_allocated_email(std::string* email) {
@@ -6929,31 +7972,31 @@ inline void ask_token_request::set_allocated_email(std::string* email) {
   }
   email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), email,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.ask_token_request.email)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.ask_token_request.email)
 }
 
 // -------------------------------------------------------------------
 
 // ask_token_response
 
-// .ComeTogether.ask_token_response.result res = 1;
+// .come_together_grpc.ask_token_response.result res = 1;
 inline void ask_token_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::ask_token_response_result ask_token_response::_internal_res() const {
-  return static_cast< ::ComeTogether::ask_token_response_result >(res_);
+inline ::come_together_grpc::ask_token_response_result ask_token_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::ask_token_response_result >(res_);
 }
-inline ::ComeTogether::ask_token_response_result ask_token_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.ask_token_response.res)
+inline ::come_together_grpc::ask_token_response_result ask_token_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.ask_token_response.res)
   return _internal_res();
 }
-inline void ask_token_response::_internal_set_res(::ComeTogether::ask_token_response_result value) {
+inline void ask_token_response::_internal_set_res(::come_together_grpc::ask_token_response_result value) {
   
   res_ = value;
 }
-inline void ask_token_response::set_res(::ComeTogether::ask_token_response_result value) {
+inline void ask_token_response::set_res(::come_together_grpc::ask_token_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.ask_token_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.ask_token_response.res)
 }
 
 // -------------------------------------------------------------------
@@ -6965,15 +8008,15 @@ inline void verify_token_request::clear_email() {
   email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& verify_token_request::email() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_get:come_together_grpc.verify_token_request.email)
   return _internal_email();
 }
 inline void verify_token_request::set_email(const std::string& value) {
   _internal_set_email(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_set:come_together_grpc.verify_token_request.email)
 }
 inline std::string* verify_token_request::mutable_email() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.verify_token_request.email)
   return _internal_mutable_email();
 }
 inline const std::string& verify_token_request::_internal_email() const {
@@ -6987,28 +8030,28 @@ inline void verify_token_request::set_email(std::string&& value) {
   
   email_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.verify_token_request.email)
 }
 inline void verify_token_request::set_email(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.verify_token_request.email)
 }
 inline void verify_token_request::set_email(const char* value,
     size_t size) {
   
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.verify_token_request.email)
 }
 inline std::string* verify_token_request::_internal_mutable_email() {
   
   return email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* verify_token_request::release_email() {
-  // @@protoc_insertion_point(field_release:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_release:come_together_grpc.verify_token_request.email)
   return email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void verify_token_request::set_allocated_email(std::string* email) {
@@ -7019,7 +8062,7 @@ inline void verify_token_request::set_allocated_email(std::string* email) {
   }
   email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), email,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.verify_token_request.email)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.verify_token_request.email)
 }
 
 // string token = 2;
@@ -7027,15 +8070,15 @@ inline void verify_token_request::clear_token() {
   token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& verify_token_request::token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.verify_token_request.token)
   return _internal_token();
 }
 inline void verify_token_request::set_token(const std::string& value) {
   _internal_set_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.verify_token_request.token)
 }
 inline std::string* verify_token_request::mutable_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.verify_token_request.token)
   return _internal_mutable_token();
 }
 inline const std::string& verify_token_request::_internal_token() const {
@@ -7049,28 +8092,28 @@ inline void verify_token_request::set_token(std::string&& value) {
   
   token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.verify_token_request.token)
 }
 inline void verify_token_request::set_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.verify_token_request.token)
 }
 inline void verify_token_request::set_token(const char* value,
     size_t size) {
   
   token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.verify_token_request.token)
 }
 inline std::string* verify_token_request::_internal_mutable_token() {
   
   return token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* verify_token_request::release_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.verify_token_request.token)
   return token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void verify_token_request::set_allocated_token(std::string* token) {
@@ -7081,31 +8124,31 @@ inline void verify_token_request::set_allocated_token(std::string* token) {
   }
   token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.verify_token_request.token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.verify_token_request.token)
 }
 
 // -------------------------------------------------------------------
 
 // verify_token_response
 
-// .ComeTogether.verify_token_response.result res = 1;
+// .come_together_grpc.verify_token_response.result res = 1;
 inline void verify_token_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::verify_token_response_result verify_token_response::_internal_res() const {
-  return static_cast< ::ComeTogether::verify_token_response_result >(res_);
+inline ::come_together_grpc::verify_token_response_result verify_token_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::verify_token_response_result >(res_);
 }
-inline ::ComeTogether::verify_token_response_result verify_token_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.verify_token_response.res)
+inline ::come_together_grpc::verify_token_response_result verify_token_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.verify_token_response.res)
   return _internal_res();
 }
-inline void verify_token_response::_internal_set_res(::ComeTogether::verify_token_response_result value) {
+inline void verify_token_response::_internal_set_res(::come_together_grpc::verify_token_response_result value) {
   
   res_ = value;
 }
-inline void verify_token_response::set_res(::ComeTogether::verify_token_response_result value) {
+inline void verify_token_response::set_res(::come_together_grpc::verify_token_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.verify_token_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.verify_token_response.res)
 }
 
 // -------------------------------------------------------------------
@@ -7117,15 +8160,15 @@ inline void update_info_request::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& update_info_request::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_request.access_token)
   return _internal_access_token();
 }
 inline void update_info_request::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.update_info_request.access_token)
 }
 inline std::string* update_info_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.update_info_request.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& update_info_request::_internal_access_token() const {
@@ -7139,28 +8182,28 @@ inline void update_info_request::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.update_info_request.access_token)
 }
 inline void update_info_request::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.update_info_request.access_token)
 }
 inline void update_info_request::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.update_info_request.access_token)
 }
 inline std::string* update_info_request::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* update_info_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.update_info_request.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void update_info_request::set_allocated_access_token(std::string* access_token) {
@@ -7171,30 +8214,30 @@ inline void update_info_request::set_allocated_access_token(std::string* access_
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.update_info_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.update_info_request.access_token)
 }
 
-// .ComeTogether.update_info_request.update_type type = 2;
+// .come_together_grpc.update_info_request.update_type type = 2;
 inline void update_info_request::clear_type() {
   type_ = 0;
 }
-inline ::ComeTogether::update_info_request_update_type update_info_request::_internal_type() const {
-  return static_cast< ::ComeTogether::update_info_request_update_type >(type_);
+inline ::come_together_grpc::update_info_request_update_type update_info_request::_internal_type() const {
+  return static_cast< ::come_together_grpc::update_info_request_update_type >(type_);
 }
-inline ::ComeTogether::update_info_request_update_type update_info_request::type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.update_info_request.type)
+inline ::come_together_grpc::update_info_request_update_type update_info_request::type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_request.type)
   return _internal_type();
 }
-inline void update_info_request::_internal_set_type(::ComeTogether::update_info_request_update_type value) {
+inline void update_info_request::_internal_set_type(::come_together_grpc::update_info_request_update_type value) {
   
   type_ = value;
 }
-inline void update_info_request::set_type(::ComeTogether::update_info_request_update_type value) {
+inline void update_info_request::set_type(::come_together_grpc::update_info_request_update_type value) {
   _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.update_info_request.type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.update_info_request.type)
 }
 
-// .ComeTogether.marker_info m_info = 3;
+// .come_together_grpc.marker_info m_info = 3;
 inline bool update_info_request::_internal_has_m_info() const {
   return data_case() == kMInfo;
 }
@@ -7212,11 +8255,11 @@ inline void update_info_request::clear_m_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::marker_info* update_info_request::release_m_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.update_info_request.m_info)
+inline ::come_together_grpc::marker_info* update_info_request::release_m_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.update_info_request.m_info)
   if (_internal_has_m_info()) {
     clear_has_data();
-      ::ComeTogether::marker_info* temp = data_.m_info_;
+      ::come_together_grpc::marker_info* temp = data_.m_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -7226,48 +8269,48 @@ inline ::ComeTogether::marker_info* update_info_request::release_m_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::marker_info& update_info_request::_internal_m_info() const {
+inline const ::come_together_grpc::marker_info& update_info_request::_internal_m_info() const {
   return _internal_has_m_info()
       ? *data_.m_info_
-      : *reinterpret_cast< ::ComeTogether::marker_info*>(&::ComeTogether::_marker_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::marker_info*>(&::come_together_grpc::_marker_info_default_instance_);
 }
-inline const ::ComeTogether::marker_info& update_info_request::m_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.update_info_request.m_info)
+inline const ::come_together_grpc::marker_info& update_info_request::m_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_request.m_info)
   return _internal_m_info();
 }
-inline ::ComeTogether::marker_info* update_info_request::unsafe_arena_release_m_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.update_info_request.m_info)
+inline ::come_together_grpc::marker_info* update_info_request::unsafe_arena_release_m_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.update_info_request.m_info)
   if (_internal_has_m_info()) {
     clear_has_data();
-    ::ComeTogether::marker_info* temp = data_.m_info_;
+    ::come_together_grpc::marker_info* temp = data_.m_info_;
     data_.m_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void update_info_request::unsafe_arena_set_allocated_m_info(::ComeTogether::marker_info* m_info) {
+inline void update_info_request::unsafe_arena_set_allocated_m_info(::come_together_grpc::marker_info* m_info) {
   clear_data();
   if (m_info) {
     set_has_m_info();
     data_.m_info_ = m_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.update_info_request.m_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.update_info_request.m_info)
 }
-inline ::ComeTogether::marker_info* update_info_request::_internal_mutable_m_info() {
+inline ::come_together_grpc::marker_info* update_info_request::_internal_mutable_m_info() {
   if (!_internal_has_m_info()) {
     clear_data();
     set_has_m_info();
-    data_.m_info_ = CreateMaybeMessage< ::ComeTogether::marker_info >(GetArena());
+    data_.m_info_ = CreateMaybeMessage< ::come_together_grpc::marker_info >(GetArena());
   }
   return data_.m_info_;
 }
-inline ::ComeTogether::marker_info* update_info_request::mutable_m_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.update_info_request.m_info)
+inline ::come_together_grpc::marker_info* update_info_request::mutable_m_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.update_info_request.m_info)
   return _internal_mutable_m_info();
 }
 
-// .ComeTogether.user_info u_info = 4;
+// .come_together_grpc.user_info u_info = 4;
 inline bool update_info_request::_internal_has_u_info() const {
   return data_case() == kUInfo;
 }
@@ -7285,11 +8328,11 @@ inline void update_info_request::clear_u_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::user_info* update_info_request::release_u_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.update_info_request.u_info)
+inline ::come_together_grpc::user_info* update_info_request::release_u_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.update_info_request.u_info)
   if (_internal_has_u_info()) {
     clear_has_data();
-      ::ComeTogether::user_info* temp = data_.u_info_;
+      ::come_together_grpc::user_info* temp = data_.u_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -7299,44 +8342,44 @@ inline ::ComeTogether::user_info* update_info_request::release_u_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::user_info& update_info_request::_internal_u_info() const {
+inline const ::come_together_grpc::user_info& update_info_request::_internal_u_info() const {
   return _internal_has_u_info()
       ? *data_.u_info_
-      : *reinterpret_cast< ::ComeTogether::user_info*>(&::ComeTogether::_user_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::user_info*>(&::come_together_grpc::_user_info_default_instance_);
 }
-inline const ::ComeTogether::user_info& update_info_request::u_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.update_info_request.u_info)
+inline const ::come_together_grpc::user_info& update_info_request::u_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_request.u_info)
   return _internal_u_info();
 }
-inline ::ComeTogether::user_info* update_info_request::unsafe_arena_release_u_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.update_info_request.u_info)
+inline ::come_together_grpc::user_info* update_info_request::unsafe_arena_release_u_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.update_info_request.u_info)
   if (_internal_has_u_info()) {
     clear_has_data();
-    ::ComeTogether::user_info* temp = data_.u_info_;
+    ::come_together_grpc::user_info* temp = data_.u_info_;
     data_.u_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void update_info_request::unsafe_arena_set_allocated_u_info(::ComeTogether::user_info* u_info) {
+inline void update_info_request::unsafe_arena_set_allocated_u_info(::come_together_grpc::user_info* u_info) {
   clear_data();
   if (u_info) {
     set_has_u_info();
     data_.u_info_ = u_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.update_info_request.u_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.update_info_request.u_info)
 }
-inline ::ComeTogether::user_info* update_info_request::_internal_mutable_u_info() {
+inline ::come_together_grpc::user_info* update_info_request::_internal_mutable_u_info() {
   if (!_internal_has_u_info()) {
     clear_data();
     set_has_u_info();
-    data_.u_info_ = CreateMaybeMessage< ::ComeTogether::user_info >(GetArena());
+    data_.u_info_ = CreateMaybeMessage< ::come_together_grpc::user_info >(GetArena());
   }
   return data_.u_info_;
 }
-inline ::ComeTogether::user_info* update_info_request::mutable_u_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.update_info_request.u_info)
+inline ::come_together_grpc::user_info* update_info_request::mutable_u_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.update_info_request.u_info)
   return _internal_mutable_u_info();
 }
 
@@ -7353,51 +8396,51 @@ inline update_info_request::DataCase update_info_request::data_case() const {
 
 // update_info_response
 
-// .ComeTogether.update_info_response.result res = 1;
+// .come_together_grpc.update_info_response.result res = 1;
 inline void update_info_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::update_info_response_result update_info_response::_internal_res() const {
-  return static_cast< ::ComeTogether::update_info_response_result >(res_);
+inline ::come_together_grpc::update_info_response_result update_info_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::update_info_response_result >(res_);
 }
-inline ::ComeTogether::update_info_response_result update_info_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.update_info_response.res)
+inline ::come_together_grpc::update_info_response_result update_info_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_response.res)
   return _internal_res();
 }
-inline void update_info_response::_internal_set_res(::ComeTogether::update_info_response_result value) {
+inline void update_info_response::_internal_set_res(::come_together_grpc::update_info_response_result value) {
   
   res_ = value;
 }
-inline void update_info_response::set_res(::ComeTogether::update_info_response_result value) {
+inline void update_info_response::set_res(::come_together_grpc::update_info_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.update_info_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.update_info_response.res)
 }
 
 // -------------------------------------------------------------------
 
 // event
 
-// .ComeTogether.event.type event_type = 1;
+// .come_together_grpc.event.type event_type = 1;
 inline void event::clear_event_type() {
   event_type_ = 0;
 }
-inline ::ComeTogether::event_type event::_internal_event_type() const {
-  return static_cast< ::ComeTogether::event_type >(event_type_);
+inline ::come_together_grpc::event_type event::_internal_event_type() const {
+  return static_cast< ::come_together_grpc::event_type >(event_type_);
 }
-inline ::ComeTogether::event_type event::event_type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.event.event_type)
+inline ::come_together_grpc::event_type event::event_type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.event.event_type)
   return _internal_event_type();
 }
-inline void event::_internal_set_event_type(::ComeTogether::event_type value) {
+inline void event::_internal_set_event_type(::come_together_grpc::event_type value) {
   
   event_type_ = value;
 }
-inline void event::set_event_type(::ComeTogether::event_type value) {
+inline void event::set_event_type(::come_together_grpc::event_type value) {
   _internal_set_event_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.event.event_type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.event.event_type)
 }
 
-// .ComeTogether.marker_info m_info = 2;
+// .come_together_grpc.marker_info m_info = 2;
 inline bool event::_internal_has_m_info() const {
   return data_case() == kMInfo;
 }
@@ -7415,11 +8458,11 @@ inline void event::clear_m_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::marker_info* event::release_m_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.event.m_info)
+inline ::come_together_grpc::marker_info* event::release_m_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.event.m_info)
   if (_internal_has_m_info()) {
     clear_has_data();
-      ::ComeTogether::marker_info* temp = data_.m_info_;
+      ::come_together_grpc::marker_info* temp = data_.m_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -7429,48 +8472,48 @@ inline ::ComeTogether::marker_info* event::release_m_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::marker_info& event::_internal_m_info() const {
+inline const ::come_together_grpc::marker_info& event::_internal_m_info() const {
   return _internal_has_m_info()
       ? *data_.m_info_
-      : *reinterpret_cast< ::ComeTogether::marker_info*>(&::ComeTogether::_marker_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::marker_info*>(&::come_together_grpc::_marker_info_default_instance_);
 }
-inline const ::ComeTogether::marker_info& event::m_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.event.m_info)
+inline const ::come_together_grpc::marker_info& event::m_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.event.m_info)
   return _internal_m_info();
 }
-inline ::ComeTogether::marker_info* event::unsafe_arena_release_m_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.event.m_info)
+inline ::come_together_grpc::marker_info* event::unsafe_arena_release_m_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.event.m_info)
   if (_internal_has_m_info()) {
     clear_has_data();
-    ::ComeTogether::marker_info* temp = data_.m_info_;
+    ::come_together_grpc::marker_info* temp = data_.m_info_;
     data_.m_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void event::unsafe_arena_set_allocated_m_info(::ComeTogether::marker_info* m_info) {
+inline void event::unsafe_arena_set_allocated_m_info(::come_together_grpc::marker_info* m_info) {
   clear_data();
   if (m_info) {
     set_has_m_info();
     data_.m_info_ = m_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.event.m_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.event.m_info)
 }
-inline ::ComeTogether::marker_info* event::_internal_mutable_m_info() {
+inline ::come_together_grpc::marker_info* event::_internal_mutable_m_info() {
   if (!_internal_has_m_info()) {
     clear_data();
     set_has_m_info();
-    data_.m_info_ = CreateMaybeMessage< ::ComeTogether::marker_info >(GetArena());
+    data_.m_info_ = CreateMaybeMessage< ::come_together_grpc::marker_info >(GetArena());
   }
   return data_.m_info_;
 }
-inline ::ComeTogether::marker_info* event::mutable_m_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.event.m_info)
+inline ::come_together_grpc::marker_info* event::mutable_m_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.event.m_info)
   return _internal_mutable_m_info();
 }
 
-// .ComeTogether.chat_message c_message = 3;
+// .come_together_grpc.chat_message c_message = 3;
 inline bool event::_internal_has_c_message() const {
   return data_case() == kCMessage;
 }
@@ -7488,11 +8531,11 @@ inline void event::clear_c_message() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::chat_message* event::release_c_message() {
-  // @@protoc_insertion_point(field_release:ComeTogether.event.c_message)
+inline ::come_together_grpc::chat_message* event::release_c_message() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.event.c_message)
   if (_internal_has_c_message()) {
     clear_has_data();
-      ::ComeTogether::chat_message* temp = data_.c_message_;
+      ::come_together_grpc::chat_message* temp = data_.c_message_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -7502,48 +8545,48 @@ inline ::ComeTogether::chat_message* event::release_c_message() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::chat_message& event::_internal_c_message() const {
+inline const ::come_together_grpc::chat_message& event::_internal_c_message() const {
   return _internal_has_c_message()
       ? *data_.c_message_
-      : *reinterpret_cast< ::ComeTogether::chat_message*>(&::ComeTogether::_chat_message_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::chat_message*>(&::come_together_grpc::_chat_message_default_instance_);
 }
-inline const ::ComeTogether::chat_message& event::c_message() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.event.c_message)
+inline const ::come_together_grpc::chat_message& event::c_message() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.event.c_message)
   return _internal_c_message();
 }
-inline ::ComeTogether::chat_message* event::unsafe_arena_release_c_message() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.event.c_message)
+inline ::come_together_grpc::chat_message* event::unsafe_arena_release_c_message() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.event.c_message)
   if (_internal_has_c_message()) {
     clear_has_data();
-    ::ComeTogether::chat_message* temp = data_.c_message_;
+    ::come_together_grpc::chat_message* temp = data_.c_message_;
     data_.c_message_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void event::unsafe_arena_set_allocated_c_message(::ComeTogether::chat_message* c_message) {
+inline void event::unsafe_arena_set_allocated_c_message(::come_together_grpc::chat_message* c_message) {
   clear_data();
   if (c_message) {
     set_has_c_message();
     data_.c_message_ = c_message;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.event.c_message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.event.c_message)
 }
-inline ::ComeTogether::chat_message* event::_internal_mutable_c_message() {
+inline ::come_together_grpc::chat_message* event::_internal_mutable_c_message() {
   if (!_internal_has_c_message()) {
     clear_data();
     set_has_c_message();
-    data_.c_message_ = CreateMaybeMessage< ::ComeTogether::chat_message >(GetArena());
+    data_.c_message_ = CreateMaybeMessage< ::come_together_grpc::chat_message >(GetArena());
   }
   return data_.c_message_;
 }
-inline ::ComeTogether::chat_message* event::mutable_c_message() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.event.c_message)
+inline ::come_together_grpc::chat_message* event::mutable_c_message() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.event.c_message)
   return _internal_mutable_c_message();
 }
 
-// .ComeTogether.user_info u_info = 4;
+// .come_together_grpc.user_info u_info = 4;
 inline bool event::_internal_has_u_info() const {
   return data_case() == kUInfo;
 }
@@ -7561,11 +8604,11 @@ inline void event::clear_u_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::user_info* event::release_u_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.event.u_info)
+inline ::come_together_grpc::user_info* event::release_u_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.event.u_info)
   if (_internal_has_u_info()) {
     clear_has_data();
-      ::ComeTogether::user_info* temp = data_.u_info_;
+      ::come_together_grpc::user_info* temp = data_.u_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -7575,44 +8618,44 @@ inline ::ComeTogether::user_info* event::release_u_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::user_info& event::_internal_u_info() const {
+inline const ::come_together_grpc::user_info& event::_internal_u_info() const {
   return _internal_has_u_info()
       ? *data_.u_info_
-      : *reinterpret_cast< ::ComeTogether::user_info*>(&::ComeTogether::_user_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::user_info*>(&::come_together_grpc::_user_info_default_instance_);
 }
-inline const ::ComeTogether::user_info& event::u_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.event.u_info)
+inline const ::come_together_grpc::user_info& event::u_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.event.u_info)
   return _internal_u_info();
 }
-inline ::ComeTogether::user_info* event::unsafe_arena_release_u_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.event.u_info)
+inline ::come_together_grpc::user_info* event::unsafe_arena_release_u_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.event.u_info)
   if (_internal_has_u_info()) {
     clear_has_data();
-    ::ComeTogether::user_info* temp = data_.u_info_;
+    ::come_together_grpc::user_info* temp = data_.u_info_;
     data_.u_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void event::unsafe_arena_set_allocated_u_info(::ComeTogether::user_info* u_info) {
+inline void event::unsafe_arena_set_allocated_u_info(::come_together_grpc::user_info* u_info) {
   clear_data();
   if (u_info) {
     set_has_u_info();
     data_.u_info_ = u_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.event.u_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.event.u_info)
 }
-inline ::ComeTogether::user_info* event::_internal_mutable_u_info() {
+inline ::come_together_grpc::user_info* event::_internal_mutable_u_info() {
   if (!_internal_has_u_info()) {
     clear_data();
     set_has_u_info();
-    data_.u_info_ = CreateMaybeMessage< ::ComeTogether::user_info >(GetArena());
+    data_.u_info_ = CreateMaybeMessage< ::come_together_grpc::user_info >(GetArena());
   }
   return data_.u_info_;
 }
-inline ::ComeTogether::user_info* event::mutable_u_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.event.u_info)
+inline ::come_together_grpc::user_info* event::mutable_u_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.event.u_info)
   return _internal_mutable_u_info();
 }
 
@@ -7634,15 +8677,15 @@ inline void chat_info::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& chat_info::uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_info.uuid)
   return _internal_uuid();
 }
 inline void chat_info::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_info.uuid)
 }
 inline std::string* chat_info::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_info.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& chat_info::_internal_uuid() const {
@@ -7656,28 +8699,28 @@ inline void chat_info::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_info.uuid)
 }
 inline void chat_info::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_info.uuid)
 }
 inline void chat_info::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_info.uuid)
 }
 inline std::string* chat_info::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_info::release_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_info.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void chat_info::set_allocated_uuid(std::string* uuid) {
@@ -7688,7 +8731,7 @@ inline void chat_info::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_info.uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_info.uuid)
 }
 
 // string title = 2;
@@ -7696,15 +8739,15 @@ inline void chat_info::clear_title() {
   title_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& chat_info::title() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_info.title)
   return _internal_title();
 }
 inline void chat_info::set_title(const std::string& value) {
   _internal_set_title(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_info.title)
 }
 inline std::string* chat_info::mutable_title() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_info.title)
   return _internal_mutable_title();
 }
 inline const std::string& chat_info::_internal_title() const {
@@ -7718,28 +8761,28 @@ inline void chat_info::set_title(std::string&& value) {
   
   title_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_info.title)
 }
 inline void chat_info::set_title(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_info.title)
 }
 inline void chat_info::set_title(const char* value,
     size_t size) {
   
   title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_info.title)
 }
 inline std::string* chat_info::_internal_mutable_title() {
   
   return title_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_info::release_title() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_info.title)
   return title_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void chat_info::set_allocated_title(std::string* title) {
@@ -7750,7 +8793,7 @@ inline void chat_info::set_allocated_title(std::string* title) {
   }
   title_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), title,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_info.title)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_info.title)
 }
 
 // repeated string participants_uuid = 3;
@@ -7764,66 +8807,66 @@ inline void chat_info::clear_participants_uuid() {
   participants_uuid_.Clear();
 }
 inline std::string* chat_info::add_participants_uuid() {
-  // @@protoc_insertion_point(field_add_mutable:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_add_mutable:come_together_grpc.chat_info.participants_uuid)
   return _internal_add_participants_uuid();
 }
 inline const std::string& chat_info::_internal_participants_uuid(int index) const {
   return participants_uuid_.Get(index);
 }
 inline const std::string& chat_info::participants_uuid(int index) const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_info.participants_uuid)
   return _internal_participants_uuid(index);
 }
 inline std::string* chat_info::mutable_participants_uuid(int index) {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_info.participants_uuid)
   return participants_uuid_.Mutable(index);
 }
 inline void chat_info::set_participants_uuid(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_info.participants_uuid)
   participants_uuid_.Mutable(index)->assign(value);
 }
 inline void chat_info::set_participants_uuid(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_info.participants_uuid)
   participants_uuid_.Mutable(index)->assign(std::move(value));
 }
 inline void chat_info::set_participants_uuid(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   participants_uuid_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_info.participants_uuid)
 }
 inline void chat_info::set_participants_uuid(int index, const char* value, size_t size) {
   participants_uuid_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_info.participants_uuid)
 }
 inline std::string* chat_info::_internal_add_participants_uuid() {
   return participants_uuid_.Add();
 }
 inline void chat_info::add_participants_uuid(const std::string& value) {
   participants_uuid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_add:come_together_grpc.chat_info.participants_uuid)
 }
 inline void chat_info::add_participants_uuid(std::string&& value) {
   participants_uuid_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_add:come_together_grpc.chat_info.participants_uuid)
 }
 inline void chat_info::add_participants_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   participants_uuid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_add_char:come_together_grpc.chat_info.participants_uuid)
 }
 inline void chat_info::add_participants_uuid(const char* value, size_t size) {
   participants_uuid_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_add_pointer:come_together_grpc.chat_info.participants_uuid)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 chat_info::participants_uuid() const {
-  // @@protoc_insertion_point(field_list:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_list:come_together_grpc.chat_info.participants_uuid)
   return participants_uuid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 chat_info::mutable_participants_uuid() {
-  // @@protoc_insertion_point(field_mutable_list:ComeTogether.chat_info.participants_uuid)
+  // @@protoc_insertion_point(field_mutable_list:come_together_grpc.chat_info.participants_uuid)
   return &participants_uuid_;
 }
 
@@ -7832,15 +8875,15 @@ inline void chat_info::clear_last_visible_message() {
   last_visible_message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& chat_info::last_visible_message() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_info.last_visible_message)
   return _internal_last_visible_message();
 }
 inline void chat_info::set_last_visible_message(const std::string& value) {
   _internal_set_last_visible_message(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_info.last_visible_message)
 }
 inline std::string* chat_info::mutable_last_visible_message() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_info.last_visible_message)
   return _internal_mutable_last_visible_message();
 }
 inline const std::string& chat_info::_internal_last_visible_message() const {
@@ -7854,28 +8897,28 @@ inline void chat_info::set_last_visible_message(std::string&& value) {
   
   last_visible_message_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_info.last_visible_message)
 }
 inline void chat_info::set_last_visible_message(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   last_visible_message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_info.last_visible_message)
 }
 inline void chat_info::set_last_visible_message(const char* value,
     size_t size) {
   
   last_visible_message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_info.last_visible_message)
 }
 inline std::string* chat_info::_internal_mutable_last_visible_message() {
   
   return last_visible_message_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_info::release_last_visible_message() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_info.last_visible_message)
   return last_visible_message_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void chat_info::set_allocated_last_visible_message(std::string* last_visible_message) {
@@ -7886,7 +8929,7 @@ inline void chat_info::set_allocated_last_visible_message(std::string* last_visi
   }
   last_visible_message_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), last_visible_message,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_info.last_visible_message)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_info.last_visible_message)
 }
 
 // -------------------------------------------------------------------
@@ -7898,15 +8941,15 @@ inline void get_chat_messages_request::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_chat_messages_request::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.access_token)
   return _internal_access_token();
 }
 inline void get_chat_messages_request::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.access_token)
 }
 inline std::string* get_chat_messages_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_chat_messages_request.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& get_chat_messages_request::_internal_access_token() const {
@@ -7920,28 +8963,28 @@ inline void get_chat_messages_request::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_chat_messages_request.access_token)
 }
 inline void get_chat_messages_request::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_chat_messages_request.access_token)
 }
 inline void get_chat_messages_request::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_chat_messages_request.access_token)
 }
 inline std::string* get_chat_messages_request::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_chat_messages_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_chat_messages_request.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_chat_messages_request::set_allocated_access_token(std::string* access_token) {
@@ -7952,7 +8995,7 @@ inline void get_chat_messages_request::set_allocated_access_token(std::string* a
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_chat_messages_request.access_token)
 }
 
 // string chat_uuid = 2;
@@ -7960,15 +9003,15 @@ inline void get_chat_messages_request::clear_chat_uuid() {
   chat_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_chat_messages_request::chat_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.chat_uuid)
   return _internal_chat_uuid();
 }
 inline void get_chat_messages_request::set_chat_uuid(const std::string& value) {
   _internal_set_chat_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.chat_uuid)
 }
 inline std::string* get_chat_messages_request::mutable_chat_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_chat_messages_request.chat_uuid)
   return _internal_mutable_chat_uuid();
 }
 inline const std::string& get_chat_messages_request::_internal_chat_uuid() const {
@@ -7982,28 +9025,28 @@ inline void get_chat_messages_request::set_chat_uuid(std::string&& value) {
   
   chat_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_chat_messages_request.chat_uuid)
 }
 inline void get_chat_messages_request::set_chat_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_chat_messages_request.chat_uuid)
 }
 inline void get_chat_messages_request::set_chat_uuid(const char* value,
     size_t size) {
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_chat_messages_request.chat_uuid)
 }
 inline std::string* get_chat_messages_request::_internal_mutable_chat_uuid() {
   
   return chat_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_chat_messages_request::release_chat_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_chat_messages_request.chat_uuid)
   return chat_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_chat_messages_request::set_allocated_chat_uuid(std::string* chat_uuid) {
@@ -8014,7 +9057,7 @@ inline void get_chat_messages_request::set_allocated_chat_uuid(std::string* chat
   }
   chat_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chat_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_chat_messages_request.chat_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_chat_messages_request.chat_uuid)
 }
 
 // int32 page_size = 3;
@@ -8025,7 +9068,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 get_chat_messages_request::_internal_page_
   return page_size_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 get_chat_messages_request::page_size() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_chat_messages_request.page_size)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.page_size)
   return _internal_page_size();
 }
 inline void get_chat_messages_request::_internal_set_page_size(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8034,7 +9077,7 @@ inline void get_chat_messages_request::_internal_set_page_size(::PROTOBUF_NAMESP
 }
 inline void get_chat_messages_request::set_page_size(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_page_size(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_chat_messages_request.page_size)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.page_size)
 }
 
 // int32 page_number = 4;
@@ -8045,7 +9088,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 get_chat_messages_request::_internal_page_
   return page_number_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 get_chat_messages_request::page_number() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_chat_messages_request.page_number)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.page_number)
   return _internal_page_number();
 }
 inline void get_chat_messages_request::_internal_set_page_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8054,7 +9097,7 @@ inline void get_chat_messages_request::_internal_set_page_number(::PROTOBUF_NAME
 }
 inline void get_chat_messages_request::set_page_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_page_number(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_chat_messages_request.page_number)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.page_number)
 }
 
 // string hash = 5;
@@ -8062,15 +9105,15 @@ inline void get_chat_messages_request::clear_hash() {
   hash_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_chat_messages_request::hash() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.hash)
   return _internal_hash();
 }
 inline void get_chat_messages_request::set_hash(const std::string& value) {
   _internal_set_hash(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.hash)
 }
 inline std::string* get_chat_messages_request::mutable_hash() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_chat_messages_request.hash)
   return _internal_mutable_hash();
 }
 inline const std::string& get_chat_messages_request::_internal_hash() const {
@@ -8084,28 +9127,28 @@ inline void get_chat_messages_request::set_hash(std::string&& value) {
   
   hash_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_chat_messages_request.hash)
 }
 inline void get_chat_messages_request::set_hash(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   hash_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_chat_messages_request.hash)
 }
 inline void get_chat_messages_request::set_hash(const char* value,
     size_t size) {
   
   hash_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_chat_messages_request.hash)
 }
 inline std::string* get_chat_messages_request::_internal_mutable_hash() {
   
   return hash_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_chat_messages_request::release_hash() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_chat_messages_request.hash)
   return hash_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_chat_messages_request::set_allocated_hash(std::string* hash) {
@@ -8116,31 +9159,31 @@ inline void get_chat_messages_request::set_allocated_hash(std::string* hash) {
   }
   hash_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hash,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_chat_messages_request.hash)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_chat_messages_request.hash)
 }
 
 // -------------------------------------------------------------------
 
 // chat_message
 
-// .ComeTogether.chat_message.message_content content_type = 1;
+// .come_together_grpc.chat_message.message_content content_type = 1;
 inline void chat_message::clear_content_type() {
   content_type_ = 0;
 }
-inline ::ComeTogether::chat_message_message_content chat_message::_internal_content_type() const {
-  return static_cast< ::ComeTogether::chat_message_message_content >(content_type_);
+inline ::come_together_grpc::chat_message_message_content chat_message::_internal_content_type() const {
+  return static_cast< ::come_together_grpc::chat_message_message_content >(content_type_);
 }
-inline ::ComeTogether::chat_message_message_content chat_message::content_type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.content_type)
+inline ::come_together_grpc::chat_message_message_content chat_message::content_type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.content_type)
   return _internal_content_type();
 }
-inline void chat_message::_internal_set_content_type(::ComeTogether::chat_message_message_content value) {
+inline void chat_message::_internal_set_content_type(::come_together_grpc::chat_message_message_content value) {
   
   content_type_ = value;
 }
-inline void chat_message::set_content_type(::ComeTogether::chat_message_message_content value) {
+inline void chat_message::set_content_type(::come_together_grpc::chat_message_message_content value) {
   _internal_set_content_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.content_type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.content_type)
 }
 
 // string sender_uuid = 2;
@@ -8148,15 +9191,15 @@ inline void chat_message::clear_sender_uuid() {
   sender_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& chat_message::sender_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.sender_uuid)
   return _internal_sender_uuid();
 }
 inline void chat_message::set_sender_uuid(const std::string& value) {
   _internal_set_sender_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.sender_uuid)
 }
 inline std::string* chat_message::mutable_sender_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_message.sender_uuid)
   return _internal_mutable_sender_uuid();
 }
 inline const std::string& chat_message::_internal_sender_uuid() const {
@@ -8170,28 +9213,28 @@ inline void chat_message::set_sender_uuid(std::string&& value) {
   
   sender_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_message.sender_uuid)
 }
 inline void chat_message::set_sender_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   sender_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_message.sender_uuid)
 }
 inline void chat_message::set_sender_uuid(const char* value,
     size_t size) {
   
   sender_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_message.sender_uuid)
 }
 inline std::string* chat_message::_internal_mutable_sender_uuid() {
   
   return sender_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_message::release_sender_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_message.sender_uuid)
   return sender_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void chat_message::set_allocated_sender_uuid(std::string* sender_uuid) {
@@ -8202,7 +9245,7 @@ inline void chat_message::set_allocated_sender_uuid(std::string* sender_uuid) {
   }
   sender_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sender_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_message.sender_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_message.sender_uuid)
 }
 
 // string text = 3;
@@ -8219,15 +9262,15 @@ inline void chat_message::clear_text() {
   }
 }
 inline const std::string& chat_message::text() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.text)
   return _internal_text();
 }
 inline void chat_message::set_text(const std::string& value) {
   _internal_set_text(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.text)
 }
 inline std::string* chat_message::mutable_text() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_message.text)
   return _internal_mutable_text();
 }
 inline const std::string& chat_message::_internal_text() const {
@@ -8245,7 +9288,7 @@ inline void chat_message::_internal_set_text(const std::string& value) {
   content_.text_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
 inline void chat_message::set_text(std::string&& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.text)
   if (!_internal_has_text()) {
     clear_content();
     set_has_text();
@@ -8253,7 +9296,7 @@ inline void chat_message::set_text(std::string&& value) {
   }
   content_.text_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_message.text)
 }
 inline void chat_message::set_text(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
@@ -8264,7 +9307,7 @@ inline void chat_message::set_text(const char* value) {
   }
   content_.text_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_message.text)
 }
 inline void chat_message::set_text(const char* value,
                              size_t size) {
@@ -8277,7 +9320,7 @@ inline void chat_message::set_text(const char* value,
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size),
       GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_message.text)
 }
 inline std::string* chat_message::_internal_mutable_text() {
   if (!_internal_has_text()) {
@@ -8288,7 +9331,7 @@ inline std::string* chat_message::_internal_mutable_text() {
   return content_.text_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_message::release_text() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_message.text)
   if (_internal_has_text()) {
     clear_has_content();
     return content_.text_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -8308,7 +9351,7 @@ inline void chat_message::set_allocated_text(std::string* text) {
       arena->Own(text);
     }
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_message.text)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_message.text)
 }
 
 // int64 sent_unix_time = 4;
@@ -8319,7 +9362,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 chat_message::_internal_sent_unix_time() c
   return sent_unix_time_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 chat_message::sent_unix_time() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.sent_unix_time)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.sent_unix_time)
   return _internal_sent_unix_time();
 }
 inline void chat_message::_internal_set_sent_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -8328,7 +9371,7 @@ inline void chat_message::_internal_set_sent_unix_time(::PROTOBUF_NAMESPACE_ID::
 }
 inline void chat_message::set_sent_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_sent_unix_time(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.sent_unix_time)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.sent_unix_time)
 }
 
 // string chat_uuid = 5;
@@ -8336,15 +9379,15 @@ inline void chat_message::clear_chat_uuid() {
   chat_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& chat_message::chat_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.chat_uuid)
   return _internal_chat_uuid();
 }
 inline void chat_message::set_chat_uuid(const std::string& value) {
   _internal_set_chat_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.chat_uuid)
 }
 inline std::string* chat_message::mutable_chat_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_message.chat_uuid)
   return _internal_mutable_chat_uuid();
 }
 inline const std::string& chat_message::_internal_chat_uuid() const {
@@ -8358,28 +9401,28 @@ inline void chat_message::set_chat_uuid(std::string&& value) {
   
   chat_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_message.chat_uuid)
 }
 inline void chat_message::set_chat_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_message.chat_uuid)
 }
 inline void chat_message::set_chat_uuid(const char* value,
     size_t size) {
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_message.chat_uuid)
 }
 inline std::string* chat_message::_internal_mutable_chat_uuid() {
   
   return chat_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_message::release_chat_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_message.chat_uuid)
   return chat_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void chat_message::set_allocated_chat_uuid(std::string* chat_uuid) {
@@ -8390,7 +9433,7 @@ inline void chat_message::set_allocated_chat_uuid(std::string* chat_uuid) {
   }
   chat_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chat_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_message.chat_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_message.chat_uuid)
 }
 
 // int64 sequence_number = 6;
@@ -8401,7 +9444,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 chat_message::_internal_sequence_number() 
   return sequence_number_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 chat_message::sequence_number() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.sequence_number)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.sequence_number)
   return _internal_sequence_number();
 }
 inline void chat_message::_internal_set_sequence_number(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -8410,7 +9453,7 @@ inline void chat_message::_internal_set_sequence_number(::PROTOBUF_NAMESPACE_ID:
 }
 inline void chat_message::set_sequence_number(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_sequence_number(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.sequence_number)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.sequence_number)
 }
 
 // string uuid = 7;
@@ -8418,15 +9461,15 @@ inline void chat_message::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& chat_message::uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.chat_message.uuid)
   return _internal_uuid();
 }
 inline void chat_message::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.chat_message.uuid)
 }
 inline std::string* chat_message::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.chat_message.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& chat_message::_internal_uuid() const {
@@ -8440,28 +9483,28 @@ inline void chat_message::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.chat_message.uuid)
 }
 inline void chat_message::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.chat_message.uuid)
 }
 inline void chat_message::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.chat_message.uuid)
 }
 inline std::string* chat_message::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* chat_message::release_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.chat_message.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void chat_message::set_allocated_uuid(std::string* uuid) {
@@ -8472,7 +9515,7 @@ inline void chat_message::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.chat_message.uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.chat_message.uuid)
 }
 
 inline bool chat_message::has_content() const {
@@ -8493,15 +9536,15 @@ inline void send_chat_message_request::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& send_chat_message_request::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_request.access_token)
   return _internal_access_token();
 }
 inline void send_chat_message_request::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_chat_message_request.access_token)
 }
 inline std::string* send_chat_message_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_chat_message_request.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& send_chat_message_request::_internal_access_token() const {
@@ -8515,28 +9558,28 @@ inline void send_chat_message_request::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.send_chat_message_request.access_token)
 }
 inline void send_chat_message_request::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.send_chat_message_request.access_token)
 }
 inline void send_chat_message_request::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.send_chat_message_request.access_token)
 }
 inline std::string* send_chat_message_request::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* send_chat_message_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_chat_message_request.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void send_chat_message_request::set_allocated_access_token(std::string* access_token) {
@@ -8547,10 +9590,10 @@ inline void send_chat_message_request::set_allocated_access_token(std::string* a
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_chat_message_request.access_token)
 }
 
-// .ComeTogether.chat_message message = 2;
+// .come_together_grpc.chat_message message = 2;
 inline bool send_chat_message_request::_internal_has_message() const {
   return this != internal_default_instance() && message_ != nullptr;
 }
@@ -8563,17 +9606,17 @@ inline void send_chat_message_request::clear_message() {
   }
   message_ = nullptr;
 }
-inline const ::ComeTogether::chat_message& send_chat_message_request::_internal_message() const {
-  const ::ComeTogether::chat_message* p = message_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::ComeTogether::chat_message*>(
-      &::ComeTogether::_chat_message_default_instance_);
+inline const ::come_together_grpc::chat_message& send_chat_message_request::_internal_message() const {
+  const ::come_together_grpc::chat_message* p = message_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::chat_message*>(
+      &::come_together_grpc::_chat_message_default_instance_);
 }
-inline const ::ComeTogether::chat_message& send_chat_message_request::message() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.send_chat_message_request.message)
+inline const ::come_together_grpc::chat_message& send_chat_message_request::message() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_request.message)
   return _internal_message();
 }
 inline void send_chat_message_request::unsafe_arena_set_allocated_message(
-    ::ComeTogether::chat_message* message) {
+    ::come_together_grpc::chat_message* message) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(message_);
   }
@@ -8583,37 +9626,37 @@ inline void send_chat_message_request::unsafe_arena_set_allocated_message(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.send_chat_message_request.message)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.send_chat_message_request.message)
 }
-inline ::ComeTogether::chat_message* send_chat_message_request::release_message() {
+inline ::come_together_grpc::chat_message* send_chat_message_request::release_message() {
   
-  ::ComeTogether::chat_message* temp = message_;
+  ::come_together_grpc::chat_message* temp = message_;
   message_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::ComeTogether::chat_message* send_chat_message_request::unsafe_arena_release_message() {
-  // @@protoc_insertion_point(field_release:ComeTogether.send_chat_message_request.message)
+inline ::come_together_grpc::chat_message* send_chat_message_request::unsafe_arena_release_message() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_chat_message_request.message)
   
-  ::ComeTogether::chat_message* temp = message_;
+  ::come_together_grpc::chat_message* temp = message_;
   message_ = nullptr;
   return temp;
 }
-inline ::ComeTogether::chat_message* send_chat_message_request::_internal_mutable_message() {
+inline ::come_together_grpc::chat_message* send_chat_message_request::_internal_mutable_message() {
   
   if (message_ == nullptr) {
-    auto* p = CreateMaybeMessage<::ComeTogether::chat_message>(GetArena());
+    auto* p = CreateMaybeMessage<::come_together_grpc::chat_message>(GetArena());
     message_ = p;
   }
   return message_;
 }
-inline ::ComeTogether::chat_message* send_chat_message_request::mutable_message() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.send_chat_message_request.message)
+inline ::come_together_grpc::chat_message* send_chat_message_request::mutable_message() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_chat_message_request.message)
   return _internal_mutable_message();
 }
-inline void send_chat_message_request::set_allocated_message(::ComeTogether::chat_message* message) {
+inline void send_chat_message_request::set_allocated_message(::come_together_grpc::chat_message* message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete message_;
@@ -8630,31 +9673,31 @@ inline void send_chat_message_request::set_allocated_message(::ComeTogether::cha
     
   }
   message_ = message;
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.send_chat_message_request.message)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_chat_message_request.message)
 }
 
 // -------------------------------------------------------------------
 
 // send_chat_message_response
 
-// .ComeTogether.send_chat_message_response.result res = 1;
+// .come_together_grpc.send_chat_message_response.result res = 1;
 inline void send_chat_message_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::send_chat_message_response_result send_chat_message_response::_internal_res() const {
-  return static_cast< ::ComeTogether::send_chat_message_response_result >(res_);
+inline ::come_together_grpc::send_chat_message_response_result send_chat_message_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::send_chat_message_response_result >(res_);
 }
-inline ::ComeTogether::send_chat_message_response_result send_chat_message_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.send_chat_message_response.res)
+inline ::come_together_grpc::send_chat_message_response_result send_chat_message_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_response.res)
   return _internal_res();
 }
-inline void send_chat_message_response::_internal_set_res(::ComeTogether::send_chat_message_response_result value) {
+inline void send_chat_message_response::_internal_set_res(::come_together_grpc::send_chat_message_response_result value) {
   
   res_ = value;
 }
-inline void send_chat_message_response::set_res(::ComeTogether::send_chat_message_response_result value) {
+inline void send_chat_message_response::set_res(::come_together_grpc::send_chat_message_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.send_chat_message_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_chat_message_response.res)
 }
 
 // int64 actual_sequence_number = 2;
@@ -8665,7 +9708,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 send_chat_message_response::_internal_actu
   return actual_sequence_number_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 send_chat_message_response::actual_sequence_number() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.send_chat_message_response.actual_sequence_number)
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_response.actual_sequence_number)
   return _internal_actual_sequence_number();
 }
 inline void send_chat_message_response::_internal_set_actual_sequence_number(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -8674,7 +9717,7 @@ inline void send_chat_message_response::_internal_set_actual_sequence_number(::P
 }
 inline void send_chat_message_response::set_actual_sequence_number(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_actual_sequence_number(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.send_chat_message_response.actual_sequence_number)
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_chat_message_response.actual_sequence_number)
 }
 
 // string message_uuid = 4;
@@ -8682,15 +9725,15 @@ inline void send_chat_message_response::clear_message_uuid() {
   message_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& send_chat_message_response::message_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_response.message_uuid)
   return _internal_message_uuid();
 }
 inline void send_chat_message_response::set_message_uuid(const std::string& value) {
   _internal_set_message_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.send_chat_message_response.message_uuid)
 }
 inline std::string* send_chat_message_response::mutable_message_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_chat_message_response.message_uuid)
   return _internal_mutable_message_uuid();
 }
 inline const std::string& send_chat_message_response::_internal_message_uuid() const {
@@ -8704,28 +9747,28 @@ inline void send_chat_message_response::set_message_uuid(std::string&& value) {
   
   message_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.send_chat_message_response.message_uuid)
 }
 inline void send_chat_message_response::set_message_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   message_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.send_chat_message_response.message_uuid)
 }
 inline void send_chat_message_response::set_message_uuid(const char* value,
     size_t size) {
   
   message_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.send_chat_message_response.message_uuid)
 }
 inline std::string* send_chat_message_response::_internal_mutable_message_uuid() {
   
   return message_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* send_chat_message_response::release_message_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_chat_message_response.message_uuid)
   return message_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void send_chat_message_response::set_allocated_message_uuid(std::string* message_uuid) {
@@ -8736,31 +9779,31 @@ inline void send_chat_message_response::set_allocated_message_uuid(std::string* 
   }
   message_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.send_chat_message_response.message_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_chat_message_response.message_uuid)
 }
 
 // -------------------------------------------------------------------
 
 // get_info_request
 
-// .ComeTogether.get_info_request.type info_type = 1;
+// .come_together_grpc.get_info_request.type info_type = 1;
 inline void get_info_request::clear_info_type() {
   info_type_ = 0;
 }
-inline ::ComeTogether::get_info_request_type get_info_request::_internal_info_type() const {
-  return static_cast< ::ComeTogether::get_info_request_type >(info_type_);
+inline ::come_together_grpc::get_info_request_type get_info_request::_internal_info_type() const {
+  return static_cast< ::come_together_grpc::get_info_request_type >(info_type_);
 }
-inline ::ComeTogether::get_info_request_type get_info_request::info_type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_request.info_type)
+inline ::come_together_grpc::get_info_request_type get_info_request::info_type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_request.info_type)
   return _internal_info_type();
 }
-inline void get_info_request::_internal_set_info_type(::ComeTogether::get_info_request_type value) {
+inline void get_info_request::_internal_set_info_type(::come_together_grpc::get_info_request_type value) {
   
   info_type_ = value;
 }
-inline void get_info_request::set_info_type(::ComeTogether::get_info_request_type value) {
+inline void get_info_request::set_info_type(::come_together_grpc::get_info_request_type value) {
   _internal_set_info_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_info_request.info_type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_info_request.info_type)
 }
 
 // string access_token = 2;
@@ -8768,15 +9811,15 @@ inline void get_info_request::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_info_request::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_request.access_token)
   return _internal_access_token();
 }
 inline void get_info_request::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_info_request.access_token)
 }
 inline std::string* get_info_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_request.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& get_info_request::_internal_access_token() const {
@@ -8790,28 +9833,28 @@ inline void get_info_request::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_info_request.access_token)
 }
 inline void get_info_request::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_info_request.access_token)
 }
 inline void get_info_request::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_info_request.access_token)
 }
 inline std::string* get_info_request::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_info_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_request.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_info_request::set_allocated_access_token(std::string* access_token) {
@@ -8822,7 +9865,7 @@ inline void get_info_request::set_allocated_access_token(std::string* access_tok
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_request.access_token)
 }
 
 // string target_uuid = 3;
@@ -8830,15 +9873,15 @@ inline void get_info_request::clear_target_uuid() {
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_info_request::target_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_request.target_uuid)
   return _internal_target_uuid();
 }
 inline void get_info_request::set_target_uuid(const std::string& value) {
   _internal_set_target_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_info_request.target_uuid)
 }
 inline std::string* get_info_request::mutable_target_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_request.target_uuid)
   return _internal_mutable_target_uuid();
 }
 inline const std::string& get_info_request::_internal_target_uuid() const {
@@ -8852,28 +9895,28 @@ inline void get_info_request::set_target_uuid(std::string&& value) {
   
   target_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_info_request.target_uuid)
 }
 inline void get_info_request::set_target_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_info_request.target_uuid)
 }
 inline void get_info_request::set_target_uuid(const char* value,
     size_t size) {
   
   target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_info_request.target_uuid)
 }
 inline std::string* get_info_request::_internal_mutable_target_uuid() {
   
   return target_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_info_request::release_target_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_request.target_uuid)
   return target_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_info_request::set_allocated_target_uuid(std::string* target_uuid) {
@@ -8884,14 +9927,14 @@ inline void get_info_request::set_allocated_target_uuid(std::string* target_uuid
   }
   target_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), target_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_info_request.target_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_request.target_uuid)
 }
 
 // -------------------------------------------------------------------
 
 // get_info_response
 
-// .ComeTogether.user_info u_info = 1;
+// .come_together_grpc.user_info u_info = 1;
 inline bool get_info_response::_internal_has_u_info() const {
   return data_case() == kUInfo;
 }
@@ -8909,11 +9952,11 @@ inline void get_info_response::clear_u_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::user_info* get_info_response::release_u_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_info_response.u_info)
+inline ::come_together_grpc::user_info* get_info_response::release_u_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_response.u_info)
   if (_internal_has_u_info()) {
     clear_has_data();
-      ::ComeTogether::user_info* temp = data_.u_info_;
+      ::come_together_grpc::user_info* temp = data_.u_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -8923,48 +9966,48 @@ inline ::ComeTogether::user_info* get_info_response::release_u_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::user_info& get_info_response::_internal_u_info() const {
+inline const ::come_together_grpc::user_info& get_info_response::_internal_u_info() const {
   return _internal_has_u_info()
       ? *data_.u_info_
-      : *reinterpret_cast< ::ComeTogether::user_info*>(&::ComeTogether::_user_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::user_info*>(&::come_together_grpc::_user_info_default_instance_);
 }
-inline const ::ComeTogether::user_info& get_info_response::u_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_response.u_info)
+inline const ::come_together_grpc::user_info& get_info_response::u_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_response.u_info)
   return _internal_u_info();
 }
-inline ::ComeTogether::user_info* get_info_response::unsafe_arena_release_u_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.get_info_response.u_info)
+inline ::come_together_grpc::user_info* get_info_response::unsafe_arena_release_u_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.get_info_response.u_info)
   if (_internal_has_u_info()) {
     clear_has_data();
-    ::ComeTogether::user_info* temp = data_.u_info_;
+    ::come_together_grpc::user_info* temp = data_.u_info_;
     data_.u_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void get_info_response::unsafe_arena_set_allocated_u_info(::ComeTogether::user_info* u_info) {
+inline void get_info_response::unsafe_arena_set_allocated_u_info(::come_together_grpc::user_info* u_info) {
   clear_data();
   if (u_info) {
     set_has_u_info();
     data_.u_info_ = u_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.get_info_response.u_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.get_info_response.u_info)
 }
-inline ::ComeTogether::user_info* get_info_response::_internal_mutable_u_info() {
+inline ::come_together_grpc::user_info* get_info_response::_internal_mutable_u_info() {
   if (!_internal_has_u_info()) {
     clear_data();
     set_has_u_info();
-    data_.u_info_ = CreateMaybeMessage< ::ComeTogether::user_info >(GetArena());
+    data_.u_info_ = CreateMaybeMessage< ::come_together_grpc::user_info >(GetArena());
   }
   return data_.u_info_;
 }
-inline ::ComeTogether::user_info* get_info_response::mutable_u_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_info_response.u_info)
+inline ::come_together_grpc::user_info* get_info_response::mutable_u_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_response.u_info)
   return _internal_mutable_u_info();
 }
 
-// .ComeTogether.marker_info m_info = 2;
+// .come_together_grpc.marker_info m_info = 2;
 inline bool get_info_response::_internal_has_m_info() const {
   return data_case() == kMInfo;
 }
@@ -8982,11 +10025,11 @@ inline void get_info_response::clear_m_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::marker_info* get_info_response::release_m_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_info_response.m_info)
+inline ::come_together_grpc::marker_info* get_info_response::release_m_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_response.m_info)
   if (_internal_has_m_info()) {
     clear_has_data();
-      ::ComeTogether::marker_info* temp = data_.m_info_;
+      ::come_together_grpc::marker_info* temp = data_.m_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -8996,48 +10039,48 @@ inline ::ComeTogether::marker_info* get_info_response::release_m_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::marker_info& get_info_response::_internal_m_info() const {
+inline const ::come_together_grpc::marker_info& get_info_response::_internal_m_info() const {
   return _internal_has_m_info()
       ? *data_.m_info_
-      : *reinterpret_cast< ::ComeTogether::marker_info*>(&::ComeTogether::_marker_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::marker_info*>(&::come_together_grpc::_marker_info_default_instance_);
 }
-inline const ::ComeTogether::marker_info& get_info_response::m_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_response.m_info)
+inline const ::come_together_grpc::marker_info& get_info_response::m_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_response.m_info)
   return _internal_m_info();
 }
-inline ::ComeTogether::marker_info* get_info_response::unsafe_arena_release_m_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.get_info_response.m_info)
+inline ::come_together_grpc::marker_info* get_info_response::unsafe_arena_release_m_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.get_info_response.m_info)
   if (_internal_has_m_info()) {
     clear_has_data();
-    ::ComeTogether::marker_info* temp = data_.m_info_;
+    ::come_together_grpc::marker_info* temp = data_.m_info_;
     data_.m_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void get_info_response::unsafe_arena_set_allocated_m_info(::ComeTogether::marker_info* m_info) {
+inline void get_info_response::unsafe_arena_set_allocated_m_info(::come_together_grpc::marker_info* m_info) {
   clear_data();
   if (m_info) {
     set_has_m_info();
     data_.m_info_ = m_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.get_info_response.m_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.get_info_response.m_info)
 }
-inline ::ComeTogether::marker_info* get_info_response::_internal_mutable_m_info() {
+inline ::come_together_grpc::marker_info* get_info_response::_internal_mutable_m_info() {
   if (!_internal_has_m_info()) {
     clear_data();
     set_has_m_info();
-    data_.m_info_ = CreateMaybeMessage< ::ComeTogether::marker_info >(GetArena());
+    data_.m_info_ = CreateMaybeMessage< ::come_together_grpc::marker_info >(GetArena());
   }
   return data_.m_info_;
 }
-inline ::ComeTogether::marker_info* get_info_response::mutable_m_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_info_response.m_info)
+inline ::come_together_grpc::marker_info* get_info_response::mutable_m_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_response.m_info)
   return _internal_mutable_m_info();
 }
 
-// .ComeTogether.chat_info c_info = 3;
+// .come_together_grpc.chat_info c_info = 3;
 inline bool get_info_response::_internal_has_c_info() const {
   return data_case() == kCInfo;
 }
@@ -9055,11 +10098,11 @@ inline void get_info_response::clear_c_info() {
     clear_has_data();
   }
 }
-inline ::ComeTogether::chat_info* get_info_response::release_c_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_info_response.c_info)
+inline ::come_together_grpc::chat_info* get_info_response::release_c_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_response.c_info)
   if (_internal_has_c_info()) {
     clear_has_data();
-      ::ComeTogether::chat_info* temp = data_.c_info_;
+      ::come_together_grpc::chat_info* temp = data_.c_info_;
     if (GetArena() != nullptr) {
       temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
     }
@@ -9069,44 +10112,44 @@ inline ::ComeTogether::chat_info* get_info_response::release_c_info() {
     return nullptr;
   }
 }
-inline const ::ComeTogether::chat_info& get_info_response::_internal_c_info() const {
+inline const ::come_together_grpc::chat_info& get_info_response::_internal_c_info() const {
   return _internal_has_c_info()
       ? *data_.c_info_
-      : *reinterpret_cast< ::ComeTogether::chat_info*>(&::ComeTogether::_chat_info_default_instance_);
+      : *reinterpret_cast< ::come_together_grpc::chat_info*>(&::come_together_grpc::_chat_info_default_instance_);
 }
-inline const ::ComeTogether::chat_info& get_info_response::c_info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_info_response.c_info)
+inline const ::come_together_grpc::chat_info& get_info_response::c_info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_response.c_info)
   return _internal_c_info();
 }
-inline ::ComeTogether::chat_info* get_info_response::unsafe_arena_release_c_info() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:ComeTogether.get_info_response.c_info)
+inline ::come_together_grpc::chat_info* get_info_response::unsafe_arena_release_c_info() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:come_together_grpc.get_info_response.c_info)
   if (_internal_has_c_info()) {
     clear_has_data();
-    ::ComeTogether::chat_info* temp = data_.c_info_;
+    ::come_together_grpc::chat_info* temp = data_.c_info_;
     data_.c_info_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void get_info_response::unsafe_arena_set_allocated_c_info(::ComeTogether::chat_info* c_info) {
+inline void get_info_response::unsafe_arena_set_allocated_c_info(::come_together_grpc::chat_info* c_info) {
   clear_data();
   if (c_info) {
     set_has_c_info();
     data_.c_info_ = c_info;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.get_info_response.c_info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.get_info_response.c_info)
 }
-inline ::ComeTogether::chat_info* get_info_response::_internal_mutable_c_info() {
+inline ::come_together_grpc::chat_info* get_info_response::_internal_mutable_c_info() {
   if (!_internal_has_c_info()) {
     clear_data();
     set_has_c_info();
-    data_.c_info_ = CreateMaybeMessage< ::ComeTogether::chat_info >(GetArena());
+    data_.c_info_ = CreateMaybeMessage< ::come_together_grpc::chat_info >(GetArena());
   }
   return data_.c_info_;
 }
-inline ::ComeTogether::chat_info* get_info_response::mutable_c_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_info_response.c_info)
+inline ::come_together_grpc::chat_info* get_info_response::mutable_c_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_response.c_info)
   return _internal_mutable_c_info();
 }
 
@@ -9123,24 +10166,24 @@ inline get_info_response::DataCase get_info_response::data_case() const {
 
 // get_images_request
 
-// .ComeTogether.get_images_request.type image_type = 1;
+// .come_together_grpc.get_images_request.type image_type = 1;
 inline void get_images_request::clear_image_type() {
   image_type_ = 0;
 }
-inline ::ComeTogether::get_images_request_type get_images_request::_internal_image_type() const {
-  return static_cast< ::ComeTogether::get_images_request_type >(image_type_);
+inline ::come_together_grpc::get_images_request_type get_images_request::_internal_image_type() const {
+  return static_cast< ::come_together_grpc::get_images_request_type >(image_type_);
 }
-inline ::ComeTogether::get_images_request_type get_images_request::image_type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.image_type)
+inline ::come_together_grpc::get_images_request_type get_images_request::image_type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.image_type)
   return _internal_image_type();
 }
-inline void get_images_request::_internal_set_image_type(::ComeTogether::get_images_request_type value) {
+inline void get_images_request::_internal_set_image_type(::come_together_grpc::get_images_request_type value) {
   
   image_type_ = value;
 }
-inline void get_images_request::set_image_type(::ComeTogether::get_images_request_type value) {
+inline void get_images_request::set_image_type(::come_together_grpc::get_images_request_type value) {
   _internal_set_image_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.image_type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.image_type)
 }
 
 // string target_uuid = 2;
@@ -9148,15 +10191,15 @@ inline void get_images_request::clear_target_uuid() {
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_images_request::target_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.target_uuid)
   return _internal_target_uuid();
 }
 inline void get_images_request::set_target_uuid(const std::string& value) {
   _internal_set_target_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.target_uuid)
 }
 inline std::string* get_images_request::mutable_target_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_images_request.target_uuid)
   return _internal_mutable_target_uuid();
 }
 inline const std::string& get_images_request::_internal_target_uuid() const {
@@ -9170,28 +10213,28 @@ inline void get_images_request::set_target_uuid(std::string&& value) {
   
   target_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_images_request.target_uuid)
 }
 inline void get_images_request::set_target_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_images_request.target_uuid)
 }
 inline void get_images_request::set_target_uuid(const char* value,
     size_t size) {
   
   target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_images_request.target_uuid)
 }
 inline std::string* get_images_request::_internal_mutable_target_uuid() {
   
   return target_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_images_request::release_target_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_images_request.target_uuid)
   return target_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_images_request::set_allocated_target_uuid(std::string* target_uuid) {
@@ -9202,7 +10245,7 @@ inline void get_images_request::set_allocated_target_uuid(std::string* target_uu
   }
   target_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), target_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_images_request.target_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_images_request.target_uuid)
 }
 
 // string access_token = 3;
@@ -9210,15 +10253,15 @@ inline void get_images_request::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_images_request::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.access_token)
   return _internal_access_token();
 }
 inline void get_images_request::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.access_token)
 }
 inline std::string* get_images_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_images_request.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& get_images_request::_internal_access_token() const {
@@ -9232,28 +10275,28 @@ inline void get_images_request::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_images_request.access_token)
 }
 inline void get_images_request::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_images_request.access_token)
 }
 inline void get_images_request::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_images_request.access_token)
 }
 inline std::string* get_images_request::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_images_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_images_request.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_images_request::set_allocated_access_token(std::string* access_token) {
@@ -9264,7 +10307,7 @@ inline void get_images_request::set_allocated_access_token(std::string* access_t
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_images_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_images_request.access_token)
 }
 
 // int32 amount = 4;
@@ -9275,7 +10318,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 get_images_request::_internal_amount() con
   return amount_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 get_images_request::amount() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.amount)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.amount)
   return _internal_amount();
 }
 inline void get_images_request::_internal_set_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9284,7 +10327,7 @@ inline void get_images_request::_internal_set_amount(::PROTOBUF_NAMESPACE_ID::in
 }
 inline void get_images_request::set_amount(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_amount(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.amount)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.amount)
 }
 
 // string hash = 5;
@@ -9292,15 +10335,15 @@ inline void get_images_request::clear_hash() {
   hash_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& get_images_request::hash() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.hash)
   return _internal_hash();
 }
 inline void get_images_request::set_hash(const std::string& value) {
   _internal_set_hash(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.hash)
 }
 inline std::string* get_images_request::mutable_hash() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_images_request.hash)
   return _internal_mutable_hash();
 }
 inline const std::string& get_images_request::_internal_hash() const {
@@ -9314,28 +10357,28 @@ inline void get_images_request::set_hash(std::string&& value) {
   
   hash_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_images_request.hash)
 }
 inline void get_images_request::set_hash(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   hash_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_images_request.hash)
 }
 inline void get_images_request::set_hash(const char* value,
     size_t size) {
   
   hash_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_images_request.hash)
 }
 inline std::string* get_images_request::_internal_mutable_hash() {
   
   return hash_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* get_images_request::release_hash() {
-  // @@protoc_insertion_point(field_release:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_images_request.hash)
   return hash_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void get_images_request::set_allocated_hash(std::string* hash) {
@@ -9346,7 +10389,7 @@ inline void get_images_request::set_allocated_hash(std::string* hash) {
   }
   hash_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hash,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_images_request.hash)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_images_request.hash)
 }
 
 // int32 starting_sequence_number = 6;
@@ -9357,7 +10400,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 get_images_request::_internal_starting_seq
   return starting_sequence_number_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 get_images_request::starting_sequence_number() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.get_images_request.starting_sequence_number)
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.starting_sequence_number)
   return _internal_starting_sequence_number();
 }
 inline void get_images_request::_internal_set_starting_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9366,31 +10409,31 @@ inline void get_images_request::_internal_set_starting_sequence_number(::PROTOBU
 }
 inline void get_images_request::set_starting_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_starting_sequence_number(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.get_images_request.starting_sequence_number)
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.starting_sequence_number)
 }
 
 // -------------------------------------------------------------------
 
 // manage_image_request
 
-// .ComeTogether.manage_image_request.action act = 1;
+// .come_together_grpc.manage_image_request.action act = 1;
 inline void manage_image_request::clear_act() {
   act_ = 0;
 }
-inline ::ComeTogether::manage_image_request_action manage_image_request::_internal_act() const {
-  return static_cast< ::ComeTogether::manage_image_request_action >(act_);
+inline ::come_together_grpc::manage_image_request_action manage_image_request::_internal_act() const {
+  return static_cast< ::come_together_grpc::manage_image_request_action >(act_);
 }
-inline ::ComeTogether::manage_image_request_action manage_image_request::act() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_request.act)
+inline ::come_together_grpc::manage_image_request_action manage_image_request::act() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.act)
   return _internal_act();
 }
-inline void manage_image_request::_internal_set_act(::ComeTogether::manage_image_request_action value) {
+inline void manage_image_request::_internal_set_act(::come_together_grpc::manage_image_request_action value) {
   
   act_ = value;
 }
-inline void manage_image_request::set_act(::ComeTogether::manage_image_request_action value) {
+inline void manage_image_request::set_act(::come_together_grpc::manage_image_request_action value) {
   _internal_set_act(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.act)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.act)
 }
 
 // string access_token = 2;
@@ -9398,15 +10441,15 @@ inline void manage_image_request::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& manage_image_request::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.access_token)
   return _internal_access_token();
 }
 inline void manage_image_request::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.access_token)
 }
 inline std::string* manage_image_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_request.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& manage_image_request::_internal_access_token() const {
@@ -9420,28 +10463,28 @@ inline void manage_image_request::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.manage_image_request.access_token)
 }
 inline void manage_image_request::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.manage_image_request.access_token)
 }
 inline void manage_image_request::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.manage_image_request.access_token)
 }
 inline std::string* manage_image_request::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* manage_image_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_request.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void manage_image_request::set_allocated_access_token(std::string* access_token) {
@@ -9452,7 +10495,7 @@ inline void manage_image_request::set_allocated_access_token(std::string* access
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_request.access_token)
 }
 
 // string target_uuid = 3;
@@ -9460,15 +10503,15 @@ inline void manage_image_request::clear_target_uuid() {
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& manage_image_request::target_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.target_uuid)
   return _internal_target_uuid();
 }
 inline void manage_image_request::set_target_uuid(const std::string& value) {
   _internal_set_target_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.target_uuid)
 }
 inline std::string* manage_image_request::mutable_target_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_request.target_uuid)
   return _internal_mutable_target_uuid();
 }
 inline const std::string& manage_image_request::_internal_target_uuid() const {
@@ -9482,28 +10525,28 @@ inline void manage_image_request::set_target_uuid(std::string&& value) {
   
   target_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.manage_image_request.target_uuid)
 }
 inline void manage_image_request::set_target_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.manage_image_request.target_uuid)
 }
 inline void manage_image_request::set_target_uuid(const char* value,
     size_t size) {
   
   target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.manage_image_request.target_uuid)
 }
 inline std::string* manage_image_request::_internal_mutable_target_uuid() {
   
   return target_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* manage_image_request::release_target_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_request.target_uuid)
   return target_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void manage_image_request::set_allocated_target_uuid(std::string* target_uuid) {
@@ -9514,7 +10557,7 @@ inline void manage_image_request::set_allocated_target_uuid(std::string* target_
   }
   target_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), target_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.manage_image_request.target_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_request.target_uuid)
 }
 
 // bytes image = 4;
@@ -9531,15 +10574,15 @@ inline void manage_image_request::clear_image() {
   }
 }
 inline const std::string& manage_image_request::image() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.image)
   return _internal_image();
 }
 inline void manage_image_request::set_image(const std::string& value) {
   _internal_set_image(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.image)
 }
 inline std::string* manage_image_request::mutable_image() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_request.image)
   return _internal_mutable_image();
 }
 inline const std::string& manage_image_request::_internal_image() const {
@@ -9557,7 +10600,7 @@ inline void manage_image_request::_internal_set_image(const std::string& value) 
   data_.image_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
 inline void manage_image_request::set_image(std::string&& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.image)
   if (!_internal_has_image()) {
     clear_data();
     set_has_image();
@@ -9565,7 +10608,7 @@ inline void manage_image_request::set_image(std::string&& value) {
   }
   data_.image_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.manage_image_request.image)
 }
 inline void manage_image_request::set_image(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
@@ -9576,7 +10619,7 @@ inline void manage_image_request::set_image(const char* value) {
   }
   data_.image_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.manage_image_request.image)
 }
 inline void manage_image_request::set_image(const void* value,
                              size_t size) {
@@ -9589,7 +10632,7 @@ inline void manage_image_request::set_image(const void* value,
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size),
       GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.manage_image_request.image)
 }
 inline std::string* manage_image_request::_internal_mutable_image() {
   if (!_internal_has_image()) {
@@ -9600,7 +10643,7 @@ inline std::string* manage_image_request::_internal_mutable_image() {
   return data_.image_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* manage_image_request::release_image() {
-  // @@protoc_insertion_point(field_release:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_request.image)
   if (_internal_has_image()) {
     clear_has_data();
     return data_.image_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -9620,7 +10663,7 @@ inline void manage_image_request::set_allocated_image(std::string* image) {
       arena->Own(image);
     }
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.manage_image_request.image)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_request.image)
 }
 
 // string image_uuid = 5;
@@ -9637,15 +10680,15 @@ inline void manage_image_request::clear_image_uuid() {
   }
 }
 inline const std::string& manage_image_request::image_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.image_uuid)
   return _internal_image_uuid();
 }
 inline void manage_image_request::set_image_uuid(const std::string& value) {
   _internal_set_image_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.image_uuid)
 }
 inline std::string* manage_image_request::mutable_image_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_request.image_uuid)
   return _internal_mutable_image_uuid();
 }
 inline const std::string& manage_image_request::_internal_image_uuid() const {
@@ -9663,7 +10706,7 @@ inline void manage_image_request::_internal_set_image_uuid(const std::string& va
   data_.image_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
 inline void manage_image_request::set_image_uuid(std::string&& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.image_uuid)
   if (!_internal_has_image_uuid()) {
     clear_data();
     set_has_image_uuid();
@@ -9671,7 +10714,7 @@ inline void manage_image_request::set_image_uuid(std::string&& value) {
   }
   data_.image_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.manage_image_request.image_uuid)
 }
 inline void manage_image_request::set_image_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
@@ -9682,7 +10725,7 @@ inline void manage_image_request::set_image_uuid(const char* value) {
   }
   data_.image_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.manage_image_request.image_uuid)
 }
 inline void manage_image_request::set_image_uuid(const char* value,
                              size_t size) {
@@ -9695,7 +10738,7 @@ inline void manage_image_request::set_image_uuid(const char* value,
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size),
       GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.manage_image_request.image_uuid)
 }
 inline std::string* manage_image_request::_internal_mutable_image_uuid() {
   if (!_internal_has_image_uuid()) {
@@ -9706,7 +10749,7 @@ inline std::string* manage_image_request::_internal_mutable_image_uuid() {
   return data_.image_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* manage_image_request::release_image_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_request.image_uuid)
   if (_internal_has_image_uuid()) {
     clear_has_data();
     return data_.image_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -9726,7 +10769,7 @@ inline void manage_image_request::set_allocated_image_uuid(std::string* image_uu
       arena->Own(image_uuid);
     }
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.manage_image_request.image_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_request.image_uuid)
 }
 
 inline bool manage_image_request::has_data() const {
@@ -9742,24 +10785,24 @@ inline manage_image_request::DataCase manage_image_request::data_case() const {
 
 // manage_image_response
 
-// .ComeTogether.manage_image_response.result res = 1;
+// .come_together_grpc.manage_image_response.result res = 1;
 inline void manage_image_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::manage_image_response_result manage_image_response::_internal_res() const {
-  return static_cast< ::ComeTogether::manage_image_response_result >(res_);
+inline ::come_together_grpc::manage_image_response_result manage_image_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::manage_image_response_result >(res_);
 }
-inline ::ComeTogether::manage_image_response_result manage_image_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_response.res)
+inline ::come_together_grpc::manage_image_response_result manage_image_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_response.res)
   return _internal_res();
 }
-inline void manage_image_response::_internal_set_res(::ComeTogether::manage_image_response_result value) {
+inline void manage_image_response::_internal_set_res(::come_together_grpc::manage_image_response_result value) {
   
   res_ = value;
 }
-inline void manage_image_response::set_res(::ComeTogether::manage_image_response_result value) {
+inline void manage_image_response::set_res(::come_together_grpc::manage_image_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_response.res)
 }
 
 // string image_uuid = 2;
@@ -9767,15 +10810,15 @@ inline void manage_image_response::clear_image_uuid() {
   image_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& manage_image_response::image_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_response.image_uuid)
   return _internal_image_uuid();
 }
 inline void manage_image_response::set_image_uuid(const std::string& value) {
   _internal_set_image_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_response.image_uuid)
 }
 inline std::string* manage_image_response::mutable_image_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_response.image_uuid)
   return _internal_mutable_image_uuid();
 }
 inline const std::string& manage_image_response::_internal_image_uuid() const {
@@ -9789,28 +10832,28 @@ inline void manage_image_response::set_image_uuid(std::string&& value) {
   
   image_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.manage_image_response.image_uuid)
 }
 inline void manage_image_response::set_image_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   image_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.manage_image_response.image_uuid)
 }
 inline void manage_image_response::set_image_uuid(const char* value,
     size_t size) {
   
   image_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.manage_image_response.image_uuid)
 }
 inline std::string* manage_image_response::_internal_mutable_image_uuid() {
   
   return image_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* manage_image_response::release_image_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_response.image_uuid)
   return image_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void manage_image_response::set_allocated_image_uuid(std::string* image_uuid) {
@@ -9821,7 +10864,7 @@ inline void manage_image_response::set_allocated_image_uuid(std::string* image_u
   }
   image_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), image_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.manage_image_response.image_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_response.image_uuid)
 }
 
 // int32 image_sequence_number = 3;
@@ -9832,7 +10875,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 manage_image_response::_internal_image_seq
   return image_sequence_number_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 manage_image_response::image_sequence_number() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.manage_image_response.image_sequence_number)
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_response.image_sequence_number)
   return _internal_image_sequence_number();
 }
 inline void manage_image_response::_internal_set_image_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9841,31 +10884,31 @@ inline void manage_image_response::_internal_set_image_sequence_number(::PROTOBU
 }
 inline void manage_image_response::set_image_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_image_sequence_number(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.manage_image_response.image_sequence_number)
+  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_response.image_sequence_number)
 }
 
 // -------------------------------------------------------------------
 
 // check_request
 
-// .ComeTogether.check_request.type check_type = 1;
+// .come_together_grpc.check_request.type check_type = 1;
 inline void check_request::clear_check_type() {
   check_type_ = 0;
 }
-inline ::ComeTogether::check_request_type check_request::_internal_check_type() const {
-  return static_cast< ::ComeTogether::check_request_type >(check_type_);
+inline ::come_together_grpc::check_request_type check_request::_internal_check_type() const {
+  return static_cast< ::come_together_grpc::check_request_type >(check_type_);
 }
-inline ::ComeTogether::check_request_type check_request::check_type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.check_request.check_type)
+inline ::come_together_grpc::check_request_type check_request::check_type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.check_request.check_type)
   return _internal_check_type();
 }
-inline void check_request::_internal_set_check_type(::ComeTogether::check_request_type value) {
+inline void check_request::_internal_set_check_type(::come_together_grpc::check_request_type value) {
   
   check_type_ = value;
 }
-inline void check_request::set_check_type(::ComeTogether::check_request_type value) {
+inline void check_request::set_check_type(::come_together_grpc::check_request_type value) {
   _internal_set_check_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.check_request.check_type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.check_request.check_type)
 }
 
 // string data = 2;
@@ -9873,15 +10916,15 @@ inline void check_request::clear_data() {
   data_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& check_request::data() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_get:come_together_grpc.check_request.data)
   return _internal_data();
 }
 inline void check_request::set_data(const std::string& value) {
   _internal_set_data(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_set:come_together_grpc.check_request.data)
 }
 inline std::string* check_request::mutable_data() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.check_request.data)
   return _internal_mutable_data();
 }
 inline const std::string& check_request::_internal_data() const {
@@ -9895,28 +10938,28 @@ inline void check_request::set_data(std::string&& value) {
   
   data_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.check_request.data)
 }
 inline void check_request::set_data(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.check_request.data)
 }
 inline void check_request::set_data(const char* value,
     size_t size) {
   
   data_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.check_request.data)
 }
 inline std::string* check_request::_internal_mutable_data() {
   
   return data_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* check_request::release_data() {
-  // @@protoc_insertion_point(field_release:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_release:come_together_grpc.check_request.data)
   return data_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void check_request::set_allocated_data(std::string* data) {
@@ -9927,31 +10970,31 @@ inline void check_request::set_allocated_data(std::string* data) {
   }
   data_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), data,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.check_request.data)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.check_request.data)
 }
 
 // -------------------------------------------------------------------
 
 // check_response
 
-// .ComeTogether.check_response.result res = 1;
+// .come_together_grpc.check_response.result res = 1;
 inline void check_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::check_response_result check_response::_internal_res() const {
-  return static_cast< ::ComeTogether::check_response_result >(res_);
+inline ::come_together_grpc::check_response_result check_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::check_response_result >(res_);
 }
-inline ::ComeTogether::check_response_result check_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.check_response.res)
+inline ::come_together_grpc::check_response_result check_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.check_response.res)
   return _internal_res();
 }
-inline void check_response::_internal_set_res(::ComeTogether::check_response_result value) {
+inline void check_response::_internal_set_res(::come_together_grpc::check_response_result value) {
   
   res_ = value;
 }
-inline void check_response::set_res(::ComeTogether::check_response_result value) {
+inline void check_response::set_res(::come_together_grpc::check_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.check_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.check_response.res)
 }
 
 // -------------------------------------------------------------------
@@ -9963,15 +11006,15 @@ inline void login_request::clear_login() {
   login_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& login_request::login() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_request.login)
   return _internal_login();
 }
 inline void login_request::set_login(const std::string& value) {
   _internal_set_login(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_set:come_together_grpc.login_request.login)
 }
 inline std::string* login_request::mutable_login() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_request.login)
   return _internal_mutable_login();
 }
 inline const std::string& login_request::_internal_login() const {
@@ -9985,28 +11028,28 @@ inline void login_request::set_login(std::string&& value) {
   
   login_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.login_request.login)
 }
 inline void login_request::set_login(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   login_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.login_request.login)
 }
 inline void login_request::set_login(const char* value,
     size_t size) {
   
   login_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.login_request.login)
 }
 inline std::string* login_request::_internal_mutable_login() {
   
   return login_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* login_request::release_login() {
-  // @@protoc_insertion_point(field_release:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_request.login)
   return login_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void login_request::set_allocated_login(std::string* login) {
@@ -10017,7 +11060,7 @@ inline void login_request::set_allocated_login(std::string* login) {
   }
   login_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), login,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.login_request.login)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_request.login)
 }
 
 // string password = 2;
@@ -10025,15 +11068,15 @@ inline void login_request::clear_password() {
   password_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& login_request::password() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_request.password)
   return _internal_password();
 }
 inline void login_request::set_password(const std::string& value) {
   _internal_set_password(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_set:come_together_grpc.login_request.password)
 }
 inline std::string* login_request::mutable_password() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_request.password)
   return _internal_mutable_password();
 }
 inline const std::string& login_request::_internal_password() const {
@@ -10047,28 +11090,28 @@ inline void login_request::set_password(std::string&& value) {
   
   password_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.login_request.password)
 }
 inline void login_request::set_password(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.login_request.password)
 }
 inline void login_request::set_password(const char* value,
     size_t size) {
   
   password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.login_request.password)
 }
 inline std::string* login_request::_internal_mutable_password() {
   
   return password_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* login_request::release_password() {
-  // @@protoc_insertion_point(field_release:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_request.password)
   return password_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void login_request::set_allocated_password(std::string* password) {
@@ -10079,34 +11122,34 @@ inline void login_request::set_allocated_password(std::string* password) {
   }
   password_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.login_request.password)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_request.password)
 }
 
 // -------------------------------------------------------------------
 
 // login_response
 
-// .ComeTogether.login_response.result res = 1;
+// .come_together_grpc.login_response.result res = 1;
 inline void login_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::login_response_result login_response::_internal_res() const {
-  return static_cast< ::ComeTogether::login_response_result >(res_);
+inline ::come_together_grpc::login_response_result login_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::login_response_result >(res_);
 }
-inline ::ComeTogether::login_response_result login_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.login_response.res)
+inline ::come_together_grpc::login_response_result login_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_response.res)
   return _internal_res();
 }
-inline void login_response::_internal_set_res(::ComeTogether::login_response_result value) {
+inline void login_response::_internal_set_res(::come_together_grpc::login_response_result value) {
   
   res_ = value;
 }
-inline void login_response::set_res(::ComeTogether::login_response_result value) {
+inline void login_response::set_res(::come_together_grpc::login_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.login_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.login_response.res)
 }
 
-// .ComeTogether.user_info info = 2;
+// .come_together_grpc.user_info info = 2;
 inline bool login_response::_internal_has_info() const {
   return this != internal_default_instance() && info_ != nullptr;
 }
@@ -10119,17 +11162,17 @@ inline void login_response::clear_info() {
   }
   info_ = nullptr;
 }
-inline const ::ComeTogether::user_info& login_response::_internal_info() const {
-  const ::ComeTogether::user_info* p = info_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::ComeTogether::user_info*>(
-      &::ComeTogether::_user_info_default_instance_);
+inline const ::come_together_grpc::user_info& login_response::_internal_info() const {
+  const ::come_together_grpc::user_info* p = info_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::user_info*>(
+      &::come_together_grpc::_user_info_default_instance_);
 }
-inline const ::ComeTogether::user_info& login_response::info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.login_response.info)
+inline const ::come_together_grpc::user_info& login_response::info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_response.info)
   return _internal_info();
 }
 inline void login_response::unsafe_arena_set_allocated_info(
-    ::ComeTogether::user_info* info) {
+    ::come_together_grpc::user_info* info) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(info_);
   }
@@ -10139,37 +11182,37 @@ inline void login_response::unsafe_arena_set_allocated_info(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.login_response.info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.login_response.info)
 }
-inline ::ComeTogether::user_info* login_response::release_info() {
+inline ::come_together_grpc::user_info* login_response::release_info() {
   
-  ::ComeTogether::user_info* temp = info_;
+  ::come_together_grpc::user_info* temp = info_;
   info_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::ComeTogether::user_info* login_response::unsafe_arena_release_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.login_response.info)
+inline ::come_together_grpc::user_info* login_response::unsafe_arena_release_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_response.info)
   
-  ::ComeTogether::user_info* temp = info_;
+  ::come_together_grpc::user_info* temp = info_;
   info_ = nullptr;
   return temp;
 }
-inline ::ComeTogether::user_info* login_response::_internal_mutable_info() {
+inline ::come_together_grpc::user_info* login_response::_internal_mutable_info() {
   
   if (info_ == nullptr) {
-    auto* p = CreateMaybeMessage<::ComeTogether::user_info>(GetArena());
+    auto* p = CreateMaybeMessage<::come_together_grpc::user_info>(GetArena());
     info_ = p;
   }
   return info_;
 }
-inline ::ComeTogether::user_info* login_response::mutable_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.login_response.info)
+inline ::come_together_grpc::user_info* login_response::mutable_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_response.info)
   return _internal_mutable_info();
 }
-inline void login_response::set_allocated_info(::ComeTogether::user_info* info) {
+inline void login_response::set_allocated_info(::come_together_grpc::user_info* info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete info_;
@@ -10186,7 +11229,7 @@ inline void login_response::set_allocated_info(::ComeTogether::user_info* info) 
     
   }
   info_ = info;
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.login_response.info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_response.info)
 }
 
 // string access_token = 3;
@@ -10194,15 +11237,15 @@ inline void login_response::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& login_response::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_response.access_token)
   return _internal_access_token();
 }
 inline void login_response::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.login_response.access_token)
 }
 inline std::string* login_response::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_response.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& login_response::_internal_access_token() const {
@@ -10216,28 +11259,28 @@ inline void login_response::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.login_response.access_token)
 }
 inline void login_response::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.login_response.access_token)
 }
 inline void login_response::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.login_response.access_token)
 }
 inline std::string* login_response::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* login_response::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_response.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void login_response::set_allocated_access_token(std::string* access_token) {
@@ -10248,14 +11291,14 @@ inline void login_response::set_allocated_access_token(std::string* access_token
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.login_response.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_response.access_token)
 }
 
 // -------------------------------------------------------------------
 
 // register_request
 
-// .ComeTogether.user_info info = 1;
+// .come_together_grpc.user_info info = 1;
 inline bool register_request::_internal_has_info() const {
   return this != internal_default_instance() && info_ != nullptr;
 }
@@ -10268,17 +11311,17 @@ inline void register_request::clear_info() {
   }
   info_ = nullptr;
 }
-inline const ::ComeTogether::user_info& register_request::_internal_info() const {
-  const ::ComeTogether::user_info* p = info_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::ComeTogether::user_info*>(
-      &::ComeTogether::_user_info_default_instance_);
+inline const ::come_together_grpc::user_info& register_request::_internal_info() const {
+  const ::come_together_grpc::user_info* p = info_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::user_info*>(
+      &::come_together_grpc::_user_info_default_instance_);
 }
-inline const ::ComeTogether::user_info& register_request::info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.register_request.info)
+inline const ::come_together_grpc::user_info& register_request::info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.register_request.info)
   return _internal_info();
 }
 inline void register_request::unsafe_arena_set_allocated_info(
-    ::ComeTogether::user_info* info) {
+    ::come_together_grpc::user_info* info) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(info_);
   }
@@ -10288,37 +11331,37 @@ inline void register_request::unsafe_arena_set_allocated_info(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.register_request.info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.register_request.info)
 }
-inline ::ComeTogether::user_info* register_request::release_info() {
+inline ::come_together_grpc::user_info* register_request::release_info() {
   
-  ::ComeTogether::user_info* temp = info_;
+  ::come_together_grpc::user_info* temp = info_;
   info_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::ComeTogether::user_info* register_request::unsafe_arena_release_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.register_request.info)
+inline ::come_together_grpc::user_info* register_request::unsafe_arena_release_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.register_request.info)
   
-  ::ComeTogether::user_info* temp = info_;
+  ::come_together_grpc::user_info* temp = info_;
   info_ = nullptr;
   return temp;
 }
-inline ::ComeTogether::user_info* register_request::_internal_mutable_info() {
+inline ::come_together_grpc::user_info* register_request::_internal_mutable_info() {
   
   if (info_ == nullptr) {
-    auto* p = CreateMaybeMessage<::ComeTogether::user_info>(GetArena());
+    auto* p = CreateMaybeMessage<::come_together_grpc::user_info>(GetArena());
     info_ = p;
   }
   return info_;
 }
-inline ::ComeTogether::user_info* register_request::mutable_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.register_request.info)
+inline ::come_together_grpc::user_info* register_request::mutable_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.register_request.info)
   return _internal_mutable_info();
 }
-inline void register_request::set_allocated_info(::ComeTogether::user_info* info) {
+inline void register_request::set_allocated_info(::come_together_grpc::user_info* info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete info_;
@@ -10335,31 +11378,31 @@ inline void register_request::set_allocated_info(::ComeTogether::user_info* info
     
   }
   info_ = info;
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.register_request.info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.register_request.info)
 }
 
 // -------------------------------------------------------------------
 
 // register_response
 
-// .ComeTogether.register_response.result res = 1;
+// .come_together_grpc.register_response.result res = 1;
 inline void register_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::register_response_result register_response::_internal_res() const {
-  return static_cast< ::ComeTogether::register_response_result >(res_);
+inline ::come_together_grpc::register_response_result register_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::register_response_result >(res_);
 }
-inline ::ComeTogether::register_response_result register_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.register_response.res)
+inline ::come_together_grpc::register_response_result register_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.register_response.res)
   return _internal_res();
 }
-inline void register_response::_internal_set_res(::ComeTogether::register_response_result value) {
+inline void register_response::_internal_set_res(::come_together_grpc::register_response_result value) {
   
   res_ = value;
 }
-inline void register_response::set_res(::ComeTogether::register_response_result value) {
+inline void register_response::set_res(::come_together_grpc::register_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.register_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.register_response.res)
 }
 
 // string user_uuid = 2;
@@ -10367,15 +11410,15 @@ inline void register_response::clear_user_uuid() {
   user_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& register_response::user_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.register_response.user_uuid)
   return _internal_user_uuid();
 }
 inline void register_response::set_user_uuid(const std::string& value) {
   _internal_set_user_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.register_response.user_uuid)
 }
 inline std::string* register_response::mutable_user_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.register_response.user_uuid)
   return _internal_mutable_user_uuid();
 }
 inline const std::string& register_response::_internal_user_uuid() const {
@@ -10389,28 +11432,28 @@ inline void register_response::set_user_uuid(std::string&& value) {
   
   user_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.register_response.user_uuid)
 }
 inline void register_response::set_user_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   user_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.register_response.user_uuid)
 }
 inline void register_response::set_user_uuid(const char* value,
     size_t size) {
   
   user_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.register_response.user_uuid)
 }
 inline std::string* register_response::_internal_mutable_user_uuid() {
   
   return user_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* register_response::release_user_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.register_response.user_uuid)
   return user_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void register_response::set_allocated_user_uuid(std::string* user_uuid) {
@@ -10421,7 +11464,7 @@ inline void register_response::set_allocated_user_uuid(std::string* user_uuid) {
   }
   user_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.register_response.user_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.register_response.user_uuid)
 }
 
 // string access_token = 3;
@@ -10429,15 +11472,15 @@ inline void register_response::clear_access_token() {
   access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& register_response::access_token() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_get:come_together_grpc.register_response.access_token)
   return _internal_access_token();
 }
 inline void register_response::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_set:come_together_grpc.register_response.access_token)
 }
 inline std::string* register_response::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.register_response.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& register_response::_internal_access_token() const {
@@ -10451,28 +11494,28 @@ inline void register_response::set_access_token(std::string&& value) {
   
   access_token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.register_response.access_token)
 }
 inline void register_response::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.register_response.access_token)
 }
 inline void register_response::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.register_response.access_token)
 }
 inline std::string* register_response::_internal_mutable_access_token() {
   
   return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* register_response::release_access_token() {
-  // @@protoc_insertion_point(field_release:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_release:come_together_grpc.register_response.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void register_response::set_allocated_access_token(std::string* access_token) {
@@ -10483,7 +11526,7 @@ inline void register_response::set_allocated_access_token(std::string* access_to
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.register_response.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.register_response.access_token)
 }
 
 // -------------------------------------------------------------------
@@ -10495,15 +11538,15 @@ inline void user_info::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.uuid)
   return _internal_uuid();
 }
 inline void user_info::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.uuid)
 }
 inline std::string* user_info::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& user_info::_internal_uuid() const {
@@ -10517,28 +11560,28 @@ inline void user_info::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.uuid)
 }
 inline void user_info::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.uuid)
 }
 inline void user_info::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.uuid)
 }
 inline std::string* user_info::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_uuid(std::string* uuid) {
@@ -10549,7 +11592,7 @@ inline void user_info::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.uuid)
 }
 
 // string email = 2;
@@ -10557,15 +11600,15 @@ inline void user_info::clear_email() {
   email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::email() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.email)
   return _internal_email();
 }
 inline void user_info::set_email(const std::string& value) {
   _internal_set_email(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.email)
 }
 inline std::string* user_info::mutable_email() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.email)
   return _internal_mutable_email();
 }
 inline const std::string& user_info::_internal_email() const {
@@ -10579,28 +11622,28 @@ inline void user_info::set_email(std::string&& value) {
   
   email_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.email)
 }
 inline void user_info::set_email(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.email)
 }
 inline void user_info::set_email(const char* value,
     size_t size) {
   
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.email)
 }
 inline std::string* user_info::_internal_mutable_email() {
   
   return email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_email() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.email)
   return email_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_email(std::string* email) {
@@ -10611,7 +11654,7 @@ inline void user_info::set_allocated_email(std::string* email) {
   }
   email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), email,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.email)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.email)
 }
 
 // string login = 3;
@@ -10619,15 +11662,15 @@ inline void user_info::clear_login() {
   login_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::login() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.login)
   return _internal_login();
 }
 inline void user_info::set_login(const std::string& value) {
   _internal_set_login(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.login)
 }
 inline std::string* user_info::mutable_login() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.login)
   return _internal_mutable_login();
 }
 inline const std::string& user_info::_internal_login() const {
@@ -10641,28 +11684,28 @@ inline void user_info::set_login(std::string&& value) {
   
   login_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.login)
 }
 inline void user_info::set_login(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   login_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.login)
 }
 inline void user_info::set_login(const char* value,
     size_t size) {
   
   login_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.login)
 }
 inline std::string* user_info::_internal_mutable_login() {
   
   return login_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_login() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.login)
   return login_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_login(std::string* login) {
@@ -10673,7 +11716,7 @@ inline void user_info::set_allocated_login(std::string* login) {
   }
   login_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), login,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.login)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.login)
 }
 
 // string password = 4;
@@ -10681,15 +11724,15 @@ inline void user_info::clear_password() {
   password_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::password() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.password)
   return _internal_password();
 }
 inline void user_info::set_password(const std::string& value) {
   _internal_set_password(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.password)
 }
 inline std::string* user_info::mutable_password() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.password)
   return _internal_mutable_password();
 }
 inline const std::string& user_info::_internal_password() const {
@@ -10703,28 +11746,28 @@ inline void user_info::set_password(std::string&& value) {
   
   password_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.password)
 }
 inline void user_info::set_password(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.password)
 }
 inline void user_info::set_password(const char* value,
     size_t size) {
   
   password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.password)
 }
 inline std::string* user_info::_internal_mutable_password() {
   
   return password_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_password() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.password)
   return password_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_password(std::string* password) {
@@ -10735,7 +11778,7 @@ inline void user_info::set_allocated_password(std::string* password) {
   }
   password_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.password)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.password)
 }
 
 // string first_name = 5;
@@ -10743,15 +11786,15 @@ inline void user_info::clear_first_name() {
   first_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::first_name() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.first_name)
   return _internal_first_name();
 }
 inline void user_info::set_first_name(const std::string& value) {
   _internal_set_first_name(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.first_name)
 }
 inline std::string* user_info::mutable_first_name() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.first_name)
   return _internal_mutable_first_name();
 }
 inline const std::string& user_info::_internal_first_name() const {
@@ -10765,28 +11808,28 @@ inline void user_info::set_first_name(std::string&& value) {
   
   first_name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.first_name)
 }
 inline void user_info::set_first_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   first_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.first_name)
 }
 inline void user_info::set_first_name(const char* value,
     size_t size) {
   
   first_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.first_name)
 }
 inline std::string* user_info::_internal_mutable_first_name() {
   
   return first_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_first_name() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.first_name)
   return first_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_first_name(std::string* first_name) {
@@ -10797,7 +11840,7 @@ inline void user_info::set_allocated_first_name(std::string* first_name) {
   }
   first_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), first_name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.first_name)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.first_name)
 }
 
 // string last_name = 6;
@@ -10805,15 +11848,15 @@ inline void user_info::clear_last_name() {
   last_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::last_name() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.last_name)
   return _internal_last_name();
 }
 inline void user_info::set_last_name(const std::string& value) {
   _internal_set_last_name(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.last_name)
 }
 inline std::string* user_info::mutable_last_name() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.last_name)
   return _internal_mutable_last_name();
 }
 inline const std::string& user_info::_internal_last_name() const {
@@ -10827,28 +11870,28 @@ inline void user_info::set_last_name(std::string&& value) {
   
   last_name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.last_name)
 }
 inline void user_info::set_last_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   last_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.last_name)
 }
 inline void user_info::set_last_name(const char* value,
     size_t size) {
   
   last_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.last_name)
 }
 inline std::string* user_info::_internal_mutable_last_name() {
   
   return last_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_last_name() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.last_name)
   return last_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_last_name(std::string* last_name) {
@@ -10859,7 +11902,7 @@ inline void user_info::set_allocated_last_name(std::string* last_name) {
   }
   last_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), last_name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.last_name)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.last_name)
 }
 
 // repeated string images_uuid = 7;
@@ -10873,66 +11916,66 @@ inline void user_info::clear_images_uuid() {
   images_uuid_.Clear();
 }
 inline std::string* user_info::add_images_uuid() {
-  // @@protoc_insertion_point(field_add_mutable:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_add_mutable:come_together_grpc.user_info.images_uuid)
   return _internal_add_images_uuid();
 }
 inline const std::string& user_info::_internal_images_uuid(int index) const {
   return images_uuid_.Get(index);
 }
 inline const std::string& user_info::images_uuid(int index) const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.images_uuid)
   return _internal_images_uuid(index);
 }
 inline std::string* user_info::mutable_images_uuid(int index) {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.images_uuid)
   return images_uuid_.Mutable(index);
 }
 inline void user_info::set_images_uuid(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.images_uuid)
   images_uuid_.Mutable(index)->assign(value);
 }
 inline void user_info::set_images_uuid(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.images_uuid)
   images_uuid_.Mutable(index)->assign(std::move(value));
 }
 inline void user_info::set_images_uuid(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   images_uuid_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.images_uuid)
 }
 inline void user_info::set_images_uuid(int index, const char* value, size_t size) {
   images_uuid_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.images_uuid)
 }
 inline std::string* user_info::_internal_add_images_uuid() {
   return images_uuid_.Add();
 }
 inline void user_info::add_images_uuid(const std::string& value) {
   images_uuid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_add:come_together_grpc.user_info.images_uuid)
 }
 inline void user_info::add_images_uuid(std::string&& value) {
   images_uuid_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_add:come_together_grpc.user_info.images_uuid)
 }
 inline void user_info::add_images_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   images_uuid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_add_char:come_together_grpc.user_info.images_uuid)
 }
 inline void user_info::add_images_uuid(const char* value, size_t size) {
   images_uuid_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_add_pointer:come_together_grpc.user_info.images_uuid)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 user_info::images_uuid() const {
-  // @@protoc_insertion_point(field_list:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_list:come_together_grpc.user_info.images_uuid)
   return images_uuid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 user_info::mutable_images_uuid() {
-  // @@protoc_insertion_point(field_mutable_list:ComeTogether.user_info.images_uuid)
+  // @@protoc_insertion_point(field_mutable_list:come_together_grpc.user_info.images_uuid)
   return &images_uuid_;
 }
 
@@ -10941,15 +11984,15 @@ inline void user_info::clear_other_info_json() {
   other_info_json_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& user_info::other_info_json() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_get:come_together_grpc.user_info.other_info_json)
   return _internal_other_info_json();
 }
 inline void user_info::set_other_info_json(const std::string& value) {
   _internal_set_other_info_json(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_set:come_together_grpc.user_info.other_info_json)
 }
 inline std::string* user_info::mutable_other_info_json() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.user_info.other_info_json)
   return _internal_mutable_other_info_json();
 }
 inline const std::string& user_info::_internal_other_info_json() const {
@@ -10963,28 +12006,28 @@ inline void user_info::set_other_info_json(std::string&& value) {
   
   other_info_json_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.user_info.other_info_json)
 }
 inline void user_info::set_other_info_json(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   other_info_json_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.user_info.other_info_json)
 }
 inline void user_info::set_other_info_json(const char* value,
     size_t size) {
   
   other_info_json_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.user_info.other_info_json)
 }
 inline std::string* user_info::_internal_mutable_other_info_json() {
   
   return other_info_json_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* user_info::release_other_info_json() {
-  // @@protoc_insertion_point(field_release:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_release:come_together_grpc.user_info.other_info_json)
   return other_info_json_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void user_info::set_allocated_other_info_json(std::string* other_info_json) {
@@ -10995,51 +12038,51 @@ inline void user_info::set_allocated_other_info_json(std::string* other_info_jso
   }
   other_info_json_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), other_info_json,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.user_info.other_info_json)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.user_info.other_info_json)
 }
 
 // -------------------------------------------------------------------
 
 // marker_info
 
-// .ComeTogether.marker_info.category cat = 1;
+// .come_together_grpc.marker_info.category cat = 1;
 inline void marker_info::clear_cat() {
   cat_ = 0;
 }
-inline ::ComeTogether::marker_info_category marker_info::_internal_cat() const {
-  return static_cast< ::ComeTogether::marker_info_category >(cat_);
+inline ::come_together_grpc::marker_info_category marker_info::_internal_cat() const {
+  return static_cast< ::come_together_grpc::marker_info_category >(cat_);
 }
-inline ::ComeTogether::marker_info_category marker_info::cat() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.cat)
+inline ::come_together_grpc::marker_info_category marker_info::cat() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.cat)
   return _internal_cat();
 }
-inline void marker_info::_internal_set_cat(::ComeTogether::marker_info_category value) {
+inline void marker_info::_internal_set_cat(::come_together_grpc::marker_info_category value) {
   
   cat_ = value;
 }
-inline void marker_info::set_cat(::ComeTogether::marker_info_category value) {
+inline void marker_info::set_cat(::come_together_grpc::marker_info_category value) {
   _internal_set_cat(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.cat)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.cat)
 }
 
-// .ComeTogether.marker_info.type marker_type = 2;
+// .come_together_grpc.marker_info.type marker_type = 2;
 inline void marker_info::clear_marker_type() {
   marker_type_ = 0;
 }
-inline ::ComeTogether::marker_info_type marker_info::_internal_marker_type() const {
-  return static_cast< ::ComeTogether::marker_info_type >(marker_type_);
+inline ::come_together_grpc::marker_info_type marker_info::_internal_marker_type() const {
+  return static_cast< ::come_together_grpc::marker_info_type >(marker_type_);
 }
-inline ::ComeTogether::marker_info_type marker_info::marker_type() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.marker_type)
+inline ::come_together_grpc::marker_info_type marker_info::marker_type() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.marker_type)
   return _internal_marker_type();
 }
-inline void marker_info::_internal_set_marker_type(::ComeTogether::marker_info_type value) {
+inline void marker_info::_internal_set_marker_type(::come_together_grpc::marker_info_type value) {
   
   marker_type_ = value;
 }
-inline void marker_info::set_marker_type(::ComeTogether::marker_info_type value) {
+inline void marker_info::set_marker_type(::come_together_grpc::marker_info_type value) {
   _internal_set_marker_type(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.marker_type)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.marker_type)
 }
 
 // int64 from_unix_time = 3;
@@ -11050,7 +12093,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 marker_info::_internal_from_unix_time() co
   return from_unix_time_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 marker_info::from_unix_time() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.from_unix_time)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.from_unix_time)
   return _internal_from_unix_time();
 }
 inline void marker_info::_internal_set_from_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -11059,7 +12102,7 @@ inline void marker_info::_internal_set_from_unix_time(::PROTOBUF_NAMESPACE_ID::i
 }
 inline void marker_info::set_from_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_from_unix_time(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.from_unix_time)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.from_unix_time)
 }
 
 // int64 to_unix_time = 4;
@@ -11070,7 +12113,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 marker_info::_internal_to_unix_time() cons
   return to_unix_time_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 marker_info::to_unix_time() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.to_unix_time)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.to_unix_time)
   return _internal_to_unix_time();
 }
 inline void marker_info::_internal_set_to_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -11079,7 +12122,7 @@ inline void marker_info::_internal_set_to_unix_time(::PROTOBUF_NAMESPACE_ID::int
 }
 inline void marker_info::set_to_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_to_unix_time(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.to_unix_time)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.to_unix_time)
 }
 
 // int64 creation_unix_time = 5;
@@ -11090,7 +12133,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 marker_info::_internal_creation_unix_time(
   return creation_unix_time_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 marker_info::creation_unix_time() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.creation_unix_time)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.creation_unix_time)
   return _internal_creation_unix_time();
 }
 inline void marker_info::_internal_set_creation_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -11099,7 +12142,7 @@ inline void marker_info::_internal_set_creation_unix_time(::PROTOBUF_NAMESPACE_I
 }
 inline void marker_info::set_creation_unix_time(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_creation_unix_time(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.creation_unix_time)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.creation_unix_time)
 }
 
 // string creator_uuid = 6;
@@ -11107,15 +12150,15 @@ inline void marker_info::clear_creator_uuid() {
   creator_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& marker_info::creator_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.creator_uuid)
   return _internal_creator_uuid();
 }
 inline void marker_info::set_creator_uuid(const std::string& value) {
   _internal_set_creator_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.creator_uuid)
 }
 inline std::string* marker_info::mutable_creator_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.marker_info.creator_uuid)
   return _internal_mutable_creator_uuid();
 }
 inline const std::string& marker_info::_internal_creator_uuid() const {
@@ -11129,28 +12172,28 @@ inline void marker_info::set_creator_uuid(std::string&& value) {
   
   creator_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.marker_info.creator_uuid)
 }
 inline void marker_info::set_creator_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   creator_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.marker_info.creator_uuid)
 }
 inline void marker_info::set_creator_uuid(const char* value,
     size_t size) {
   
   creator_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.marker_info.creator_uuid)
 }
 inline std::string* marker_info::_internal_mutable_creator_uuid() {
   
   return creator_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* marker_info::release_creator_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.marker_info.creator_uuid)
   return creator_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void marker_info::set_allocated_creator_uuid(std::string* creator_uuid) {
@@ -11161,7 +12204,7 @@ inline void marker_info::set_allocated_creator_uuid(std::string* creator_uuid) {
   }
   creator_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), creator_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.marker_info.creator_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.marker_info.creator_uuid)
 }
 
 // string display_name = 7;
@@ -11169,15 +12212,15 @@ inline void marker_info::clear_display_name() {
   display_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& marker_info::display_name() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.display_name)
   return _internal_display_name();
 }
 inline void marker_info::set_display_name(const std::string& value) {
   _internal_set_display_name(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.display_name)
 }
 inline std::string* marker_info::mutable_display_name() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.marker_info.display_name)
   return _internal_mutable_display_name();
 }
 inline const std::string& marker_info::_internal_display_name() const {
@@ -11191,28 +12234,28 @@ inline void marker_info::set_display_name(std::string&& value) {
   
   display_name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.marker_info.display_name)
 }
 inline void marker_info::set_display_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   display_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.marker_info.display_name)
 }
 inline void marker_info::set_display_name(const char* value,
     size_t size) {
   
   display_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.marker_info.display_name)
 }
 inline std::string* marker_info::_internal_mutable_display_name() {
   
   return display_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* marker_info::release_display_name() {
-  // @@protoc_insertion_point(field_release:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_release:come_together_grpc.marker_info.display_name)
   return display_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void marker_info::set_allocated_display_name(std::string* display_name) {
@@ -11223,7 +12266,7 @@ inline void marker_info::set_allocated_display_name(std::string* display_name) {
   }
   display_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), display_name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.marker_info.display_name)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.marker_info.display_name)
 }
 
 // double latitude = 9;
@@ -11234,7 +12277,7 @@ inline double marker_info::_internal_latitude() const {
   return latitude_;
 }
 inline double marker_info::latitude() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.latitude)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.latitude)
   return _internal_latitude();
 }
 inline void marker_info::_internal_set_latitude(double value) {
@@ -11243,7 +12286,7 @@ inline void marker_info::_internal_set_latitude(double value) {
 }
 inline void marker_info::set_latitude(double value) {
   _internal_set_latitude(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.latitude)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.latitude)
 }
 
 // double longitude = 10;
@@ -11254,7 +12297,7 @@ inline double marker_info::_internal_longitude() const {
   return longitude_;
 }
 inline double marker_info::longitude() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.longitude)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.longitude)
   return _internal_longitude();
 }
 inline void marker_info::_internal_set_longitude(double value) {
@@ -11263,7 +12306,7 @@ inline void marker_info::_internal_set_longitude(double value) {
 }
 inline void marker_info::set_longitude(double value) {
   _internal_set_longitude(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.longitude)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.longitude)
 }
 
 // string uuid = 11;
@@ -11271,15 +12314,15 @@ inline void marker_info::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& marker_info::uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.uuid)
   return _internal_uuid();
 }
 inline void marker_info::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.uuid)
 }
 inline std::string* marker_info::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.marker_info.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& marker_info::_internal_uuid() const {
@@ -11293,28 +12336,28 @@ inline void marker_info::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.marker_info.uuid)
 }
 inline void marker_info::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.marker_info.uuid)
 }
 inline void marker_info::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.marker_info.uuid)
 }
 inline std::string* marker_info::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* marker_info::release_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.marker_info.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void marker_info::set_allocated_uuid(std::string* uuid) {
@@ -11325,7 +12368,7 @@ inline void marker_info::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.marker_info.uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.marker_info.uuid)
 }
 
 // string chat_uuid = 12;
@@ -11333,15 +12376,15 @@ inline void marker_info::clear_chat_uuid() {
   chat_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& marker_info::chat_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.chat_uuid)
   return _internal_chat_uuid();
 }
 inline void marker_info::set_chat_uuid(const std::string& value) {
   _internal_set_chat_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.chat_uuid)
 }
 inline std::string* marker_info::mutable_chat_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.marker_info.chat_uuid)
   return _internal_mutable_chat_uuid();
 }
 inline const std::string& marker_info::_internal_chat_uuid() const {
@@ -11355,28 +12398,28 @@ inline void marker_info::set_chat_uuid(std::string&& value) {
   
   chat_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.marker_info.chat_uuid)
 }
 inline void marker_info::set_chat_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.marker_info.chat_uuid)
 }
 inline void marker_info::set_chat_uuid(const char* value,
     size_t size) {
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.marker_info.chat_uuid)
 }
 inline std::string* marker_info::_internal_mutable_chat_uuid() {
   
   return chat_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* marker_info::release_chat_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.marker_info.chat_uuid)
   return chat_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void marker_info::set_allocated_chat_uuid(std::string* chat_uuid) {
@@ -11387,7 +12430,7 @@ inline void marker_info::set_allocated_chat_uuid(std::string* chat_uuid) {
   }
   chat_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chat_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.marker_info.chat_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.marker_info.chat_uuid)
 }
 
 // repeated string images_uuid = 13;
@@ -11401,66 +12444,66 @@ inline void marker_info::clear_images_uuid() {
   images_uuid_.Clear();
 }
 inline std::string* marker_info::add_images_uuid() {
-  // @@protoc_insertion_point(field_add_mutable:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_add_mutable:come_together_grpc.marker_info.images_uuid)
   return _internal_add_images_uuid();
 }
 inline const std::string& marker_info::_internal_images_uuid(int index) const {
   return images_uuid_.Get(index);
 }
 inline const std::string& marker_info::images_uuid(int index) const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.images_uuid)
   return _internal_images_uuid(index);
 }
 inline std::string* marker_info::mutable_images_uuid(int index) {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.marker_info.images_uuid)
   return images_uuid_.Mutable(index);
 }
 inline void marker_info::set_images_uuid(int index, const std::string& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.images_uuid)
   images_uuid_.Mutable(index)->assign(value);
 }
 inline void marker_info::set_images_uuid(int index, std::string&& value) {
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.images_uuid)
   images_uuid_.Mutable(index)->assign(std::move(value));
 }
 inline void marker_info::set_images_uuid(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   images_uuid_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.marker_info.images_uuid)
 }
 inline void marker_info::set_images_uuid(int index, const char* value, size_t size) {
   images_uuid_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.marker_info.images_uuid)
 }
 inline std::string* marker_info::_internal_add_images_uuid() {
   return images_uuid_.Add();
 }
 inline void marker_info::add_images_uuid(const std::string& value) {
   images_uuid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_add:come_together_grpc.marker_info.images_uuid)
 }
 inline void marker_info::add_images_uuid(std::string&& value) {
   images_uuid_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_add:come_together_grpc.marker_info.images_uuid)
 }
 inline void marker_info::add_images_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   images_uuid_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_add_char:come_together_grpc.marker_info.images_uuid)
 }
 inline void marker_info::add_images_uuid(const char* value, size_t size) {
   images_uuid_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_add_pointer:come_together_grpc.marker_info.images_uuid)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
 marker_info::images_uuid() const {
-  // @@protoc_insertion_point(field_list:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_list:come_together_grpc.marker_info.images_uuid)
   return images_uuid_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 marker_info::mutable_images_uuid() {
-  // @@protoc_insertion_point(field_mutable_list:ComeTogether.marker_info.images_uuid)
+  // @@protoc_insertion_point(field_mutable_list:come_together_grpc.marker_info.images_uuid)
   return &images_uuid_;
 }
 
@@ -11469,15 +12512,15 @@ inline void marker_info::clear_other_data_json() {
   other_data_json_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& marker_info::other_data_json() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_get:come_together_grpc.marker_info.other_data_json)
   return _internal_other_data_json();
 }
 inline void marker_info::set_other_data_json(const std::string& value) {
   _internal_set_other_data_json(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_set:come_together_grpc.marker_info.other_data_json)
 }
 inline std::string* marker_info::mutable_other_data_json() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.marker_info.other_data_json)
   return _internal_mutable_other_data_json();
 }
 inline const std::string& marker_info::_internal_other_data_json() const {
@@ -11491,28 +12534,28 @@ inline void marker_info::set_other_data_json(std::string&& value) {
   
   other_data_json_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.marker_info.other_data_json)
 }
 inline void marker_info::set_other_data_json(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   other_data_json_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.marker_info.other_data_json)
 }
 inline void marker_info::set_other_data_json(const char* value,
     size_t size) {
   
   other_data_json_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.marker_info.other_data_json)
 }
 inline std::string* marker_info::_internal_mutable_other_data_json() {
   
   return other_data_json_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* marker_info::release_other_data_json() {
-  // @@protoc_insertion_point(field_release:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_release:come_together_grpc.marker_info.other_data_json)
   return other_data_json_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void marker_info::set_allocated_other_data_json(std::string* other_data_json) {
@@ -11523,14 +12566,14 @@ inline void marker_info::set_allocated_other_data_json(std::string* other_data_j
   }
   other_data_json_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), other_data_json,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.marker_info.other_data_json)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.marker_info.other_data_json)
 }
 
 // -------------------------------------------------------------------
 
 // add_marker_request
 
-// .ComeTogether.marker_info info = 1;
+// .come_together_grpc.marker_info info = 1;
 inline bool add_marker_request::_internal_has_info() const {
   return this != internal_default_instance() && info_ != nullptr;
 }
@@ -11543,17 +12586,17 @@ inline void add_marker_request::clear_info() {
   }
   info_ = nullptr;
 }
-inline const ::ComeTogether::marker_info& add_marker_request::_internal_info() const {
-  const ::ComeTogether::marker_info* p = info_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::ComeTogether::marker_info*>(
-      &::ComeTogether::_marker_info_default_instance_);
+inline const ::come_together_grpc::marker_info& add_marker_request::_internal_info() const {
+  const ::come_together_grpc::marker_info* p = info_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::marker_info*>(
+      &::come_together_grpc::_marker_info_default_instance_);
 }
-inline const ::ComeTogether::marker_info& add_marker_request::info() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.add_marker_request.info)
+inline const ::come_together_grpc::marker_info& add_marker_request::info() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.add_marker_request.info)
   return _internal_info();
 }
 inline void add_marker_request::unsafe_arena_set_allocated_info(
-    ::ComeTogether::marker_info* info) {
+    ::come_together_grpc::marker_info* info) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(info_);
   }
@@ -11563,37 +12606,37 @@ inline void add_marker_request::unsafe_arena_set_allocated_info(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ComeTogether.add_marker_request.info)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.add_marker_request.info)
 }
-inline ::ComeTogether::marker_info* add_marker_request::release_info() {
+inline ::come_together_grpc::marker_info* add_marker_request::release_info() {
   
-  ::ComeTogether::marker_info* temp = info_;
+  ::come_together_grpc::marker_info* temp = info_;
   info_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::ComeTogether::marker_info* add_marker_request::unsafe_arena_release_info() {
-  // @@protoc_insertion_point(field_release:ComeTogether.add_marker_request.info)
+inline ::come_together_grpc::marker_info* add_marker_request::unsafe_arena_release_info() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.add_marker_request.info)
   
-  ::ComeTogether::marker_info* temp = info_;
+  ::come_together_grpc::marker_info* temp = info_;
   info_ = nullptr;
   return temp;
 }
-inline ::ComeTogether::marker_info* add_marker_request::_internal_mutable_info() {
+inline ::come_together_grpc::marker_info* add_marker_request::_internal_mutable_info() {
   
   if (info_ == nullptr) {
-    auto* p = CreateMaybeMessage<::ComeTogether::marker_info>(GetArena());
+    auto* p = CreateMaybeMessage<::come_together_grpc::marker_info>(GetArena());
     info_ = p;
   }
   return info_;
 }
-inline ::ComeTogether::marker_info* add_marker_request::mutable_info() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.add_marker_request.info)
+inline ::come_together_grpc::marker_info* add_marker_request::mutable_info() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.add_marker_request.info)
   return _internal_mutable_info();
 }
-inline void add_marker_request::set_allocated_info(::ComeTogether::marker_info* info) {
+inline void add_marker_request::set_allocated_info(::come_together_grpc::marker_info* info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete info_;
@@ -11610,31 +12653,31 @@ inline void add_marker_request::set_allocated_info(::ComeTogether::marker_info* 
     
   }
   info_ = info;
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.add_marker_request.info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.add_marker_request.info)
 }
 
 // -------------------------------------------------------------------
 
 // add_marker_response
 
-// .ComeTogether.add_marker_response.result res = 1;
+// .come_together_grpc.add_marker_response.result res = 1;
 inline void add_marker_response::clear_res() {
   res_ = 0;
 }
-inline ::ComeTogether::add_marker_response_result add_marker_response::_internal_res() const {
-  return static_cast< ::ComeTogether::add_marker_response_result >(res_);
+inline ::come_together_grpc::add_marker_response_result add_marker_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::add_marker_response_result >(res_);
 }
-inline ::ComeTogether::add_marker_response_result add_marker_response::res() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.add_marker_response.res)
+inline ::come_together_grpc::add_marker_response_result add_marker_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.add_marker_response.res)
   return _internal_res();
 }
-inline void add_marker_response::_internal_set_res(::ComeTogether::add_marker_response_result value) {
+inline void add_marker_response::_internal_set_res(::come_together_grpc::add_marker_response_result value) {
   
   res_ = value;
 }
-inline void add_marker_response::set_res(::ComeTogether::add_marker_response_result value) {
+inline void add_marker_response::set_res(::come_together_grpc::add_marker_response_result value) {
   _internal_set_res(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.add_marker_response.res)
+  // @@protoc_insertion_point(field_set:come_together_grpc.add_marker_response.res)
 }
 
 // string uuid = 2;
@@ -11642,15 +12685,15 @@ inline void add_marker_response::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& add_marker_response::uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.add_marker_response.uuid)
   return _internal_uuid();
 }
 inline void add_marker_response::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.add_marker_response.uuid)
 }
 inline std::string* add_marker_response::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.add_marker_response.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& add_marker_response::_internal_uuid() const {
@@ -11664,28 +12707,28 @@ inline void add_marker_response::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.add_marker_response.uuid)
 }
 inline void add_marker_response::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.add_marker_response.uuid)
 }
 inline void add_marker_response::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.add_marker_response.uuid)
 }
 inline std::string* add_marker_response::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* add_marker_response::release_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.add_marker_response.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void add_marker_response::set_allocated_uuid(std::string* uuid) {
@@ -11696,7 +12739,7 @@ inline void add_marker_response::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.add_marker_response.uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.add_marker_response.uuid)
 }
 
 // string chat_uuid = 3;
@@ -11704,15 +12747,15 @@ inline void add_marker_response::clear_chat_uuid() {
   chat_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& add_marker_response::chat_uuid() const {
-  // @@protoc_insertion_point(field_get:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_get:come_together_grpc.add_marker_response.chat_uuid)
   return _internal_chat_uuid();
 }
 inline void add_marker_response::set_chat_uuid(const std::string& value) {
   _internal_set_chat_uuid(value);
-  // @@protoc_insertion_point(field_set:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_set:come_together_grpc.add_marker_response.chat_uuid)
 }
 inline std::string* add_marker_response::mutable_chat_uuid() {
-  // @@protoc_insertion_point(field_mutable:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.add_marker_response.chat_uuid)
   return _internal_mutable_chat_uuid();
 }
 inline const std::string& add_marker_response::_internal_chat_uuid() const {
@@ -11726,28 +12769,28 @@ inline void add_marker_response::set_chat_uuid(std::string&& value) {
   
   chat_uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.add_marker_response.chat_uuid)
 }
 inline void add_marker_response::set_chat_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.add_marker_response.chat_uuid)
 }
 inline void add_marker_response::set_chat_uuid(const char* value,
     size_t size) {
   
   chat_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.add_marker_response.chat_uuid)
 }
 inline std::string* add_marker_response::_internal_mutable_chat_uuid() {
   
   return chat_uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* add_marker_response::release_chat_uuid() {
-  // @@protoc_insertion_point(field_release:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_release:come_together_grpc.add_marker_response.chat_uuid)
   return chat_uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void add_marker_response::set_allocated_chat_uuid(std::string* chat_uuid) {
@@ -11758,7 +12801,7 @@ inline void add_marker_response::set_allocated_chat_uuid(std::string* chat_uuid)
   }
   chat_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chat_uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.add_marker_response.chat_uuid)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.add_marker_response.chat_uuid)
 }
 
 #ifdef __GNUC__
@@ -11820,102 +12863,120 @@ inline void add_marker_response::set_allocated_chat_uuid(std::string* chat_uuid)
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace ComeTogether
+}  // namespace come_together_grpc
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::ComeTogether::ask_token_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::send_push_token_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::ask_token_response_result>() {
-  return ::ComeTogether::ask_token_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::send_push_token_response_result>() {
+  return ::come_together_grpc::send_push_token_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::verify_token_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::delete_marker_reponse_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::verify_token_response_result>() {
-  return ::ComeTogether::verify_token_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::delete_marker_reponse_result>() {
+  return ::come_together_grpc::delete_marker_reponse_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::update_info_request_update_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::ask_token_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::update_info_request_update_type>() {
-  return ::ComeTogether::update_info_request_update_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::ask_token_response_result>() {
+  return ::come_together_grpc::ask_token_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::update_info_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::verify_token_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::update_info_response_result>() {
-  return ::ComeTogether::update_info_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::verify_token_response_result>() {
+  return ::come_together_grpc::verify_token_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::event_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::update_info_request_update_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::event_type>() {
-  return ::ComeTogether::event_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::update_info_request_update_type>() {
+  return ::come_together_grpc::update_info_request_update_type_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::chat_message_message_content> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::update_info_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::chat_message_message_content>() {
-  return ::ComeTogether::chat_message_message_content_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::update_info_response_result>() {
+  return ::come_together_grpc::update_info_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::send_chat_message_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::event_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::send_chat_message_response_result>() {
-  return ::ComeTogether::send_chat_message_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::event_type>() {
+  return ::come_together_grpc::event_type_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::get_info_request_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::chat_message_message_content> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::get_info_request_type>() {
-  return ::ComeTogether::get_info_request_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::chat_message_message_content>() {
+  return ::come_together_grpc::chat_message_message_content_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::get_images_request_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::send_chat_message_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::get_images_request_type>() {
-  return ::ComeTogether::get_images_request_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::send_chat_message_response_result>() {
+  return ::come_together_grpc::send_chat_message_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::manage_image_request_action> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::get_info_request_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::manage_image_request_action>() {
-  return ::ComeTogether::manage_image_request_action_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::get_info_request_type>() {
+  return ::come_together_grpc::get_info_request_type_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::manage_image_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::get_images_request_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::manage_image_response_result>() {
-  return ::ComeTogether::manage_image_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::get_images_request_type>() {
+  return ::come_together_grpc::get_images_request_type_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::check_request_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::manage_image_request_action> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::check_request_type>() {
-  return ::ComeTogether::check_request_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::manage_image_request_action>() {
+  return ::come_together_grpc::manage_image_request_action_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::check_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::manage_image_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::check_response_result>() {
-  return ::ComeTogether::check_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::manage_image_response_result>() {
+  return ::come_together_grpc::manage_image_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::login_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::check_request_type> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::login_response_result>() {
-  return ::ComeTogether::login_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::check_request_type>() {
+  return ::come_together_grpc::check_request_type_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::register_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::check_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::register_response_result>() {
-  return ::ComeTogether::register_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::check_response_result>() {
+  return ::come_together_grpc::check_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::marker_info_category> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::login_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::marker_info_category>() {
-  return ::ComeTogether::marker_info_category_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::login_response_result>() {
+  return ::come_together_grpc::login_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::marker_info_type> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::register_response_result> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::marker_info_type>() {
-  return ::ComeTogether::marker_info_type_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::register_response_result>() {
+  return ::come_together_grpc::register_response_result_descriptor();
 }
-template <> struct is_proto_enum< ::ComeTogether::add_marker_response_result> : ::std::true_type {};
+template <> struct is_proto_enum< ::come_together_grpc::marker_info_category> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ComeTogether::add_marker_response_result>() {
-  return ::ComeTogether::add_marker_response_result_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::marker_info_category>() {
+  return ::come_together_grpc::marker_info_category_descriptor();
+}
+template <> struct is_proto_enum< ::come_together_grpc::marker_info_type> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::marker_info_type>() {
+  return ::come_together_grpc::marker_info_type_descriptor();
+}
+template <> struct is_proto_enum< ::come_together_grpc::add_marker_response_result> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::add_marker_response_result>() {
+  return ::come_together_grpc::add_marker_response_result_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

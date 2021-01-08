@@ -18,4 +18,5 @@ public:
     CT::user_info GetUserInfo(const std::string& user_uuid) override;
     std::vector<std::string> GetAllImagesUuid(const CT::get_images_request& req) override;
     std::array<std::string, 2> AddMarker(const CT::marker_info& info) override;
+    std::vector<CT::marker_info> GetAllMarkers() override;
 };

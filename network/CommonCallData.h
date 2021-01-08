@@ -9,8 +9,8 @@
 struct CommonCallData : private QueueEvents
 {
     std::unique_ptr<grpc::ServerContext> m_ctx;
-    std::unique_ptr<ComeTogether::access_token> m_token;
-    std::unique_ptr<grpc::ServerAsyncWriter<ComeTogether::event>> m_writer;
+    std::unique_ptr<come_together_grpc::access_token> m_token;
+    std::unique_ptr<grpc::ServerAsyncWriter<come_together_grpc::event>> m_writer;
     std::atomic<bool> m_state;
     CommonCallData();
     CommonCallData(CommonCallData&& r) noexcept;

@@ -4,8 +4,8 @@
 
 CommonCallData::CommonCallData()
     : m_ctx(std::make_unique<grpc::ServerContext>())
-    , m_token(std::make_unique<ComeTogether::access_token>())
-    , m_writer(std::make_unique<grpc::ServerAsyncWriter<ComeTogether::event>>(m_ctx.get()))
+    , m_token(std::make_unique<come_together_grpc::access_token>())
+    , m_writer(std::make_unique<grpc::ServerAsyncWriter<come_together_grpc::event>>(m_ctx.get()))
     , m_state(false)
 {}
 

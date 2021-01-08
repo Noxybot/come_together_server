@@ -1,18 +1,18 @@
 #pragma once
-#include <iostream>
+#include <plog/Log.h>
 #define CATCH_ALL(ret) catch (pqxx::sql_error const &e)\
 {\
-    std::cerr\
+    PLOG_ERROR\
     << "Database error: " << e.what() << std::endl\
-    << "Query was: " << e.query() << std::endl;\
+    << "Query was: " << e.query();\
     return ret;\
 }\
 catch (std::exception const &e)\
 {\
-    std::cerr << e.what() << std::endl;\
+    PLOG_ERROR << e.what();\
     return ret;\
 }\
 catch (...)\
 {\
-    std::cerr << "Unknown exception" << std::endl;\
+    PLOG_ERROR << "Unknown exception";\
 }

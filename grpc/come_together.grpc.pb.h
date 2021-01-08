@@ -26,274 +26,304 @@
 #include <grpcpp/impl/codegen/stub_options.h>
 #include <grpcpp/impl/codegen/sync_stream.h>
 
-namespace ComeTogether {
+namespace come_together_grpc {
 
 class MainEndpoint final {
  public:
   static constexpr char const* service_full_name() {
-    return "ComeTogether.MainEndpoint";
+    return "come_together_grpc.MainEndpoint";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::ComeTogether::ask_token_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::ask_token_response>> AsyncAskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::ask_token_response>>(AsyncAskTokenRaw(context, request, cq));
+    virtual ::grpc::Status AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::come_together_grpc::ask_token_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::ask_token_response>> AsyncAskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::ask_token_response>>(AsyncAskTokenRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::ask_token_response>> PrepareAsyncAskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::ask_token_response>>(PrepareAsyncAskTokenRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::ask_token_response>> PrepareAsyncAskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::ask_token_response>>(PrepareAsyncAskTokenRaw(context, request, cq));
     }
-    virtual ::grpc::Status VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::ComeTogether::verify_token_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::verify_token_response>> AsyncVerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::verify_token_response>>(AsyncVerifyTokenRaw(context, request, cq));
+    virtual ::grpc::Status VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::come_together_grpc::verify_token_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::verify_token_response>> AsyncVerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::verify_token_response>>(AsyncVerifyTokenRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::verify_token_response>> PrepareAsyncVerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::verify_token_response>>(PrepareAsyncVerifyTokenRaw(context, request, cq));
-    }
-    // **********************************************************//
-    virtual ::grpc::Status Check(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::ComeTogether::check_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::check_response>> AsyncCheck(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::check_response>>(AsyncCheckRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::check_response>> PrepareAsyncCheck(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::check_response>>(PrepareAsyncCheckRaw(context, request, cq));
-    }
-    virtual ::grpc::Status RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::ComeTogether::register_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::register_response>> AsyncRegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::register_response>>(AsyncRegisterUserRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::register_response>> PrepareAsyncRegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::register_response>>(PrepareAsyncRegisterUserRaw(context, request, cq));
-    }
-    virtual ::grpc::Status LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::ComeTogether::login_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::login_response>> AsyncLoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::login_response>>(AsyncLoginUserRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::login_response>> PrepareAsyncLoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::login_response>>(PrepareAsyncLoginUserRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::verify_token_response>> PrepareAsyncVerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::verify_token_response>>(PrepareAsyncVerifyTokenRaw(context, request, cq));
     }
     // **********************************************************//
-    virtual ::grpc::Status AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::ComeTogether::add_marker_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::add_marker_response>> AsyncAddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::add_marker_response>>(AsyncAddMarkerRaw(context, request, cq));
+    virtual ::grpc::Status Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::come_together_grpc::check_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::check_response>> AsyncCheck(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::check_response>>(AsyncCheckRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::add_marker_response>> PrepareAsyncAddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::add_marker_response>>(PrepareAsyncAddMarkerRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::check_response>> PrepareAsyncCheck(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::check_response>>(PrepareAsyncCheckRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::marker_info>> GetAllMarkers(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::marker_info>>(GetAllMarkersRaw(context, request));
+    virtual ::grpc::Status RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::come_together_grpc::register_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::register_response>> AsyncRegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::register_response>>(AsyncRegisterUserRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::marker_info>> AsyncGetAllMarkers(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::marker_info>>(AsyncGetAllMarkersRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::register_response>> PrepareAsyncRegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::register_response>>(PrepareAsyncRegisterUserRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::marker_info>> PrepareAsyncGetAllMarkers(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::marker_info>>(PrepareAsyncGetAllMarkersRaw(context, request, cq));
+    virtual ::grpc::Status LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::come_together_grpc::login_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::login_response>> AsyncLoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::login_response>>(AsyncLoginUserRaw(context, request, cq));
     }
-    // **********************************************************//
-    virtual ::grpc::Status GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::ComeTogether::get_info_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::get_info_response>> AsyncGetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::get_info_response>>(AsyncGetInfoRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::get_info_response>> PrepareAsyncGetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::get_info_response>>(PrepareAsyncGetInfoRaw(context, request, cq));
-    }
-    virtual ::grpc::Status UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::ComeTogether::update_info_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::update_info_response>> AsyncUpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::update_info_response>>(AsyncUpdateInfoRaw(context, request, cq));
-    }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::update_info_response>> PrepareAsyncUpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::update_info_response>>(PrepareAsyncUpdateInfoRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::login_response>> PrepareAsyncLoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::login_response>>(PrepareAsyncLoginUserRaw(context, request, cq));
     }
     // **********************************************************//
-    virtual ::grpc::Status ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::ComeTogether::manage_image_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::manage_image_response>> AsyncManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::manage_image_response>>(AsyncManageImageRaw(context, request, cq));
+    virtual ::grpc::Status AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::come_together_grpc::add_marker_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::add_marker_response>> AsyncAddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::add_marker_response>>(AsyncAddMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::manage_image_response>> PrepareAsyncManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::manage_image_response>>(PrepareAsyncManageImageRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::add_marker_response>> PrepareAsyncAddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::add_marker_response>>(PrepareAsyncAddMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::image>> GetImages(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::image>>(GetImagesRaw(context, request));
+    virtual ::grpc::Status DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::come_together_grpc::delete_marker_reponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::delete_marker_reponse>> AsyncDeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::delete_marker_reponse>>(AsyncDeleteMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::image>> AsyncGetImages(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::image>>(AsyncGetImagesRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::delete_marker_reponse>> PrepareAsyncDeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::delete_marker_reponse>>(PrepareAsyncDeleteMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::image>> PrepareAsyncGetImages(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::image>>(PrepareAsyncGetImagesRaw(context, request, cq));
+    // may be unused (for now)
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::marker_info>> GetAllMarkers(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::marker_info>>(GetAllMarkersRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::marker_info>> AsyncGetAllMarkers(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::marker_info>>(AsyncGetAllMarkersRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::marker_info>> PrepareAsyncGetAllMarkers(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::marker_info>>(PrepareAsyncGetAllMarkersRaw(context, request, cq));
     }
     // **********************************************************//
-    virtual ::grpc::Status SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::ComeTogether::send_chat_message_response* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::send_chat_message_response>> AsyncSendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::send_chat_message_response>>(AsyncSendChatMessageRaw(context, request, cq));
+    // may be unused (for now)
+    virtual ::grpc::Status GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::come_together_grpc::get_info_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::get_info_response>> AsyncGetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::get_info_response>>(AsyncGetInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::send_chat_message_response>> PrepareAsyncSendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::send_chat_message_response>>(PrepareAsyncSendChatMessageRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::get_info_response>> PrepareAsyncGetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::get_info_response>>(PrepareAsyncGetInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::chat_message>> GetChatMessages(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::chat_message>>(GetChatMessagesRaw(context, request));
+    virtual ::grpc::Status UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::come_together_grpc::update_info_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::update_info_response>> AsyncUpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::update_info_response>>(AsyncUpdateInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::chat_message>> AsyncGetChatMessages(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::chat_message>>(AsyncGetChatMessagesRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::update_info_response>> PrepareAsyncUpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::update_info_response>>(PrepareAsyncUpdateInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::chat_message>> PrepareAsyncGetChatMessages(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::chat_message>>(PrepareAsyncGetChatMessagesRaw(context, request, cq));
+    // **********************************************************//
+    virtual ::grpc::Status ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::come_together_grpc::manage_image_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::manage_image_response>> AsyncManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::manage_image_response>>(AsyncManageImageRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::manage_image_response>> PrepareAsyncManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::manage_image_response>>(PrepareAsyncManageImageRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::image>> GetImages(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::image>>(GetImagesRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::image>> AsyncGetImages(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::image>>(AsyncGetImagesRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::image>> PrepareAsyncGetImages(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::image>>(PrepareAsyncGetImagesRaw(context, request, cq));
+    }
+    // **********************************************************//
+    virtual ::grpc::Status SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::come_together_grpc::send_chat_message_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_chat_message_response>> AsyncSendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_chat_message_response>>(AsyncSendChatMessageRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_chat_message_response>> PrepareAsyncSendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_chat_message_response>>(PrepareAsyncSendChatMessageRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::chat_message>> GetChatMessages(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::chat_message>>(GetChatMessagesRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::chat_message>> AsyncGetChatMessages(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::chat_message>>(AsyncGetChatMessagesRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::chat_message>> PrepareAsyncGetChatMessages(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::chat_message>>(PrepareAsyncGetChatMessagesRaw(context, request, cq));
     }
     //
     // Events:
     // Add new marker to map or message to chat
     // Edit existing marker, message or user profile
     // Delete existing marker or image
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::event>> SubscribeToEvents(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::ComeTogether::event>>(SubscribeToEventsRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::event>> SubscribeToEvents(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::come_together_grpc::event>>(SubscribeToEventsRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::event>> AsyncSubscribeToEvents(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::event>>(AsyncSubscribeToEventsRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::event>> AsyncSubscribeToEvents(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::event>>(AsyncSubscribeToEventsRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::event>> PrepareAsyncSubscribeToEvents(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::ComeTogether::event>>(PrepareAsyncSubscribeToEventsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::event>> PrepareAsyncSubscribeToEvents(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::event>>(PrepareAsyncSubscribeToEventsRaw(context, request, cq));
+    }
+    virtual ::grpc::Status SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::come_together_grpc::send_push_token_response* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_push_token_response>> AsyncSendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_push_token_response>>(AsyncSendPushTokenRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_push_token_response>> PrepareAsyncSendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_push_token_response>>(PrepareAsyncSendPushTokenRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
       virtual ~experimental_async_interface() {}
-      virtual void AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::ask_token_response* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      virtual void VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::verify_token_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::verify_token_response* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      // **********************************************************//
-      virtual void Check(::grpc::ClientContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::check_response* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void Check(::grpc::ClientContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void Check(::grpc::ClientContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::check_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      virtual void RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::register_response* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::register_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      virtual void LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::login_response* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::login_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       // **********************************************************//
-      virtual void AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::add_marker_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::check_response* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::check_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      virtual void RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::register_response* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetAllMarkers(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::ClientReadReactor< ::ComeTogether::marker_info>* reactor) = 0;
+      virtual void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::register_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void GetAllMarkers(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::marker_info>* reactor) = 0;
+      virtual void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      // **********************************************************//
-      virtual void GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::get_info_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::login_response* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      virtual void UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::update_info_response* response, std::function<void(::grpc::Status)>) = 0;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::login_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       // **********************************************************//
-      virtual void ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::manage_image_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::add_marker_response* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      virtual void DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void DeleteMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::delete_marker_reponse* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetImages(::grpc::ClientContext* context, ::ComeTogether::get_images_request* request, ::grpc::ClientReadReactor< ::ComeTogether::image>* reactor) = 0;
+      virtual void DeleteMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void GetImages(::grpc::ClientContext* context, ::ComeTogether::get_images_request* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::image>* reactor) = 0;
+      virtual void DeleteMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      // may be unused (for now)
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetAllMarkers(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::ClientReadReactor< ::come_together_grpc::marker_info>* reactor) = 0;
+      #else
+      virtual void GetAllMarkers(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::marker_info>* reactor) = 0;
       #endif
       // **********************************************************//
-      virtual void SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::send_chat_message_response* response, std::function<void(::grpc::Status)>) = 0;
+      // may be unused (for now)
+      virtual void GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::get_info_response* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      virtual void UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::update_info_response* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetChatMessages(::grpc::ClientContext* context, ::ComeTogether::get_chat_messages_request* request, ::grpc::ClientReadReactor< ::ComeTogether::chat_message>* reactor) = 0;
+      virtual void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void GetChatMessages(::grpc::ClientContext* context, ::ComeTogether::get_chat_messages_request* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::chat_message>* reactor) = 0;
+      virtual void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      // **********************************************************//
+      virtual void ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::manage_image_response* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetImages(::grpc::ClientContext* context, ::come_together_grpc::get_images_request* request, ::grpc::ClientReadReactor< ::come_together_grpc::image>* reactor) = 0;
+      #else
+      virtual void GetImages(::grpc::ClientContext* context, ::come_together_grpc::get_images_request* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::image>* reactor) = 0;
+      #endif
+      // **********************************************************//
+      virtual void SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_chat_message_response* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void GetChatMessages(::grpc::ClientContext* context, ::come_together_grpc::get_chat_messages_request* request, ::grpc::ClientReadReactor< ::come_together_grpc::chat_message>* reactor) = 0;
+      #else
+      virtual void GetChatMessages(::grpc::ClientContext* context, ::come_together_grpc::get_chat_messages_request* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::chat_message>* reactor) = 0;
       #endif
       //
       // Events:
@@ -301,9 +331,21 @@ class MainEndpoint final {
       // Edit existing marker, message or user profile
       // Delete existing marker or image
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void SubscribeToEvents(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::ClientReadReactor< ::ComeTogether::event>* reactor) = 0;
+      virtual void SubscribeToEvents(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::ClientReadReactor< ::come_together_grpc::event>* reactor) = 0;
       #else
-      virtual void SubscribeToEvents(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::event>* reactor) = 0;
+      virtual void SubscribeToEvents(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::event>* reactor) = 0;
+      #endif
+      virtual void SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void SendPushToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_push_token_response* response, std::function<void(::grpc::Status)>) = 0;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      virtual void SendPushToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_push_token_response* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      #else
+      virtual void SendPushToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_push_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -314,290 +356,332 @@ class MainEndpoint final {
     #endif
     virtual class experimental_async_interface* experimental_async() { return nullptr; }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::ask_token_response>* AsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::ask_token_response>* PrepareAsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::verify_token_response>* AsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::verify_token_response>* PrepareAsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::check_response>* AsyncCheckRaw(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::check_response>* PrepareAsyncCheckRaw(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::register_response>* AsyncRegisterUserRaw(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::register_response>* PrepareAsyncRegisterUserRaw(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::login_response>* AsyncLoginUserRaw(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::login_response>* PrepareAsyncLoginUserRaw(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::add_marker_response>* AsyncAddMarkerRaw(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::add_marker_response>* PrepareAsyncAddMarkerRaw(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::ComeTogether::marker_info>* GetAllMarkersRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::marker_info>* AsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::marker_info>* PrepareAsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::get_info_response>* AsyncGetInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::get_info_response>* PrepareAsyncGetInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::update_info_response>* AsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::update_info_response>* PrepareAsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::manage_image_response>* AsyncManageImageRaw(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::manage_image_response>* PrepareAsyncManageImageRaw(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::ComeTogether::image>* GetImagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::image>* AsyncGetImagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::image>* PrepareAsyncGetImagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::send_chat_message_response>* AsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ComeTogether::send_chat_message_response>* PrepareAsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::ComeTogether::chat_message>* GetChatMessagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::chat_message>* AsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::chat_message>* PrepareAsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientReaderInterface< ::ComeTogether::event>* SubscribeToEventsRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::event>* AsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::ComeTogether::event>* PrepareAsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::ask_token_response>* AsyncAskTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::ask_token_response>* PrepareAsyncAskTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::verify_token_response>* AsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::verify_token_response>* PrepareAsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::check_response>* AsyncCheckRaw(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::check_response>* PrepareAsyncCheckRaw(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::register_response>* AsyncRegisterUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::register_response>* PrepareAsyncRegisterUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::login_response>* AsyncLoginUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::login_response>* PrepareAsyncLoginUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::add_marker_response>* AsyncAddMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::add_marker_response>* PrepareAsyncAddMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::delete_marker_reponse>* AsyncDeleteMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::delete_marker_reponse>* PrepareAsyncDeleteMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::come_together_grpc::marker_info>* GetAllMarkersRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::marker_info>* AsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::marker_info>* PrepareAsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::get_info_response>* AsyncGetInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::get_info_response>* PrepareAsyncGetInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::update_info_response>* AsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::update_info_response>* PrepareAsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::manage_image_response>* AsyncManageImageRaw(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::manage_image_response>* PrepareAsyncManageImageRaw(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::come_together_grpc::image>* GetImagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::image>* AsyncGetImagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::image>* PrepareAsyncGetImagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_chat_message_response>* AsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_chat_message_response>* PrepareAsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::come_together_grpc::chat_message>* GetChatMessagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::chat_message>* AsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::chat_message>* PrepareAsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::come_together_grpc::event>* SubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::event>* AsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::come_together_grpc::event>* PrepareAsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_push_token_response>* AsyncSendPushTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::come_together_grpc::send_push_token_response>* PrepareAsyncSendPushTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::ComeTogether::ask_token_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>> AsyncAskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>>(AsyncAskTokenRaw(context, request, cq));
+    ::grpc::Status AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::come_together_grpc::ask_token_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::ask_token_response>> AsyncAskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::ask_token_response>>(AsyncAskTokenRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>> PrepareAsyncAskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>>(PrepareAsyncAskTokenRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::ask_token_response>> PrepareAsyncAskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::ask_token_response>>(PrepareAsyncAskTokenRaw(context, request, cq));
     }
-    ::grpc::Status VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::ComeTogether::verify_token_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::verify_token_response>> AsyncVerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::verify_token_response>>(AsyncVerifyTokenRaw(context, request, cq));
+    ::grpc::Status VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::come_together_grpc::verify_token_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::verify_token_response>> AsyncVerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::verify_token_response>>(AsyncVerifyTokenRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::verify_token_response>> PrepareAsyncVerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::verify_token_response>>(PrepareAsyncVerifyTokenRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::verify_token_response>> PrepareAsyncVerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::verify_token_response>>(PrepareAsyncVerifyTokenRaw(context, request, cq));
     }
-    ::grpc::Status Check(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::ComeTogether::check_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::check_response>> AsyncCheck(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::check_response>>(AsyncCheckRaw(context, request, cq));
+    ::grpc::Status Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::come_together_grpc::check_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::check_response>> AsyncCheck(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::check_response>>(AsyncCheckRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::check_response>> PrepareAsyncCheck(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::check_response>>(PrepareAsyncCheckRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::check_response>> PrepareAsyncCheck(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::check_response>>(PrepareAsyncCheckRaw(context, request, cq));
     }
-    ::grpc::Status RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::ComeTogether::register_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::register_response>> AsyncRegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::register_response>>(AsyncRegisterUserRaw(context, request, cq));
+    ::grpc::Status RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::come_together_grpc::register_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::register_response>> AsyncRegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::register_response>>(AsyncRegisterUserRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::register_response>> PrepareAsyncRegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::register_response>>(PrepareAsyncRegisterUserRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::register_response>> PrepareAsyncRegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::register_response>>(PrepareAsyncRegisterUserRaw(context, request, cq));
     }
-    ::grpc::Status LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::ComeTogether::login_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::login_response>> AsyncLoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::login_response>>(AsyncLoginUserRaw(context, request, cq));
+    ::grpc::Status LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::come_together_grpc::login_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>> AsyncLoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>>(AsyncLoginUserRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::login_response>> PrepareAsyncLoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::login_response>>(PrepareAsyncLoginUserRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>> PrepareAsyncLoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>>(PrepareAsyncLoginUserRaw(context, request, cq));
     }
-    ::grpc::Status AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::ComeTogether::add_marker_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::add_marker_response>> AsyncAddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::add_marker_response>>(AsyncAddMarkerRaw(context, request, cq));
+    ::grpc::Status AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::come_together_grpc::add_marker_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::add_marker_response>> AsyncAddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::add_marker_response>>(AsyncAddMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::add_marker_response>> PrepareAsyncAddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::add_marker_response>>(PrepareAsyncAddMarkerRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::add_marker_response>> PrepareAsyncAddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::add_marker_response>>(PrepareAsyncAddMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::marker_info>> GetAllMarkers(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::marker_info>>(GetAllMarkersRaw(context, request));
+    ::grpc::Status DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::come_together_grpc::delete_marker_reponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::delete_marker_reponse>> AsyncDeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::delete_marker_reponse>>(AsyncDeleteMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::marker_info>> AsyncGetAllMarkers(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::marker_info>>(AsyncGetAllMarkersRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::delete_marker_reponse>> PrepareAsyncDeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::delete_marker_reponse>>(PrepareAsyncDeleteMarkerRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::marker_info>> PrepareAsyncGetAllMarkers(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::marker_info>>(PrepareAsyncGetAllMarkersRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::marker_info>> GetAllMarkers(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::marker_info>>(GetAllMarkersRaw(context, request));
     }
-    ::grpc::Status GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::ComeTogether::get_info_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::get_info_response>> AsyncGetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::get_info_response>>(AsyncGetInfoRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::marker_info>> AsyncGetAllMarkers(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::marker_info>>(AsyncGetAllMarkersRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::get_info_response>> PrepareAsyncGetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::get_info_response>>(PrepareAsyncGetInfoRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::marker_info>> PrepareAsyncGetAllMarkers(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::marker_info>>(PrepareAsyncGetAllMarkersRaw(context, request, cq));
     }
-    ::grpc::Status UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::ComeTogether::update_info_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::update_info_response>> AsyncUpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::update_info_response>>(AsyncUpdateInfoRaw(context, request, cq));
+    ::grpc::Status GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::come_together_grpc::get_info_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::get_info_response>> AsyncGetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::get_info_response>>(AsyncGetInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::update_info_response>> PrepareAsyncUpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::update_info_response>>(PrepareAsyncUpdateInfoRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::get_info_response>> PrepareAsyncGetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::get_info_response>>(PrepareAsyncGetInfoRaw(context, request, cq));
     }
-    ::grpc::Status ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::ComeTogether::manage_image_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::manage_image_response>> AsyncManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::manage_image_response>>(AsyncManageImageRaw(context, request, cq));
+    ::grpc::Status UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::come_together_grpc::update_info_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::update_info_response>> AsyncUpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::update_info_response>>(AsyncUpdateInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::manage_image_response>> PrepareAsyncManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::manage_image_response>>(PrepareAsyncManageImageRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::update_info_response>> PrepareAsyncUpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::update_info_response>>(PrepareAsyncUpdateInfoRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::image>> GetImages(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::image>>(GetImagesRaw(context, request));
+    ::grpc::Status ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::come_together_grpc::manage_image_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::manage_image_response>> AsyncManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::manage_image_response>>(AsyncManageImageRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::image>> AsyncGetImages(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::image>>(AsyncGetImagesRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::manage_image_response>> PrepareAsyncManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::manage_image_response>>(PrepareAsyncManageImageRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::image>> PrepareAsyncGetImages(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::image>>(PrepareAsyncGetImagesRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::image>> GetImages(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::image>>(GetImagesRaw(context, request));
     }
-    ::grpc::Status SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::ComeTogether::send_chat_message_response* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::send_chat_message_response>> AsyncSendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::send_chat_message_response>>(AsyncSendChatMessageRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::image>> AsyncGetImages(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::image>>(AsyncGetImagesRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::send_chat_message_response>> PrepareAsyncSendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ComeTogether::send_chat_message_response>>(PrepareAsyncSendChatMessageRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::image>> PrepareAsyncGetImages(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::image>>(PrepareAsyncGetImagesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::chat_message>> GetChatMessages(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::chat_message>>(GetChatMessagesRaw(context, request));
+    ::grpc::Status SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::come_together_grpc::send_chat_message_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_chat_message_response>> AsyncSendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_chat_message_response>>(AsyncSendChatMessageRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::chat_message>> AsyncGetChatMessages(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::chat_message>>(AsyncGetChatMessagesRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_chat_message_response>> PrepareAsyncSendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_chat_message_response>>(PrepareAsyncSendChatMessageRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::chat_message>> PrepareAsyncGetChatMessages(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::chat_message>>(PrepareAsyncGetChatMessagesRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::chat_message>> GetChatMessages(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::chat_message>>(GetChatMessagesRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::event>> SubscribeToEvents(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::ComeTogether::event>>(SubscribeToEventsRaw(context, request));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::chat_message>> AsyncGetChatMessages(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::chat_message>>(AsyncGetChatMessagesRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::event>> AsyncSubscribeToEvents(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::event>>(AsyncSubscribeToEventsRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::chat_message>> PrepareAsyncGetChatMessages(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::chat_message>>(PrepareAsyncGetChatMessagesRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::event>> PrepareAsyncSubscribeToEvents(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::ComeTogether::event>>(PrepareAsyncSubscribeToEventsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::event>> SubscribeToEvents(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::come_together_grpc::event>>(SubscribeToEventsRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::event>> AsyncSubscribeToEvents(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::event>>(AsyncSubscribeToEventsRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::event>> PrepareAsyncSubscribeToEvents(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::come_together_grpc::event>>(PrepareAsyncSubscribeToEventsRaw(context, request, cq));
+    }
+    ::grpc::Status SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::come_together_grpc::send_push_token_response* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_push_token_response>> AsyncSendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_push_token_response>>(AsyncSendPushTokenRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_push_token_response>> PrepareAsyncSendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_push_token_response>>(PrepareAsyncSendPushTokenRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
      public:
-      void AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, std::function<void(::grpc::Status)>) override;
-      void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, std::function<void(::grpc::Status)>) override;
+      void AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response, std::function<void(::grpc::Status)>) override;
+      void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::ask_token_response* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void AskToken(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::ask_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void AskToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::ask_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response, std::function<void(::grpc::Status)>) override;
-      void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::verify_token_response* response, std::function<void(::grpc::Status)>) override;
+      void VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response, std::function<void(::grpc::Status)>) override;
+      void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::verify_token_response* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void VerifyToken(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      void Check(::grpc::ClientContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response, std::function<void(::grpc::Status)>) override;
-      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::check_response* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void Check(::grpc::ClientContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void Check(::grpc::ClientContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void VerifyToken(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::check_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::verify_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void VerifyToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::verify_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response, std::function<void(::grpc::Status)>) override;
-      void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::register_response* response, std::function<void(::grpc::Status)>) override;
+      void Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response, std::function<void(::grpc::Status)>) override;
+      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::check_response* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void RegisterUser(::grpc::ClientContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::register_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      void LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response, std::function<void(::grpc::Status)>) override;
-      void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::login_response* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void LoginUser(::grpc::ClientContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void Check(::grpc::ClientContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::login_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::check_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void Check(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::check_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response, std::function<void(::grpc::Status)>) override;
-      void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::add_marker_response* response, std::function<void(::grpc::Status)>) override;
+      void RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response, std::function<void(::grpc::Status)>) override;
+      void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::register_response* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void AddMarker(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void RegisterUser(::grpc::ClientContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetAllMarkers(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::ClientReadReactor< ::ComeTogether::marker_info>* reactor) override;
+      void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::register_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void GetAllMarkers(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::marker_info>* reactor) override;
+      void RegisterUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::register_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response, std::function<void(::grpc::Status)>) override;
-      void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::get_info_response* response, std::function<void(::grpc::Status)>) override;
+      void LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response, std::function<void(::grpc::Status)>) override;
+      void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::login_response* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void GetInfo(::grpc::ClientContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      void UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response, std::function<void(::grpc::Status)>) override;
-      void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::update_info_response* response, std::function<void(::grpc::Status)>) override;
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void UpdateInfo(::grpc::ClientContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void LoginUser(::grpc::ClientContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::login_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void LoginUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::login_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response, std::function<void(::grpc::Status)>) override;
-      void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::manage_image_response* response, std::function<void(::grpc::Status)>) override;
+      void AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response, std::function<void(::grpc::Status)>) override;
+      void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::add_marker_response* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void ManageImage(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetImages(::grpc::ClientContext* context, ::ComeTogether::get_images_request* request, ::grpc::ClientReadReactor< ::ComeTogether::image>* reactor) override;
+      void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::add_marker_response* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void GetImages(::grpc::ClientContext* context, ::ComeTogether::get_images_request* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::image>* reactor) override;
+      void AddMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::add_marker_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response, std::function<void(::grpc::Status)>) override;
-      void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::send_chat_message_response* response, std::function<void(::grpc::Status)>) override;
+      void DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response, std::function<void(::grpc::Status)>) override;
+      void DeleteMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::delete_marker_reponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void SendChatMessage(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::ComeTogether::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void DeleteMarker(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetChatMessages(::grpc::ClientContext* context, ::ComeTogether::get_chat_messages_request* request, ::grpc::ClientReadReactor< ::ComeTogether::chat_message>* reactor) override;
+      void DeleteMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void GetChatMessages(::grpc::ClientContext* context, ::ComeTogether::get_chat_messages_request* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::chat_message>* reactor) override;
+      void DeleteMarker(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::delete_marker_reponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void SubscribeToEvents(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::ClientReadReactor< ::ComeTogether::event>* reactor) override;
+      void GetAllMarkers(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::ClientReadReactor< ::come_together_grpc::marker_info>* reactor) override;
       #else
-      void SubscribeToEvents(::grpc::ClientContext* context, ::ComeTogether::access_token* request, ::grpc::experimental::ClientReadReactor< ::ComeTogether::event>* reactor) override;
+      void GetAllMarkers(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::marker_info>* reactor) override;
+      #endif
+      void GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response, std::function<void(::grpc::Status)>) override;
+      void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::get_info_response* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetInfo(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::get_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void GetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::get_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      void UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response, std::function<void(::grpc::Status)>) override;
+      void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::update_info_response* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void UpdateInfo(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::update_info_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void UpdateInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::update_info_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      void ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response, std::function<void(::grpc::Status)>) override;
+      void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::manage_image_response* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ManageImage(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::manage_image_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void ManageImage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::manage_image_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetImages(::grpc::ClientContext* context, ::come_together_grpc::get_images_request* request, ::grpc::ClientReadReactor< ::come_together_grpc::image>* reactor) override;
+      #else
+      void GetImages(::grpc::ClientContext* context, ::come_together_grpc::get_images_request* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::image>* reactor) override;
+      #endif
+      void SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response, std::function<void(::grpc::Status)>) override;
+      void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_chat_message_response* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SendChatMessage(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SendChatMessage(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_chat_message_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void GetChatMessages(::grpc::ClientContext* context, ::come_together_grpc::get_chat_messages_request* request, ::grpc::ClientReadReactor< ::come_together_grpc::chat_message>* reactor) override;
+      #else
+      void GetChatMessages(::grpc::ClientContext* context, ::come_together_grpc::get_chat_messages_request* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::chat_message>* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SubscribeToEvents(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::ClientReadReactor< ::come_together_grpc::event>* reactor) override;
+      #else
+      void SubscribeToEvents(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::event>* reactor) override;
+      #endif
+      void SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response, std::function<void(::grpc::Status)>) override;
+      void SendPushToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_push_token_response* response, std::function<void(::grpc::Status)>) override;
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SendPushToken(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      #endif
+      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      void SendPushToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_push_token_response* response, ::grpc::ClientUnaryReactor* reactor) override;
+      #else
+      void SendPushToken(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::send_push_token_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -610,44 +694,49 @@ class MainEndpoint final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class experimental_async async_stub_{this};
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>* AsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::ask_token_response>* PrepareAsyncAskTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::ask_token_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::verify_token_response>* AsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::verify_token_response>* PrepareAsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::ComeTogether::verify_token_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::check_response>* AsyncCheckRaw(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::check_response>* PrepareAsyncCheckRaw(::grpc::ClientContext* context, const ::ComeTogether::check_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::register_response>* AsyncRegisterUserRaw(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::register_response>* PrepareAsyncRegisterUserRaw(::grpc::ClientContext* context, const ::ComeTogether::register_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::login_response>* AsyncLoginUserRaw(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::login_response>* PrepareAsyncLoginUserRaw(::grpc::ClientContext* context, const ::ComeTogether::login_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::add_marker_response>* AsyncAddMarkerRaw(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::add_marker_response>* PrepareAsyncAddMarkerRaw(::grpc::ClientContext* context, const ::ComeTogether::add_marker_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::ComeTogether::marker_info>* GetAllMarkersRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::marker_info>* AsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::marker_info>* PrepareAsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::get_info_response>* AsyncGetInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::get_info_response>* PrepareAsyncGetInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::get_info_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::update_info_response>* AsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::update_info_response>* PrepareAsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::ComeTogether::update_info_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::manage_image_response>* AsyncManageImageRaw(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::manage_image_response>* PrepareAsyncManageImageRaw(::grpc::ClientContext* context, const ::ComeTogether::manage_image_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::ComeTogether::image>* GetImagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::image>* AsyncGetImagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::image>* PrepareAsyncGetImagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_images_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::send_chat_message_response>* AsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::ComeTogether::send_chat_message_response>* PrepareAsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::ComeTogether::send_chat_message_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::ComeTogether::chat_message>* GetChatMessagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::chat_message>* AsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::chat_message>* PrepareAsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::ComeTogether::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientReader< ::ComeTogether::event>* SubscribeToEventsRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::event>* AsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::ComeTogether::event>* PrepareAsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::ComeTogether::access_token& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::ask_token_response>* AsyncAskTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::ask_token_response>* PrepareAsyncAskTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::verify_token_response>* AsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::verify_token_response>* PrepareAsyncVerifyTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::verify_token_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::check_response>* AsyncCheckRaw(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::check_response>* PrepareAsyncCheckRaw(::grpc::ClientContext* context, const ::come_together_grpc::check_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::register_response>* AsyncRegisterUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::register_response>* PrepareAsyncRegisterUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::register_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>* AsyncLoginUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>* PrepareAsyncLoginUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::add_marker_response>* AsyncAddMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::add_marker_response>* PrepareAsyncAddMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::delete_marker_reponse>* AsyncDeleteMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::delete_marker_reponse>* PrepareAsyncDeleteMarkerRaw(::grpc::ClientContext* context, const ::come_together_grpc::delete_marker_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::come_together_grpc::marker_info>* GetAllMarkersRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::marker_info>* AsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::marker_info>* PrepareAsyncGetAllMarkersRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::get_info_response>* AsyncGetInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::get_info_response>* PrepareAsyncGetInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_info_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::update_info_response>* AsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::update_info_response>* PrepareAsyncUpdateInfoRaw(::grpc::ClientContext* context, const ::come_together_grpc::update_info_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::manage_image_response>* AsyncManageImageRaw(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::manage_image_response>* PrepareAsyncManageImageRaw(::grpc::ClientContext* context, const ::come_together_grpc::manage_image_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::come_together_grpc::image>* GetImagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::image>* AsyncGetImagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::image>* PrepareAsyncGetImagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_images_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_chat_message_response>* AsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_chat_message_response>* PrepareAsyncSendChatMessageRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_chat_message_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::come_together_grpc::chat_message>* GetChatMessagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::chat_message>* AsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::chat_message>* PrepareAsyncGetChatMessagesRaw(::grpc::ClientContext* context, const ::come_together_grpc::get_chat_messages_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::come_together_grpc::event>* SubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::event>* AsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::come_together_grpc::event>* PrepareAsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_push_token_response>* AsyncSendPushTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::come_together_grpc::send_push_token_response>* PrepareAsyncSendPushTokenRaw(::grpc::ClientContext* context, const ::come_together_grpc::send_push_token_request& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AskToken_;
     const ::grpc::internal::RpcMethod rpcmethod_VerifyToken_;
     const ::grpc::internal::RpcMethod rpcmethod_Check_;
     const ::grpc::internal::RpcMethod rpcmethod_RegisterUser_;
     const ::grpc::internal::RpcMethod rpcmethod_LoginUser_;
     const ::grpc::internal::RpcMethod rpcmethod_AddMarker_;
+    const ::grpc::internal::RpcMethod rpcmethod_DeleteMarker_;
     const ::grpc::internal::RpcMethod rpcmethod_GetAllMarkers_;
     const ::grpc::internal::RpcMethod rpcmethod_GetInfo_;
     const ::grpc::internal::RpcMethod rpcmethod_UpdateInfo_;
@@ -656,6 +745,7 @@ class MainEndpoint final {
     const ::grpc::internal::RpcMethod rpcmethod_SendChatMessage_;
     const ::grpc::internal::RpcMethod rpcmethod_GetChatMessages_;
     const ::grpc::internal::RpcMethod rpcmethod_SubscribeToEvents_;
+    const ::grpc::internal::RpcMethod rpcmethod_SendPushToken_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -663,30 +753,34 @@ class MainEndpoint final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status AskToken(::grpc::ServerContext* context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response);
-    virtual ::grpc::Status VerifyToken(::grpc::ServerContext* context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response);
+    virtual ::grpc::Status AskToken(::grpc::ServerContext* context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response);
+    virtual ::grpc::Status VerifyToken(::grpc::ServerContext* context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response);
     // **********************************************************//
-    virtual ::grpc::Status Check(::grpc::ServerContext* context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response);
-    virtual ::grpc::Status RegisterUser(::grpc::ServerContext* context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response);
-    virtual ::grpc::Status LoginUser(::grpc::ServerContext* context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response);
+    virtual ::grpc::Status Check(::grpc::ServerContext* context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response);
+    virtual ::grpc::Status RegisterUser(::grpc::ServerContext* context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response);
+    virtual ::grpc::Status LoginUser(::grpc::ServerContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response);
     // **********************************************************//
-    virtual ::grpc::Status AddMarker(::grpc::ServerContext* context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response);
-    virtual ::grpc::Status GetAllMarkers(::grpc::ServerContext* context, const ::ComeTogether::access_token* request, ::grpc::ServerWriter< ::ComeTogether::marker_info>* writer);
+    virtual ::grpc::Status AddMarker(::grpc::ServerContext* context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response);
+    virtual ::grpc::Status DeleteMarker(::grpc::ServerContext* context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response);
+    // may be unused (for now)
+    virtual ::grpc::Status GetAllMarkers(::grpc::ServerContext* context, const ::come_together_grpc::access_token* request, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* writer);
     // **********************************************************//
-    virtual ::grpc::Status GetInfo(::grpc::ServerContext* context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response);
-    virtual ::grpc::Status UpdateInfo(::grpc::ServerContext* context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response);
+    // may be unused (for now)
+    virtual ::grpc::Status GetInfo(::grpc::ServerContext* context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response);
+    virtual ::grpc::Status UpdateInfo(::grpc::ServerContext* context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response);
     // **********************************************************//
-    virtual ::grpc::Status ManageImage(::grpc::ServerContext* context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response);
-    virtual ::grpc::Status GetImages(::grpc::ServerContext* context, const ::ComeTogether::get_images_request* request, ::grpc::ServerWriter< ::ComeTogether::image>* writer);
+    virtual ::grpc::Status ManageImage(::grpc::ServerContext* context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response);
+    virtual ::grpc::Status GetImages(::grpc::ServerContext* context, const ::come_together_grpc::get_images_request* request, ::grpc::ServerWriter< ::come_together_grpc::image>* writer);
     // **********************************************************//
-    virtual ::grpc::Status SendChatMessage(::grpc::ServerContext* context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response);
-    virtual ::grpc::Status GetChatMessages(::grpc::ServerContext* context, const ::ComeTogether::get_chat_messages_request* request, ::grpc::ServerWriter< ::ComeTogether::chat_message>* writer);
+    virtual ::grpc::Status SendChatMessage(::grpc::ServerContext* context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response);
+    virtual ::grpc::Status GetChatMessages(::grpc::ServerContext* context, const ::come_together_grpc::get_chat_messages_request* request, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* writer);
     //
     // Events:
     // Add new marker to map or message to chat
     // Edit existing marker, message or user profile
     // Delete existing marker or image
-    virtual ::grpc::Status SubscribeToEvents(::grpc::ServerContext* context, const ::ComeTogether::access_token* request, ::grpc::ServerWriter< ::ComeTogether::event>* writer);
+    virtual ::grpc::Status SubscribeToEvents(::grpc::ServerContext* context, const ::come_together_grpc::access_token* request, ::grpc::ServerWriter< ::come_together_grpc::event>* writer);
+    virtual ::grpc::Status SendPushToken(::grpc::ServerContext* context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_AskToken : public BaseClass {
@@ -700,11 +794,11 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/) override {
+    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestAskToken(::grpc::ServerContext* context, ::ComeTogether::ask_token_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::ask_token_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestAskToken(::grpc::ServerContext* context, ::come_together_grpc::ask_token_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::ask_token_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -720,11 +814,11 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/) override {
+    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestVerifyToken(::grpc::ServerContext* context, ::ComeTogether::verify_token_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::verify_token_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestVerifyToken(::grpc::ServerContext* context, ::come_together_grpc::verify_token_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::verify_token_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -740,11 +834,11 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestCheck(::grpc::ServerContext* context, ::ComeTogether::check_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::check_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestCheck(::grpc::ServerContext* context, ::come_together_grpc::check_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::check_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -760,11 +854,11 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/) override {
+    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestRegisterUser(::grpc::ServerContext* context, ::ComeTogether::register_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::register_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestRegisterUser(::grpc::ServerContext* context, ::come_together_grpc::register_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::register_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -780,11 +874,11 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/) override {
+    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestLoginUser(::grpc::ServerContext* context, ::ComeTogether::login_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::login_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestLoginUser(::grpc::ServerContext* context, ::come_together_grpc::login_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::login_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -800,12 +894,32 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/) override {
+    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestAddMarker(::grpc::ServerContext* context, ::ComeTogether::add_marker_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::add_marker_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestAddMarker(::grpc::ServerContext* context, ::come_together_grpc::add_marker_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::add_marker_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_DeleteMarker : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_DeleteMarker() {
+      ::grpc::Service::MarkMethodAsync(6);
+    }
+    ~WithAsyncMethod_DeleteMarker() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteMarker(::grpc::ServerContext* context, ::come_together_grpc::delete_marker_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::delete_marker_reponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -814,18 +928,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetAllMarkers() {
-      ::grpc::Service::MarkMethodAsync(6);
+      ::grpc::Service::MarkMethodAsync(7);
     }
     ~WithAsyncMethod_GetAllMarkers() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::marker_info>* /*writer*/) override {
+    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetAllMarkers(::grpc::ServerContext* context, ::ComeTogether::access_token* request, ::grpc::ServerAsyncWriter< ::ComeTogether::marker_info>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(6, context, request, writer, new_call_cq, notification_cq, tag);
+    void RequestGetAllMarkers(::grpc::ServerContext* context, ::come_together_grpc::access_token* request, ::grpc::ServerAsyncWriter< ::come_together_grpc::marker_info>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(7, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -834,18 +948,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetInfo() {
-      ::grpc::Service::MarkMethodAsync(7);
+      ::grpc::Service::MarkMethodAsync(8);
     }
     ~WithAsyncMethod_GetInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/) override {
+    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetInfo(::grpc::ServerContext* context, ::ComeTogether::get_info_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::get_info_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestGetInfo(::grpc::ServerContext* context, ::come_together_grpc::get_info_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::get_info_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -854,18 +968,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_UpdateInfo() {
-      ::grpc::Service::MarkMethodAsync(8);
+      ::grpc::Service::MarkMethodAsync(9);
     }
     ~WithAsyncMethod_UpdateInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/) override {
+    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestUpdateInfo(::grpc::ServerContext* context, ::ComeTogether::update_info_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::update_info_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestUpdateInfo(::grpc::ServerContext* context, ::come_together_grpc::update_info_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::update_info_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -874,18 +988,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_ManageImage() {
-      ::grpc::Service::MarkMethodAsync(9);
+      ::grpc::Service::MarkMethodAsync(10);
     }
     ~WithAsyncMethod_ManageImage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/) override {
+    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestManageImage(::grpc::ServerContext* context, ::ComeTogether::manage_image_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::manage_image_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestManageImage(::grpc::ServerContext* context, ::come_together_grpc::manage_image_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::manage_image_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -894,18 +1008,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetImages() {
-      ::grpc::Service::MarkMethodAsync(10);
+      ::grpc::Service::MarkMethodAsync(11);
     }
     ~WithAsyncMethod_GetImages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::image>* /*writer*/) override {
+    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::image>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetImages(::grpc::ServerContext* context, ::ComeTogether::get_images_request* request, ::grpc::ServerAsyncWriter< ::ComeTogether::image>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(10, context, request, writer, new_call_cq, notification_cq, tag);
+    void RequestGetImages(::grpc::ServerContext* context, ::come_together_grpc::get_images_request* request, ::grpc::ServerAsyncWriter< ::come_together_grpc::image>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(11, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -914,18 +1028,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SendChatMessage() {
-      ::grpc::Service::MarkMethodAsync(11);
+      ::grpc::Service::MarkMethodAsync(12);
     }
     ~WithAsyncMethod_SendChatMessage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/) override {
+    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSendChatMessage(::grpc::ServerContext* context, ::ComeTogether::send_chat_message_request* request, ::grpc::ServerAsyncResponseWriter< ::ComeTogether::send_chat_message_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+    void RequestSendChatMessage(::grpc::ServerContext* context, ::come_together_grpc::send_chat_message_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::send_chat_message_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -934,18 +1048,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_GetChatMessages() {
-      ::grpc::Service::MarkMethodAsync(12);
+      ::grpc::Service::MarkMethodAsync(13);
     }
     ~WithAsyncMethod_GetChatMessages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::chat_message>* /*writer*/) override {
+    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetChatMessages(::grpc::ServerContext* context, ::ComeTogether::get_chat_messages_request* request, ::grpc::ServerAsyncWriter< ::ComeTogether::chat_message>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(12, context, request, writer, new_call_cq, notification_cq, tag);
+    void RequestGetChatMessages(::grpc::ServerContext* context, ::come_together_grpc::get_chat_messages_request* request, ::grpc::ServerAsyncWriter< ::come_together_grpc::chat_message>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(13, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -954,21 +1068,41 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_SubscribeToEvents() {
-      ::grpc::Service::MarkMethodAsync(13);
+      ::grpc::Service::MarkMethodAsync(14);
     }
     ~WithAsyncMethod_SubscribeToEvents() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::event>* /*writer*/) override {
+    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::event>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubscribeToEvents(::grpc::ServerContext* context, ::ComeTogether::access_token* request, ::grpc::ServerAsyncWriter< ::ComeTogether::event>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(13, context, request, writer, new_call_cq, notification_cq, tag);
+    void RequestSubscribeToEvents(::grpc::ServerContext* context, ::come_together_grpc::access_token* request, ::grpc::ServerAsyncWriter< ::come_together_grpc::event>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(14, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AskToken<WithAsyncMethod_VerifyToken<WithAsyncMethod_Check<WithAsyncMethod_RegisterUser<WithAsyncMethod_LoginUser<WithAsyncMethod_AddMarker<WithAsyncMethod_GetAllMarkers<WithAsyncMethod_GetInfo<WithAsyncMethod_UpdateInfo<WithAsyncMethod_ManageImage<WithAsyncMethod_GetImages<WithAsyncMethod_SendChatMessage<WithAsyncMethod_GetChatMessages<WithAsyncMethod_SubscribeToEvents<Service > > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_SendPushToken : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SendPushToken() {
+      ::grpc::Service::MarkMethodAsync(15);
+    }
+    ~WithAsyncMethod_SendPushToken() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendPushToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendPushToken(::grpc::ServerContext* context, ::come_together_grpc::send_push_token_request* request, ::grpc::ServerAsyncResponseWriter< ::come_together_grpc::send_push_token_response>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_AskToken<WithAsyncMethod_VerifyToken<WithAsyncMethod_Check<WithAsyncMethod_RegisterUser<WithAsyncMethod_LoginUser<WithAsyncMethod_AddMarker<WithAsyncMethod_DeleteMarker<WithAsyncMethod_GetAllMarkers<WithAsyncMethod_GetInfo<WithAsyncMethod_UpdateInfo<WithAsyncMethod_ManageImage<WithAsyncMethod_GetImages<WithAsyncMethod_SendChatMessage<WithAsyncMethod_GetChatMessages<WithAsyncMethod_SubscribeToEvents<WithAsyncMethod_SendPushToken<Service > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_AskToken : public BaseClass {
    private:
@@ -981,38 +1115,38 @@ class MainEndpoint final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::ask_token_request, ::ComeTogether::ask_token_response>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::ask_token_request, ::come_together_grpc::ask_token_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::ask_token_request* request, ::ComeTogether::ask_token_response* response) { return this->AskToken(context, request, response); }));}
+                     context, const ::come_together_grpc::ask_token_request* request, ::come_together_grpc::ask_token_response* response) { return this->AskToken(context, request, response); }));}
     void SetMessageAllocatorFor_AskToken(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::ask_token_request, ::ComeTogether::ask_token_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::ask_token_request, ::come_together_grpc::ask_token_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::ask_token_request, ::ComeTogether::ask_token_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::ask_token_request, ::come_together_grpc::ask_token_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_AskToken() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/) override {
+    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* AskToken(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* AskToken(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1028,38 +1162,38 @@ class MainEndpoint final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::verify_token_request, ::ComeTogether::verify_token_response>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::verify_token_request, ::come_together_grpc::verify_token_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::verify_token_request* request, ::ComeTogether::verify_token_response* response) { return this->VerifyToken(context, request, response); }));}
+                     context, const ::come_together_grpc::verify_token_request* request, ::come_together_grpc::verify_token_response* response) { return this->VerifyToken(context, request, response); }));}
     void SetMessageAllocatorFor_VerifyToken(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::verify_token_request, ::ComeTogether::verify_token_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::verify_token_request, ::come_together_grpc::verify_token_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::verify_token_request, ::ComeTogether::verify_token_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::verify_token_request, ::come_together_grpc::verify_token_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_VerifyToken() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/) override {
+    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* VerifyToken(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* VerifyToken(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1075,38 +1209,38 @@ class MainEndpoint final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::check_request, ::ComeTogether::check_response>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::check_request, ::come_together_grpc::check_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::check_request* request, ::ComeTogether::check_response* response) { return this->Check(context, request, response); }));}
+                     context, const ::come_together_grpc::check_request* request, ::come_together_grpc::check_response* response) { return this->Check(context, request, response); }));}
     void SetMessageAllocatorFor_Check(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::check_request, ::ComeTogether::check_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::check_request, ::come_together_grpc::check_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::check_request, ::ComeTogether::check_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::check_request, ::come_together_grpc::check_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_Check() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* Check(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* Check(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1122,38 +1256,38 @@ class MainEndpoint final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::register_request, ::ComeTogether::register_response>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::register_request, ::come_together_grpc::register_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::register_request* request, ::ComeTogether::register_response* response) { return this->RegisterUser(context, request, response); }));}
+                     context, const ::come_together_grpc::register_request* request, ::come_together_grpc::register_response* response) { return this->RegisterUser(context, request, response); }));}
     void SetMessageAllocatorFor_RegisterUser(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::register_request, ::ComeTogether::register_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::register_request, ::come_together_grpc::register_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::register_request, ::ComeTogether::register_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::register_request, ::come_together_grpc::register_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_RegisterUser() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/) override {
+    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* RegisterUser(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* RegisterUser(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1169,38 +1303,38 @@ class MainEndpoint final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::login_request, ::ComeTogether::login_response>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::login_request, ::come_together_grpc::login_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::login_request* request, ::ComeTogether::login_response* response) { return this->LoginUser(context, request, response); }));}
+                     context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response) { return this->LoginUser(context, request, response); }));}
     void SetMessageAllocatorFor_LoginUser(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::login_request, ::ComeTogether::login_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::login_request, ::come_together_grpc::login_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::login_request, ::ComeTogether::login_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::login_request, ::come_together_grpc::login_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_LoginUser() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/) override {
+    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* LoginUser(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* LoginUser(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1216,38 +1350,85 @@ class MainEndpoint final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(5,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::add_marker_request, ::ComeTogether::add_marker_response>(
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::add_marker_request, ::come_together_grpc::add_marker_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::add_marker_request* request, ::ComeTogether::add_marker_response* response) { return this->AddMarker(context, request, response); }));}
+                     context, const ::come_together_grpc::add_marker_request* request, ::come_together_grpc::add_marker_response* response) { return this->AddMarker(context, request, response); }));}
     void SetMessageAllocatorFor_AddMarker(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::add_marker_request, ::ComeTogether::add_marker_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::add_marker_request, ::come_together_grpc::add_marker_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::add_marker_request, ::ComeTogether::add_marker_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::add_marker_request, ::come_together_grpc::add_marker_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_AddMarker() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/) override {
+    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* AddMarker(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* AddMarker(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class ExperimentalWithCallbackMethod_DeleteMarker : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithCallbackMethod_DeleteMarker() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::delete_marker_request, ::come_together_grpc::delete_marker_reponse>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::come_together_grpc::delete_marker_request* request, ::come_together_grpc::delete_marker_reponse* response) { return this->DeleteMarker(context, request, response); }));}
+    void SetMessageAllocatorFor_DeleteMarker(
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::delete_marker_request, ::come_together_grpc::delete_marker_reponse>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::delete_marker_request, ::come_together_grpc::delete_marker_reponse>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~ExperimentalWithCallbackMethod_DeleteMarker() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* DeleteMarker(
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DeleteMarker(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1262,30 +1443,30 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(6,
-          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::ComeTogether::access_token, ::ComeTogether::marker_info>(
+        MarkMethodCallback(7,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::come_together_grpc::access_token, ::come_together_grpc::marker_info>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::access_token* request) { return this->GetAllMarkers(context, request); }));
+                     context, const ::come_together_grpc::access_token* request) { return this->GetAllMarkers(context, request); }));
     }
     ~ExperimentalWithCallbackMethod_GetAllMarkers() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::marker_info>* /*writer*/) override {
+    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerWriteReactor< ::ComeTogether::marker_info>* GetAllMarkers(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/)
+    virtual ::grpc::ServerWriteReactor< ::come_together_grpc::marker_info>* GetAllMarkers(
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/)
     #else
-    virtual ::grpc::experimental::ServerWriteReactor< ::ComeTogether::marker_info>* GetAllMarkers(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/)
+    virtual ::grpc::experimental::ServerWriteReactor< ::come_together_grpc::marker_info>* GetAllMarkers(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/)
     #endif
       { return nullptr; }
   };
@@ -1300,39 +1481,39 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(7,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::get_info_request, ::ComeTogether::get_info_response>(
+        MarkMethodCallback(8,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::get_info_request, ::come_together_grpc::get_info_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::get_info_request* request, ::ComeTogether::get_info_response* response) { return this->GetInfo(context, request, response); }));}
+                     context, const ::come_together_grpc::get_info_request* request, ::come_together_grpc::get_info_response* response) { return this->GetInfo(context, request, response); }));}
     void SetMessageAllocatorFor_GetInfo(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::get_info_request, ::ComeTogether::get_info_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::get_info_request, ::come_together_grpc::get_info_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
     #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(7);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(8);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::get_info_request, ::ComeTogether::get_info_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::get_info_request, ::come_together_grpc::get_info_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/) override {
+    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* GetInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* GetInfo(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1347,39 +1528,39 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(8,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::update_info_request, ::ComeTogether::update_info_response>(
+        MarkMethodCallback(9,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::update_info_request, ::come_together_grpc::update_info_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::update_info_request* request, ::ComeTogether::update_info_response* response) { return this->UpdateInfo(context, request, response); }));}
+                     context, const ::come_together_grpc::update_info_request* request, ::come_together_grpc::update_info_response* response) { return this->UpdateInfo(context, request, response); }));}
     void SetMessageAllocatorFor_UpdateInfo(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::update_info_request, ::ComeTogether::update_info_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::update_info_request, ::come_together_grpc::update_info_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
     #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(8);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(9);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::update_info_request, ::ComeTogether::update_info_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::update_info_request, ::come_together_grpc::update_info_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_UpdateInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/) override {
+    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* UpdateInfo(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* UpdateInfo(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1394,39 +1575,39 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(9,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::manage_image_request, ::ComeTogether::manage_image_response>(
+        MarkMethodCallback(10,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::manage_image_request, ::come_together_grpc::manage_image_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::manage_image_request* request, ::ComeTogether::manage_image_response* response) { return this->ManageImage(context, request, response); }));}
+                     context, const ::come_together_grpc::manage_image_request* request, ::come_together_grpc::manage_image_response* response) { return this->ManageImage(context, request, response); }));}
     void SetMessageAllocatorFor_ManageImage(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::manage_image_request, ::ComeTogether::manage_image_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::manage_image_request, ::come_together_grpc::manage_image_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
     #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(9);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(10);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::manage_image_request, ::ComeTogether::manage_image_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::manage_image_request, ::come_together_grpc::manage_image_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ManageImage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/) override {
+    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* ManageImage(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* ManageImage(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1441,30 +1622,30 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(10,
-          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::ComeTogether::get_images_request, ::ComeTogether::image>(
+        MarkMethodCallback(11,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::come_together_grpc::get_images_request, ::come_together_grpc::image>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::get_images_request* request) { return this->GetImages(context, request); }));
+                     context, const ::come_together_grpc::get_images_request* request) { return this->GetImages(context, request); }));
     }
     ~ExperimentalWithCallbackMethod_GetImages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::image>* /*writer*/) override {
+    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::image>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerWriteReactor< ::ComeTogether::image>* GetImages(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/)
+    virtual ::grpc::ServerWriteReactor< ::come_together_grpc::image>* GetImages(
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/)
     #else
-    virtual ::grpc::experimental::ServerWriteReactor< ::ComeTogether::image>* GetImages(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/)
+    virtual ::grpc::experimental::ServerWriteReactor< ::come_together_grpc::image>* GetImages(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/)
     #endif
       { return nullptr; }
   };
@@ -1479,39 +1660,39 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(11,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::send_chat_message_request, ::ComeTogether::send_chat_message_response>(
+        MarkMethodCallback(12,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::send_chat_message_request, ::come_together_grpc::send_chat_message_response>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::send_chat_message_request* request, ::ComeTogether::send_chat_message_response* response) { return this->SendChatMessage(context, request, response); }));}
+                     context, const ::come_together_grpc::send_chat_message_request* request, ::come_together_grpc::send_chat_message_response* response) { return this->SendChatMessage(context, request, response); }));}
     void SetMessageAllocatorFor_SendChatMessage(
-        ::grpc::experimental::MessageAllocator< ::ComeTogether::send_chat_message_request, ::ComeTogether::send_chat_message_response>* allocator) {
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::send_chat_message_request, ::come_together_grpc::send_chat_message_response>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(11);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(12);
     #else
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(11);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(12);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::ComeTogether::send_chat_message_request, ::ComeTogether::send_chat_message_response>*>(handler)
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::send_chat_message_request, ::come_together_grpc::send_chat_message_response>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_SendChatMessage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/) override {
+    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
     virtual ::grpc::ServerUnaryReactor* SendChatMessage(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/)
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* SendChatMessage(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/)
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/)
     #endif
       { return nullptr; }
   };
@@ -1526,30 +1707,30 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(12,
-          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::ComeTogether::get_chat_messages_request, ::ComeTogether::chat_message>(
+        MarkMethodCallback(13,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::come_together_grpc::get_chat_messages_request, ::come_together_grpc::chat_message>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::get_chat_messages_request* request) { return this->GetChatMessages(context, request); }));
+                     context, const ::come_together_grpc::get_chat_messages_request* request) { return this->GetChatMessages(context, request); }));
     }
     ~ExperimentalWithCallbackMethod_GetChatMessages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::chat_message>* /*writer*/) override {
+    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerWriteReactor< ::ComeTogether::chat_message>* GetChatMessages(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/)
+    virtual ::grpc::ServerWriteReactor< ::come_together_grpc::chat_message>* GetChatMessages(
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/)
     #else
-    virtual ::grpc::experimental::ServerWriteReactor< ::ComeTogether::chat_message>* GetChatMessages(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/)
+    virtual ::grpc::experimental::ServerWriteReactor< ::come_together_grpc::chat_message>* GetChatMessages(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/)
     #endif
       { return nullptr; }
   };
@@ -1564,38 +1745,85 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodCallback(13,
-          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::ComeTogether::access_token, ::ComeTogether::event>(
+        MarkMethodCallback(14,
+          new ::grpc_impl::internal::CallbackServerStreamingHandler< ::come_together_grpc::access_token, ::come_together_grpc::event>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::ComeTogether::access_token* request) { return this->SubscribeToEvents(context, request); }));
+                     context, const ::come_together_grpc::access_token* request) { return this->SubscribeToEvents(context, request); }));
     }
     ~ExperimentalWithCallbackMethod_SubscribeToEvents() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::event>* /*writer*/) override {
+    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::event>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerWriteReactor< ::ComeTogether::event>* SubscribeToEvents(
-      ::grpc::CallbackServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/)
+    virtual ::grpc::ServerWriteReactor< ::come_together_grpc::event>* SubscribeToEvents(
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/)
     #else
-    virtual ::grpc::experimental::ServerWriteReactor< ::ComeTogether::event>* SubscribeToEvents(
-      ::grpc::experimental::CallbackServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/)
+    virtual ::grpc::experimental::ServerWriteReactor< ::come_together_grpc::event>* SubscribeToEvents(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class ExperimentalWithCallbackMethod_SendPushToken : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithCallbackMethod_SendPushToken() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodCallback(15,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::send_push_token_request, ::come_together_grpc::send_push_token_response>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::come_together_grpc::send_push_token_request* request, ::come_together_grpc::send_push_token_response* response) { return this->SendPushToken(context, request, response); }));}
+    void SetMessageAllocatorFor_SendPushToken(
+        ::grpc::experimental::MessageAllocator< ::come_together_grpc::send_push_token_request, ::come_together_grpc::send_push_token_response>* allocator) {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(15);
+    #else
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(15);
+    #endif
+      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::come_together_grpc::send_push_token_request, ::come_together_grpc::send_push_token_response>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~ExperimentalWithCallbackMethod_SendPushToken() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendPushToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SendPushToken(
+      ::grpc::CallbackServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SendPushToken(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/)
     #endif
       { return nullptr; }
   };
   #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-  typedef ExperimentalWithCallbackMethod_AskToken<ExperimentalWithCallbackMethod_VerifyToken<ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_RegisterUser<ExperimentalWithCallbackMethod_LoginUser<ExperimentalWithCallbackMethod_AddMarker<ExperimentalWithCallbackMethod_GetAllMarkers<ExperimentalWithCallbackMethod_GetInfo<ExperimentalWithCallbackMethod_UpdateInfo<ExperimentalWithCallbackMethod_ManageImage<ExperimentalWithCallbackMethod_GetImages<ExperimentalWithCallbackMethod_SendChatMessage<ExperimentalWithCallbackMethod_GetChatMessages<ExperimentalWithCallbackMethod_SubscribeToEvents<Service > > > > > > > > > > > > > > CallbackService;
+  typedef ExperimentalWithCallbackMethod_AskToken<ExperimentalWithCallbackMethod_VerifyToken<ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_RegisterUser<ExperimentalWithCallbackMethod_LoginUser<ExperimentalWithCallbackMethod_AddMarker<ExperimentalWithCallbackMethod_DeleteMarker<ExperimentalWithCallbackMethod_GetAllMarkers<ExperimentalWithCallbackMethod_GetInfo<ExperimentalWithCallbackMethod_UpdateInfo<ExperimentalWithCallbackMethod_ManageImage<ExperimentalWithCallbackMethod_GetImages<ExperimentalWithCallbackMethod_SendChatMessage<ExperimentalWithCallbackMethod_GetChatMessages<ExperimentalWithCallbackMethod_SubscribeToEvents<ExperimentalWithCallbackMethod_SendPushToken<Service > > > > > > > > > > > > > > > > CallbackService;
   #endif
 
-  typedef ExperimentalWithCallbackMethod_AskToken<ExperimentalWithCallbackMethod_VerifyToken<ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_RegisterUser<ExperimentalWithCallbackMethod_LoginUser<ExperimentalWithCallbackMethod_AddMarker<ExperimentalWithCallbackMethod_GetAllMarkers<ExperimentalWithCallbackMethod_GetInfo<ExperimentalWithCallbackMethod_UpdateInfo<ExperimentalWithCallbackMethod_ManageImage<ExperimentalWithCallbackMethod_GetImages<ExperimentalWithCallbackMethod_SendChatMessage<ExperimentalWithCallbackMethod_GetChatMessages<ExperimentalWithCallbackMethod_SubscribeToEvents<Service > > > > > > > > > > > > > > ExperimentalCallbackService;
+  typedef ExperimentalWithCallbackMethod_AskToken<ExperimentalWithCallbackMethod_VerifyToken<ExperimentalWithCallbackMethod_Check<ExperimentalWithCallbackMethod_RegisterUser<ExperimentalWithCallbackMethod_LoginUser<ExperimentalWithCallbackMethod_AddMarker<ExperimentalWithCallbackMethod_DeleteMarker<ExperimentalWithCallbackMethod_GetAllMarkers<ExperimentalWithCallbackMethod_GetInfo<ExperimentalWithCallbackMethod_UpdateInfo<ExperimentalWithCallbackMethod_ManageImage<ExperimentalWithCallbackMethod_GetImages<ExperimentalWithCallbackMethod_SendChatMessage<ExperimentalWithCallbackMethod_GetChatMessages<ExperimentalWithCallbackMethod_SubscribeToEvents<ExperimentalWithCallbackMethod_SendPushToken<Service > > > > > > > > > > > > > > > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AskToken : public BaseClass {
    private:
@@ -1608,7 +1836,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/) override {
+    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1625,7 +1853,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/) override {
+    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1642,7 +1870,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1659,7 +1887,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/) override {
+    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1676,7 +1904,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/) override {
+    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1693,7 +1921,24 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/) override {
+    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_DeleteMarker : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_DeleteMarker() {
+      ::grpc::Service::MarkMethodGeneric(6);
+    }
+    ~WithGenericMethod_DeleteMarker() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1704,13 +1949,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetAllMarkers() {
-      ::grpc::Service::MarkMethodGeneric(6);
+      ::grpc::Service::MarkMethodGeneric(7);
     }
     ~WithGenericMethod_GetAllMarkers() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::marker_info>* /*writer*/) override {
+    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1721,13 +1966,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetInfo() {
-      ::grpc::Service::MarkMethodGeneric(7);
+      ::grpc::Service::MarkMethodGeneric(8);
     }
     ~WithGenericMethod_GetInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/) override {
+    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1738,13 +1983,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_UpdateInfo() {
-      ::grpc::Service::MarkMethodGeneric(8);
+      ::grpc::Service::MarkMethodGeneric(9);
     }
     ~WithGenericMethod_UpdateInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/) override {
+    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1755,13 +2000,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_ManageImage() {
-      ::grpc::Service::MarkMethodGeneric(9);
+      ::grpc::Service::MarkMethodGeneric(10);
     }
     ~WithGenericMethod_ManageImage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/) override {
+    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1772,13 +2017,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetImages() {
-      ::grpc::Service::MarkMethodGeneric(10);
+      ::grpc::Service::MarkMethodGeneric(11);
     }
     ~WithGenericMethod_GetImages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::image>* /*writer*/) override {
+    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::image>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1789,13 +2034,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SendChatMessage() {
-      ::grpc::Service::MarkMethodGeneric(11);
+      ::grpc::Service::MarkMethodGeneric(12);
     }
     ~WithGenericMethod_SendChatMessage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/) override {
+    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1806,13 +2051,13 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_GetChatMessages() {
-      ::grpc::Service::MarkMethodGeneric(12);
+      ::grpc::Service::MarkMethodGeneric(13);
     }
     ~WithGenericMethod_GetChatMessages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::chat_message>* /*writer*/) override {
+    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1823,13 +2068,30 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_SubscribeToEvents() {
-      ::grpc::Service::MarkMethodGeneric(13);
+      ::grpc::Service::MarkMethodGeneric(14);
     }
     ~WithGenericMethod_SubscribeToEvents() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::event>* /*writer*/) override {
+    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::event>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_SendPushToken : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SendPushToken() {
+      ::grpc::Service::MarkMethodGeneric(15);
+    }
+    ~WithGenericMethod_SendPushToken() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendPushToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1846,7 +2108,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/) override {
+    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1866,7 +2128,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/) override {
+    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1886,7 +2148,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1906,7 +2168,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/) override {
+    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1926,7 +2188,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/) override {
+    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1946,7 +2208,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/) override {
+    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1955,23 +2217,43 @@ class MainEndpoint final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_DeleteMarker : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_DeleteMarker() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_DeleteMarker() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestDeleteMarker(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_GetAllMarkers : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetAllMarkers() {
-      ::grpc::Service::MarkMethodRaw(6);
+      ::grpc::Service::MarkMethodRaw(7);
     }
     ~WithRawMethod_GetAllMarkers() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::marker_info>* /*writer*/) override {
+    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetAllMarkers(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(6, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(7, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1980,18 +2262,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetInfo() {
-      ::grpc::Service::MarkMethodRaw(7);
+      ::grpc::Service::MarkMethodRaw(8);
     }
     ~WithRawMethod_GetInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/) override {
+    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2000,18 +2282,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_UpdateInfo() {
-      ::grpc::Service::MarkMethodRaw(8);
+      ::grpc::Service::MarkMethodRaw(9);
     }
     ~WithRawMethod_UpdateInfo() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/) override {
+    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestUpdateInfo(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2020,18 +2302,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_ManageImage() {
-      ::grpc::Service::MarkMethodRaw(9);
+      ::grpc::Service::MarkMethodRaw(10);
     }
     ~WithRawMethod_ManageImage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/) override {
+    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestManageImage(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2040,18 +2322,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetImages() {
-      ::grpc::Service::MarkMethodRaw(10);
+      ::grpc::Service::MarkMethodRaw(11);
     }
     ~WithRawMethod_GetImages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::image>* /*writer*/) override {
+    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::image>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetImages(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(10, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(11, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2060,18 +2342,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SendChatMessage() {
-      ::grpc::Service::MarkMethodRaw(11);
+      ::grpc::Service::MarkMethodRaw(12);
     }
     ~WithRawMethod_SendChatMessage() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/) override {
+    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSendChatMessage(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2080,18 +2362,18 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_GetChatMessages() {
-      ::grpc::Service::MarkMethodRaw(12);
+      ::grpc::Service::MarkMethodRaw(13);
     }
     ~WithRawMethod_GetChatMessages() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::chat_message>* /*writer*/) override {
+    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestGetChatMessages(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(12, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(13, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2100,18 +2382,38 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_SubscribeToEvents() {
-      ::grpc::Service::MarkMethodRaw(13);
+      ::grpc::Service::MarkMethodRaw(14);
     }
     ~WithRawMethod_SubscribeToEvents() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::event>* /*writer*/) override {
+    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::event>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestSubscribeToEvents(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncServerStreaming(13, context, request, writer, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncServerStreaming(14, context, request, writer, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_SendPushToken : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SendPushToken() {
+      ::grpc::Service::MarkMethodRaw(15);
+    }
+    ~WithRawMethod_SendPushToken() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendPushToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSendPushToken(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -2139,7 +2441,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/) override {
+    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2177,7 +2479,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/) override {
+    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2215,7 +2517,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2253,7 +2555,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/) override {
+    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2291,7 +2593,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/) override {
+    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2329,7 +2631,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/) override {
+    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2338,6 +2640,44 @@ class MainEndpoint final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
     #else
     virtual ::grpc::experimental::ServerUnaryReactor* AddMarker(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class ExperimentalWithRawCallbackMethod_DeleteMarker : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithRawCallbackMethod_DeleteMarker() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(6,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->DeleteMarker(context, request, response); }));
+    }
+    ~ExperimentalWithRawCallbackMethod_DeleteMarker() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status DeleteMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* DeleteMarker(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* DeleteMarker(
       ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
     #endif
       { return nullptr; }
@@ -2353,7 +2693,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(6,
+        MarkMethodRawCallback(7,
           new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2367,7 +2707,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::marker_info>* /*writer*/) override {
+    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2391,7 +2731,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(7,
+        MarkMethodRawCallback(8,
           new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2405,7 +2745,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/) override {
+    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2429,7 +2769,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(8,
+        MarkMethodRawCallback(9,
           new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2443,7 +2783,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/) override {
+    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2467,7 +2807,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(9,
+        MarkMethodRawCallback(10,
           new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2481,7 +2821,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/) override {
+    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2505,7 +2845,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(10,
+        MarkMethodRawCallback(11,
           new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2519,7 +2859,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::image>* /*writer*/) override {
+    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::image>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2543,7 +2883,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(11,
+        MarkMethodRawCallback(12,
           new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2557,7 +2897,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/) override {
+    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2581,7 +2921,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(12,
+        MarkMethodRawCallback(13,
           new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2595,7 +2935,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::chat_message>* /*writer*/) override {
+    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2619,7 +2959,7 @@ class MainEndpoint final {
     #else
       ::grpc::Service::experimental().
     #endif
-        MarkMethodRawCallback(13,
+        MarkMethodRawCallback(14,
           new ::grpc_impl::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -2633,7 +2973,7 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::event>* /*writer*/) override {
+    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::event>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2647,6 +2987,44 @@ class MainEndpoint final {
       { return nullptr; }
   };
   template <class BaseClass>
+  class ExperimentalWithRawCallbackMethod_SendPushToken : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    ExperimentalWithRawCallbackMethod_SendPushToken() {
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+      ::grpc::Service::
+    #else
+      ::grpc::Service::experimental().
+    #endif
+        MarkMethodRawCallback(15,
+          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+                   ::grpc::CallbackServerContext*
+    #else
+                   ::grpc::experimental::CallbackServerContext*
+    #endif
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->SendPushToken(context, request, response); }));
+    }
+    ~ExperimentalWithRawCallbackMethod_SendPushToken() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SendPushToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
+    virtual ::grpc::ServerUnaryReactor* SendPushToken(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #else
+    virtual ::grpc::experimental::ServerUnaryReactor* SendPushToken(
+      ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
+    #endif
+      { return nullptr; }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_AskToken : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -2654,10 +3032,10 @@ class MainEndpoint final {
     WithStreamedUnaryMethod_AskToken() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::ask_token_request, ::ComeTogether::ask_token_response>(
+          ::come_together_grpc::ask_token_request, ::come_together_grpc::ask_token_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::ask_token_request, ::ComeTogether::ask_token_response>* streamer) {
+                     ::come_together_grpc::ask_token_request, ::come_together_grpc::ask_token_response>* streamer) {
                        return this->StreamedAskToken(context,
                          streamer);
                   }));
@@ -2666,12 +3044,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::ask_token_request* /*request*/, ::ComeTogether::ask_token_response* /*response*/) override {
+    ::grpc::Status AskToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::ask_token_request* /*request*/, ::come_together_grpc::ask_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAskToken(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::ask_token_request,::ComeTogether::ask_token_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedAskToken(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::ask_token_request,::come_together_grpc::ask_token_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_VerifyToken : public BaseClass {
@@ -2681,10 +3059,10 @@ class MainEndpoint final {
     WithStreamedUnaryMethod_VerifyToken() {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::verify_token_request, ::ComeTogether::verify_token_response>(
+          ::come_together_grpc::verify_token_request, ::come_together_grpc::verify_token_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::verify_token_request, ::ComeTogether::verify_token_response>* streamer) {
+                     ::come_together_grpc::verify_token_request, ::come_together_grpc::verify_token_response>* streamer) {
                        return this->StreamedVerifyToken(context,
                          streamer);
                   }));
@@ -2693,12 +3071,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::ComeTogether::verify_token_request* /*request*/, ::ComeTogether::verify_token_response* /*response*/) override {
+    ::grpc::Status VerifyToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::verify_token_request* /*request*/, ::come_together_grpc::verify_token_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedVerifyToken(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::verify_token_request,::ComeTogether::verify_token_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedVerifyToken(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::verify_token_request,::come_together_grpc::verify_token_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Check : public BaseClass {
@@ -2708,10 +3086,10 @@ class MainEndpoint final {
     WithStreamedUnaryMethod_Check() {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::check_request, ::ComeTogether::check_response>(
+          ::come_together_grpc::check_request, ::come_together_grpc::check_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::check_request, ::ComeTogether::check_response>* streamer) {
+                     ::come_together_grpc::check_request, ::come_together_grpc::check_response>* streamer) {
                        return this->StreamedCheck(context,
                          streamer);
                   }));
@@ -2720,12 +3098,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::ComeTogether::check_request* /*request*/, ::ComeTogether::check_response* /*response*/) override {
+    ::grpc::Status Check(::grpc::ServerContext* /*context*/, const ::come_together_grpc::check_request* /*request*/, ::come_together_grpc::check_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedCheck(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::check_request,::ComeTogether::check_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedCheck(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::check_request,::come_together_grpc::check_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_RegisterUser : public BaseClass {
@@ -2735,10 +3113,10 @@ class MainEndpoint final {
     WithStreamedUnaryMethod_RegisterUser() {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::register_request, ::ComeTogether::register_response>(
+          ::come_together_grpc::register_request, ::come_together_grpc::register_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::register_request, ::ComeTogether::register_response>* streamer) {
+                     ::come_together_grpc::register_request, ::come_together_grpc::register_response>* streamer) {
                        return this->StreamedRegisterUser(context,
                          streamer);
                   }));
@@ -2747,12 +3125,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::register_request* /*request*/, ::ComeTogether::register_response* /*response*/) override {
+    ::grpc::Status RegisterUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::register_request* /*request*/, ::come_together_grpc::register_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedRegisterUser(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::register_request,::ComeTogether::register_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedRegisterUser(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::register_request,::come_together_grpc::register_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_LoginUser : public BaseClass {
@@ -2762,10 +3140,10 @@ class MainEndpoint final {
     WithStreamedUnaryMethod_LoginUser() {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::login_request, ::ComeTogether::login_response>(
+          ::come_together_grpc::login_request, ::come_together_grpc::login_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::login_request, ::ComeTogether::login_response>* streamer) {
+                     ::come_together_grpc::login_request, ::come_together_grpc::login_response>* streamer) {
                        return this->StreamedLoginUser(context,
                          streamer);
                   }));
@@ -2774,12 +3152,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::ComeTogether::login_request* /*request*/, ::ComeTogether::login_response* /*response*/) override {
+    ::grpc::Status LoginUser(::grpc::ServerContext* /*context*/, const ::come_together_grpc::login_request* /*request*/, ::come_together_grpc::login_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedLoginUser(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::login_request,::ComeTogether::login_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedLoginUser(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::login_request,::come_together_grpc::login_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_AddMarker : public BaseClass {
@@ -2789,10 +3167,10 @@ class MainEndpoint final {
     WithStreamedUnaryMethod_AddMarker() {
       ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::add_marker_request, ::ComeTogether::add_marker_response>(
+          ::come_together_grpc::add_marker_request, ::come_together_grpc::add_marker_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::add_marker_request, ::ComeTogether::add_marker_response>* streamer) {
+                     ::come_together_grpc::add_marker_request, ::come_together_grpc::add_marker_response>* streamer) {
                        return this->StreamedAddMarker(context,
                          streamer);
                   }));
@@ -2801,12 +3179,39 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::ComeTogether::add_marker_request* /*request*/, ::ComeTogether::add_marker_response* /*response*/) override {
+    ::grpc::Status AddMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::add_marker_request* /*request*/, ::come_together_grpc::add_marker_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedAddMarker(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::add_marker_request,::ComeTogether::add_marker_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedAddMarker(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::add_marker_request,::come_together_grpc::add_marker_response>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_DeleteMarker : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_DeleteMarker() {
+      ::grpc::Service::MarkMethodStreamed(6,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::come_together_grpc::delete_marker_request, ::come_together_grpc::delete_marker_reponse>(
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
+                     ::come_together_grpc::delete_marker_request, ::come_together_grpc::delete_marker_reponse>* streamer) {
+                       return this->StreamedDeleteMarker(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_DeleteMarker() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status DeleteMarker(::grpc::ServerContext* /*context*/, const ::come_together_grpc::delete_marker_request* /*request*/, ::come_together_grpc::delete_marker_reponse* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedDeleteMarker(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::delete_marker_request,::come_together_grpc::delete_marker_reponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetInfo : public BaseClass {
@@ -2814,12 +3219,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_GetInfo() {
-      ::grpc::Service::MarkMethodStreamed(7,
+      ::grpc::Service::MarkMethodStreamed(8,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::get_info_request, ::ComeTogether::get_info_response>(
+          ::come_together_grpc::get_info_request, ::come_together_grpc::get_info_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::get_info_request, ::ComeTogether::get_info_response>* streamer) {
+                     ::come_together_grpc::get_info_request, ::come_together_grpc::get_info_response>* streamer) {
                        return this->StreamedGetInfo(context,
                          streamer);
                   }));
@@ -2828,12 +3233,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_info_request* /*request*/, ::ComeTogether::get_info_response* /*response*/) override {
+    ::grpc::Status GetInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_info_request* /*request*/, ::come_together_grpc::get_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::get_info_request,::ComeTogether::get_info_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::get_info_request,::come_together_grpc::get_info_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_UpdateInfo : public BaseClass {
@@ -2841,12 +3246,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_UpdateInfo() {
-      ::grpc::Service::MarkMethodStreamed(8,
+      ::grpc::Service::MarkMethodStreamed(9,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::update_info_request, ::ComeTogether::update_info_response>(
+          ::come_together_grpc::update_info_request, ::come_together_grpc::update_info_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::update_info_request, ::ComeTogether::update_info_response>* streamer) {
+                     ::come_together_grpc::update_info_request, ::come_together_grpc::update_info_response>* streamer) {
                        return this->StreamedUpdateInfo(context,
                          streamer);
                   }));
@@ -2855,12 +3260,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::ComeTogether::update_info_request* /*request*/, ::ComeTogether::update_info_response* /*response*/) override {
+    ::grpc::Status UpdateInfo(::grpc::ServerContext* /*context*/, const ::come_together_grpc::update_info_request* /*request*/, ::come_together_grpc::update_info_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedUpdateInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::update_info_request,::ComeTogether::update_info_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedUpdateInfo(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::update_info_request,::come_together_grpc::update_info_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ManageImage : public BaseClass {
@@ -2868,12 +3273,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_ManageImage() {
-      ::grpc::Service::MarkMethodStreamed(9,
+      ::grpc::Service::MarkMethodStreamed(10,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::manage_image_request, ::ComeTogether::manage_image_response>(
+          ::come_together_grpc::manage_image_request, ::come_together_grpc::manage_image_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::manage_image_request, ::ComeTogether::manage_image_response>* streamer) {
+                     ::come_together_grpc::manage_image_request, ::come_together_grpc::manage_image_response>* streamer) {
                        return this->StreamedManageImage(context,
                          streamer);
                   }));
@@ -2882,12 +3287,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::ComeTogether::manage_image_request* /*request*/, ::ComeTogether::manage_image_response* /*response*/) override {
+    ::grpc::Status ManageImage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::manage_image_request* /*request*/, ::come_together_grpc::manage_image_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedManageImage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::manage_image_request,::ComeTogether::manage_image_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedManageImage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::manage_image_request,::come_together_grpc::manage_image_response>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_SendChatMessage : public BaseClass {
@@ -2895,12 +3300,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_SendChatMessage() {
-      ::grpc::Service::MarkMethodStreamed(11,
+      ::grpc::Service::MarkMethodStreamed(12,
         new ::grpc::internal::StreamedUnaryHandler<
-          ::ComeTogether::send_chat_message_request, ::ComeTogether::send_chat_message_response>(
+          ::come_together_grpc::send_chat_message_request, ::come_together_grpc::send_chat_message_response>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerUnaryStreamer<
-                     ::ComeTogether::send_chat_message_request, ::ComeTogether::send_chat_message_response>* streamer) {
+                     ::come_together_grpc::send_chat_message_request, ::come_together_grpc::send_chat_message_response>* streamer) {
                        return this->StreamedSendChatMessage(context,
                          streamer);
                   }));
@@ -2909,26 +3314,53 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::ComeTogether::send_chat_message_request* /*request*/, ::ComeTogether::send_chat_message_response* /*response*/) override {
+    ::grpc::Status SendChatMessage(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_chat_message_request* /*request*/, ::come_together_grpc::send_chat_message_response* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedSendChatMessage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::ComeTogether::send_chat_message_request,::ComeTogether::send_chat_message_response>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedSendChatMessage(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::send_chat_message_request,::come_together_grpc::send_chat_message_response>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AskToken<WithStreamedUnaryMethod_VerifyToken<WithStreamedUnaryMethod_Check<WithStreamedUnaryMethod_RegisterUser<WithStreamedUnaryMethod_LoginUser<WithStreamedUnaryMethod_AddMarker<WithStreamedUnaryMethod_GetInfo<WithStreamedUnaryMethod_UpdateInfo<WithStreamedUnaryMethod_ManageImage<WithStreamedUnaryMethod_SendChatMessage<Service > > > > > > > > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_SendPushToken : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_SendPushToken() {
+      ::grpc::Service::MarkMethodStreamed(15,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::come_together_grpc::send_push_token_request, ::come_together_grpc::send_push_token_response>(
+            [this](::grpc_impl::ServerContext* context,
+                   ::grpc_impl::ServerUnaryStreamer<
+                     ::come_together_grpc::send_push_token_request, ::come_together_grpc::send_push_token_response>* streamer) {
+                       return this->StreamedSendPushToken(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_SendPushToken() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SendPushToken(::grpc::ServerContext* /*context*/, const ::come_together_grpc::send_push_token_request* /*request*/, ::come_together_grpc::send_push_token_response* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedSendPushToken(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::come_together_grpc::send_push_token_request,::come_together_grpc::send_push_token_response>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_AskToken<WithStreamedUnaryMethod_VerifyToken<WithStreamedUnaryMethod_Check<WithStreamedUnaryMethod_RegisterUser<WithStreamedUnaryMethod_LoginUser<WithStreamedUnaryMethod_AddMarker<WithStreamedUnaryMethod_DeleteMarker<WithStreamedUnaryMethod_GetInfo<WithStreamedUnaryMethod_UpdateInfo<WithStreamedUnaryMethod_ManageImage<WithStreamedUnaryMethod_SendChatMessage<WithStreamedUnaryMethod_SendPushToken<Service > > > > > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
   class WithSplitStreamingMethod_GetAllMarkers : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_GetAllMarkers() {
-      ::grpc::Service::MarkMethodStreamed(6,
+      ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::ComeTogether::access_token, ::ComeTogether::marker_info>(
+          ::come_together_grpc::access_token, ::come_together_grpc::marker_info>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerSplitStreamer<
-                     ::ComeTogether::access_token, ::ComeTogether::marker_info>* streamer) {
+                     ::come_together_grpc::access_token, ::come_together_grpc::marker_info>* streamer) {
                        return this->StreamedGetAllMarkers(context,
                          streamer);
                   }));
@@ -2937,12 +3369,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::marker_info>* /*writer*/) override {
+    ::grpc::Status GetAllMarkers(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::marker_info>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedGetAllMarkers(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::ComeTogether::access_token,::ComeTogether::marker_info>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedGetAllMarkers(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::come_together_grpc::access_token,::come_together_grpc::marker_info>* server_split_streamer) = 0;
   };
   template <class BaseClass>
   class WithSplitStreamingMethod_GetImages : public BaseClass {
@@ -2950,12 +3382,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_GetImages() {
-      ::grpc::Service::MarkMethodStreamed(10,
+      ::grpc::Service::MarkMethodStreamed(11,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::ComeTogether::get_images_request, ::ComeTogether::image>(
+          ::come_together_grpc::get_images_request, ::come_together_grpc::image>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerSplitStreamer<
-                     ::ComeTogether::get_images_request, ::ComeTogether::image>* streamer) {
+                     ::come_together_grpc::get_images_request, ::come_together_grpc::image>* streamer) {
                        return this->StreamedGetImages(context,
                          streamer);
                   }));
@@ -2964,12 +3396,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_images_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::image>* /*writer*/) override {
+    ::grpc::Status GetImages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_images_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::image>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedGetImages(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::ComeTogether::get_images_request,::ComeTogether::image>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedGetImages(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::come_together_grpc::get_images_request,::come_together_grpc::image>* server_split_streamer) = 0;
   };
   template <class BaseClass>
   class WithSplitStreamingMethod_GetChatMessages : public BaseClass {
@@ -2977,12 +3409,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_GetChatMessages() {
-      ::grpc::Service::MarkMethodStreamed(12,
+      ::grpc::Service::MarkMethodStreamed(13,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::ComeTogether::get_chat_messages_request, ::ComeTogether::chat_message>(
+          ::come_together_grpc::get_chat_messages_request, ::come_together_grpc::chat_message>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerSplitStreamer<
-                     ::ComeTogether::get_chat_messages_request, ::ComeTogether::chat_message>* streamer) {
+                     ::come_together_grpc::get_chat_messages_request, ::come_together_grpc::chat_message>* streamer) {
                        return this->StreamedGetChatMessages(context,
                          streamer);
                   }));
@@ -2991,12 +3423,12 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::ComeTogether::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::ComeTogether::chat_message>* /*writer*/) override {
+    ::grpc::Status GetChatMessages(::grpc::ServerContext* /*context*/, const ::come_together_grpc::get_chat_messages_request* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::chat_message>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedGetChatMessages(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::ComeTogether::get_chat_messages_request,::ComeTogether::chat_message>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedGetChatMessages(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::come_together_grpc::get_chat_messages_request,::come_together_grpc::chat_message>* server_split_streamer) = 0;
   };
   template <class BaseClass>
   class WithSplitStreamingMethod_SubscribeToEvents : public BaseClass {
@@ -3004,12 +3436,12 @@ class MainEndpoint final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithSplitStreamingMethod_SubscribeToEvents() {
-      ::grpc::Service::MarkMethodStreamed(13,
+      ::grpc::Service::MarkMethodStreamed(14,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::ComeTogether::access_token, ::ComeTogether::event>(
+          ::come_together_grpc::access_token, ::come_together_grpc::event>(
             [this](::grpc_impl::ServerContext* context,
                    ::grpc_impl::ServerSplitStreamer<
-                     ::ComeTogether::access_token, ::ComeTogether::event>* streamer) {
+                     ::come_together_grpc::access_token, ::come_together_grpc::event>* streamer) {
                        return this->StreamedSubscribeToEvents(context,
                          streamer);
                   }));
@@ -3018,18 +3450,18 @@ class MainEndpoint final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::ComeTogether::access_token* /*request*/, ::grpc::ServerWriter< ::ComeTogether::event>* /*writer*/) override {
+    ::grpc::Status SubscribeToEvents(::grpc::ServerContext* /*context*/, const ::come_together_grpc::access_token* /*request*/, ::grpc::ServerWriter< ::come_together_grpc::event>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedSubscribeToEvents(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::ComeTogether::access_token,::ComeTogether::event>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedSubscribeToEvents(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::come_together_grpc::access_token,::come_together_grpc::event>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_GetAllMarkers<WithSplitStreamingMethod_GetImages<WithSplitStreamingMethod_GetChatMessages<WithSplitStreamingMethod_SubscribeToEvents<Service > > > > SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AskToken<WithStreamedUnaryMethod_VerifyToken<WithStreamedUnaryMethod_Check<WithStreamedUnaryMethod_RegisterUser<WithStreamedUnaryMethod_LoginUser<WithStreamedUnaryMethod_AddMarker<WithSplitStreamingMethod_GetAllMarkers<WithStreamedUnaryMethod_GetInfo<WithStreamedUnaryMethod_UpdateInfo<WithStreamedUnaryMethod_ManageImage<WithSplitStreamingMethod_GetImages<WithStreamedUnaryMethod_SendChatMessage<WithSplitStreamingMethod_GetChatMessages<WithSplitStreamingMethod_SubscribeToEvents<Service > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AskToken<WithStreamedUnaryMethod_VerifyToken<WithStreamedUnaryMethod_Check<WithStreamedUnaryMethod_RegisterUser<WithStreamedUnaryMethod_LoginUser<WithStreamedUnaryMethod_AddMarker<WithStreamedUnaryMethod_DeleteMarker<WithSplitStreamingMethod_GetAllMarkers<WithStreamedUnaryMethod_GetInfo<WithStreamedUnaryMethod_UpdateInfo<WithStreamedUnaryMethod_ManageImage<WithSplitStreamingMethod_GetImages<WithStreamedUnaryMethod_SendChatMessage<WithSplitStreamingMethod_GetChatMessages<WithSplitStreamingMethod_SubscribeToEvents<WithStreamedUnaryMethod_SendPushToken<Service > > > > > > > > > > > > > > > > StreamedService;
 };
 
-}  // namespace ComeTogether
+}  // namespace come_together_grpc
 
 
 #endif  // GRPC_come_5ftogether_2eproto__INCLUDED

@@ -200,3 +200,21 @@ std::array<std::string, 2> DBPostgres::AddMarker(const CT::marker_info& info)try
     return res;
 }
 CATCH_ALL({})
+
+std::vector<CT::marker_info> DBPostgres::GetAllMarkers() try
+{
+    std::vector<CT::marker_info> res;
+    const auto conn = m_pool->AcquireConnection();
+    pqxx::work work(*conn);
+    const auto result = work.exec(std::string(QueryManager::Get(Query::GET_ALL_MARKERS)));
+    work.commit();
+    for(const auto& marker_row : result)
+    {
+        CT::marker_info info;
+        info.set_latitude(marker_row[8].as<double>());
+        info.set_longitude(marker_row[9].as<double>());
+        res.push_back(std::move(info));
+    }
+    return res;
+}
+CATCH_ALL({})

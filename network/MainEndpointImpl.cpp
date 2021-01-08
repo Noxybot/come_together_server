@@ -123,6 +123,9 @@ MainEndpointImpl::~MainEndpointImpl()
 ::grpc::Status MainEndpointImpl::GetAllMarkers(::grpc::ServerContext* context, const CT::access_token* request,
     ::grpc::ServerWriter<CT::marker_info>* writer)
 {
+    const auto markers = m_db->GetAllMarkers();
+    for (const auto& marker : markers)
+        writer->Write(marker);
     return grpc::Status::OK;
 }
 
@@ -172,10 +175,11 @@ MainEndpointImpl::~MainEndpointImpl()
     return grpc::Status::OK;
 }
 
-void MainEndpointImpl::SubscribeToNewEventsListener(grpc::ServerAsyncWriter<CT::event>* writer, grpc::ServerContext* ctx,
-    ComeTogether::access_token* token, void* tag)
+::grpc::Status MainEndpointImpl::SendPushToken(::grpc::ServerContext* context,
+    const CT::send_push_token_request* request, CT::send_push_token_response* response)
 {
-    RequestSubscribeToEvents(ctx, token, writer, m_cq.get(), m_cq.get(), tag);
+    PLOG_FATAL << request->push_token();
+    return grpc::Status::OK;
 }
 
 void MainEndpointImpl::WaitForEventsSubscriptionAsync()

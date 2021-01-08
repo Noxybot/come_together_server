@@ -5,7 +5,7 @@
 #include <grpc++/create_channel.h>
 #include <plog/Log.h>
 
-using namespace ComeTogether;
+using namespace come_together_grpc;
 std::unique_ptr<MainEndpoint::Stub> test_stub;
 void RUN_ALL_TESTS_IMPL();
 template <class ResultType, class MemberT, class GetRequestType = std::nullptr_t, class PostCall = std::nullptr_t>

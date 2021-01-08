@@ -11,6 +11,7 @@ enum class Query
     GET_USER_INFO,
     GET_ALL_USER_IMAGES,
     GET_ALL_MARKER_IMAGES,
+    GET_ALL_MARKERS,
     ADD_MARKER,
     QUERY_COUNT
 };

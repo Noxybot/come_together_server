@@ -3,7 +3,7 @@
 #include <string>
 #include "../grpc/come_together.pb.h"
 
-namespace  CT = ComeTogether;
+namespace  CT = come_together_grpc;
 
 class MailerInterface
 {

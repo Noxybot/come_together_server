@@ -12,10 +12,10 @@
 static const char *payload_text[] = {
     "Date: Mon, 29 Nov 2010 21:54:29 +1100\r\n",
     "To: {to_tag} \r\n",
-    "From: ComeTogether {from_tag} \r\n",
+    "From: come_together_grpc {from_tag} \r\n",
     "Message-ID: <dcd7cb36-11db-487a-9f3a-e652a9458efd>",
     "rfcpedant.example.org>\r\n",
-    "Subject: ComeTogether email verification {secret_tag}\r\n",
+    "Subject: come_together_grpc email verification {secret_tag}\r\n",
     "\r\n", /* empty line to divide headers from body, see RFC5322 */
     "Token: {secret_tag}\r\n",
     nullptr

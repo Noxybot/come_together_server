@@ -4,24 +4,23 @@
 #include <plog/Initializers/RollingFileInitializer.h>
 #include <plog/Appenders/ColorConsoleAppender.h>
 
-#include <Windows.h>
+#include <plog/Log.h>
 
 int main() try
 {
-    SetConsoleOutputCP(CP_UTF8);
     static plog::ColorConsoleAppender<plog::TxtFormatter> consoleAppender;
     plog::init(plog::verbose, &consoleAppender);
     Server srv;
-    RUN_ALL_TESTS();
+    //RUN_ALL_TESTS();
     srv.Start();
     return 0;
 }
 catch (std::exception const &e)
 {
-    std::cerr << e.what() << std::endl;
+    LOG_ERROR << e.what() << std::endl;
     return -1;
 }
 catch (...)
 {
-    std::cerr << "Unknown exception" << std::endl;
+    LOG_ERROR << "Unknown exception" << std::endl;
 }

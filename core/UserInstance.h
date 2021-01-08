@@ -5,7 +5,7 @@
 #include <mutex>
 #include <queue>
 
-using event_ptr = std::shared_ptr<ComeTogether::event>;
+using event_ptr = std::shared_ptr<come_together_grpc::event>;
 
 class UserInstance : public QueueEvents
 {

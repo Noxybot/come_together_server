@@ -18,7 +18,7 @@ extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID:
 extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_chat_message_come_5ftogether_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_marker_info_come_5ftogether_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_user_info_come_5ftogether_2eproto;
-namespace ComeTogether {
+namespace come_together_grpc {
 class imageDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<image> _instance;
@@ -27,6 +27,22 @@ class access_tokenDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<access_token> _instance;
 } _access_token_default_instance_;
+class send_push_token_requestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<send_push_token_request> _instance;
+} _send_push_token_request_default_instance_;
+class send_push_token_responseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<send_push_token_response> _instance;
+} _send_push_token_response_default_instance_;
+class delete_marker_requestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<delete_marker_request> _instance;
+} _delete_marker_request_default_instance_;
+class delete_marker_reponseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<delete_marker_reponse> _instance;
+} _delete_marker_reponse_default_instance_;
 class ask_token_requestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ask_token_request> _instance;
@@ -46,8 +62,8 @@ class verify_token_responseDefaultTypeInternal {
 class update_info_requestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<update_info_request> _instance;
-  const ::ComeTogether::marker_info* m_info_;
-  const ::ComeTogether::user_info* u_info_;
+  const ::come_together_grpc::marker_info* m_info_;
+  const ::come_together_grpc::user_info* u_info_;
 } _update_info_request_default_instance_;
 class update_info_responseDefaultTypeInternal {
  public:
@@ -56,9 +72,9 @@ class update_info_responseDefaultTypeInternal {
 class eventDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<event> _instance;
-  const ::ComeTogether::marker_info* m_info_;
-  const ::ComeTogether::chat_message* c_message_;
-  const ::ComeTogether::user_info* u_info_;
+  const ::come_together_grpc::marker_info* m_info_;
+  const ::come_together_grpc::chat_message* c_message_;
+  const ::come_together_grpc::user_info* u_info_;
 } _event_default_instance_;
 class chat_infoDefaultTypeInternal {
  public:
@@ -88,9 +104,9 @@ class get_info_requestDefaultTypeInternal {
 class get_info_responseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<get_info_response> _instance;
-  const ::ComeTogether::user_info* u_info_;
-  const ::ComeTogether::marker_info* m_info_;
-  const ::ComeTogether::chat_info* c_info_;
+  const ::come_together_grpc::user_info* u_info_;
+  const ::come_together_grpc::marker_info* m_info_;
+  const ::come_together_grpc::chat_info* c_info_;
 } _get_info_response_default_instance_;
 class get_images_requestDefaultTypeInternal {
  public:
@@ -146,16 +162,16 @@ class add_marker_responseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<add_marker_response> _instance;
 } _add_marker_response_default_instance_;
-}  // namespace ComeTogether
+}  // namespace come_together_grpc
 static void InitDefaultsscc_info_access_token_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_access_token_default_instance_;
-    new (ptr) ::ComeTogether::access_token();
+    void* ptr = &::come_together_grpc::_access_token_default_instance_;
+    new (ptr) ::come_together_grpc::access_token();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::access_token::InitAsDefaultInstance();
+  ::come_together_grpc::access_token::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_access_token_come_5ftogether_2eproto =
@@ -165,11 +181,11 @@ static void InitDefaultsscc_info_add_marker_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_add_marker_request_default_instance_;
-    new (ptr) ::ComeTogether::add_marker_request();
+    void* ptr = &::come_together_grpc::_add_marker_request_default_instance_;
+    new (ptr) ::come_together_grpc::add_marker_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::add_marker_request::InitAsDefaultInstance();
+  ::come_together_grpc::add_marker_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_add_marker_request_come_5ftogether_2eproto =
@@ -180,11 +196,11 @@ static void InitDefaultsscc_info_add_marker_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_add_marker_response_default_instance_;
-    new (ptr) ::ComeTogether::add_marker_response();
+    void* ptr = &::come_together_grpc::_add_marker_response_default_instance_;
+    new (ptr) ::come_together_grpc::add_marker_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::add_marker_response::InitAsDefaultInstance();
+  ::come_together_grpc::add_marker_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_add_marker_response_come_5ftogether_2eproto =
@@ -194,11 +210,11 @@ static void InitDefaultsscc_info_ask_token_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_ask_token_request_default_instance_;
-    new (ptr) ::ComeTogether::ask_token_request();
+    void* ptr = &::come_together_grpc::_ask_token_request_default_instance_;
+    new (ptr) ::come_together_grpc::ask_token_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::ask_token_request::InitAsDefaultInstance();
+  ::come_together_grpc::ask_token_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ask_token_request_come_5ftogether_2eproto =
@@ -208,11 +224,11 @@ static void InitDefaultsscc_info_ask_token_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_ask_token_response_default_instance_;
-    new (ptr) ::ComeTogether::ask_token_response();
+    void* ptr = &::come_together_grpc::_ask_token_response_default_instance_;
+    new (ptr) ::come_together_grpc::ask_token_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::ask_token_response::InitAsDefaultInstance();
+  ::come_together_grpc::ask_token_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ask_token_response_come_5ftogether_2eproto =
@@ -222,11 +238,11 @@ static void InitDefaultsscc_info_chat_info_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_chat_info_default_instance_;
-    new (ptr) ::ComeTogether::chat_info();
+    void* ptr = &::come_together_grpc::_chat_info_default_instance_;
+    new (ptr) ::come_together_grpc::chat_info();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::chat_info::InitAsDefaultInstance();
+  ::come_together_grpc::chat_info::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_chat_info_come_5ftogether_2eproto =
@@ -236,11 +252,11 @@ static void InitDefaultsscc_info_chat_message_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_chat_message_default_instance_;
-    new (ptr) ::ComeTogether::chat_message();
+    void* ptr = &::come_together_grpc::_chat_message_default_instance_;
+    new (ptr) ::come_together_grpc::chat_message();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::chat_message::InitAsDefaultInstance();
+  ::come_together_grpc::chat_message::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_chat_message_come_5ftogether_2eproto =
@@ -250,11 +266,11 @@ static void InitDefaultsscc_info_check_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_check_request_default_instance_;
-    new (ptr) ::ComeTogether::check_request();
+    void* ptr = &::come_together_grpc::_check_request_default_instance_;
+    new (ptr) ::come_together_grpc::check_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::check_request::InitAsDefaultInstance();
+  ::come_together_grpc::check_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_check_request_come_5ftogether_2eproto =
@@ -264,25 +280,53 @@ static void InitDefaultsscc_info_check_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_check_response_default_instance_;
-    new (ptr) ::ComeTogether::check_response();
+    void* ptr = &::come_together_grpc::_check_response_default_instance_;
+    new (ptr) ::come_together_grpc::check_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::check_response::InitAsDefaultInstance();
+  ::come_together_grpc::check_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_check_response_come_5ftogether_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_check_response_come_5ftogether_2eproto}, {}};
 
+static void InitDefaultsscc_info_delete_marker_reponse_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_delete_marker_reponse_default_instance_;
+    new (ptr) ::come_together_grpc::delete_marker_reponse();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::delete_marker_reponse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_delete_marker_reponse_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_delete_marker_reponse_come_5ftogether_2eproto}, {}};
+
+static void InitDefaultsscc_info_delete_marker_request_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_delete_marker_request_default_instance_;
+    new (ptr) ::come_together_grpc::delete_marker_request();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::delete_marker_request::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_delete_marker_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_delete_marker_request_come_5ftogether_2eproto}, {}};
+
 static void InitDefaultsscc_info_event_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_event_default_instance_;
-    new (ptr) ::ComeTogether::event();
+    void* ptr = &::come_together_grpc::_event_default_instance_;
+    new (ptr) ::come_together_grpc::event();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::event::InitAsDefaultInstance();
+  ::come_together_grpc::event::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_event_come_5ftogether_2eproto =
@@ -295,11 +339,11 @@ static void InitDefaultsscc_info_get_chat_messages_request_come_5ftogether_2epro
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_get_chat_messages_request_default_instance_;
-    new (ptr) ::ComeTogether::get_chat_messages_request();
+    void* ptr = &::come_together_grpc::_get_chat_messages_request_default_instance_;
+    new (ptr) ::come_together_grpc::get_chat_messages_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::get_chat_messages_request::InitAsDefaultInstance();
+  ::come_together_grpc::get_chat_messages_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_get_chat_messages_request_come_5ftogether_2eproto =
@@ -309,11 +353,11 @@ static void InitDefaultsscc_info_get_images_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_get_images_request_default_instance_;
-    new (ptr) ::ComeTogether::get_images_request();
+    void* ptr = &::come_together_grpc::_get_images_request_default_instance_;
+    new (ptr) ::come_together_grpc::get_images_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::get_images_request::InitAsDefaultInstance();
+  ::come_together_grpc::get_images_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_get_images_request_come_5ftogether_2eproto =
@@ -323,11 +367,11 @@ static void InitDefaultsscc_info_get_info_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_get_info_request_default_instance_;
-    new (ptr) ::ComeTogether::get_info_request();
+    void* ptr = &::come_together_grpc::_get_info_request_default_instance_;
+    new (ptr) ::come_together_grpc::get_info_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::get_info_request::InitAsDefaultInstance();
+  ::come_together_grpc::get_info_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_get_info_request_come_5ftogether_2eproto =
@@ -337,11 +381,11 @@ static void InitDefaultsscc_info_get_info_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_get_info_response_default_instance_;
-    new (ptr) ::ComeTogether::get_info_response();
+    void* ptr = &::come_together_grpc::_get_info_response_default_instance_;
+    new (ptr) ::come_together_grpc::get_info_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::get_info_response::InitAsDefaultInstance();
+  ::come_together_grpc::get_info_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_get_info_response_come_5ftogether_2eproto =
@@ -354,11 +398,11 @@ static void InitDefaultsscc_info_image_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_image_default_instance_;
-    new (ptr) ::ComeTogether::image();
+    void* ptr = &::come_together_grpc::_image_default_instance_;
+    new (ptr) ::come_together_grpc::image();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::image::InitAsDefaultInstance();
+  ::come_together_grpc::image::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_image_come_5ftogether_2eproto =
@@ -368,11 +412,11 @@ static void InitDefaultsscc_info_login_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_login_request_default_instance_;
-    new (ptr) ::ComeTogether::login_request();
+    void* ptr = &::come_together_grpc::_login_request_default_instance_;
+    new (ptr) ::come_together_grpc::login_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::login_request::InitAsDefaultInstance();
+  ::come_together_grpc::login_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_login_request_come_5ftogether_2eproto =
@@ -382,11 +426,11 @@ static void InitDefaultsscc_info_login_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_login_response_default_instance_;
-    new (ptr) ::ComeTogether::login_response();
+    void* ptr = &::come_together_grpc::_login_response_default_instance_;
+    new (ptr) ::come_together_grpc::login_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::login_response::InitAsDefaultInstance();
+  ::come_together_grpc::login_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_login_response_come_5ftogether_2eproto =
@@ -397,11 +441,11 @@ static void InitDefaultsscc_info_manage_image_request_come_5ftogether_2eproto() 
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_manage_image_request_default_instance_;
-    new (ptr) ::ComeTogether::manage_image_request();
+    void* ptr = &::come_together_grpc::_manage_image_request_default_instance_;
+    new (ptr) ::come_together_grpc::manage_image_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::manage_image_request::InitAsDefaultInstance();
+  ::come_together_grpc::manage_image_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_manage_image_request_come_5ftogether_2eproto =
@@ -411,11 +455,11 @@ static void InitDefaultsscc_info_manage_image_response_come_5ftogether_2eproto()
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_manage_image_response_default_instance_;
-    new (ptr) ::ComeTogether::manage_image_response();
+    void* ptr = &::come_together_grpc::_manage_image_response_default_instance_;
+    new (ptr) ::come_together_grpc::manage_image_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::manage_image_response::InitAsDefaultInstance();
+  ::come_together_grpc::manage_image_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_manage_image_response_come_5ftogether_2eproto =
@@ -425,11 +469,11 @@ static void InitDefaultsscc_info_marker_info_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_marker_info_default_instance_;
-    new (ptr) ::ComeTogether::marker_info();
+    void* ptr = &::come_together_grpc::_marker_info_default_instance_;
+    new (ptr) ::come_together_grpc::marker_info();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::marker_info::InitAsDefaultInstance();
+  ::come_together_grpc::marker_info::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_marker_info_come_5ftogether_2eproto =
@@ -439,11 +483,11 @@ static void InitDefaultsscc_info_register_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_register_request_default_instance_;
-    new (ptr) ::ComeTogether::register_request();
+    void* ptr = &::come_together_grpc::_register_request_default_instance_;
+    new (ptr) ::come_together_grpc::register_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::register_request::InitAsDefaultInstance();
+  ::come_together_grpc::register_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_register_request_come_5ftogether_2eproto =
@@ -454,11 +498,11 @@ static void InitDefaultsscc_info_register_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_register_response_default_instance_;
-    new (ptr) ::ComeTogether::register_response();
+    void* ptr = &::come_together_grpc::_register_response_default_instance_;
+    new (ptr) ::come_together_grpc::register_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::register_response::InitAsDefaultInstance();
+  ::come_together_grpc::register_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_register_response_come_5ftogether_2eproto =
@@ -468,11 +512,11 @@ static void InitDefaultsscc_info_send_chat_message_request_come_5ftogether_2epro
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_send_chat_message_request_default_instance_;
-    new (ptr) ::ComeTogether::send_chat_message_request();
+    void* ptr = &::come_together_grpc::_send_chat_message_request_default_instance_;
+    new (ptr) ::come_together_grpc::send_chat_message_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::send_chat_message_request::InitAsDefaultInstance();
+  ::come_together_grpc::send_chat_message_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_send_chat_message_request_come_5ftogether_2eproto =
@@ -483,25 +527,53 @@ static void InitDefaultsscc_info_send_chat_message_response_come_5ftogether_2epr
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_send_chat_message_response_default_instance_;
-    new (ptr) ::ComeTogether::send_chat_message_response();
+    void* ptr = &::come_together_grpc::_send_chat_message_response_default_instance_;
+    new (ptr) ::come_together_grpc::send_chat_message_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::send_chat_message_response::InitAsDefaultInstance();
+  ::come_together_grpc::send_chat_message_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_send_chat_message_response_come_5ftogether_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_send_chat_message_response_come_5ftogether_2eproto}, {}};
 
+static void InitDefaultsscc_info_send_push_token_request_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_send_push_token_request_default_instance_;
+    new (ptr) ::come_together_grpc::send_push_token_request();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::send_push_token_request::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_send_push_token_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_send_push_token_request_come_5ftogether_2eproto}, {}};
+
+static void InitDefaultsscc_info_send_push_token_response_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_send_push_token_response_default_instance_;
+    new (ptr) ::come_together_grpc::send_push_token_response();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::send_push_token_response::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_send_push_token_response_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_send_push_token_response_come_5ftogether_2eproto}, {}};
+
 static void InitDefaultsscc_info_update_info_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_update_info_request_default_instance_;
-    new (ptr) ::ComeTogether::update_info_request();
+    void* ptr = &::come_together_grpc::_update_info_request_default_instance_;
+    new (ptr) ::come_together_grpc::update_info_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::update_info_request::InitAsDefaultInstance();
+  ::come_together_grpc::update_info_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_update_info_request_come_5ftogether_2eproto =
@@ -513,11 +585,11 @@ static void InitDefaultsscc_info_update_info_response_come_5ftogether_2eproto() 
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_update_info_response_default_instance_;
-    new (ptr) ::ComeTogether::update_info_response();
+    void* ptr = &::come_together_grpc::_update_info_response_default_instance_;
+    new (ptr) ::come_together_grpc::update_info_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::update_info_response::InitAsDefaultInstance();
+  ::come_together_grpc::update_info_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_update_info_response_come_5ftogether_2eproto =
@@ -527,11 +599,11 @@ static void InitDefaultsscc_info_user_info_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_user_info_default_instance_;
-    new (ptr) ::ComeTogether::user_info();
+    void* ptr = &::come_together_grpc::_user_info_default_instance_;
+    new (ptr) ::come_together_grpc::user_info();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::user_info::InitAsDefaultInstance();
+  ::come_together_grpc::user_info::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_user_info_come_5ftogether_2eproto =
@@ -541,11 +613,11 @@ static void InitDefaultsscc_info_verify_token_request_come_5ftogether_2eproto() 
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_verify_token_request_default_instance_;
-    new (ptr) ::ComeTogether::verify_token_request();
+    void* ptr = &::come_together_grpc::_verify_token_request_default_instance_;
+    new (ptr) ::come_together_grpc::verify_token_request();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::verify_token_request::InitAsDefaultInstance();
+  ::come_together_grpc::verify_token_request::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_verify_token_request_come_5ftogether_2eproto =
@@ -555,495 +627,555 @@ static void InitDefaultsscc_info_verify_token_response_come_5ftogether_2eproto()
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ComeTogether::_verify_token_response_default_instance_;
-    new (ptr) ::ComeTogether::verify_token_response();
+    void* ptr = &::come_together_grpc::_verify_token_response_default_instance_;
+    new (ptr) ::come_together_grpc::verify_token_response();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ComeTogether::verify_token_response::InitAsDefaultInstance();
+  ::come_together_grpc::verify_token_response::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_verify_token_response_come_5ftogether_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_verify_token_response_come_5ftogether_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_come_5ftogether_2eproto[29];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_come_5ftogether_2eproto[18];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_come_5ftogether_2eproto[33];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_come_5ftogether_2eproto[20];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_come_5ftogether_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::image, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::image, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::image, data_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::image, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::image, sequence_number_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::image, data_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::image, uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::image, sequence_number_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::access_token, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::access_token, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::access_token, token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::access_token, token_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::ask_token_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::ask_token_request, email_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, push_token_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::ask_token_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::ask_token_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_response, res_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::verify_token_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::verify_token_request, email_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::verify_token_request, token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_request, marker_uuid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::verify_token_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_reponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::verify_token_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_reponse, res_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_request, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_request, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_request, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_request, type_),
-  offsetof(::ComeTogether::update_info_requestDefaultTypeInternal, m_info_),
-  offsetof(::ComeTogether::update_info_requestDefaultTypeInternal, u_info_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_request, data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::ask_token_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::update_info_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::ask_token_request, email_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::event, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::event, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::event, event_type_),
-  offsetof(::ComeTogether::eventDefaultTypeInternal, m_info_),
-  offsetof(::ComeTogether::eventDefaultTypeInternal, c_message_),
-  offsetof(::ComeTogether::eventDefaultTypeInternal, u_info_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::event, data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_info, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::ask_token_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_info, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_info, title_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_info, participants_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_info, last_visible_message_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::ask_token_response, res_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_chat_messages_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::verify_token_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_chat_messages_request, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_chat_messages_request, chat_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_chat_messages_request, page_size_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_chat_messages_request, page_number_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_chat_messages_request, hash_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::verify_token_request, email_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::verify_token_request, token_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, content_type_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, sender_uuid_),
-  offsetof(::ComeTogether::chat_messageDefaultTypeInternal, text_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, sent_unix_time_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, chat_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, sequence_number_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::chat_message, content_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::verify_token_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_request, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_request, message_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::verify_token_response, res_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, type_),
+  offsetof(::come_together_grpc::update_info_requestDefaultTypeInternal, m_info_),
+  offsetof(::come_together_grpc::update_info_requestDefaultTypeInternal, u_info_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_response, res_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_response, actual_sequence_number_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::send_chat_message_response, message_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_response, res_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::event, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::event, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::event, event_type_),
+  offsetof(::come_together_grpc::eventDefaultTypeInternal, m_info_),
+  offsetof(::come_together_grpc::eventDefaultTypeInternal, c_message_),
+  offsetof(::come_together_grpc::eventDefaultTypeInternal, u_info_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::event, data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_info, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, info_type_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_request, target_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_info, uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_info, title_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_info, participants_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_info, last_visible_message_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_response, _internal_metadata_),
-  ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_response, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
-  offsetof(::ComeTogether::get_info_responseDefaultTypeInternal, u_info_),
-  offsetof(::ComeTogether::get_info_responseDefaultTypeInternal, m_info_),
-  offsetof(::ComeTogether::get_info_responseDefaultTypeInternal, c_info_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_info_response, data_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, image_type_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, target_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, amount_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, hash_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::get_images_request, starting_sequence_number_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, chat_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, page_size_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, page_number_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, hash_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_request, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_request, act_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_request, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_request, target_uuid_),
-  offsetof(::ComeTogether::manage_image_requestDefaultTypeInternal, image_),
-  offsetof(::ComeTogether::manage_image_requestDefaultTypeInternal, image_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_request, data_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, content_type_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, sender_uuid_),
+  offsetof(::come_together_grpc::chat_messageDefaultTypeInternal, text_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, sent_unix_time_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, chat_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, sequence_number_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::chat_message, content_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_response, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_response, res_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_response, image_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::manage_image_response, image_sequence_number_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::check_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::check_request, check_type_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::check_request, data_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_request, message_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::check_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::check_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_response, actual_sequence_number_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_response, message_uuid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_request, login_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_request, password_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, info_type_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, target_uuid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_response, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  offsetof(::come_together_grpc::get_info_responseDefaultTypeInternal, u_info_),
+  offsetof(::come_together_grpc::get_info_responseDefaultTypeInternal, m_info_),
+  offsetof(::come_together_grpc::get_info_responseDefaultTypeInternal, c_info_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_response, data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_response, res_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_response, info_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::login_response, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, image_type_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, target_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, amount_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, hash_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, starting_sequence_number_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::register_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, act_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, target_uuid_),
+  offsetof(::come_together_grpc::manage_image_requestDefaultTypeInternal, image_),
+  offsetof(::come_together_grpc::manage_image_requestDefaultTypeInternal, image_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, data_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::register_request, info_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_response, image_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_response, image_sequence_number_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::register_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::check_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::register_response, res_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::register_response, user_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::register_response, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::check_request, check_type_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::check_request, data_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::check_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, email_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, login_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, password_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, first_name_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, last_name_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, images_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::user_info, other_info_json_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::check_response, res_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, cat_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, marker_type_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, from_unix_time_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, to_unix_time_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, creation_unix_time_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, creator_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, display_name_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, latitude_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, longitude_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, chat_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, images_uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::marker_info, other_data_json_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, login_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, password_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_request, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_request, info_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, info_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, access_token_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_response, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_response, res_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_response, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ComeTogether::add_marker_response, chat_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_request, info_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, user_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, access_token_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, email_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, login_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, password_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, first_name_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, last_name_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, images_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, other_info_json_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, cat_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, marker_type_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, from_unix_time_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, to_unix_time_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, creation_unix_time_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, creator_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, display_name_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, latitude_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, longitude_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, chat_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, images_uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::marker_info, other_data_json_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::add_marker_request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::add_marker_request, info_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::add_marker_response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::add_marker_response, res_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::add_marker_response, uuid_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::add_marker_response, chat_uuid_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ComeTogether::image)},
-  { 8, -1, sizeof(::ComeTogether::access_token)},
-  { 14, -1, sizeof(::ComeTogether::ask_token_request)},
-  { 20, -1, sizeof(::ComeTogether::ask_token_response)},
-  { 26, -1, sizeof(::ComeTogether::verify_token_request)},
-  { 33, -1, sizeof(::ComeTogether::verify_token_response)},
-  { 39, -1, sizeof(::ComeTogether::update_info_request)},
-  { 49, -1, sizeof(::ComeTogether::update_info_response)},
-  { 55, -1, sizeof(::ComeTogether::event)},
-  { 65, -1, sizeof(::ComeTogether::chat_info)},
-  { 74, -1, sizeof(::ComeTogether::get_chat_messages_request)},
-  { 84, -1, sizeof(::ComeTogether::chat_message)},
-  { 97, -1, sizeof(::ComeTogether::send_chat_message_request)},
-  { 104, -1, sizeof(::ComeTogether::send_chat_message_response)},
-  { 112, -1, sizeof(::ComeTogether::get_info_request)},
-  { 120, -1, sizeof(::ComeTogether::get_info_response)},
-  { 129, -1, sizeof(::ComeTogether::get_images_request)},
-  { 140, -1, sizeof(::ComeTogether::manage_image_request)},
-  { 151, -1, sizeof(::ComeTogether::manage_image_response)},
-  { 159, -1, sizeof(::ComeTogether::check_request)},
-  { 166, -1, sizeof(::ComeTogether::check_response)},
-  { 172, -1, sizeof(::ComeTogether::login_request)},
-  { 179, -1, sizeof(::ComeTogether::login_response)},
-  { 187, -1, sizeof(::ComeTogether::register_request)},
-  { 193, -1, sizeof(::ComeTogether::register_response)},
-  { 201, -1, sizeof(::ComeTogether::user_info)},
-  { 214, -1, sizeof(::ComeTogether::marker_info)},
-  { 232, -1, sizeof(::ComeTogether::add_marker_request)},
-  { 238, -1, sizeof(::ComeTogether::add_marker_response)},
+  { 0, -1, sizeof(::come_together_grpc::image)},
+  { 8, -1, sizeof(::come_together_grpc::access_token)},
+  { 14, -1, sizeof(::come_together_grpc::send_push_token_request)},
+  { 21, -1, sizeof(::come_together_grpc::send_push_token_response)},
+  { 27, -1, sizeof(::come_together_grpc::delete_marker_request)},
+  { 34, -1, sizeof(::come_together_grpc::delete_marker_reponse)},
+  { 40, -1, sizeof(::come_together_grpc::ask_token_request)},
+  { 46, -1, sizeof(::come_together_grpc::ask_token_response)},
+  { 52, -1, sizeof(::come_together_grpc::verify_token_request)},
+  { 59, -1, sizeof(::come_together_grpc::verify_token_response)},
+  { 65, -1, sizeof(::come_together_grpc::update_info_request)},
+  { 75, -1, sizeof(::come_together_grpc::update_info_response)},
+  { 81, -1, sizeof(::come_together_grpc::event)},
+  { 91, -1, sizeof(::come_together_grpc::chat_info)},
+  { 100, -1, sizeof(::come_together_grpc::get_chat_messages_request)},
+  { 110, -1, sizeof(::come_together_grpc::chat_message)},
+  { 123, -1, sizeof(::come_together_grpc::send_chat_message_request)},
+  { 130, -1, sizeof(::come_together_grpc::send_chat_message_response)},
+  { 138, -1, sizeof(::come_together_grpc::get_info_request)},
+  { 146, -1, sizeof(::come_together_grpc::get_info_response)},
+  { 155, -1, sizeof(::come_together_grpc::get_images_request)},
+  { 166, -1, sizeof(::come_together_grpc::manage_image_request)},
+  { 177, -1, sizeof(::come_together_grpc::manage_image_response)},
+  { 185, -1, sizeof(::come_together_grpc::check_request)},
+  { 192, -1, sizeof(::come_together_grpc::check_response)},
+  { 198, -1, sizeof(::come_together_grpc::login_request)},
+  { 205, -1, sizeof(::come_together_grpc::login_response)},
+  { 213, -1, sizeof(::come_together_grpc::register_request)},
+  { 219, -1, sizeof(::come_together_grpc::register_response)},
+  { 227, -1, sizeof(::come_together_grpc::user_info)},
+  { 240, -1, sizeof(::come_together_grpc::marker_info)},
+  { 258, -1, sizeof(::come_together_grpc::add_marker_request)},
+  { 264, -1, sizeof(::come_together_grpc::add_marker_response)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_image_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_access_token_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_ask_token_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_ask_token_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_verify_token_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_verify_token_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_update_info_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_update_info_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_event_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_chat_info_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_get_chat_messages_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_chat_message_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_send_chat_message_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_send_chat_message_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_get_info_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_get_info_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_get_images_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_manage_image_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_manage_image_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_check_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_check_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_login_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_login_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_register_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_register_response_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_user_info_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_marker_info_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_add_marker_request_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ComeTogether::_add_marker_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_image_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_access_token_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_send_push_token_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_send_push_token_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_delete_marker_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_delete_marker_reponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_ask_token_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_ask_token_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_verify_token_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_verify_token_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_update_info_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_update_info_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_event_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_chat_info_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_get_chat_messages_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_chat_message_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_send_chat_message_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_send_chat_message_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_get_info_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_get_info_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_get_images_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_manage_image_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_manage_image_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_check_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_check_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_login_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_login_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_register_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_register_response_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_user_info_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_marker_info_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_add_marker_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_add_marker_response_default_instance_),
 };
 
 const char descriptor_table_protodef_come_5ftogether_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\023come_together.proto\022\014ComeTogether\"<\n\005i"
-  "mage\022\014\n\004data\030\001 \001(\014\022\014\n\004uuid\030\002 \001(\t\022\027\n\017sequ"
-  "ence_number\030\003 \001(\005\"\035\n\014access_token\022\r\n\005tok"
-  "en\030\001 \001(\t\"\"\n\021ask_token_request\022\r\n\005email\030\001"
-  " \001(\t\"\214\001\n\022ask_token_response\0224\n\003res\030\001 \001(\016"
-  "2\'.ComeTogether.ask_token_response.resul"
-  "t\"@\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\025\n\021MAIL"
-  "_WAS_NOT_SENT\020\002\022\n\n\005OTHER\020\347\007\"4\n\024verify_to"
-  "ken_request\022\r\n\005email\030\001 \001(\t\022\r\n\005token\030\002 \001("
-  "\t\"\241\001\n\025verify_token_response\0227\n\003res\030\001 \001(\016"
-  "2*.ComeTogether.verify_token_response.re"
-  "sult\"O\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\023\n\017E"
-  "MAIL_NOT_FOUND\020\002\022\017\n\013WRONG_TOKEN\020\003\022\n\n\005OTH"
-  "ER\020\347\007\"\372\001\n\023update_info_request\022\024\n\014access_"
-  "token\030\001 \001(\t\022;\n\004type\030\002 \001(\0162-.ComeTogether"
-  ".update_info_request.update_type\022+\n\006m_in"
-  "fo\030\003 \001(\0132\031.ComeTogether.marker_infoH\000\022)\n"
-  "\006u_info\030\004 \001(\0132\027.ComeTogether.user_infoH\000"
-  "\"0\n\013update_type\022\013\n\007NOT_SET\020\000\022\n\n\006MARKER\020\001"
-  "\022\010\n\004USER\020\002B\006\n\004data\"\226\001\n\024update_info_respo"
-  "nse\0226\n\003res\030\001 \001(\0162).ComeTogether.update_i"
-  "nfo_response.result\"F\n\006result\022\013\n\007NOT_SET"
-  "\020\000\022\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIONS\020\002\022"
-  "\n\n\005OTHER\020\347\007\"\212\003\n\005event\022,\n\nevent_type\030\001 \001("
-  "\0162\030.ComeTogether.event.type\022+\n\006m_info\030\002 "
-  "\001(\0132\031.ComeTogether.marker_infoH\000\022/\n\tc_me"
-  "ssage\030\003 \001(\0132\032.ComeTogether.chat_messageH"
-  "\000\022)\n\006u_info\030\004 \001(\0132\027.ComeTogether.user_in"
-  "foH\000\"\301\001\n\004type\022\013\n\007NOT_SET\020\000\022\020\n\014MARKER_ADD"
-  "ED\020\001\022\021\n\rMARKER_EDITED\020\002\022\032\n\026MARKER_DELETE"
-  "D_BY_USER\020\003\022\035\n\031MARKER_DELETED_BY_TIMEOUT"
-  "\020\004\022\021\n\rMESSAGE_ADDED\020\005\022\022\n\016MESSAGE_EDITED\020"
-  "\006\022\023\n\017MESSAGE_DELETED\020\007\022\020\n\014USER_UPDATED\020\010"
-  "B\006\n\004data\"a\n\tchat_info\022\014\n\004uuid\030\001 \001(\t\022\r\n\005t"
-  "itle\030\002 \001(\t\022\031\n\021participants_uuid\030\003 \003(\t\022\034\n"
-  "\024last_visible_message\030\004 \001(\t\"z\n\031get_chat_"
-  "messages_request\022\024\n\014access_token\030\001 \001(\t\022\021"
-  "\n\tchat_uuid\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\022\023\n\013"
-  "page_number\030\004 \001(\005\022\014\n\004hash\030\005 \001(\t\"\374\001\n\014chat"
-  "_message\022@\n\014content_type\030\001 \001(\0162*.ComeTog"
-  "ether.chat_message.message_content\022\023\n\013se"
-  "nder_uuid\030\002 \001(\t\022\016\n\004text\030\003 \001(\tH\000\022\026\n\016sent_"
-  "unix_time\030\004 \001(\003\022\021\n\tchat_uuid\030\005 \001(\t\022\027\n\017se"
-  "quence_number\030\006 \001(\003\022\014\n\004uuid\030\007 \001(\t\"(\n\017mes"
-  "sage_content\022\013\n\007NOT_SET\020\000\022\010\n\004TEXT\020\001B\t\n\007c"
-  "ontent\"^\n\031send_chat_message_request\022\024\n\014a"
-  "ccess_token\030\001 \001(\t\022+\n\007message\030\002 \001(\0132\032.Com"
-  "eTogether.chat_message\"\212\002\n\032send_chat_mes"
-  "sage_response\022<\n\003res\030\001 \001(\0162/.ComeTogethe"
-  "r.send_chat_message_response.result\022\036\n\026a"
-  "ctual_sequence_number\030\002 \001(\003\022\024\n\014message_u"
-  "uid\030\004 \001(\t\"x\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001"
-  "\022\027\n\023CHAT_DOES_NOT_EXIST\020\002\022\027\n\023USER_DOES_N"
-  "OT_EXIST\020\003\022\033\n\027INSUFFICIENT_PERMISIONS\020\004\022"
-  "\n\n\005OTHER\020\347\007\"\252\001\n\020get_info_request\0226\n\tinfo"
-  "_type\030\001 \001(\0162#.ComeTogether.get_info_requ"
-  "est.type\022\024\n\014access_token\030\002 \001(\t\022\023\n\013target"
-  "_uuid\030\003 \001(\t\"3\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004USER"
-  "\020\001\022\n\n\006MARKER\020\002\022\010\n\004CHAT\020\003\"\236\001\n\021get_info_re"
-  "sponse\022)\n\006u_info\030\001 \001(\0132\027.ComeTogether.us"
-  "er_infoH\000\022+\n\006m_info\030\002 \001(\0132\031.ComeTogether"
-  ".marker_infoH\000\022)\n\006c_info\030\003 \001(\0132\027.ComeTog"
-  "ether.chat_infoH\000B\006\n\004data\"\345\001\n\022get_images"
-  "_request\0229\n\nimage_type\030\001 \001(\0162%.ComeToget"
-  "her.get_images_request.type\022\023\n\013target_uu"
-  "id\030\002 \001(\t\022\024\n\014access_token\030\003 \001(\t\022\016\n\006amount"
-  "\030\004 \001(\005\022\014\n\004hash\030\005 \001(\t\022 \n\030starting_sequenc"
-  "e_number\030\006 \001(\005\")\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004U"
-  "SER\020\001\022\n\n\006MARKER\020\002\"\237\002\n\024manage_image_reque"
-  "st\0226\n\003act\030\001 \001(\0162).ComeTogether.manage_im"
-  "age_request.action\022\024\n\014access_token\030\002 \001(\t"
-  "\022\023\n\013target_uuid\030\003 \001(\t\022\017\n\005image\030\004 \001(\014H\000\022\024"
-  "\n\nimage_uuid\030\005 \001(\tH\000\"u\n\006action\022\013\n\007NOT_SE"
-  "T\020\000\022\025\n\021UPLOAD_USER_IMAGE\020\001\022\025\n\021DELETE_USE"
-  "R_IMAGE\020\002\022\027\n\023UPLOAD_MARKER_IMAGE\020\003\022\027\n\023DE"
-  "LETE_MARKER_IMAGE\020\004B\006\n\004data\"\313\001\n\025manage_i"
-  "mage_response\0227\n\003res\030\001 \001(\0162*.ComeTogethe"
-  "r.manage_image_response.result\022\022\n\nimage_"
-  "uuid\030\002 \001(\t\022\035\n\025image_sequence_number\030\003 \001("
-  "\005\"F\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSU"
-  "FFICIENT_PERMISIONS\020\002\022\n\n\005OTHER\020\347\007\"~\n\rche"
-  "ck_request\0224\n\ncheck_type\030\001 \001(\0162 .ComeTog"
-  "ether.check_request.type\022\014\n\004data\030\002 \001(\t\")"
-  "\n\004type\022\013\n\007NOT_SET\020\000\022\t\n\005EMAIL\020\001\022\t\n\005LOGIN\020"
-  "\002\"\177\n\016check_response\0220\n\003res\030\001 \001(\0162#.ComeT"
-  "ogether.check_response.result\";\n\006result\022"
-  "\013\n\007NOT_SET\020\000\022\r\n\tAVAILABLE\020\001\022\t\n\005TAKEN\020\002\022\n"
-  "\n\005OTHER\020\347\007\"0\n\rlogin_request\022\r\n\005login\030\001 \001"
-  "(\t\022\020\n\010password\030\002 \001(\t\"\322\001\n\016login_response\022"
-  "0\n\003res\030\001 \001(\0162#.ComeTogether.login_respon"
-  "se.result\022%\n\004info\030\002 \001(\0132\027.ComeTogether.u"
-  "ser_info\022\024\n\014access_token\030\003 \001(\t\"Q\n\006result"
-  "\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\022\n\016USER_NOT_FOUND\020"
-  "\002\022\022\n\016WRONG_PASSWORD\020\003\022\n\n\005OTHER\020\347\007\"9\n\020reg"
-  "ister_request\022%\n\004info\030\001 \001(\0132\027.ComeTogeth"
-  "er.user_info\"\316\001\n\021register_response\0223\n\003re"
-  "s\030\001 \001(\0162&.ComeTogether.register_response"
-  ".result\022\021\n\tuser_uuid\030\002 \001(\t\022\024\n\014access_tok"
-  "en\030\003 \001(\t\"[\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022"
-  "\027\n\023EMAIL_ALREADY_TAKEN\020\002\022\027\n\023LOGIN_ALREAD"
-  "Y_TAKEN\020\003\022\n\n\005OTHER\020\347\007\"\236\001\n\tuser_info\022\014\n\004u"
-  "uid\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022\r\n\005login\030\003 \001(\t\022"
-  "\020\n\010password\030\004 \001(\t\022\022\n\nfirst_name\030\005 \001(\t\022\021\n"
-  "\tlast_name\030\006 \001(\t\022\023\n\013images_uuid\030\007 \003(\t\022\027\n"
-  "\017other_info_json\030\010 \001(\t\"\220\005\n\013marker_info\022/"
-  "\n\003cat\030\001 \001(\0162\".ComeTogether.marker_info.c"
-  "ategory\0223\n\013marker_type\030\002 \001(\0162\036.ComeToget"
-  "her.marker_info.type\022\026\n\016from_unix_time\030\003"
-  " \001(\003\022\024\n\014to_unix_time\030\004 \001(\003\022\032\n\022creation_u"
-  "nix_time\030\005 \001(\003\022\024\n\014creator_uuid\030\006 \001(\t\022\024\n\014"
-  "display_name\030\007 \001(\t\022\020\n\010latitude\030\t \001(\001\022\021\n\t"
-  "longitude\030\n \001(\001\022\014\n\004uuid\030\013 \001(\t\022\021\n\tchat_uu"
-  "id\030\014 \001(\t\022\023\n\013images_uuid\030\r \003(\t\022\027\n\017other_d"
-  "ata_json\030\016 \001(\t\"\367\001\n\010category\022\013\n\007NOT_SET\020\000"
-  "\022\013\n\007CYCLING\020\001\022\014\n\010FOOTBALL\020\002\022\016\n\nBASKETBAL"
-  "L\020\003\022\013\n\007RUNNING\020\004\022\007\n\003GYM\020\005\022\013\n\007GALLERY\020\006\022\r"
-  "\n\tEXCURSION\020\007\022\013\n\007THEATER\020\010\022\n\n\006CINEMA\020\t\022\007"
-  "\n\003BAR\020\n\022\016\n\nRESTAURANT\020\013\022\016\n\nNIGTH_CLUB\020\014\022"
-  "\n\n\006HOOKAH\020\r\022\010\n\004CAFE\020\016\022\010\n\004WALK\020\017\022\013\n\007CONCE"
-  "RT\020\020\022\t\n\005QUEST\020\021\022\007\n\003ZOO\020\022\"7\n\004type\022\027\n\023NOT_"
-  "SET_MARKER_TYPE\020\000\022\013\n\007PRIVATE\020\001\022\t\n\005GROUP\020"
-  "\002\"=\n\022add_marker_request\022\'\n\004info\030\001 \001(\0132\031."
-  "ComeTogether.marker_info\"\321\001\n\023add_marker_"
-  "response\0225\n\003res\030\001 \001(\0162(.ComeTogether.add"
-  "_marker_response.result\022\014\n\004uuid\030\002 \001(\t\022\021\n"
-  "\tchat_uuid\030\003 \001(\t\"b\n\006result\022\013\n\007NOT_SET\020\000\022"
-  "\006\n\002OK\020\001\022\033\n\027TIME_INTERVAL_TOO_SMALL\020\002\022\032\n\026"
-  "CREATION_TIME_OUTDATED\020\003\022\n\n\005OTHER\020\347\0072\221\t\n"
-  "\014MainEndpoint\022O\n\010AskToken\022\037.ComeTogether"
-  ".ask_token_request\032 .ComeTogether.ask_to"
-  "ken_response\"\000\022X\n\013VerifyToken\022\".ComeToge"
-  "ther.verify_token_request\032#.ComeTogether"
-  ".verify_token_response\"\000\022D\n\005Check\022\033.Come"
-  "Together.check_request\032\034.ComeTogether.ch"
-  "eck_response\"\000\022Q\n\014RegisterUser\022\036.ComeTog"
-  "ether.register_request\032\037.ComeTogether.re"
-  "gister_response\"\000\022H\n\tLoginUser\022\033.ComeTog"
-  "ether.login_request\032\034.ComeTogether.login"
-  "_response\"\000\022R\n\tAddMarker\022 .ComeTogether."
-  "add_marker_request\032!.ComeTogether.add_ma"
-  "rker_response\"\000\022J\n\rGetAllMarkers\022\032.ComeT"
-  "ogether.access_token\032\031.ComeTogether.mark"
-  "er_info\"\0000\001\022L\n\007GetInfo\022\036.ComeTogether.ge"
-  "t_info_request\032\037.ComeTogether.get_info_r"
-  "esponse\"\000\022U\n\nUpdateInfo\022!.ComeTogether.u"
-  "pdate_info_request\032\".ComeTogether.update"
-  "_info_response\"\000\022X\n\013ManageImage\022\".ComeTo"
-  "gether.manage_image_request\032#.ComeTogeth"
-  "er.manage_image_response\"\000\022F\n\tGetImages\022"
-  " .ComeTogether.get_images_request\032\023.Come"
-  "Together.image\"\0000\001\022f\n\017SendChatMessage\022\'."
-  "ComeTogether.send_chat_message_request\032("
-  ".ComeTogether.send_chat_message_response"
-  "\"\000\022Z\n\017GetChatMessages\022\'.ComeTogether.get"
-  "_chat_messages_request\032\032.ComeTogether.ch"
-  "at_message\"\0000\001\022H\n\021SubscribeToEvents\022\032.Co"
-  "meTogether.access_token\032\023.ComeTogether.e"
-  "vent\"\0000\001b\006proto3"
+  "\n\023come_together.proto\022\022come_together_grp"
+  "c\"<\n\005image\022\014\n\004data\030\001 \001(\014\022\014\n\004uuid\030\002 \001(\t\022\027"
+  "\n\017sequence_number\030\003 \001(\005\"\035\n\014access_token\022"
+  "\r\n\005token\030\001 \001(\t\"C\n\027send_push_token_reques"
+  "t\022\024\n\014access_token\030\001 \001(\t\022\022\n\npush_token\030\002 "
+  "\001(\t\"\236\001\n\030send_push_token_response\022@\n\003res\030"
+  "\001 \001(\01623.come_together_grpc.send_push_tok"
+  "en_response.result\"@\n\006result\022\013\n\007NOT_SET\020"
+  "\000\022\006\n\002OK\020\001\022\026\n\022USER_NOT_LOGGED_IN\020\002\022\t\n\005OTH"
+  "ER\020\003\"B\n\025delete_marker_request\022\024\n\014access_"
+  "token\030\001 \001(\t\022\023\n\013marker_uuid\030\002 \001(\t\"\264\001\n\025del"
+  "ete_marker_reponse\022=\n\003res\030\001 \001(\01620.come_t"
+  "ogether_grpc.delete_marker_reponse.resul"
+  "t\"\\\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSU"
+  "FFICIENT_PERMISIONS\020\002\022\024\n\020MARKER_NOT_FOUN"
+  "D\020\003\022\n\n\005OTHER\020\347\007\"\"\n\021ask_token_request\022\r\n\005"
+  "email\030\001 \001(\t\"\222\001\n\022ask_token_response\022:\n\003re"
+  "s\030\001 \001(\0162-.come_together_grpc.ask_token_r"
+  "esponse.result\"@\n\006result\022\013\n\007NOT_SET\020\000\022\006\n"
+  "\002OK\020\001\022\025\n\021MAIL_WAS_NOT_SENT\020\002\022\n\n\005OTHER\020\347\007"
+  "\"4\n\024verify_token_request\022\r\n\005email\030\001 \001(\t\022"
+  "\r\n\005token\030\002 \001(\t\"\247\001\n\025verify_token_response"
+  "\022=\n\003res\030\001 \001(\01620.come_together_grpc.verif"
+  "y_token_response.result\"O\n\006result\022\013\n\007NOT"
+  "_SET\020\000\022\006\n\002OK\020\001\022\023\n\017EMAIL_NOT_FOUND\020\002\022\017\n\013W"
+  "RONG_TOKEN\020\003\022\n\n\005OTHER\020\347\007\"\214\002\n\023update_info"
+  "_request\022\024\n\014access_token\030\001 \001(\t\022A\n\004type\030\002"
+  " \001(\01623.come_together_grpc.update_info_re"
+  "quest.update_type\0221\n\006m_info\030\003 \001(\0132\037.come"
+  "_together_grpc.marker_infoH\000\022/\n\006u_info\030\004"
+  " \001(\0132\035.come_together_grpc.user_infoH\000\"0\n"
+  "\013update_type\022\013\n\007NOT_SET\020\000\022\n\n\006MARKER\020\001\022\010\n"
+  "\004USER\020\002B\006\n\004data\"\234\001\n\024update_info_response"
+  "\022<\n\003res\030\001 \001(\0162/.come_together_grpc.updat"
+  "e_info_response.result\"F\n\006result\022\013\n\007NOT_"
+  "SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIONS"
+  "\020\002\022\n\n\005OTHER\020\347\007\"\242\003\n\005event\0222\n\nevent_type\030\001"
+  " \001(\0162\036.come_together_grpc.event.type\0221\n\006"
+  "m_info\030\002 \001(\0132\037.come_together_grpc.marker"
+  "_infoH\000\0225\n\tc_message\030\003 \001(\0132 .come_togeth"
+  "er_grpc.chat_messageH\000\022/\n\006u_info\030\004 \001(\0132\035"
+  ".come_together_grpc.user_infoH\000\"\301\001\n\004type"
+  "\022\013\n\007NOT_SET\020\000\022\020\n\014MARKER_ADDED\020\001\022\021\n\rMARKE"
+  "R_EDITED\020\002\022\032\n\026MARKER_DELETED_BY_USER\020\003\022\035"
+  "\n\031MARKER_DELETED_BY_TIMEOUT\020\004\022\021\n\rMESSAGE"
+  "_ADDED\020\005\022\022\n\016MESSAGE_EDITED\020\006\022\023\n\017MESSAGE_"
+  "DELETED\020\007\022\020\n\014USER_UPDATED\020\010B\006\n\004data\"a\n\tc"
+  "hat_info\022\014\n\004uuid\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\031\n"
+  "\021participants_uuid\030\003 \003(\t\022\034\n\024last_visible"
+  "_message\030\004 \001(\t\"z\n\031get_chat_messages_requ"
+  "est\022\024\n\014access_token\030\001 \001(\t\022\021\n\tchat_uuid\030\002"
+  " \001(\t\022\021\n\tpage_size\030\003 \001(\005\022\023\n\013page_number\030\004"
+  " \001(\005\022\014\n\004hash\030\005 \001(\t\"\202\002\n\014chat_message\022F\n\014c"
+  "ontent_type\030\001 \001(\01620.come_together_grpc.c"
+  "hat_message.message_content\022\023\n\013sender_uu"
+  "id\030\002 \001(\t\022\016\n\004text\030\003 \001(\tH\000\022\026\n\016sent_unix_ti"
+  "me\030\004 \001(\003\022\021\n\tchat_uuid\030\005 \001(\t\022\027\n\017sequence_"
+  "number\030\006 \001(\003\022\014\n\004uuid\030\007 \001(\t\"(\n\017message_co"
+  "ntent\022\013\n\007NOT_SET\020\000\022\010\n\004TEXT\020\001B\t\n\007content\""
+  "d\n\031send_chat_message_request\022\024\n\014access_t"
+  "oken\030\001 \001(\t\0221\n\007message\030\002 \001(\0132 .come_toget"
+  "her_grpc.chat_message\"\220\002\n\032send_chat_mess"
+  "age_response\022B\n\003res\030\001 \001(\01625.come_togethe"
+  "r_grpc.send_chat_message_response.result"
+  "\022\036\n\026actual_sequence_number\030\002 \001(\003\022\024\n\014mess"
+  "age_uuid\030\004 \001(\t\"x\n\006result\022\013\n\007NOT_SET\020\000\022\006\n"
+  "\002OK\020\001\022\027\n\023CHAT_DOES_NOT_EXIST\020\002\022\027\n\023USER_D"
+  "OES_NOT_EXIST\020\003\022\033\n\027INSUFFICIENT_PERMISIO"
+  "NS\020\004\022\n\n\005OTHER\020\347\007\"\260\001\n\020get_info_request\022<\n"
+  "\tinfo_type\030\001 \001(\0162).come_together_grpc.ge"
+  "t_info_request.type\022\024\n\014access_token\030\002 \001("
+  "\t\022\023\n\013target_uuid\030\003 \001(\t\"3\n\004type\022\013\n\007NOT_SE"
+  "T\020\000\022\010\n\004USER\020\001\022\n\n\006MARKER\020\002\022\010\n\004CHAT\020\003\"\260\001\n\021"
+  "get_info_response\022/\n\006u_info\030\001 \001(\0132\035.come"
+  "_together_grpc.user_infoH\000\0221\n\006m_info\030\002 \001"
+  "(\0132\037.come_together_grpc.marker_infoH\000\022/\n"
+  "\006c_info\030\003 \001(\0132\035.come_together_grpc.chat_"
+  "infoH\000B\006\n\004data\"\353\001\n\022get_images_request\022\?\n"
+  "\nimage_type\030\001 \001(\0162+.come_together_grpc.g"
+  "et_images_request.type\022\023\n\013target_uuid\030\002 "
+  "\001(\t\022\024\n\014access_token\030\003 \001(\t\022\016\n\006amount\030\004 \001("
+  "\005\022\014\n\004hash\030\005 \001(\t\022 \n\030starting_sequence_num"
+  "ber\030\006 \001(\005\")\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004USER\020\001"
+  "\022\n\n\006MARKER\020\002\"\245\002\n\024manage_image_request\022<\n"
+  "\003act\030\001 \001(\0162/.come_together_grpc.manage_i"
+  "mage_request.action\022\024\n\014access_token\030\002 \001("
+  "\t\022\023\n\013target_uuid\030\003 \001(\t\022\017\n\005image\030\004 \001(\014H\000\022"
+  "\024\n\nimage_uuid\030\005 \001(\tH\000\"u\n\006action\022\013\n\007NOT_S"
+  "ET\020\000\022\025\n\021UPLOAD_USER_IMAGE\020\001\022\025\n\021DELETE_US"
+  "ER_IMAGE\020\002\022\027\n\023UPLOAD_MARKER_IMAGE\020\003\022\027\n\023D"
+  "ELETE_MARKER_IMAGE\020\004B\006\n\004data\"\321\001\n\025manage_"
+  "image_response\022=\n\003res\030\001 \001(\01620.come_toget"
+  "her_grpc.manage_image_response.result\022\022\n"
+  "\nimage_uuid\030\002 \001(\t\022\035\n\025image_sequence_numb"
+  "er\030\003 \001(\005\"F\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022"
+  "\033\n\027INSUFFICIENT_PERMISIONS\020\002\022\n\n\005OTHER\020\347\007"
+  "\"\204\001\n\rcheck_request\022:\n\ncheck_type\030\001 \001(\0162&"
+  ".come_together_grpc.check_request.type\022\014"
+  "\n\004data\030\002 \001(\t\")\n\004type\022\013\n\007NOT_SET\020\000\022\t\n\005EMA"
+  "IL\020\001\022\t\n\005LOGIN\020\002\"\205\001\n\016check_response\0226\n\003re"
+  "s\030\001 \001(\0162).come_together_grpc.check_respo"
+  "nse.result\";\n\006result\022\013\n\007NOT_SET\020\000\022\r\n\tAVA"
+  "ILABLE\020\001\022\t\n\005TAKEN\020\002\022\n\n\005OTHER\020\347\007\"0\n\rlogin"
+  "_request\022\r\n\005login\030\001 \001(\t\022\020\n\010password\030\002 \001("
+  "\t\"\336\001\n\016login_response\0226\n\003res\030\001 \001(\0162).come"
+  "_together_grpc.login_response.result\022+\n\004"
+  "info\030\002 \001(\0132\035.come_together_grpc.user_inf"
+  "o\022\024\n\014access_token\030\003 \001(\t\"Q\n\006result\022\013\n\007NOT"
+  "_SET\020\000\022\006\n\002OK\020\001\022\022\n\016USER_NOT_FOUND\020\002\022\022\n\016WR"
+  "ONG_PASSWORD\020\003\022\n\n\005OTHER\020\347\007\"\?\n\020register_r"
+  "equest\022+\n\004info\030\001 \001(\0132\035.come_together_grp"
+  "c.user_info\"\324\001\n\021register_response\0229\n\003res"
+  "\030\001 \001(\0162,.come_together_grpc.register_res"
+  "ponse.result\022\021\n\tuser_uuid\030\002 \001(\t\022\024\n\014acces"
+  "s_token\030\003 \001(\t\"[\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002"
+  "OK\020\001\022\027\n\023EMAIL_ALREADY_TAKEN\020\002\022\027\n\023LOGIN_A"
+  "LREADY_TAKEN\020\003\022\n\n\005OTHER\020\347\007\"\236\001\n\tuser_info"
+  "\022\014\n\004uuid\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022\r\n\005login\030\003"
+  " \001(\t\022\020\n\010password\030\004 \001(\t\022\022\n\nfirst_name\030\005 \001"
+  "(\t\022\021\n\tlast_name\030\006 \001(\t\022\023\n\013images_uuid\030\007 \003"
+  "(\t\022\027\n\017other_info_json\030\010 \001(\t\"\234\005\n\013marker_i"
+  "nfo\0225\n\003cat\030\001 \001(\0162(.come_together_grpc.ma"
+  "rker_info.category\0229\n\013marker_type\030\002 \001(\0162"
+  "$.come_together_grpc.marker_info.type\022\026\n"
+  "\016from_unix_time\030\003 \001(\003\022\024\n\014to_unix_time\030\004 "
+  "\001(\003\022\032\n\022creation_unix_time\030\005 \001(\003\022\024\n\014creat"
+  "or_uuid\030\006 \001(\t\022\024\n\014display_name\030\007 \001(\t\022\020\n\010l"
+  "atitude\030\t \001(\001\022\021\n\tlongitude\030\n \001(\001\022\014\n\004uuid"
+  "\030\013 \001(\t\022\021\n\tchat_uuid\030\014 \001(\t\022\023\n\013images_uuid"
+  "\030\r \003(\t\022\027\n\017other_data_json\030\016 \001(\t\"\367\001\n\010cate"
+  "gory\022\013\n\007NOT_SET\020\000\022\013\n\007CYCLING\020\001\022\014\n\010FOOTBA"
+  "LL\020\002\022\016\n\nBASKETBALL\020\003\022\013\n\007RUNNING\020\004\022\007\n\003GYM"
+  "\020\005\022\013\n\007GALLERY\020\006\022\r\n\tEXCURSION\020\007\022\013\n\007THEATE"
+  "R\020\010\022\n\n\006CINEMA\020\t\022\007\n\003BAR\020\n\022\016\n\nRESTAURANT\020\013"
+  "\022\016\n\nNIGTH_CLUB\020\014\022\n\n\006HOOKAH\020\r\022\010\n\004CAFE\020\016\022\010"
+  "\n\004WALK\020\017\022\013\n\007CONCERT\020\020\022\t\n\005QUEST\020\021\022\007\n\003ZOO\020"
+  "\022\"7\n\004type\022\027\n\023NOT_SET_MARKER_TYPE\020\000\022\013\n\007PR"
+  "IVATE\020\001\022\t\n\005GROUP\020\002\"C\n\022add_marker_request"
+  "\022-\n\004info\030\001 \001(\0132\037.come_together_grpc.mark"
+  "er_info\"\327\001\n\023add_marker_response\022;\n\003res\030\001"
+  " \001(\0162..come_together_grpc.add_marker_res"
+  "ponse.result\022\014\n\004uuid\030\002 \001(\t\022\021\n\tchat_uuid\030"
+  "\003 \001(\t\"b\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027"
+  "TIME_INTERVAL_TOO_SMALL\020\002\022\032\n\026CREATION_TI"
+  "ME_OUTDATED\020\003\022\n\n\005OTHER\020\347\0072\217\014\n\014MainEndpoi"
+  "nt\022[\n\010AskToken\022%.come_together_grpc.ask_"
+  "token_request\032&.come_together_grpc.ask_t"
+  "oken_response\"\000\022d\n\013VerifyToken\022(.come_to"
+  "gether_grpc.verify_token_request\032).come_"
+  "together_grpc.verify_token_response\"\000\022P\n"
+  "\005Check\022!.come_together_grpc.check_reques"
+  "t\032\".come_together_grpc.check_response\"\000\022"
+  "]\n\014RegisterUser\022$.come_together_grpc.reg"
+  "ister_request\032%.come_together_grpc.regis"
+  "ter_response\"\000\022T\n\tLoginUser\022!.come_toget"
+  "her_grpc.login_request\032\".come_together_g"
+  "rpc.login_response\"\000\022^\n\tAddMarker\022&.come"
+  "_together_grpc.add_marker_request\032\'.come"
+  "_together_grpc.add_marker_response\"\000\022f\n\014"
+  "DeleteMarker\022).come_together_grpc.delete"
+  "_marker_request\032).come_together_grpc.del"
+  "ete_marker_reponse\"\000\022V\n\rGetAllMarkers\022 ."
+  "come_together_grpc.access_token\032\037.come_t"
+  "ogether_grpc.marker_info\"\0000\001\022X\n\007GetInfo\022"
+  "$.come_together_grpc.get_info_request\032%."
+  "come_together_grpc.get_info_response\"\000\022a"
+  "\n\nUpdateInfo\022\'.come_together_grpc.update"
+  "_info_request\032(.come_together_grpc.updat"
+  "e_info_response\"\000\022d\n\013ManageImage\022(.come_"
+  "together_grpc.manage_image_request\032).com"
+  "e_together_grpc.manage_image_response\"\000\022"
+  "R\n\tGetImages\022&.come_together_grpc.get_im"
+  "ages_request\032\031.come_together_grpc.image\""
+  "\0000\001\022r\n\017SendChatMessage\022-.come_together_g"
+  "rpc.send_chat_message_request\032..come_tog"
+  "ether_grpc.send_chat_message_response\"\000\022"
+  "f\n\017GetChatMessages\022-.come_together_grpc."
+  "get_chat_messages_request\032 .come_togethe"
+  "r_grpc.chat_message\"\0000\001\022T\n\021SubscribeToEv"
+  "ents\022 .come_together_grpc.access_token\032\031"
+  ".come_together_grpc.event\"\0000\001\022l\n\rSendPus"
+  "hToken\022+.come_together_grpc.send_push_to"
+  "ken_request\032,.come_together_grpc.send_pu"
+  "sh_token_response\"\000b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_come_5ftogether_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_come_5ftogether_2eproto_sccs[29] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_come_5ftogether_2eproto_sccs[33] = {
   &scc_info_access_token_come_5ftogether_2eproto.base,
   &scc_info_add_marker_request_come_5ftogether_2eproto.base,
   &scc_info_add_marker_response_come_5ftogether_2eproto.base,
@@ -1053,6 +1185,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_com
   &scc_info_chat_message_come_5ftogether_2eproto.base,
   &scc_info_check_request_come_5ftogether_2eproto.base,
   &scc_info_check_response_come_5ftogether_2eproto.base,
+  &scc_info_delete_marker_reponse_come_5ftogether_2eproto.base,
+  &scc_info_delete_marker_request_come_5ftogether_2eproto.base,
   &scc_info_event_come_5ftogether_2eproto.base,
   &scc_info_get_chat_messages_request_come_5ftogether_2eproto.base,
   &scc_info_get_images_request_come_5ftogether_2eproto.base,
@@ -1068,6 +1202,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_com
   &scc_info_register_response_come_5ftogether_2eproto.base,
   &scc_info_send_chat_message_request_come_5ftogether_2eproto.base,
   &scc_info_send_chat_message_response_come_5ftogether_2eproto.base,
+  &scc_info_send_push_token_request_come_5ftogether_2eproto.base,
+  &scc_info_send_push_token_response_come_5ftogether_2eproto.base,
   &scc_info_update_info_request_come_5ftogether_2eproto.base,
   &scc_info_update_info_response_come_5ftogether_2eproto.base,
   &scc_info_user_info_come_5ftogether_2eproto.base,
@@ -1076,18 +1212,70 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_com
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_come_5ftogether_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_come_5ftogether_2eproto = {
-  false, false, descriptor_table_protodef_come_5ftogether_2eproto, "come_together.proto", 6296,
-  &descriptor_table_come_5ftogether_2eproto_once, descriptor_table_come_5ftogether_2eproto_sccs, descriptor_table_come_5ftogether_2eproto_deps, 29, 0,
+  false, false, descriptor_table_protodef_come_5ftogether_2eproto, "come_together.proto", 7347,
+  &descriptor_table_come_5ftogether_2eproto_once, descriptor_table_come_5ftogether_2eproto_sccs, descriptor_table_come_5ftogether_2eproto_deps, 33, 0,
   schemas, file_default_instances, TableStruct_come_5ftogether_2eproto::offsets,
-  file_level_metadata_come_5ftogether_2eproto, 29, file_level_enum_descriptors_come_5ftogether_2eproto, file_level_service_descriptors_come_5ftogether_2eproto,
+  file_level_metadata_come_5ftogether_2eproto, 33, file_level_enum_descriptors_come_5ftogether_2eproto, file_level_service_descriptors_come_5ftogether_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_come_5ftogether_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_come_5ftogether_2eproto)), true);
-namespace ComeTogether {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ask_token_response_result_descriptor() {
+namespace come_together_grpc {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* send_push_token_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
   return file_level_enum_descriptors_come_5ftogether_2eproto[0];
+}
+bool send_push_token_response_result_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr send_push_token_response_result send_push_token_response::NOT_SET;
+constexpr send_push_token_response_result send_push_token_response::OK;
+constexpr send_push_token_response_result send_push_token_response::USER_NOT_LOGGED_IN;
+constexpr send_push_token_response_result send_push_token_response::OTHER;
+constexpr send_push_token_response_result send_push_token_response::result_MIN;
+constexpr send_push_token_response_result send_push_token_response::result_MAX;
+constexpr int send_push_token_response::result_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* delete_marker_reponse_result_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
+  return file_level_enum_descriptors_come_5ftogether_2eproto[1];
+}
+bool delete_marker_reponse_result_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 999:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr delete_marker_reponse_result delete_marker_reponse::NOT_SET;
+constexpr delete_marker_reponse_result delete_marker_reponse::OK;
+constexpr delete_marker_reponse_result delete_marker_reponse::INSUFFICIENT_PERMISIONS;
+constexpr delete_marker_reponse_result delete_marker_reponse::MARKER_NOT_FOUND;
+constexpr delete_marker_reponse_result delete_marker_reponse::OTHER;
+constexpr delete_marker_reponse_result delete_marker_reponse::result_MIN;
+constexpr delete_marker_reponse_result delete_marker_reponse::result_MAX;
+constexpr int delete_marker_reponse::result_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ask_token_response_result_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
+  return file_level_enum_descriptors_come_5ftogether_2eproto[2];
 }
 bool ask_token_response_result_IsValid(int value) {
   switch (value) {
@@ -1112,7 +1300,7 @@ constexpr int ask_token_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* verify_token_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[1];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[3];
 }
 bool verify_token_response_result_IsValid(int value) {
   switch (value) {
@@ -1139,7 +1327,7 @@ constexpr int verify_token_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* update_info_request_update_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[2];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[4];
 }
 bool update_info_request_update_type_IsValid(int value) {
   switch (value) {
@@ -1162,7 +1350,7 @@ constexpr int update_info_request::update_type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* update_info_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[3];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[5];
 }
 bool update_info_response_result_IsValid(int value) {
   switch (value) {
@@ -1187,7 +1375,7 @@ constexpr int update_info_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* event_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[4];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[6];
 }
 bool event_type_IsValid(int value) {
   switch (value) {
@@ -1222,7 +1410,7 @@ constexpr int event::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* chat_message_message_content_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[5];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[7];
 }
 bool chat_message_message_content_IsValid(int value) {
   switch (value) {
@@ -1243,7 +1431,7 @@ constexpr int chat_message::message_content_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* send_chat_message_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[6];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[8];
 }
 bool send_chat_message_response_result_IsValid(int value) {
   switch (value) {
@@ -1272,7 +1460,7 @@ constexpr int send_chat_message_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_info_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[7];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[9];
 }
 bool get_info_request_type_IsValid(int value) {
   switch (value) {
@@ -1297,7 +1485,7 @@ constexpr int get_info_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_images_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[8];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[10];
 }
 bool get_images_request_type_IsValid(int value) {
   switch (value) {
@@ -1320,7 +1508,7 @@ constexpr int get_images_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* manage_image_request_action_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[9];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[11];
 }
 bool manage_image_request_action_IsValid(int value) {
   switch (value) {
@@ -1347,7 +1535,7 @@ constexpr int manage_image_request::action_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* manage_image_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[10];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[12];
 }
 bool manage_image_response_result_IsValid(int value) {
   switch (value) {
@@ -1372,7 +1560,7 @@ constexpr int manage_image_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* check_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[11];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[13];
 }
 bool check_request_type_IsValid(int value) {
   switch (value) {
@@ -1395,7 +1583,7 @@ constexpr int check_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* check_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[12];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[14];
 }
 bool check_response_result_IsValid(int value) {
   switch (value) {
@@ -1420,7 +1608,7 @@ constexpr int check_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* login_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[13];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[15];
 }
 bool login_response_result_IsValid(int value) {
   switch (value) {
@@ -1447,7 +1635,7 @@ constexpr int login_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* register_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[14];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[16];
 }
 bool register_response_result_IsValid(int value) {
   switch (value) {
@@ -1474,7 +1662,7 @@ constexpr int register_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_category_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[15];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[17];
 }
 bool marker_info_category_IsValid(int value) {
   switch (value) {
@@ -1529,7 +1717,7 @@ constexpr int marker_info::category_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[16];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[18];
 }
 bool marker_info_type_IsValid(int value) {
   switch (value) {
@@ -1552,7 +1740,7 @@ constexpr int marker_info::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* add_marker_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[17];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[19];
 }
 bool add_marker_response_result_IsValid(int value) {
   switch (value) {
@@ -1590,7 +1778,7 @@ image::image(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.image)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.image)
 }
 image::image(const image& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1606,7 +1794,7 @@ image::image(const image& from)
       GetArena());
   }
   sequence_number_ = from.sequence_number_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.image)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.image)
 }
 
 void image::SharedCtor() {
@@ -1617,7 +1805,7 @@ void image::SharedCtor() {
 }
 
 image::~image() {
-  // @@protoc_insertion_point(destructor:ComeTogether.image)
+  // @@protoc_insertion_point(destructor:come_together_grpc.image)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1644,7 +1832,7 @@ const image& image::default_instance() {
 
 
 void image::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.image)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.image)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1676,7 +1864,7 @@ const char* image::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.image.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.image.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1711,7 +1899,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* image::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.image)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.image)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1726,7 +1914,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.image.uuid");
+      "come_together_grpc.image.uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_uuid(), target);
   }
@@ -1741,12 +1929,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.image)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.image)
   return target;
 }
 
 size_t image::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.image)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.image)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1784,22 +1972,22 @@ size_t image::ByteSizeLong() const {
 }
 
 void image::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.image)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.image)
   GOOGLE_DCHECK_NE(&from, this);
   const image* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<image>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.image)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.image)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.image)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.image)
     MergeFrom(*source);
   }
 }
 
 void image::MergeFrom(const image& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.image)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.image)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1817,14 +2005,14 @@ void image::MergeFrom(const image& from) {
 }
 
 void image::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.image)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.image)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void image::CopyFrom(const image& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.image)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.image)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1859,7 +2047,7 @@ access_token::access_token(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.access_token)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.access_token)
 }
 access_token::access_token(const access_token& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1869,7 +2057,7 @@ access_token::access_token(const access_token& from)
     token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.access_token)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.access_token)
 }
 
 void access_token::SharedCtor() {
@@ -1878,7 +2066,7 @@ void access_token::SharedCtor() {
 }
 
 access_token::~access_token() {
-  // @@protoc_insertion_point(destructor:ComeTogether.access_token)
+  // @@protoc_insertion_point(destructor:come_together_grpc.access_token)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1904,7 +2092,7 @@ const access_token& access_token::default_instance() {
 
 
 void access_token::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.access_token)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.access_token)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1926,7 +2114,7 @@ const char* access_token::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.access_token.token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.access_token.token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1954,7 +2142,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* access_token::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.access_token)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.access_token)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1963,7 +2151,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.access_token.token");
+      "come_together_grpc.access_token.token");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_token(), target);
   }
@@ -1972,12 +2160,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.access_token)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.access_token)
   return target;
 }
 
 size_t access_token::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.access_token)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.access_token)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2001,22 +2189,22 @@ size_t access_token::ByteSizeLong() const {
 }
 
 void access_token::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.access_token)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.access_token)
   GOOGLE_DCHECK_NE(&from, this);
   const access_token* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<access_token>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.access_token)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.access_token)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.access_token)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.access_token)
     MergeFrom(*source);
   }
 }
 
 void access_token::MergeFrom(const access_token& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.access_token)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.access_token)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2028,14 +2216,14 @@ void access_token::MergeFrom(const access_token& from) {
 }
 
 void access_token::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.access_token)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.access_token)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void access_token::CopyFrom(const access_token& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.access_token)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.access_token)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2058,6 +2246,896 @@ void access_token::InternalSwap(access_token* other) {
 
 // ===================================================================
 
+void send_push_token_request::InitAsDefaultInstance() {
+}
+class send_push_token_request::_Internal {
+ public:
+};
+
+send_push_token_request::send_push_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.send_push_token_request)
+}
+send_push_token_request::send_push_token_request(const send_push_token_request& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_access_token().empty()) {
+    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
+      GetArena());
+  }
+  push_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_push_token().empty()) {
+    push_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_push_token(),
+      GetArena());
+  }
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.send_push_token_request)
+}
+
+void send_push_token_request::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_send_push_token_request_come_5ftogether_2eproto.base);
+  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  push_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+send_push_token_request::~send_push_token_request() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.send_push_token_request)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void send_push_token_request::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  push_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void send_push_token_request::ArenaDtor(void* object) {
+  send_push_token_request* _this = reinterpret_cast< send_push_token_request* >(object);
+  (void)_this;
+}
+void send_push_token_request::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void send_push_token_request::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const send_push_token_request& send_push_token_request::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_send_push_token_request_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void send_push_token_request::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.send_push_token_request)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  push_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* send_push_token_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string access_token = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_access_token();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.send_push_token_request.access_token"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string push_token = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_push_token();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.send_push_token_request.push_token"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* send_push_token_request::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.send_push_token_request)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "come_together_grpc.send_push_token_request.access_token");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_access_token(), target);
+  }
+
+  // string push_token = 2;
+  if (this->push_token().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_push_token().data(), static_cast<int>(this->_internal_push_token().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "come_together_grpc.send_push_token_request.push_token");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_push_token(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.send_push_token_request)
+  return target;
+}
+
+size_t send_push_token_request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.send_push_token_request)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_access_token());
+  }
+
+  // string push_token = 2;
+  if (this->push_token().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_push_token());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void send_push_token_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.send_push_token_request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const send_push_token_request* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<send_push_token_request>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.send_push_token_request)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.send_push_token_request)
+    MergeFrom(*source);
+  }
+}
+
+void send_push_token_request::MergeFrom(const send_push_token_request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.send_push_token_request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.access_token().size() > 0) {
+    _internal_set_access_token(from._internal_access_token());
+  }
+  if (from.push_token().size() > 0) {
+    _internal_set_push_token(from._internal_push_token());
+  }
+}
+
+void send_push_token_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.send_push_token_request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void send_push_token_request::CopyFrom(const send_push_token_request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.send_push_token_request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool send_push_token_request::IsInitialized() const {
+  return true;
+}
+
+void send_push_token_request::InternalSwap(send_push_token_request* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  push_token_.Swap(&other->push_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata send_push_token_request::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void send_push_token_response::InitAsDefaultInstance() {
+}
+class send_push_token_response::_Internal {
+ public:
+};
+
+send_push_token_response::send_push_token_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.send_push_token_response)
+}
+send_push_token_response::send_push_token_response(const send_push_token_response& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  res_ = from.res_;
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.send_push_token_response)
+}
+
+void send_push_token_response::SharedCtor() {
+  res_ = 0;
+}
+
+send_push_token_response::~send_push_token_response() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.send_push_token_response)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void send_push_token_response::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void send_push_token_response::ArenaDtor(void* object) {
+  send_push_token_response* _this = reinterpret_cast< send_push_token_response* >(object);
+  (void)_this;
+}
+void send_push_token_response::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void send_push_token_response::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const send_push_token_response& send_push_token_response::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_send_push_token_response_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void send_push_token_response::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.send_push_token_response)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  res_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* send_push_token_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .come_together_grpc.send_push_token_response.result res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_res(static_cast<::come_together_grpc::send_push_token_response_result>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* send_push_token_response::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.send_push_token_response)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .come_together_grpc.send_push_token_response.result res = 1;
+  if (this->res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_res(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.send_push_token_response)
+  return target;
+}
+
+size_t send_push_token_response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.send_push_token_response)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .come_together_grpc.send_push_token_response.result res = 1;
+  if (this->res() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void send_push_token_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.send_push_token_response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const send_push_token_response* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<send_push_token_response>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.send_push_token_response)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.send_push_token_response)
+    MergeFrom(*source);
+  }
+}
+
+void send_push_token_response::MergeFrom(const send_push_token_response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.send_push_token_response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.res() != 0) {
+    _internal_set_res(from._internal_res());
+  }
+}
+
+void send_push_token_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.send_push_token_response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void send_push_token_response::CopyFrom(const send_push_token_response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.send_push_token_response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool send_push_token_response::IsInitialized() const {
+  return true;
+}
+
+void send_push_token_response::InternalSwap(send_push_token_response* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(res_, other->res_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata send_push_token_response::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void delete_marker_request::InitAsDefaultInstance() {
+}
+class delete_marker_request::_Internal {
+ public:
+};
+
+delete_marker_request::delete_marker_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.delete_marker_request)
+}
+delete_marker_request::delete_marker_request(const delete_marker_request& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_access_token().empty()) {
+    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
+      GetArena());
+  }
+  marker_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_marker_uuid().empty()) {
+    marker_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_marker_uuid(),
+      GetArena());
+  }
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.delete_marker_request)
+}
+
+void delete_marker_request::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_delete_marker_request_come_5ftogether_2eproto.base);
+  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  marker_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+delete_marker_request::~delete_marker_request() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.delete_marker_request)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void delete_marker_request::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  marker_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void delete_marker_request::ArenaDtor(void* object) {
+  delete_marker_request* _this = reinterpret_cast< delete_marker_request* >(object);
+  (void)_this;
+}
+void delete_marker_request::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void delete_marker_request::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const delete_marker_request& delete_marker_request::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_delete_marker_request_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void delete_marker_request::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.delete_marker_request)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  marker_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* delete_marker_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string access_token = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_access_token();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.delete_marker_request.access_token"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string marker_uuid = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_marker_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.delete_marker_request.marker_uuid"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* delete_marker_request::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.delete_marker_request)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "come_together_grpc.delete_marker_request.access_token");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_access_token(), target);
+  }
+
+  // string marker_uuid = 2;
+  if (this->marker_uuid().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_marker_uuid().data(), static_cast<int>(this->_internal_marker_uuid().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "come_together_grpc.delete_marker_request.marker_uuid");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_marker_uuid(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.delete_marker_request)
+  return target;
+}
+
+size_t delete_marker_request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.delete_marker_request)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string access_token = 1;
+  if (this->access_token().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_access_token());
+  }
+
+  // string marker_uuid = 2;
+  if (this->marker_uuid().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_marker_uuid());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void delete_marker_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.delete_marker_request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const delete_marker_request* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<delete_marker_request>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.delete_marker_request)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.delete_marker_request)
+    MergeFrom(*source);
+  }
+}
+
+void delete_marker_request::MergeFrom(const delete_marker_request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.delete_marker_request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.access_token().size() > 0) {
+    _internal_set_access_token(from._internal_access_token());
+  }
+  if (from.marker_uuid().size() > 0) {
+    _internal_set_marker_uuid(from._internal_marker_uuid());
+  }
+}
+
+void delete_marker_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.delete_marker_request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void delete_marker_request::CopyFrom(const delete_marker_request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.delete_marker_request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool delete_marker_request::IsInitialized() const {
+  return true;
+}
+
+void delete_marker_request::InternalSwap(delete_marker_request* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  marker_uuid_.Swap(&other->marker_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata delete_marker_request::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void delete_marker_reponse::InitAsDefaultInstance() {
+}
+class delete_marker_reponse::_Internal {
+ public:
+};
+
+delete_marker_reponse::delete_marker_reponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.delete_marker_reponse)
+}
+delete_marker_reponse::delete_marker_reponse(const delete_marker_reponse& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  res_ = from.res_;
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.delete_marker_reponse)
+}
+
+void delete_marker_reponse::SharedCtor() {
+  res_ = 0;
+}
+
+delete_marker_reponse::~delete_marker_reponse() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.delete_marker_reponse)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void delete_marker_reponse::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void delete_marker_reponse::ArenaDtor(void* object) {
+  delete_marker_reponse* _this = reinterpret_cast< delete_marker_reponse* >(object);
+  (void)_this;
+}
+void delete_marker_reponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void delete_marker_reponse::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const delete_marker_reponse& delete_marker_reponse::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_delete_marker_reponse_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void delete_marker_reponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.delete_marker_reponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  res_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* delete_marker_reponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .come_together_grpc.delete_marker_reponse.result res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_res(static_cast<::come_together_grpc::delete_marker_reponse_result>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* delete_marker_reponse::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.delete_marker_reponse)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .come_together_grpc.delete_marker_reponse.result res = 1;
+  if (this->res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_res(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.delete_marker_reponse)
+  return target;
+}
+
+size_t delete_marker_reponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.delete_marker_reponse)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .come_together_grpc.delete_marker_reponse.result res = 1;
+  if (this->res() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void delete_marker_reponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.delete_marker_reponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const delete_marker_reponse* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<delete_marker_reponse>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.delete_marker_reponse)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.delete_marker_reponse)
+    MergeFrom(*source);
+  }
+}
+
+void delete_marker_reponse::MergeFrom(const delete_marker_reponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.delete_marker_reponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.res() != 0) {
+    _internal_set_res(from._internal_res());
+  }
+}
+
+void delete_marker_reponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.delete_marker_reponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void delete_marker_reponse::CopyFrom(const delete_marker_reponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.delete_marker_reponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool delete_marker_reponse::IsInitialized() const {
+  return true;
+}
+
+void delete_marker_reponse::InternalSwap(delete_marker_reponse* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(res_, other->res_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata delete_marker_reponse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void ask_token_request::InitAsDefaultInstance() {
 }
 class ask_token_request::_Internal {
@@ -2068,7 +3146,7 @@ ask_token_request::ask_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.ask_token_request)
 }
 ask_token_request::ask_token_request(const ask_token_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2078,7 +3156,7 @@ ask_token_request::ask_token_request(const ask_token_request& from)
     email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_email(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.ask_token_request)
 }
 
 void ask_token_request::SharedCtor() {
@@ -2087,7 +3165,7 @@ void ask_token_request::SharedCtor() {
 }
 
 ask_token_request::~ask_token_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.ask_token_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2113,7 +3191,7 @@ const ask_token_request& ask_token_request::default_instance() {
 
 
 void ask_token_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.ask_token_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.ask_token_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2135,7 +3213,7 @@ const char* ask_token_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_email();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.ask_token_request.email"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.ask_token_request.email"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2163,7 +3241,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* ask_token_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.ask_token_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2172,7 +3250,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_email().data(), static_cast<int>(this->_internal_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.ask_token_request.email");
+      "come_together_grpc.ask_token_request.email");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_email(), target);
   }
@@ -2181,12 +3259,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.ask_token_request)
   return target;
 }
 
 size_t ask_token_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.ask_token_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.ask_token_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2210,22 +3288,22 @@ size_t ask_token_request::ByteSizeLong() const {
 }
 
 void ask_token_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.ask_token_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.ask_token_request)
   GOOGLE_DCHECK_NE(&from, this);
   const ask_token_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ask_token_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.ask_token_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.ask_token_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.ask_token_request)
     MergeFrom(*source);
   }
 }
 
 void ask_token_request::MergeFrom(const ask_token_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.ask_token_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.ask_token_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2237,14 +3315,14 @@ void ask_token_request::MergeFrom(const ask_token_request& from) {
 }
 
 void ask_token_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.ask_token_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.ask_token_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ask_token_request::CopyFrom(const ask_token_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.ask_token_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.ask_token_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2277,13 +3355,13 @@ ask_token_response::ask_token_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.ask_token_response)
 }
 ask_token_response::ask_token_response(const ask_token_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.ask_token_response)
 }
 
 void ask_token_response::SharedCtor() {
@@ -2291,7 +3369,7 @@ void ask_token_response::SharedCtor() {
 }
 
 ask_token_response::~ask_token_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.ask_token_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2316,7 +3394,7 @@ const ask_token_response& ask_token_response::default_instance() {
 
 
 void ask_token_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.ask_token_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.ask_token_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2333,12 +3411,12 @@ const char* ask_token_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.ask_token_response.result res = 1;
+      // .come_together_grpc.ask_token_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::ask_token_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::ask_token_response_result>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -2365,11 +3443,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* ask_token_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.ask_token_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.ask_token_response.result res = 1;
+  // .come_together_grpc.ask_token_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2380,19 +3458,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.ask_token_response)
   return target;
 }
 
 size_t ask_token_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.ask_token_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.ask_token_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.ask_token_response.result res = 1;
+  // .come_together_grpc.ask_token_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -2408,22 +3486,22 @@ size_t ask_token_response::ByteSizeLong() const {
 }
 
 void ask_token_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.ask_token_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.ask_token_response)
   GOOGLE_DCHECK_NE(&from, this);
   const ask_token_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ask_token_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.ask_token_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.ask_token_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.ask_token_response)
     MergeFrom(*source);
   }
 }
 
 void ask_token_response::MergeFrom(const ask_token_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.ask_token_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.ask_token_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2435,14 +3513,14 @@ void ask_token_response::MergeFrom(const ask_token_response& from) {
 }
 
 void ask_token_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.ask_token_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.ask_token_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ask_token_response::CopyFrom(const ask_token_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.ask_token_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.ask_token_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2475,7 +3553,7 @@ verify_token_request::verify_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.verify_token_request)
 }
 verify_token_request::verify_token_request(const verify_token_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2490,7 +3568,7 @@ verify_token_request::verify_token_request(const verify_token_request& from)
     token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.verify_token_request)
 }
 
 void verify_token_request::SharedCtor() {
@@ -2500,7 +3578,7 @@ void verify_token_request::SharedCtor() {
 }
 
 verify_token_request::~verify_token_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.verify_token_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2527,7 +3605,7 @@ const verify_token_request& verify_token_request::default_instance() {
 
 
 void verify_token_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.verify_token_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.verify_token_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2550,7 +3628,7 @@ const char* verify_token_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_email();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.verify_token_request.email"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.verify_token_request.email"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2559,7 +3637,7 @@ const char* verify_token_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.verify_token_request.token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.verify_token_request.token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2587,7 +3665,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* verify_token_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.verify_token_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2596,7 +3674,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_email().data(), static_cast<int>(this->_internal_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.verify_token_request.email");
+      "come_together_grpc.verify_token_request.email");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_email(), target);
   }
@@ -2606,7 +3684,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.verify_token_request.token");
+      "come_together_grpc.verify_token_request.token");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_token(), target);
   }
@@ -2615,12 +3693,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.verify_token_request)
   return target;
 }
 
 size_t verify_token_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.verify_token_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.verify_token_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2651,22 +3729,22 @@ size_t verify_token_request::ByteSizeLong() const {
 }
 
 void verify_token_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.verify_token_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.verify_token_request)
   GOOGLE_DCHECK_NE(&from, this);
   const verify_token_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<verify_token_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.verify_token_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.verify_token_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.verify_token_request)
     MergeFrom(*source);
   }
 }
 
 void verify_token_request::MergeFrom(const verify_token_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.verify_token_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.verify_token_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2681,14 +3759,14 @@ void verify_token_request::MergeFrom(const verify_token_request& from) {
 }
 
 void verify_token_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.verify_token_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.verify_token_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void verify_token_request::CopyFrom(const verify_token_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.verify_token_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.verify_token_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2722,13 +3800,13 @@ verify_token_response::verify_token_response(::PROTOBUF_NAMESPACE_ID::Arena* are
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.verify_token_response)
 }
 verify_token_response::verify_token_response(const verify_token_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.verify_token_response)
 }
 
 void verify_token_response::SharedCtor() {
@@ -2736,7 +3814,7 @@ void verify_token_response::SharedCtor() {
 }
 
 verify_token_response::~verify_token_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.verify_token_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2761,7 +3839,7 @@ const verify_token_response& verify_token_response::default_instance() {
 
 
 void verify_token_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.verify_token_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.verify_token_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2778,12 +3856,12 @@ const char* verify_token_response::_InternalParse(const char* ptr, ::PROTOBUF_NA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.verify_token_response.result res = 1;
+      // .come_together_grpc.verify_token_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::verify_token_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::verify_token_response_result>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -2810,11 +3888,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* verify_token_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.verify_token_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.verify_token_response.result res = 1;
+  // .come_together_grpc.verify_token_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -2825,19 +3903,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.verify_token_response)
   return target;
 }
 
 size_t verify_token_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.verify_token_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.verify_token_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.verify_token_response.result res = 1;
+  // .come_together_grpc.verify_token_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -2853,22 +3931,22 @@ size_t verify_token_response::ByteSizeLong() const {
 }
 
 void verify_token_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.verify_token_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.verify_token_response)
   GOOGLE_DCHECK_NE(&from, this);
   const verify_token_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<verify_token_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.verify_token_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.verify_token_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.verify_token_response)
     MergeFrom(*source);
   }
 }
 
 void verify_token_response::MergeFrom(const verify_token_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.verify_token_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.verify_token_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2880,14 +3958,14 @@ void verify_token_response::MergeFrom(const verify_token_response& from) {
 }
 
 void verify_token_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.verify_token_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.verify_token_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void verify_token_response::CopyFrom(const verify_token_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.verify_token_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.verify_token_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2911,26 +3989,26 @@ void verify_token_response::InternalSwap(verify_token_response* other) {
 // ===================================================================
 
 void update_info_request::InitAsDefaultInstance() {
-  ::ComeTogether::_update_info_request_default_instance_.m_info_ = const_cast< ::ComeTogether::marker_info*>(
-      ::ComeTogether::marker_info::internal_default_instance());
-  ::ComeTogether::_update_info_request_default_instance_.u_info_ = const_cast< ::ComeTogether::user_info*>(
-      ::ComeTogether::user_info::internal_default_instance());
+  ::come_together_grpc::_update_info_request_default_instance_.m_info_ = const_cast< ::come_together_grpc::marker_info*>(
+      ::come_together_grpc::marker_info::internal_default_instance());
+  ::come_together_grpc::_update_info_request_default_instance_.u_info_ = const_cast< ::come_together_grpc::user_info*>(
+      ::come_together_grpc::user_info::internal_default_instance());
 }
 class update_info_request::_Internal {
  public:
-  static const ::ComeTogether::marker_info& m_info(const update_info_request* msg);
-  static const ::ComeTogether::user_info& u_info(const update_info_request* msg);
+  static const ::come_together_grpc::marker_info& m_info(const update_info_request* msg);
+  static const ::come_together_grpc::user_info& u_info(const update_info_request* msg);
 };
 
-const ::ComeTogether::marker_info&
+const ::come_together_grpc::marker_info&
 update_info_request::_Internal::m_info(const update_info_request* msg) {
   return *msg->data_.m_info_;
 }
-const ::ComeTogether::user_info&
+const ::come_together_grpc::user_info&
 update_info_request::_Internal::u_info(const update_info_request* msg) {
   return *msg->data_.u_info_;
 }
-void update_info_request::set_allocated_m_info(::ComeTogether::marker_info* m_info) {
+void update_info_request::set_allocated_m_info(::come_together_grpc::marker_info* m_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (m_info) {
@@ -2943,9 +4021,9 @@ void update_info_request::set_allocated_m_info(::ComeTogether::marker_info* m_in
     set_has_m_info();
     data_.m_info_ = m_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.update_info_request.m_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.update_info_request.m_info)
 }
-void update_info_request::set_allocated_u_info(::ComeTogether::user_info* u_info) {
+void update_info_request::set_allocated_u_info(::come_together_grpc::user_info* u_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (u_info) {
@@ -2958,13 +4036,13 @@ void update_info_request::set_allocated_u_info(::ComeTogether::user_info* u_info
     set_has_u_info();
     data_.u_info_ = u_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.update_info_request.u_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.update_info_request.u_info)
 }
 update_info_request::update_info_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.update_info_request)
 }
 update_info_request::update_info_request(const update_info_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2978,18 +4056,18 @@ update_info_request::update_info_request(const update_info_request& from)
   clear_has_data();
   switch (from.data_case()) {
     case kMInfo: {
-      _internal_mutable_m_info()->::ComeTogether::marker_info::MergeFrom(from._internal_m_info());
+      _internal_mutable_m_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_m_info());
       break;
     }
     case kUInfo: {
-      _internal_mutable_u_info()->::ComeTogether::user_info::MergeFrom(from._internal_u_info());
+      _internal_mutable_u_info()->::come_together_grpc::user_info::MergeFrom(from._internal_u_info());
       break;
     }
     case DATA_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.update_info_request)
 }
 
 void update_info_request::SharedCtor() {
@@ -3000,7 +4078,7 @@ void update_info_request::SharedCtor() {
 }
 
 update_info_request::~update_info_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.update_info_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3029,7 +4107,7 @@ const update_info_request& update_info_request::default_instance() {
 
 
 void update_info_request::clear_data() {
-// @@protoc_insertion_point(one_of_clear_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(one_of_clear_start:come_together_grpc.update_info_request)
   switch (data_case()) {
     case kMInfo: {
       if (GetArena() == nullptr) {
@@ -3052,7 +4130,7 @@ void update_info_request::clear_data() {
 
 
 void update_info_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.update_info_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3076,26 +4154,26 @@ const char* update_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAME
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.update_info_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.update_info_request.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.update_info_request.update_type type = 2;
+      // .come_together_grpc.update_info_request.update_type type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_type(static_cast<::ComeTogether::update_info_request_update_type>(val));
+          _internal_set_type(static_cast<::come_together_grpc::update_info_request_update_type>(val));
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.marker_info m_info = 3;
+      // .come_together_grpc.marker_info m_info = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_m_info(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.user_info u_info = 4;
+      // .come_together_grpc.user_info u_info = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_u_info(), ptr);
@@ -3126,7 +4204,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* update_info_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.update_info_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3135,19 +4213,19 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.update_info_request.access_token");
+      "come_together_grpc.update_info_request.access_token");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_access_token(), target);
   }
 
-  // .ComeTogether.update_info_request.update_type type = 2;
+  // .come_together_grpc.update_info_request.update_type type = 2;
   if (this->type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       2, this->_internal_type(), target);
   }
 
-  // .ComeTogether.marker_info m_info = 3;
+  // .come_together_grpc.marker_info m_info = 3;
   if (_internal_has_m_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3155,7 +4233,7 @@ failure:
         3, _Internal::m_info(this), target, stream);
   }
 
-  // .ComeTogether.user_info u_info = 4;
+  // .come_together_grpc.user_info u_info = 4;
   if (_internal_has_u_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3167,12 +4245,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.update_info_request)
   return target;
 }
 
 size_t update_info_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.update_info_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3186,21 +4264,21 @@ size_t update_info_request::ByteSizeLong() const {
         this->_internal_access_token());
   }
 
-  // .ComeTogether.update_info_request.update_type type = 2;
+  // .come_together_grpc.update_info_request.update_type type = 2;
   if (this->type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   switch (data_case()) {
-    // .ComeTogether.marker_info m_info = 3;
+    // .come_together_grpc.marker_info m_info = 3;
     case kMInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.m_info_);
       break;
     }
-    // .ComeTogether.user_info u_info = 4;
+    // .come_together_grpc.user_info u_info = 4;
     case kUInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3221,22 +4299,22 @@ size_t update_info_request::ByteSizeLong() const {
 }
 
 void update_info_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.update_info_request)
   GOOGLE_DCHECK_NE(&from, this);
   const update_info_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<update_info_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.update_info_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.update_info_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.update_info_request)
     MergeFrom(*source);
   }
 }
 
 void update_info_request::MergeFrom(const update_info_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.update_info_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3250,11 +4328,11 @@ void update_info_request::MergeFrom(const update_info_request& from) {
   }
   switch (from.data_case()) {
     case kMInfo: {
-      _internal_mutable_m_info()->::ComeTogether::marker_info::MergeFrom(from._internal_m_info());
+      _internal_mutable_m_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_m_info());
       break;
     }
     case kUInfo: {
-      _internal_mutable_u_info()->::ComeTogether::user_info::MergeFrom(from._internal_u_info());
+      _internal_mutable_u_info()->::come_together_grpc::user_info::MergeFrom(from._internal_u_info());
       break;
     }
     case DATA_NOT_SET: {
@@ -3264,14 +4342,14 @@ void update_info_request::MergeFrom(const update_info_request& from) {
 }
 
 void update_info_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.update_info_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void update_info_request::CopyFrom(const update_info_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.update_info_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.update_info_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3307,13 +4385,13 @@ update_info_response::update_info_response(::PROTOBUF_NAMESPACE_ID::Arena* arena
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.update_info_response)
 }
 update_info_response::update_info_response(const update_info_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.update_info_response)
 }
 
 void update_info_response::SharedCtor() {
@@ -3321,7 +4399,7 @@ void update_info_response::SharedCtor() {
 }
 
 update_info_response::~update_info_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.update_info_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3346,7 +4424,7 @@ const update_info_response& update_info_response::default_instance() {
 
 
 void update_info_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.update_info_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.update_info_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3363,12 +4441,12 @@ const char* update_info_response::_InternalParse(const char* ptr, ::PROTOBUF_NAM
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.update_info_response.result res = 1;
+      // .come_together_grpc.update_info_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::update_info_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::update_info_response_result>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -3395,11 +4473,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* update_info_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.update_info_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.update_info_response.result res = 1;
+  // .come_together_grpc.update_info_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -3410,19 +4488,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.update_info_response)
   return target;
 }
 
 size_t update_info_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.update_info_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.update_info_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.update_info_response.result res = 1;
+  // .come_together_grpc.update_info_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -3438,22 +4516,22 @@ size_t update_info_response::ByteSizeLong() const {
 }
 
 void update_info_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.update_info_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.update_info_response)
   GOOGLE_DCHECK_NE(&from, this);
   const update_info_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<update_info_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.update_info_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.update_info_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.update_info_response)
     MergeFrom(*source);
   }
 }
 
 void update_info_response::MergeFrom(const update_info_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.update_info_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.update_info_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3465,14 +4543,14 @@ void update_info_response::MergeFrom(const update_info_response& from) {
 }
 
 void update_info_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.update_info_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.update_info_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void update_info_response::CopyFrom(const update_info_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.update_info_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.update_info_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3496,33 +4574,33 @@ void update_info_response::InternalSwap(update_info_response* other) {
 // ===================================================================
 
 void event::InitAsDefaultInstance() {
-  ::ComeTogether::_event_default_instance_.m_info_ = const_cast< ::ComeTogether::marker_info*>(
-      ::ComeTogether::marker_info::internal_default_instance());
-  ::ComeTogether::_event_default_instance_.c_message_ = const_cast< ::ComeTogether::chat_message*>(
-      ::ComeTogether::chat_message::internal_default_instance());
-  ::ComeTogether::_event_default_instance_.u_info_ = const_cast< ::ComeTogether::user_info*>(
-      ::ComeTogether::user_info::internal_default_instance());
+  ::come_together_grpc::_event_default_instance_.m_info_ = const_cast< ::come_together_grpc::marker_info*>(
+      ::come_together_grpc::marker_info::internal_default_instance());
+  ::come_together_grpc::_event_default_instance_.c_message_ = const_cast< ::come_together_grpc::chat_message*>(
+      ::come_together_grpc::chat_message::internal_default_instance());
+  ::come_together_grpc::_event_default_instance_.u_info_ = const_cast< ::come_together_grpc::user_info*>(
+      ::come_together_grpc::user_info::internal_default_instance());
 }
 class event::_Internal {
  public:
-  static const ::ComeTogether::marker_info& m_info(const event* msg);
-  static const ::ComeTogether::chat_message& c_message(const event* msg);
-  static const ::ComeTogether::user_info& u_info(const event* msg);
+  static const ::come_together_grpc::marker_info& m_info(const event* msg);
+  static const ::come_together_grpc::chat_message& c_message(const event* msg);
+  static const ::come_together_grpc::user_info& u_info(const event* msg);
 };
 
-const ::ComeTogether::marker_info&
+const ::come_together_grpc::marker_info&
 event::_Internal::m_info(const event* msg) {
   return *msg->data_.m_info_;
 }
-const ::ComeTogether::chat_message&
+const ::come_together_grpc::chat_message&
 event::_Internal::c_message(const event* msg) {
   return *msg->data_.c_message_;
 }
-const ::ComeTogether::user_info&
+const ::come_together_grpc::user_info&
 event::_Internal::u_info(const event* msg) {
   return *msg->data_.u_info_;
 }
-void event::set_allocated_m_info(::ComeTogether::marker_info* m_info) {
+void event::set_allocated_m_info(::come_together_grpc::marker_info* m_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (m_info) {
@@ -3535,9 +4613,9 @@ void event::set_allocated_m_info(::ComeTogether::marker_info* m_info) {
     set_has_m_info();
     data_.m_info_ = m_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.event.m_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.event.m_info)
 }
-void event::set_allocated_c_message(::ComeTogether::chat_message* c_message) {
+void event::set_allocated_c_message(::come_together_grpc::chat_message* c_message) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (c_message) {
@@ -3550,9 +4628,9 @@ void event::set_allocated_c_message(::ComeTogether::chat_message* c_message) {
     set_has_c_message();
     data_.c_message_ = c_message;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.event.c_message)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.event.c_message)
 }
-void event::set_allocated_u_info(::ComeTogether::user_info* u_info) {
+void event::set_allocated_u_info(::come_together_grpc::user_info* u_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (u_info) {
@@ -3565,13 +4643,13 @@ void event::set_allocated_u_info(::ComeTogether::user_info* u_info) {
     set_has_u_info();
     data_.u_info_ = u_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.event.u_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.event.u_info)
 }
 event::event(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.event)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.event)
 }
 event::event(const event& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3580,22 +4658,22 @@ event::event(const event& from)
   clear_has_data();
   switch (from.data_case()) {
     case kMInfo: {
-      _internal_mutable_m_info()->::ComeTogether::marker_info::MergeFrom(from._internal_m_info());
+      _internal_mutable_m_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_m_info());
       break;
     }
     case kCMessage: {
-      _internal_mutable_c_message()->::ComeTogether::chat_message::MergeFrom(from._internal_c_message());
+      _internal_mutable_c_message()->::come_together_grpc::chat_message::MergeFrom(from._internal_c_message());
       break;
     }
     case kUInfo: {
-      _internal_mutable_u_info()->::ComeTogether::user_info::MergeFrom(from._internal_u_info());
+      _internal_mutable_u_info()->::come_together_grpc::user_info::MergeFrom(from._internal_u_info());
       break;
     }
     case DATA_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.event)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.event)
 }
 
 void event::SharedCtor() {
@@ -3605,7 +4683,7 @@ void event::SharedCtor() {
 }
 
 event::~event() {
-  // @@protoc_insertion_point(destructor:ComeTogether.event)
+  // @@protoc_insertion_point(destructor:come_together_grpc.event)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3633,7 +4711,7 @@ const event& event::default_instance() {
 
 
 void event::clear_data() {
-// @@protoc_insertion_point(one_of_clear_start:ComeTogether.event)
+// @@protoc_insertion_point(one_of_clear_start:come_together_grpc.event)
   switch (data_case()) {
     case kMInfo: {
       if (GetArena() == nullptr) {
@@ -3662,7 +4740,7 @@ void event::clear_data() {
 
 
 void event::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.event)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.event)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3680,29 +4758,29 @@ const char* event::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.event.type event_type = 1;
+      // .come_together_grpc.event.type event_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_event_type(static_cast<::ComeTogether::event_type>(val));
+          _internal_set_event_type(static_cast<::come_together_grpc::event_type>(val));
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.marker_info m_info = 2;
+      // .come_together_grpc.marker_info m_info = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_m_info(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.chat_message c_message = 3;
+      // .come_together_grpc.chat_message c_message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_c_message(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.user_info u_info = 4;
+      // .come_together_grpc.user_info u_info = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_u_info(), ptr);
@@ -3733,18 +4811,18 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* event::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.event)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.event)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.event.type event_type = 1;
+  // .come_together_grpc.event.type event_type = 1;
   if (this->event_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->_internal_event_type(), target);
   }
 
-  // .ComeTogether.marker_info m_info = 2;
+  // .come_together_grpc.marker_info m_info = 2;
   if (_internal_has_m_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3752,7 +4830,7 @@ failure:
         2, _Internal::m_info(this), target, stream);
   }
 
-  // .ComeTogether.chat_message c_message = 3;
+  // .come_together_grpc.chat_message c_message = 3;
   if (_internal_has_c_message()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3760,7 +4838,7 @@ failure:
         3, _Internal::c_message(this), target, stream);
   }
 
-  // .ComeTogether.user_info u_info = 4;
+  // .come_together_grpc.user_info u_info = 4;
   if (_internal_has_u_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3772,40 +4850,40 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.event)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.event)
   return target;
 }
 
 size_t event::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.event)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.event)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.event.type event_type = 1;
+  // .come_together_grpc.event.type event_type = 1;
   if (this->event_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_event_type());
   }
 
   switch (data_case()) {
-    // .ComeTogether.marker_info m_info = 2;
+    // .come_together_grpc.marker_info m_info = 2;
     case kMInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.m_info_);
       break;
     }
-    // .ComeTogether.chat_message c_message = 3;
+    // .come_together_grpc.chat_message c_message = 3;
     case kCMessage: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.c_message_);
       break;
     }
-    // .ComeTogether.user_info u_info = 4;
+    // .come_together_grpc.user_info u_info = 4;
     case kUInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3826,22 +4904,22 @@ size_t event::ByteSizeLong() const {
 }
 
 void event::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.event)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.event)
   GOOGLE_DCHECK_NE(&from, this);
   const event* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<event>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.event)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.event)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.event)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.event)
     MergeFrom(*source);
   }
 }
 
 void event::MergeFrom(const event& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.event)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.event)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3852,15 +4930,15 @@ void event::MergeFrom(const event& from) {
   }
   switch (from.data_case()) {
     case kMInfo: {
-      _internal_mutable_m_info()->::ComeTogether::marker_info::MergeFrom(from._internal_m_info());
+      _internal_mutable_m_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_m_info());
       break;
     }
     case kCMessage: {
-      _internal_mutable_c_message()->::ComeTogether::chat_message::MergeFrom(from._internal_c_message());
+      _internal_mutable_c_message()->::come_together_grpc::chat_message::MergeFrom(from._internal_c_message());
       break;
     }
     case kUInfo: {
-      _internal_mutable_u_info()->::ComeTogether::user_info::MergeFrom(from._internal_u_info());
+      _internal_mutable_u_info()->::come_together_grpc::user_info::MergeFrom(from._internal_u_info());
       break;
     }
     case DATA_NOT_SET: {
@@ -3870,14 +4948,14 @@ void event::MergeFrom(const event& from) {
 }
 
 void event::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.event)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.event)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void event::CopyFrom(const event& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.event)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.event)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3913,7 +4991,7 @@ chat_info::chat_info(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   participants_uuid_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.chat_info)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.chat_info)
 }
 chat_info::chat_info(const chat_info& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -3934,7 +5012,7 @@ chat_info::chat_info(const chat_info& from)
     last_visible_message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_last_visible_message(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.chat_info)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.chat_info)
 }
 
 void chat_info::SharedCtor() {
@@ -3945,7 +5023,7 @@ void chat_info::SharedCtor() {
 }
 
 chat_info::~chat_info() {
-  // @@protoc_insertion_point(destructor:ComeTogether.chat_info)
+  // @@protoc_insertion_point(destructor:come_together_grpc.chat_info)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3973,7 +5051,7 @@ const chat_info& chat_info::default_instance() {
 
 
 void chat_info::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.chat_info)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.chat_info)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3998,7 +5076,7 @@ const char* chat_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_info.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_info.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4007,7 +5085,7 @@ const char* chat_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_title();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_info.title"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_info.title"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4019,7 +5097,7 @@ const char* chat_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
             ptr += 1;
             auto str = _internal_add_participants_uuid();
             ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_info.participants_uuid"));
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_info.participants_uuid"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
@@ -4030,7 +5108,7 @@ const char* chat_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_last_visible_message();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_info.last_visible_message"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_info.last_visible_message"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4058,7 +5136,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* chat_info::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.chat_info)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.chat_info)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4067,7 +5145,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_info.uuid");
+      "come_together_grpc.chat_info.uuid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uuid(), target);
   }
@@ -4077,7 +5155,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_title().data(), static_cast<int>(this->_internal_title().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_info.title");
+      "come_together_grpc.chat_info.title");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_title(), target);
   }
@@ -4088,7 +5166,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_info.participants_uuid");
+      "come_together_grpc.chat_info.participants_uuid");
     target = stream->WriteString(3, s, target);
   }
 
@@ -4097,7 +5175,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_last_visible_message().data(), static_cast<int>(this->_internal_last_visible_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_info.last_visible_message");
+      "come_together_grpc.chat_info.last_visible_message");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_last_visible_message(), target);
   }
@@ -4106,12 +5184,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.chat_info)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.chat_info)
   return target;
 }
 
 size_t chat_info::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.chat_info)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.chat_info)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4157,22 +5235,22 @@ size_t chat_info::ByteSizeLong() const {
 }
 
 void chat_info::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.chat_info)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.chat_info)
   GOOGLE_DCHECK_NE(&from, this);
   const chat_info* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<chat_info>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.chat_info)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.chat_info)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.chat_info)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.chat_info)
     MergeFrom(*source);
   }
 }
 
 void chat_info::MergeFrom(const chat_info& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.chat_info)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.chat_info)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4191,14 +5269,14 @@ void chat_info::MergeFrom(const chat_info& from) {
 }
 
 void chat_info::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.chat_info)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.chat_info)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void chat_info::CopyFrom(const chat_info& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.chat_info)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.chat_info)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4234,7 +5312,7 @@ get_chat_messages_request::get_chat_messages_request(::PROTOBUF_NAMESPACE_ID::Ar
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.get_chat_messages_request)
 }
 get_chat_messages_request::get_chat_messages_request(const get_chat_messages_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4257,7 +5335,7 @@ get_chat_messages_request::get_chat_messages_request(const get_chat_messages_req
   ::memcpy(&page_size_, &from.page_size_,
     static_cast<size_t>(reinterpret_cast<char*>(&page_number_) -
     reinterpret_cast<char*>(&page_size_)) + sizeof(page_number_));
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.get_chat_messages_request)
 }
 
 void get_chat_messages_request::SharedCtor() {
@@ -4271,7 +5349,7 @@ void get_chat_messages_request::SharedCtor() {
 }
 
 get_chat_messages_request::~get_chat_messages_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.get_chat_messages_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -4299,7 +5377,7 @@ const get_chat_messages_request& get_chat_messages_request::default_instance() {
 
 
 void get_chat_messages_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.get_chat_messages_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.get_chat_messages_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4326,7 +5404,7 @@ const char* get_chat_messages_request::_InternalParse(const char* ptr, ::PROTOBU
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_chat_messages_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_chat_messages_request.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4335,7 +5413,7 @@ const char* get_chat_messages_request::_InternalParse(const char* ptr, ::PROTOBU
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_chat_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_chat_messages_request.chat_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_chat_messages_request.chat_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4358,7 +5436,7 @@ const char* get_chat_messages_request::_InternalParse(const char* ptr, ::PROTOBU
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_hash();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_chat_messages_request.hash"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_chat_messages_request.hash"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4386,7 +5464,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* get_chat_messages_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.get_chat_messages_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4395,7 +5473,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_chat_messages_request.access_token");
+      "come_together_grpc.get_chat_messages_request.access_token");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_access_token(), target);
   }
@@ -4405,7 +5483,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chat_uuid().data(), static_cast<int>(this->_internal_chat_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_chat_messages_request.chat_uuid");
+      "come_together_grpc.get_chat_messages_request.chat_uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_chat_uuid(), target);
   }
@@ -4427,7 +5505,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_hash().data(), static_cast<int>(this->_internal_hash().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_chat_messages_request.hash");
+      "come_together_grpc.get_chat_messages_request.hash");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_hash(), target);
   }
@@ -4436,12 +5514,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.get_chat_messages_request)
   return target;
 }
 
 size_t get_chat_messages_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.get_chat_messages_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.get_chat_messages_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4493,22 +5571,22 @@ size_t get_chat_messages_request::ByteSizeLong() const {
 }
 
 void get_chat_messages_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.get_chat_messages_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.get_chat_messages_request)
   GOOGLE_DCHECK_NE(&from, this);
   const get_chat_messages_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<get_chat_messages_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.get_chat_messages_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.get_chat_messages_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.get_chat_messages_request)
     MergeFrom(*source);
   }
 }
 
 void get_chat_messages_request::MergeFrom(const get_chat_messages_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.get_chat_messages_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.get_chat_messages_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4532,14 +5610,14 @@ void get_chat_messages_request::MergeFrom(const get_chat_messages_request& from)
 }
 
 void get_chat_messages_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.get_chat_messages_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.get_chat_messages_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void get_chat_messages_request::CopyFrom(const get_chat_messages_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.get_chat_messages_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.get_chat_messages_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4571,7 +5649,7 @@ void get_chat_messages_request::InternalSwap(get_chat_messages_request* other) {
 // ===================================================================
 
 void chat_message::InitAsDefaultInstance() {
-  ::ComeTogether::_chat_message_default_instance_.text_.UnsafeSetDefault(
+  ::come_together_grpc::_chat_message_default_instance_.text_.UnsafeSetDefault(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 class chat_message::_Internal {
@@ -4582,7 +5660,7 @@ chat_message::chat_message(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.chat_message)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.chat_message)
 }
 chat_message::chat_message(const chat_message& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4615,7 +5693,7 @@ chat_message::chat_message(const chat_message& from)
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.chat_message)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.chat_message)
 }
 
 void chat_message::SharedCtor() {
@@ -4630,7 +5708,7 @@ void chat_message::SharedCtor() {
 }
 
 chat_message::~chat_message() {
-  // @@protoc_insertion_point(destructor:ComeTogether.chat_message)
+  // @@protoc_insertion_point(destructor:come_together_grpc.chat_message)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -4661,7 +5739,7 @@ const chat_message& chat_message::default_instance() {
 
 
 void chat_message::clear_content() {
-// @@protoc_insertion_point(one_of_clear_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(one_of_clear_start:come_together_grpc.chat_message)
   switch (content_case()) {
     case kText: {
       content_.text_.Destroy(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -4676,7 +5754,7 @@ void chat_message::clear_content() {
 
 
 void chat_message::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.chat_message)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4699,12 +5777,12 @@ const char* chat_message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.chat_message.message_content content_type = 1;
+      // .come_together_grpc.chat_message.message_content content_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_content_type(static_cast<::ComeTogether::chat_message_message_content>(val));
+          _internal_set_content_type(static_cast<::come_together_grpc::chat_message_message_content>(val));
         } else goto handle_unusual;
         continue;
       // string sender_uuid = 2;
@@ -4712,7 +5790,7 @@ const char* chat_message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_sender_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_message.sender_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_message.sender_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4721,7 +5799,7 @@ const char* chat_message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_text();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_message.text"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_message.text"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4737,7 +5815,7 @@ const char* chat_message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_chat_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_message.chat_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_message.chat_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4753,7 +5831,7 @@ const char* chat_message::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.chat_message.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.chat_message.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4781,11 +5859,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* chat_message::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.chat_message)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.chat_message)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.chat_message.message_content content_type = 1;
+  // .come_together_grpc.chat_message.message_content content_type = 1;
   if (this->content_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -4797,7 +5875,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_sender_uuid().data(), static_cast<int>(this->_internal_sender_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_message.sender_uuid");
+      "come_together_grpc.chat_message.sender_uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_sender_uuid(), target);
   }
@@ -4807,7 +5885,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_text().data(), static_cast<int>(this->_internal_text().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_message.text");
+      "come_together_grpc.chat_message.text");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_text(), target);
   }
@@ -4823,7 +5901,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chat_uuid().data(), static_cast<int>(this->_internal_chat_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_message.chat_uuid");
+      "come_together_grpc.chat_message.chat_uuid");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_chat_uuid(), target);
   }
@@ -4839,7 +5917,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.chat_message.uuid");
+      "come_together_grpc.chat_message.uuid");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_uuid(), target);
   }
@@ -4848,12 +5926,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.chat_message)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.chat_message)
   return target;
 }
 
 size_t chat_message::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.chat_message)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4895,7 +5973,7 @@ size_t chat_message::ByteSizeLong() const {
         this->_internal_sequence_number());
   }
 
-  // .ComeTogether.chat_message.message_content content_type = 1;
+  // .come_together_grpc.chat_message.message_content content_type = 1;
   if (this->content_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_content_type());
@@ -4923,22 +6001,22 @@ size_t chat_message::ByteSizeLong() const {
 }
 
 void chat_message::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.chat_message)
   GOOGLE_DCHECK_NE(&from, this);
   const chat_message* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<chat_message>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.chat_message)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.chat_message)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.chat_message)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.chat_message)
     MergeFrom(*source);
   }
 }
 
 void chat_message::MergeFrom(const chat_message& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.chat_message)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4974,14 +6052,14 @@ void chat_message::MergeFrom(const chat_message& from) {
 }
 
 void chat_message::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.chat_message)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void chat_message::CopyFrom(const chat_message& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.chat_message)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.chat_message)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5015,15 +6093,15 @@ void chat_message::InternalSwap(chat_message* other) {
 // ===================================================================
 
 void send_chat_message_request::InitAsDefaultInstance() {
-  ::ComeTogether::_send_chat_message_request_default_instance_._instance.get_mutable()->message_ = const_cast< ::ComeTogether::chat_message*>(
-      ::ComeTogether::chat_message::internal_default_instance());
+  ::come_together_grpc::_send_chat_message_request_default_instance_._instance.get_mutable()->message_ = const_cast< ::come_together_grpc::chat_message*>(
+      ::come_together_grpc::chat_message::internal_default_instance());
 }
 class send_chat_message_request::_Internal {
  public:
-  static const ::ComeTogether::chat_message& message(const send_chat_message_request* msg);
+  static const ::come_together_grpc::chat_message& message(const send_chat_message_request* msg);
 };
 
-const ::ComeTogether::chat_message&
+const ::come_together_grpc::chat_message&
 send_chat_message_request::_Internal::message(const send_chat_message_request* msg) {
   return *msg->message_;
 }
@@ -5031,7 +6109,7 @@ send_chat_message_request::send_chat_message_request(::PROTOBUF_NAMESPACE_ID::Ar
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.send_chat_message_request)
 }
 send_chat_message_request::send_chat_message_request(const send_chat_message_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5042,11 +6120,11 @@ send_chat_message_request::send_chat_message_request(const send_chat_message_req
       GetArena());
   }
   if (from._internal_has_message()) {
-    message_ = new ::ComeTogether::chat_message(*from.message_);
+    message_ = new ::come_together_grpc::chat_message(*from.message_);
   } else {
     message_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.send_chat_message_request)
 }
 
 void send_chat_message_request::SharedCtor() {
@@ -5056,7 +6134,7 @@ void send_chat_message_request::SharedCtor() {
 }
 
 send_chat_message_request::~send_chat_message_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.send_chat_message_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -5083,7 +6161,7 @@ const send_chat_message_request& send_chat_message_request::default_instance() {
 
 
 void send_chat_message_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.send_chat_message_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.send_chat_message_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5109,11 +6187,11 @@ const char* send_chat_message_request::_InternalParse(const char* ptr, ::PROTOBU
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.send_chat_message_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.send_chat_message_request.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.chat_message message = 2;
+      // .come_together_grpc.chat_message message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_message(), ptr);
@@ -5144,7 +6222,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* send_chat_message_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.send_chat_message_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5153,12 +6231,12 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.send_chat_message_request.access_token");
+      "come_together_grpc.send_chat_message_request.access_token");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_access_token(), target);
   }
 
-  // .ComeTogether.chat_message message = 2;
+  // .come_together_grpc.chat_message message = 2;
   if (this->has_message()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -5170,12 +6248,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.send_chat_message_request)
   return target;
 }
 
 size_t send_chat_message_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.send_chat_message_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.send_chat_message_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -5189,7 +6267,7 @@ size_t send_chat_message_request::ByteSizeLong() const {
         this->_internal_access_token());
   }
 
-  // .ComeTogether.chat_message message = 2;
+  // .come_together_grpc.chat_message message = 2;
   if (this->has_message()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -5206,22 +6284,22 @@ size_t send_chat_message_request::ByteSizeLong() const {
 }
 
 void send_chat_message_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.send_chat_message_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.send_chat_message_request)
   GOOGLE_DCHECK_NE(&from, this);
   const send_chat_message_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<send_chat_message_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.send_chat_message_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.send_chat_message_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.send_chat_message_request)
     MergeFrom(*source);
   }
 }
 
 void send_chat_message_request::MergeFrom(const send_chat_message_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.send_chat_message_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.send_chat_message_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -5231,19 +6309,19 @@ void send_chat_message_request::MergeFrom(const send_chat_message_request& from)
     _internal_set_access_token(from._internal_access_token());
   }
   if (from.has_message()) {
-    _internal_mutable_message()->::ComeTogether::chat_message::MergeFrom(from._internal_message());
+    _internal_mutable_message()->::come_together_grpc::chat_message::MergeFrom(from._internal_message());
   }
 }
 
 void send_chat_message_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.send_chat_message_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.send_chat_message_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void send_chat_message_request::CopyFrom(const send_chat_message_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.send_chat_message_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.send_chat_message_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5277,7 +6355,7 @@ send_chat_message_response::send_chat_message_response(::PROTOBUF_NAMESPACE_ID::
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.send_chat_message_response)
 }
 send_chat_message_response::send_chat_message_response(const send_chat_message_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5290,7 +6368,7 @@ send_chat_message_response::send_chat_message_response(const send_chat_message_r
   ::memcpy(&actual_sequence_number_, &from.actual_sequence_number_,
     static_cast<size_t>(reinterpret_cast<char*>(&res_) -
     reinterpret_cast<char*>(&actual_sequence_number_)) + sizeof(res_));
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.send_chat_message_response)
 }
 
 void send_chat_message_response::SharedCtor() {
@@ -5302,7 +6380,7 @@ void send_chat_message_response::SharedCtor() {
 }
 
 send_chat_message_response::~send_chat_message_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.send_chat_message_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -5328,7 +6406,7 @@ const send_chat_message_response& send_chat_message_response::default_instance()
 
 
 void send_chat_message_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.send_chat_message_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.send_chat_message_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5348,12 +6426,12 @@ const char* send_chat_message_response::_InternalParse(const char* ptr, ::PROTOB
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.send_chat_message_response.result res = 1;
+      // .come_together_grpc.send_chat_message_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::send_chat_message_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::send_chat_message_response_result>(val));
         } else goto handle_unusual;
         continue;
       // int64 actual_sequence_number = 2;
@@ -5368,7 +6446,7 @@ const char* send_chat_message_response::_InternalParse(const char* ptr, ::PROTOB
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_message_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.send_chat_message_response.message_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.send_chat_message_response.message_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5396,11 +6474,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* send_chat_message_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.send_chat_message_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.send_chat_message_response.result res = 1;
+  // .come_together_grpc.send_chat_message_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -5418,7 +6496,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message_uuid().data(), static_cast<int>(this->_internal_message_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.send_chat_message_response.message_uuid");
+      "come_together_grpc.send_chat_message_response.message_uuid");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_message_uuid(), target);
   }
@@ -5427,12 +6505,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.send_chat_message_response)
   return target;
 }
 
 size_t send_chat_message_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.send_chat_message_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.send_chat_message_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -5453,7 +6531,7 @@ size_t send_chat_message_response::ByteSizeLong() const {
         this->_internal_actual_sequence_number());
   }
 
-  // .ComeTogether.send_chat_message_response.result res = 1;
+  // .come_together_grpc.send_chat_message_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -5469,22 +6547,22 @@ size_t send_chat_message_response::ByteSizeLong() const {
 }
 
 void send_chat_message_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.send_chat_message_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.send_chat_message_response)
   GOOGLE_DCHECK_NE(&from, this);
   const send_chat_message_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<send_chat_message_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.send_chat_message_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.send_chat_message_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.send_chat_message_response)
     MergeFrom(*source);
   }
 }
 
 void send_chat_message_response::MergeFrom(const send_chat_message_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.send_chat_message_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.send_chat_message_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -5502,14 +6580,14 @@ void send_chat_message_response::MergeFrom(const send_chat_message_response& fro
 }
 
 void send_chat_message_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.send_chat_message_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.send_chat_message_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void send_chat_message_response::CopyFrom(const send_chat_message_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.send_chat_message_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.send_chat_message_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5548,7 +6626,7 @@ get_info_request::get_info_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.get_info_request)
 }
 get_info_request::get_info_request(const get_info_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5564,7 +6642,7 @@ get_info_request::get_info_request(const get_info_request& from)
       GetArena());
   }
   info_type_ = from.info_type_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.get_info_request)
 }
 
 void get_info_request::SharedCtor() {
@@ -5575,7 +6653,7 @@ void get_info_request::SharedCtor() {
 }
 
 get_info_request::~get_info_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.get_info_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -5602,7 +6680,7 @@ const get_info_request& get_info_request::default_instance() {
 
 
 void get_info_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.get_info_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.get_info_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5621,12 +6699,12 @@ const char* get_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.get_info_request.type info_type = 1;
+      // .come_together_grpc.get_info_request.type info_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_info_type(static_cast<::ComeTogether::get_info_request_type>(val));
+          _internal_set_info_type(static_cast<::come_together_grpc::get_info_request_type>(val));
         } else goto handle_unusual;
         continue;
       // string access_token = 2;
@@ -5634,7 +6712,7 @@ const char* get_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_info_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_info_request.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5643,7 +6721,7 @@ const char* get_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_target_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_info_request.target_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_info_request.target_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5671,11 +6749,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* get_info_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.get_info_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.get_info_request.type info_type = 1;
+  // .come_together_grpc.get_info_request.type info_type = 1;
   if (this->info_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -5687,7 +6765,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_info_request.access_token");
+      "come_together_grpc.get_info_request.access_token");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_access_token(), target);
   }
@@ -5697,7 +6775,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_target_uuid().data(), static_cast<int>(this->_internal_target_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_info_request.target_uuid");
+      "come_together_grpc.get_info_request.target_uuid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_target_uuid(), target);
   }
@@ -5706,12 +6784,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.get_info_request)
   return target;
 }
 
 size_t get_info_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.get_info_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.get_info_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -5732,7 +6810,7 @@ size_t get_info_request::ByteSizeLong() const {
         this->_internal_target_uuid());
   }
 
-  // .ComeTogether.get_info_request.type info_type = 1;
+  // .come_together_grpc.get_info_request.type info_type = 1;
   if (this->info_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_info_type());
@@ -5748,22 +6826,22 @@ size_t get_info_request::ByteSizeLong() const {
 }
 
 void get_info_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.get_info_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.get_info_request)
   GOOGLE_DCHECK_NE(&from, this);
   const get_info_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<get_info_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.get_info_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.get_info_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.get_info_request)
     MergeFrom(*source);
   }
 }
 
 void get_info_request::MergeFrom(const get_info_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.get_info_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.get_info_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -5781,14 +6859,14 @@ void get_info_request::MergeFrom(const get_info_request& from) {
 }
 
 void get_info_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.get_info_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.get_info_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void get_info_request::CopyFrom(const get_info_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.get_info_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.get_info_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5814,33 +6892,33 @@ void get_info_request::InternalSwap(get_info_request* other) {
 // ===================================================================
 
 void get_info_response::InitAsDefaultInstance() {
-  ::ComeTogether::_get_info_response_default_instance_.u_info_ = const_cast< ::ComeTogether::user_info*>(
-      ::ComeTogether::user_info::internal_default_instance());
-  ::ComeTogether::_get_info_response_default_instance_.m_info_ = const_cast< ::ComeTogether::marker_info*>(
-      ::ComeTogether::marker_info::internal_default_instance());
-  ::ComeTogether::_get_info_response_default_instance_.c_info_ = const_cast< ::ComeTogether::chat_info*>(
-      ::ComeTogether::chat_info::internal_default_instance());
+  ::come_together_grpc::_get_info_response_default_instance_.u_info_ = const_cast< ::come_together_grpc::user_info*>(
+      ::come_together_grpc::user_info::internal_default_instance());
+  ::come_together_grpc::_get_info_response_default_instance_.m_info_ = const_cast< ::come_together_grpc::marker_info*>(
+      ::come_together_grpc::marker_info::internal_default_instance());
+  ::come_together_grpc::_get_info_response_default_instance_.c_info_ = const_cast< ::come_together_grpc::chat_info*>(
+      ::come_together_grpc::chat_info::internal_default_instance());
 }
 class get_info_response::_Internal {
  public:
-  static const ::ComeTogether::user_info& u_info(const get_info_response* msg);
-  static const ::ComeTogether::marker_info& m_info(const get_info_response* msg);
-  static const ::ComeTogether::chat_info& c_info(const get_info_response* msg);
+  static const ::come_together_grpc::user_info& u_info(const get_info_response* msg);
+  static const ::come_together_grpc::marker_info& m_info(const get_info_response* msg);
+  static const ::come_together_grpc::chat_info& c_info(const get_info_response* msg);
 };
 
-const ::ComeTogether::user_info&
+const ::come_together_grpc::user_info&
 get_info_response::_Internal::u_info(const get_info_response* msg) {
   return *msg->data_.u_info_;
 }
-const ::ComeTogether::marker_info&
+const ::come_together_grpc::marker_info&
 get_info_response::_Internal::m_info(const get_info_response* msg) {
   return *msg->data_.m_info_;
 }
-const ::ComeTogether::chat_info&
+const ::come_together_grpc::chat_info&
 get_info_response::_Internal::c_info(const get_info_response* msg) {
   return *msg->data_.c_info_;
 }
-void get_info_response::set_allocated_u_info(::ComeTogether::user_info* u_info) {
+void get_info_response::set_allocated_u_info(::come_together_grpc::user_info* u_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (u_info) {
@@ -5853,9 +6931,9 @@ void get_info_response::set_allocated_u_info(::ComeTogether::user_info* u_info) 
     set_has_u_info();
     data_.u_info_ = u_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_info_response.u_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_response.u_info)
 }
-void get_info_response::set_allocated_m_info(::ComeTogether::marker_info* m_info) {
+void get_info_response::set_allocated_m_info(::come_together_grpc::marker_info* m_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (m_info) {
@@ -5868,9 +6946,9 @@ void get_info_response::set_allocated_m_info(::ComeTogether::marker_info* m_info
     set_has_m_info();
     data_.m_info_ = m_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_info_response.m_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_response.m_info)
 }
-void get_info_response::set_allocated_c_info(::ComeTogether::chat_info* c_info) {
+void get_info_response::set_allocated_c_info(::come_together_grpc::chat_info* c_info) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_data();
   if (c_info) {
@@ -5883,13 +6961,13 @@ void get_info_response::set_allocated_c_info(::ComeTogether::chat_info* c_info) 
     set_has_c_info();
     data_.c_info_ = c_info;
   }
-  // @@protoc_insertion_point(field_set_allocated:ComeTogether.get_info_response.c_info)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_response.c_info)
 }
 get_info_response::get_info_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.get_info_response)
 }
 get_info_response::get_info_response(const get_info_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5897,22 +6975,22 @@ get_info_response::get_info_response(const get_info_response& from)
   clear_has_data();
   switch (from.data_case()) {
     case kUInfo: {
-      _internal_mutable_u_info()->::ComeTogether::user_info::MergeFrom(from._internal_u_info());
+      _internal_mutable_u_info()->::come_together_grpc::user_info::MergeFrom(from._internal_u_info());
       break;
     }
     case kMInfo: {
-      _internal_mutable_m_info()->::ComeTogether::marker_info::MergeFrom(from._internal_m_info());
+      _internal_mutable_m_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_m_info());
       break;
     }
     case kCInfo: {
-      _internal_mutable_c_info()->::ComeTogether::chat_info::MergeFrom(from._internal_c_info());
+      _internal_mutable_c_info()->::come_together_grpc::chat_info::MergeFrom(from._internal_c_info());
       break;
     }
     case DATA_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.get_info_response)
 }
 
 void get_info_response::SharedCtor() {
@@ -5921,7 +6999,7 @@ void get_info_response::SharedCtor() {
 }
 
 get_info_response::~get_info_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.get_info_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -5949,7 +7027,7 @@ const get_info_response& get_info_response::default_instance() {
 
 
 void get_info_response::clear_data() {
-// @@protoc_insertion_point(one_of_clear_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(one_of_clear_start:come_together_grpc.get_info_response)
   switch (data_case()) {
     case kUInfo: {
       if (GetArena() == nullptr) {
@@ -5978,7 +7056,7 @@ void get_info_response::clear_data() {
 
 
 void get_info_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.get_info_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5995,21 +7073,21 @@ const char* get_info_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.user_info u_info = 1;
+      // .come_together_grpc.user_info u_info = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_u_info(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.marker_info m_info = 2;
+      // .come_together_grpc.marker_info m_info = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_m_info(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.chat_info c_info = 3;
+      // .come_together_grpc.chat_info c_info = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_c_info(), ptr);
@@ -6040,11 +7118,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* get_info_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.get_info_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.user_info u_info = 1;
+  // .come_together_grpc.user_info u_info = 1;
   if (_internal_has_u_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -6052,7 +7130,7 @@ failure:
         1, _Internal::u_info(this), target, stream);
   }
 
-  // .ComeTogether.marker_info m_info = 2;
+  // .come_together_grpc.marker_info m_info = 2;
   if (_internal_has_m_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -6060,7 +7138,7 @@ failure:
         2, _Internal::m_info(this), target, stream);
   }
 
-  // .ComeTogether.chat_info c_info = 3;
+  // .come_together_grpc.chat_info c_info = 3;
   if (_internal_has_c_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -6072,12 +7150,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.get_info_response)
   return target;
 }
 
 size_t get_info_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.get_info_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -6085,21 +7163,21 @@ size_t get_info_response::ByteSizeLong() const {
   (void) cached_has_bits;
 
   switch (data_case()) {
-    // .ComeTogether.user_info u_info = 1;
+    // .come_together_grpc.user_info u_info = 1;
     case kUInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.u_info_);
       break;
     }
-    // .ComeTogether.marker_info m_info = 2;
+    // .come_together_grpc.marker_info m_info = 2;
     case kMInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
           *data_.m_info_);
       break;
     }
-    // .ComeTogether.chat_info c_info = 3;
+    // .come_together_grpc.chat_info c_info = 3;
     case kCInfo: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -6120,22 +7198,22 @@ size_t get_info_response::ByteSizeLong() const {
 }
 
 void get_info_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.get_info_response)
   GOOGLE_DCHECK_NE(&from, this);
   const get_info_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<get_info_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.get_info_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.get_info_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.get_info_response)
     MergeFrom(*source);
   }
 }
 
 void get_info_response::MergeFrom(const get_info_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.get_info_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -6143,15 +7221,15 @@ void get_info_response::MergeFrom(const get_info_response& from) {
 
   switch (from.data_case()) {
     case kUInfo: {
-      _internal_mutable_u_info()->::ComeTogether::user_info::MergeFrom(from._internal_u_info());
+      _internal_mutable_u_info()->::come_together_grpc::user_info::MergeFrom(from._internal_u_info());
       break;
     }
     case kMInfo: {
-      _internal_mutable_m_info()->::ComeTogether::marker_info::MergeFrom(from._internal_m_info());
+      _internal_mutable_m_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_m_info());
       break;
     }
     case kCInfo: {
-      _internal_mutable_c_info()->::ComeTogether::chat_info::MergeFrom(from._internal_c_info());
+      _internal_mutable_c_info()->::come_together_grpc::chat_info::MergeFrom(from._internal_c_info());
       break;
     }
     case DATA_NOT_SET: {
@@ -6161,14 +7239,14 @@ void get_info_response::MergeFrom(const get_info_response& from) {
 }
 
 void get_info_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.get_info_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void get_info_response::CopyFrom(const get_info_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.get_info_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.get_info_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6202,7 +7280,7 @@ get_images_request::get_images_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.get_images_request)
 }
 get_images_request::get_images_request(const get_images_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6225,7 +7303,7 @@ get_images_request::get_images_request(const get_images_request& from)
   ::memcpy(&image_type_, &from.image_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&starting_sequence_number_) -
     reinterpret_cast<char*>(&image_type_)) + sizeof(starting_sequence_number_));
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.get_images_request)
 }
 
 void get_images_request::SharedCtor() {
@@ -6239,7 +7317,7 @@ void get_images_request::SharedCtor() {
 }
 
 get_images_request::~get_images_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.get_images_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -6267,7 +7345,7 @@ const get_images_request& get_images_request::default_instance() {
 
 
 void get_images_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.get_images_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.get_images_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6289,12 +7367,12 @@ const char* get_images_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.get_images_request.type image_type = 1;
+      // .come_together_grpc.get_images_request.type image_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_image_type(static_cast<::ComeTogether::get_images_request_type>(val));
+          _internal_set_image_type(static_cast<::come_together_grpc::get_images_request_type>(val));
         } else goto handle_unusual;
         continue;
       // string target_uuid = 2;
@@ -6302,7 +7380,7 @@ const char* get_images_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_target_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_images_request.target_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_images_request.target_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6311,7 +7389,7 @@ const char* get_images_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_images_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_images_request.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6327,7 +7405,7 @@ const char* get_images_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_hash();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.get_images_request.hash"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_images_request.hash"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6362,11 +7440,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* get_images_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.get_images_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.get_images_request.type image_type = 1;
+  // .come_together_grpc.get_images_request.type image_type = 1;
   if (this->image_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -6378,7 +7456,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_target_uuid().data(), static_cast<int>(this->_internal_target_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_images_request.target_uuid");
+      "come_together_grpc.get_images_request.target_uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_target_uuid(), target);
   }
@@ -6388,7 +7466,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_images_request.access_token");
+      "come_together_grpc.get_images_request.access_token");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_access_token(), target);
   }
@@ -6404,7 +7482,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_hash().data(), static_cast<int>(this->_internal_hash().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.get_images_request.hash");
+      "come_together_grpc.get_images_request.hash");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_hash(), target);
   }
@@ -6419,12 +7497,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.get_images_request)
   return target;
 }
 
 size_t get_images_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.get_images_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.get_images_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -6452,7 +7530,7 @@ size_t get_images_request::ByteSizeLong() const {
         this->_internal_hash());
   }
 
-  // .ComeTogether.get_images_request.type image_type = 1;
+  // .come_together_grpc.get_images_request.type image_type = 1;
   if (this->image_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_image_type());
@@ -6482,22 +7560,22 @@ size_t get_images_request::ByteSizeLong() const {
 }
 
 void get_images_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.get_images_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.get_images_request)
   GOOGLE_DCHECK_NE(&from, this);
   const get_images_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<get_images_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.get_images_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.get_images_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.get_images_request)
     MergeFrom(*source);
   }
 }
 
 void get_images_request::MergeFrom(const get_images_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.get_images_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.get_images_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -6524,14 +7602,14 @@ void get_images_request::MergeFrom(const get_images_request& from) {
 }
 
 void get_images_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.get_images_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.get_images_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void get_images_request::CopyFrom(const get_images_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.get_images_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.get_images_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6563,9 +7641,9 @@ void get_images_request::InternalSwap(get_images_request* other) {
 // ===================================================================
 
 void manage_image_request::InitAsDefaultInstance() {
-  ::ComeTogether::_manage_image_request_default_instance_.image_.UnsafeSetDefault(
+  ::come_together_grpc::_manage_image_request_default_instance_.image_.UnsafeSetDefault(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::ComeTogether::_manage_image_request_default_instance_.image_uuid_.UnsafeSetDefault(
+  ::come_together_grpc::_manage_image_request_default_instance_.image_uuid_.UnsafeSetDefault(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 class manage_image_request::_Internal {
@@ -6576,7 +7654,7 @@ manage_image_request::manage_image_request(::PROTOBUF_NAMESPACE_ID::Arena* arena
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.manage_image_request)
 }
 manage_image_request::manage_image_request(const manage_image_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6606,7 +7684,7 @@ manage_image_request::manage_image_request(const manage_image_request& from)
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.manage_image_request)
 }
 
 void manage_image_request::SharedCtor() {
@@ -6618,7 +7696,7 @@ void manage_image_request::SharedCtor() {
 }
 
 manage_image_request::~manage_image_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.manage_image_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -6648,7 +7726,7 @@ const manage_image_request& manage_image_request::default_instance() {
 
 
 void manage_image_request::clear_data() {
-// @@protoc_insertion_point(one_of_clear_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(one_of_clear_start:come_together_grpc.manage_image_request)
   switch (data_case()) {
     case kImage: {
       data_.image_.Destroy(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -6667,7 +7745,7 @@ void manage_image_request::clear_data() {
 
 
 void manage_image_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.manage_image_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -6687,12 +7765,12 @@ const char* manage_image_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.manage_image_request.action act = 1;
+      // .come_together_grpc.manage_image_request.action act = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_act(static_cast<::ComeTogether::manage_image_request_action>(val));
+          _internal_set_act(static_cast<::come_together_grpc::manage_image_request_action>(val));
         } else goto handle_unusual;
         continue;
       // string access_token = 2;
@@ -6700,7 +7778,7 @@ const char* manage_image_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.manage_image_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.manage_image_request.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6709,7 +7787,7 @@ const char* manage_image_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_target_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.manage_image_request.target_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.manage_image_request.target_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6726,7 +7804,7 @@ const char* manage_image_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_image_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.manage_image_request.image_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.manage_image_request.image_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6754,11 +7832,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* manage_image_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.manage_image_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.manage_image_request.action act = 1;
+  // .come_together_grpc.manage_image_request.action act = 1;
   if (this->act() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -6770,7 +7848,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.manage_image_request.access_token");
+      "come_together_grpc.manage_image_request.access_token");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_access_token(), target);
   }
@@ -6780,7 +7858,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_target_uuid().data(), static_cast<int>(this->_internal_target_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.manage_image_request.target_uuid");
+      "come_together_grpc.manage_image_request.target_uuid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_target_uuid(), target);
   }
@@ -6796,7 +7874,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_image_uuid().data(), static_cast<int>(this->_internal_image_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.manage_image_request.image_uuid");
+      "come_together_grpc.manage_image_request.image_uuid");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_image_uuid(), target);
   }
@@ -6805,12 +7883,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.manage_image_request)
   return target;
 }
 
 size_t manage_image_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.manage_image_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -6831,7 +7909,7 @@ size_t manage_image_request::ByteSizeLong() const {
         this->_internal_target_uuid());
   }
 
-  // .ComeTogether.manage_image_request.action act = 1;
+  // .come_together_grpc.manage_image_request.action act = 1;
   if (this->act() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_act());
@@ -6866,22 +7944,22 @@ size_t manage_image_request::ByteSizeLong() const {
 }
 
 void manage_image_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.manage_image_request)
   GOOGLE_DCHECK_NE(&from, this);
   const manage_image_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<manage_image_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.manage_image_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.manage_image_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.manage_image_request)
     MergeFrom(*source);
   }
 }
 
 void manage_image_request::MergeFrom(const manage_image_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.manage_image_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -6912,14 +7990,14 @@ void manage_image_request::MergeFrom(const manage_image_request& from) {
 }
 
 void manage_image_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.manage_image_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void manage_image_request::CopyFrom(const manage_image_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.manage_image_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.manage_image_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6956,7 +8034,7 @@ manage_image_response::manage_image_response(::PROTOBUF_NAMESPACE_ID::Arena* are
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.manage_image_response)
 }
 manage_image_response::manage_image_response(const manage_image_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -6969,7 +8047,7 @@ manage_image_response::manage_image_response(const manage_image_response& from)
   ::memcpy(&res_, &from.res_,
     static_cast<size_t>(reinterpret_cast<char*>(&image_sequence_number_) -
     reinterpret_cast<char*>(&res_)) + sizeof(image_sequence_number_));
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.manage_image_response)
 }
 
 void manage_image_response::SharedCtor() {
@@ -6981,7 +8059,7 @@ void manage_image_response::SharedCtor() {
 }
 
 manage_image_response::~manage_image_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.manage_image_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -7007,7 +8085,7 @@ const manage_image_response& manage_image_response::default_instance() {
 
 
 void manage_image_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.manage_image_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.manage_image_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7027,12 +8105,12 @@ const char* manage_image_response::_InternalParse(const char* ptr, ::PROTOBUF_NA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.manage_image_response.result res = 1;
+      // .come_together_grpc.manage_image_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::manage_image_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::manage_image_response_result>(val));
         } else goto handle_unusual;
         continue;
       // string image_uuid = 2;
@@ -7040,7 +8118,7 @@ const char* manage_image_response::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_image_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.manage_image_response.image_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.manage_image_response.image_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7075,11 +8153,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* manage_image_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.manage_image_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.manage_image_response.result res = 1;
+  // .come_together_grpc.manage_image_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -7091,7 +8169,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_image_uuid().data(), static_cast<int>(this->_internal_image_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.manage_image_response.image_uuid");
+      "come_together_grpc.manage_image_response.image_uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_image_uuid(), target);
   }
@@ -7106,12 +8184,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.manage_image_response)
   return target;
 }
 
 size_t manage_image_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.manage_image_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.manage_image_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7125,7 +8203,7 @@ size_t manage_image_response::ByteSizeLong() const {
         this->_internal_image_uuid());
   }
 
-  // .ComeTogether.manage_image_response.result res = 1;
+  // .come_together_grpc.manage_image_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -7148,22 +8226,22 @@ size_t manage_image_response::ByteSizeLong() const {
 }
 
 void manage_image_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.manage_image_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.manage_image_response)
   GOOGLE_DCHECK_NE(&from, this);
   const manage_image_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<manage_image_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.manage_image_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.manage_image_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.manage_image_response)
     MergeFrom(*source);
   }
 }
 
 void manage_image_response::MergeFrom(const manage_image_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.manage_image_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.manage_image_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7181,14 +8259,14 @@ void manage_image_response::MergeFrom(const manage_image_response& from) {
 }
 
 void manage_image_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.manage_image_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.manage_image_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void manage_image_response::CopyFrom(const manage_image_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.manage_image_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.manage_image_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7227,7 +8305,7 @@ check_request::check_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.check_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.check_request)
 }
 check_request::check_request(const check_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7238,7 +8316,7 @@ check_request::check_request(const check_request& from)
       GetArena());
   }
   check_type_ = from.check_type_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.check_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.check_request)
 }
 
 void check_request::SharedCtor() {
@@ -7248,7 +8326,7 @@ void check_request::SharedCtor() {
 }
 
 check_request::~check_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.check_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.check_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -7274,7 +8352,7 @@ const check_request& check_request::default_instance() {
 
 
 void check_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.check_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.check_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7292,12 +8370,12 @@ const char* check_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.check_request.type check_type = 1;
+      // .come_together_grpc.check_request.type check_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_check_type(static_cast<::ComeTogether::check_request_type>(val));
+          _internal_set_check_type(static_cast<::come_together_grpc::check_request_type>(val));
         } else goto handle_unusual;
         continue;
       // string data = 2;
@@ -7305,7 +8383,7 @@ const char* check_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_data();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.check_request.data"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.check_request.data"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7333,11 +8411,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* check_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.check_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.check_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.check_request.type check_type = 1;
+  // .come_together_grpc.check_request.type check_type = 1;
   if (this->check_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -7349,7 +8427,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_data().data(), static_cast<int>(this->_internal_data().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.check_request.data");
+      "come_together_grpc.check_request.data");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_data(), target);
   }
@@ -7358,12 +8436,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.check_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.check_request)
   return target;
 }
 
 size_t check_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.check_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.check_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7377,7 +8455,7 @@ size_t check_request::ByteSizeLong() const {
         this->_internal_data());
   }
 
-  // .ComeTogether.check_request.type check_type = 1;
+  // .come_together_grpc.check_request.type check_type = 1;
   if (this->check_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_check_type());
@@ -7393,22 +8471,22 @@ size_t check_request::ByteSizeLong() const {
 }
 
 void check_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.check_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.check_request)
   GOOGLE_DCHECK_NE(&from, this);
   const check_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<check_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.check_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.check_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.check_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.check_request)
     MergeFrom(*source);
   }
 }
 
 void check_request::MergeFrom(const check_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.check_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.check_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7423,14 +8501,14 @@ void check_request::MergeFrom(const check_request& from) {
 }
 
 void check_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.check_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.check_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void check_request::CopyFrom(const check_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.check_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.check_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7464,13 +8542,13 @@ check_response::check_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.check_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.check_response)
 }
 check_response::check_response(const check_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.check_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.check_response)
 }
 
 void check_response::SharedCtor() {
@@ -7478,7 +8556,7 @@ void check_response::SharedCtor() {
 }
 
 check_response::~check_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.check_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.check_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -7503,7 +8581,7 @@ const check_response& check_response::default_instance() {
 
 
 void check_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.check_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.check_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7520,12 +8598,12 @@ const char* check_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.check_response.result res = 1;
+      // .come_together_grpc.check_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::check_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::check_response_result>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -7552,11 +8630,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* check_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.check_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.check_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.check_response.result res = 1;
+  // .come_together_grpc.check_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -7567,19 +8645,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.check_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.check_response)
   return target;
 }
 
 size_t check_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.check_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.check_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.check_response.result res = 1;
+  // .come_together_grpc.check_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -7595,22 +8673,22 @@ size_t check_response::ByteSizeLong() const {
 }
 
 void check_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.check_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.check_response)
   GOOGLE_DCHECK_NE(&from, this);
   const check_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<check_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.check_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.check_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.check_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.check_response)
     MergeFrom(*source);
   }
 }
 
 void check_response::MergeFrom(const check_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.check_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.check_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7622,14 +8700,14 @@ void check_response::MergeFrom(const check_response& from) {
 }
 
 void check_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.check_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.check_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void check_response::CopyFrom(const check_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.check_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.check_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7662,7 +8740,7 @@ login_request::login_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.login_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.login_request)
 }
 login_request::login_request(const login_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7677,7 +8755,7 @@ login_request::login_request(const login_request& from)
     password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_password(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.login_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.login_request)
 }
 
 void login_request::SharedCtor() {
@@ -7687,7 +8765,7 @@ void login_request::SharedCtor() {
 }
 
 login_request::~login_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.login_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.login_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -7714,7 +8792,7 @@ const login_request& login_request::default_instance() {
 
 
 void login_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.login_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.login_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7737,7 +8815,7 @@ const char* login_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_login();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.login_request.login"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.login_request.login"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7746,7 +8824,7 @@ const char* login_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_password();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.login_request.password"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.login_request.password"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7774,7 +8852,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* login_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.login_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.login_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7783,7 +8861,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_login().data(), static_cast<int>(this->_internal_login().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.login_request.login");
+      "come_together_grpc.login_request.login");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_login(), target);
   }
@@ -7793,7 +8871,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.login_request.password");
+      "come_together_grpc.login_request.password");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_password(), target);
   }
@@ -7802,12 +8880,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.login_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.login_request)
   return target;
 }
 
 size_t login_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.login_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.login_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7838,22 +8916,22 @@ size_t login_request::ByteSizeLong() const {
 }
 
 void login_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.login_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.login_request)
   GOOGLE_DCHECK_NE(&from, this);
   const login_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<login_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.login_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.login_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.login_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.login_request)
     MergeFrom(*source);
   }
 }
 
 void login_request::MergeFrom(const login_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.login_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.login_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -7868,14 +8946,14 @@ void login_request::MergeFrom(const login_request& from) {
 }
 
 void login_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.login_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.login_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void login_request::CopyFrom(const login_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.login_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.login_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -7900,15 +8978,15 @@ void login_request::InternalSwap(login_request* other) {
 // ===================================================================
 
 void login_response::InitAsDefaultInstance() {
-  ::ComeTogether::_login_response_default_instance_._instance.get_mutable()->info_ = const_cast< ::ComeTogether::user_info*>(
-      ::ComeTogether::user_info::internal_default_instance());
+  ::come_together_grpc::_login_response_default_instance_._instance.get_mutable()->info_ = const_cast< ::come_together_grpc::user_info*>(
+      ::come_together_grpc::user_info::internal_default_instance());
 }
 class login_response::_Internal {
  public:
-  static const ::ComeTogether::user_info& info(const login_response* msg);
+  static const ::come_together_grpc::user_info& info(const login_response* msg);
 };
 
-const ::ComeTogether::user_info&
+const ::come_together_grpc::user_info&
 login_response::_Internal::info(const login_response* msg) {
   return *msg->info_;
 }
@@ -7916,7 +8994,7 @@ login_response::login_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.login_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.login_response)
 }
 login_response::login_response(const login_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -7927,12 +9005,12 @@ login_response::login_response(const login_response& from)
       GetArena());
   }
   if (from._internal_has_info()) {
-    info_ = new ::ComeTogether::user_info(*from.info_);
+    info_ = new ::come_together_grpc::user_info(*from.info_);
   } else {
     info_ = nullptr;
   }
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.login_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.login_response)
 }
 
 void login_response::SharedCtor() {
@@ -7944,7 +9022,7 @@ void login_response::SharedCtor() {
 }
 
 login_response::~login_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.login_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.login_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -7971,7 +9049,7 @@ const login_response& login_response::default_instance() {
 
 
 void login_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.login_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.login_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7993,15 +9071,15 @@ const char* login_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.login_response.result res = 1;
+      // .come_together_grpc.login_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::login_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::login_response_result>(val));
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.user_info info = 2;
+      // .come_together_grpc.user_info info = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_info(), ptr);
@@ -8013,7 +9091,7 @@ const char* login_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.login_response.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.login_response.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8041,18 +9119,18 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* login_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.login_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.login_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.login_response.result res = 1;
+  // .come_together_grpc.login_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->_internal_res(), target);
   }
 
-  // .ComeTogether.user_info info = 2;
+  // .come_together_grpc.user_info info = 2;
   if (this->has_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -8065,7 +9143,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.login_response.access_token");
+      "come_together_grpc.login_response.access_token");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_access_token(), target);
   }
@@ -8074,12 +9152,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.login_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.login_response)
   return target;
 }
 
 size_t login_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.login_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.login_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -8093,14 +9171,14 @@ size_t login_response::ByteSizeLong() const {
         this->_internal_access_token());
   }
 
-  // .ComeTogether.user_info info = 2;
+  // .come_together_grpc.user_info info = 2;
   if (this->has_info()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *info_);
   }
 
-  // .ComeTogether.login_response.result res = 1;
+  // .come_together_grpc.login_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -8116,22 +9194,22 @@ size_t login_response::ByteSizeLong() const {
 }
 
 void login_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.login_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.login_response)
   GOOGLE_DCHECK_NE(&from, this);
   const login_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<login_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.login_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.login_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.login_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.login_response)
     MergeFrom(*source);
   }
 }
 
 void login_response::MergeFrom(const login_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.login_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.login_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -8141,7 +9219,7 @@ void login_response::MergeFrom(const login_response& from) {
     _internal_set_access_token(from._internal_access_token());
   }
   if (from.has_info()) {
-    _internal_mutable_info()->::ComeTogether::user_info::MergeFrom(from._internal_info());
+    _internal_mutable_info()->::come_together_grpc::user_info::MergeFrom(from._internal_info());
   }
   if (from.res() != 0) {
     _internal_set_res(from._internal_res());
@@ -8149,14 +9227,14 @@ void login_response::MergeFrom(const login_response& from) {
 }
 
 void login_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.login_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.login_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void login_response::CopyFrom(const login_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.login_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.login_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8186,15 +9264,15 @@ void login_response::InternalSwap(login_response* other) {
 // ===================================================================
 
 void register_request::InitAsDefaultInstance() {
-  ::ComeTogether::_register_request_default_instance_._instance.get_mutable()->info_ = const_cast< ::ComeTogether::user_info*>(
-      ::ComeTogether::user_info::internal_default_instance());
+  ::come_together_grpc::_register_request_default_instance_._instance.get_mutable()->info_ = const_cast< ::come_together_grpc::user_info*>(
+      ::come_together_grpc::user_info::internal_default_instance());
 }
 class register_request::_Internal {
  public:
-  static const ::ComeTogether::user_info& info(const register_request* msg);
+  static const ::come_together_grpc::user_info& info(const register_request* msg);
 };
 
-const ::ComeTogether::user_info&
+const ::come_together_grpc::user_info&
 register_request::_Internal::info(const register_request* msg) {
   return *msg->info_;
 }
@@ -8202,17 +9280,17 @@ register_request::register_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.register_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.register_request)
 }
 register_request::register_request(const register_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_info()) {
-    info_ = new ::ComeTogether::user_info(*from.info_);
+    info_ = new ::come_together_grpc::user_info(*from.info_);
   } else {
     info_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.register_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.register_request)
 }
 
 void register_request::SharedCtor() {
@@ -8221,7 +9299,7 @@ void register_request::SharedCtor() {
 }
 
 register_request::~register_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.register_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.register_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -8247,7 +9325,7 @@ const register_request& register_request::default_instance() {
 
 
 void register_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.register_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.register_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8267,7 +9345,7 @@ const char* register_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.user_info info = 1;
+      // .come_together_grpc.user_info info = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_info(), ptr);
@@ -8298,11 +9376,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* register_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.register_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.register_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.user_info info = 1;
+  // .come_together_grpc.user_info info = 1;
   if (this->has_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -8314,19 +9392,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.register_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.register_request)
   return target;
 }
 
 size_t register_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.register_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.register_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.user_info info = 1;
+  // .come_together_grpc.user_info info = 1;
   if (this->has_info()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -8343,41 +9421,41 @@ size_t register_request::ByteSizeLong() const {
 }
 
 void register_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.register_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.register_request)
   GOOGLE_DCHECK_NE(&from, this);
   const register_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<register_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.register_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.register_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.register_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.register_request)
     MergeFrom(*source);
   }
 }
 
 void register_request::MergeFrom(const register_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.register_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.register_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_info()) {
-    _internal_mutable_info()->::ComeTogether::user_info::MergeFrom(from._internal_info());
+    _internal_mutable_info()->::come_together_grpc::user_info::MergeFrom(from._internal_info());
   }
 }
 
 void register_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.register_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.register_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void register_request::CopyFrom(const register_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.register_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.register_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8410,7 +9488,7 @@ register_response::register_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.register_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.register_response)
 }
 register_response::register_response(const register_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -8426,7 +9504,7 @@ register_response::register_response(const register_response& from)
       GetArena());
   }
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.register_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.register_response)
 }
 
 void register_response::SharedCtor() {
@@ -8437,7 +9515,7 @@ void register_response::SharedCtor() {
 }
 
 register_response::~register_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.register_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.register_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -8464,7 +9542,7 @@ const register_response& register_response::default_instance() {
 
 
 void register_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.register_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.register_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8483,12 +9561,12 @@ const char* register_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.register_response.result res = 1;
+      // .come_together_grpc.register_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::register_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::register_response_result>(val));
         } else goto handle_unusual;
         continue;
       // string user_uuid = 2;
@@ -8496,7 +9574,7 @@ const char* register_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_user_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.register_response.user_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.register_response.user_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8505,7 +9583,7 @@ const char* register_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.register_response.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.register_response.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8533,11 +9611,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* register_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.register_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.register_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.register_response.result res = 1;
+  // .come_together_grpc.register_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -8549,7 +9627,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_user_uuid().data(), static_cast<int>(this->_internal_user_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.register_response.user_uuid");
+      "come_together_grpc.register_response.user_uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_user_uuid(), target);
   }
@@ -8559,7 +9637,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.register_response.access_token");
+      "come_together_grpc.register_response.access_token");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_access_token(), target);
   }
@@ -8568,12 +9646,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.register_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.register_response)
   return target;
 }
 
 size_t register_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.register_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.register_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -8594,7 +9672,7 @@ size_t register_response::ByteSizeLong() const {
         this->_internal_access_token());
   }
 
-  // .ComeTogether.register_response.result res = 1;
+  // .come_together_grpc.register_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -8610,22 +9688,22 @@ size_t register_response::ByteSizeLong() const {
 }
 
 void register_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.register_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.register_response)
   GOOGLE_DCHECK_NE(&from, this);
   const register_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<register_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.register_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.register_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.register_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.register_response)
     MergeFrom(*source);
   }
 }
 
 void register_response::MergeFrom(const register_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.register_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.register_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -8643,14 +9721,14 @@ void register_response::MergeFrom(const register_response& from) {
 }
 
 void register_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.register_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.register_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void register_response::CopyFrom(const register_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.register_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.register_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -8686,7 +9764,7 @@ user_info::user_info(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   images_uuid_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.user_info)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.user_info)
 }
 user_info::user_info(const user_info& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -8727,7 +9805,7 @@ user_info::user_info(const user_info& from)
     other_info_json_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_other_info_json(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.user_info)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.user_info)
 }
 
 void user_info::SharedCtor() {
@@ -8742,7 +9820,7 @@ void user_info::SharedCtor() {
 }
 
 user_info::~user_info() {
-  // @@protoc_insertion_point(destructor:ComeTogether.user_info)
+  // @@protoc_insertion_point(destructor:come_together_grpc.user_info)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -8774,7 +9852,7 @@ const user_info& user_info::default_instance() {
 
 
 void user_info::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.user_info)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.user_info)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8803,7 +9881,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8812,7 +9890,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_email();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.email"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.email"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8821,7 +9899,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_login();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.login"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.login"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8830,7 +9908,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_password();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.password"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.password"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8839,7 +9917,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_first_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.first_name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.first_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8848,7 +9926,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           auto str = _internal_mutable_last_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.last_name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.last_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8860,7 +9938,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
             ptr += 1;
             auto str = _internal_add_images_uuid();
             ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.images_uuid"));
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.images_uuid"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
@@ -8871,7 +9949,7 @@ const char* user_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           auto str = _internal_mutable_other_info_json();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.user_info.other_info_json"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.user_info.other_info_json"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8899,7 +9977,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* user_info::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.user_info)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.user_info)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8908,7 +9986,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.uuid");
+      "come_together_grpc.user_info.uuid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uuid(), target);
   }
@@ -8918,7 +9996,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_email().data(), static_cast<int>(this->_internal_email().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.email");
+      "come_together_grpc.user_info.email");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_email(), target);
   }
@@ -8928,7 +10006,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_login().data(), static_cast<int>(this->_internal_login().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.login");
+      "come_together_grpc.user_info.login");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_login(), target);
   }
@@ -8938,7 +10016,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.password");
+      "come_together_grpc.user_info.password");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_password(), target);
   }
@@ -8948,7 +10026,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_first_name().data(), static_cast<int>(this->_internal_first_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.first_name");
+      "come_together_grpc.user_info.first_name");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_first_name(), target);
   }
@@ -8958,7 +10036,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_last_name().data(), static_cast<int>(this->_internal_last_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.last_name");
+      "come_together_grpc.user_info.last_name");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_last_name(), target);
   }
@@ -8969,7 +10047,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.images_uuid");
+      "come_together_grpc.user_info.images_uuid");
     target = stream->WriteString(7, s, target);
   }
 
@@ -8978,7 +10056,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_other_info_json().data(), static_cast<int>(this->_internal_other_info_json().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.user_info.other_info_json");
+      "come_together_grpc.user_info.other_info_json");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_other_info_json(), target);
   }
@@ -8987,12 +10065,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.user_info)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.user_info)
   return target;
 }
 
 size_t user_info::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.user_info)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.user_info)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -9066,22 +10144,22 @@ size_t user_info::ByteSizeLong() const {
 }
 
 void user_info::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.user_info)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.user_info)
   GOOGLE_DCHECK_NE(&from, this);
   const user_info* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<user_info>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.user_info)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.user_info)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.user_info)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.user_info)
     MergeFrom(*source);
   }
 }
 
 void user_info::MergeFrom(const user_info& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.user_info)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.user_info)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -9112,14 +10190,14 @@ void user_info::MergeFrom(const user_info& from) {
 }
 
 void user_info::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.user_info)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.user_info)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void user_info::CopyFrom(const user_info& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.user_info)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.user_info)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9160,7 +10238,7 @@ marker_info::marker_info(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   images_uuid_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.marker_info)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.marker_info)
 }
 marker_info::marker_info(const marker_info& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -9194,7 +10272,7 @@ marker_info::marker_info(const marker_info& from)
   ::memcpy(&cat_, &from.cat_,
     static_cast<size_t>(reinterpret_cast<char*>(&longitude_) -
     reinterpret_cast<char*>(&cat_)) + sizeof(longitude_));
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.marker_info)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.marker_info)
 }
 
 void marker_info::SharedCtor() {
@@ -9210,7 +10288,7 @@ void marker_info::SharedCtor() {
 }
 
 marker_info::~marker_info() {
-  // @@protoc_insertion_point(destructor:ComeTogether.marker_info)
+  // @@protoc_insertion_point(destructor:come_together_grpc.marker_info)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -9240,7 +10318,7 @@ const marker_info& marker_info::default_instance() {
 
 
 void marker_info::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.marker_info)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.marker_info)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9265,20 +10343,20 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.marker_info.category cat = 1;
+      // .come_together_grpc.marker_info.category cat = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_cat(static_cast<::ComeTogether::marker_info_category>(val));
+          _internal_set_cat(static_cast<::come_together_grpc::marker_info_category>(val));
         } else goto handle_unusual;
         continue;
-      // .ComeTogether.marker_info.type marker_type = 2;
+      // .come_together_grpc.marker_info.type marker_type = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_marker_type(static_cast<::ComeTogether::marker_info_type>(val));
+          _internal_set_marker_type(static_cast<::come_together_grpc::marker_info_type>(val));
         } else goto handle_unusual;
         continue;
       // int64 from_unix_time = 3;
@@ -9307,7 +10385,7 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           auto str = _internal_mutable_creator_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.creator_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.marker_info.creator_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9316,7 +10394,7 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           auto str = _internal_mutable_display_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.display_name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.marker_info.display_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9339,7 +10417,7 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.marker_info.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9348,7 +10426,7 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
           auto str = _internal_mutable_chat_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.chat_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.marker_info.chat_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9360,7 +10438,7 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
             ptr += 1;
             auto str = _internal_add_images_uuid();
             ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.images_uuid"));
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.marker_info.images_uuid"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<106>(ptr));
@@ -9371,7 +10449,7 @@ const char* marker_info::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
           auto str = _internal_mutable_other_data_json();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.marker_info.other_data_json"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.marker_info.other_data_json"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9399,18 +10477,18 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* marker_info::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.marker_info)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.marker_info)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.marker_info.category cat = 1;
+  // .come_together_grpc.marker_info.category cat = 1;
   if (this->cat() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       1, this->_internal_cat(), target);
   }
 
-  // .ComeTogether.marker_info.type marker_type = 2;
+  // .come_together_grpc.marker_info.type marker_type = 2;
   if (this->marker_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -9440,7 +10518,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_creator_uuid().data(), static_cast<int>(this->_internal_creator_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.marker_info.creator_uuid");
+      "come_together_grpc.marker_info.creator_uuid");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_creator_uuid(), target);
   }
@@ -9450,7 +10528,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_display_name().data(), static_cast<int>(this->_internal_display_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.marker_info.display_name");
+      "come_together_grpc.marker_info.display_name");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_display_name(), target);
   }
@@ -9472,7 +10550,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.marker_info.uuid");
+      "come_together_grpc.marker_info.uuid");
     target = stream->WriteStringMaybeAliased(
         11, this->_internal_uuid(), target);
   }
@@ -9482,7 +10560,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chat_uuid().data(), static_cast<int>(this->_internal_chat_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.marker_info.chat_uuid");
+      "come_together_grpc.marker_info.chat_uuid");
     target = stream->WriteStringMaybeAliased(
         12, this->_internal_chat_uuid(), target);
   }
@@ -9493,7 +10571,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.marker_info.images_uuid");
+      "come_together_grpc.marker_info.images_uuid");
     target = stream->WriteString(13, s, target);
   }
 
@@ -9502,7 +10580,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_other_data_json().data(), static_cast<int>(this->_internal_other_data_json().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.marker_info.other_data_json");
+      "come_together_grpc.marker_info.other_data_json");
     target = stream->WriteStringMaybeAliased(
         14, this->_internal_other_data_json(), target);
   }
@@ -9511,12 +10589,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.marker_info)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.marker_info)
   return target;
 }
 
 size_t marker_info::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.marker_info)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.marker_info)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -9566,13 +10644,13 @@ size_t marker_info::ByteSizeLong() const {
         this->_internal_other_data_json());
   }
 
-  // .ComeTogether.marker_info.category cat = 1;
+  // .come_together_grpc.marker_info.category cat = 1;
   if (this->cat() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_cat());
   }
 
-  // .ComeTogether.marker_info.type marker_type = 2;
+  // .come_together_grpc.marker_info.type marker_type = 2;
   if (this->marker_type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_marker_type());
@@ -9619,22 +10697,22 @@ size_t marker_info::ByteSizeLong() const {
 }
 
 void marker_info::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.marker_info)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.marker_info)
   GOOGLE_DCHECK_NE(&from, this);
   const marker_info* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<marker_info>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.marker_info)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.marker_info)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.marker_info)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.marker_info)
     MergeFrom(*source);
   }
 }
 
 void marker_info::MergeFrom(const marker_info& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.marker_info)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.marker_info)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -9680,14 +10758,14 @@ void marker_info::MergeFrom(const marker_info& from) {
 }
 
 void marker_info::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.marker_info)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.marker_info)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void marker_info::CopyFrom(const marker_info& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.marker_info)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.marker_info)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9722,15 +10800,15 @@ void marker_info::InternalSwap(marker_info* other) {
 // ===================================================================
 
 void add_marker_request::InitAsDefaultInstance() {
-  ::ComeTogether::_add_marker_request_default_instance_._instance.get_mutable()->info_ = const_cast< ::ComeTogether::marker_info*>(
-      ::ComeTogether::marker_info::internal_default_instance());
+  ::come_together_grpc::_add_marker_request_default_instance_._instance.get_mutable()->info_ = const_cast< ::come_together_grpc::marker_info*>(
+      ::come_together_grpc::marker_info::internal_default_instance());
 }
 class add_marker_request::_Internal {
  public:
-  static const ::ComeTogether::marker_info& info(const add_marker_request* msg);
+  static const ::come_together_grpc::marker_info& info(const add_marker_request* msg);
 };
 
-const ::ComeTogether::marker_info&
+const ::come_together_grpc::marker_info&
 add_marker_request::_Internal::info(const add_marker_request* msg) {
   return *msg->info_;
 }
@@ -9738,17 +10816,17 @@ add_marker_request::add_marker_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.add_marker_request)
 }
 add_marker_request::add_marker_request(const add_marker_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_info()) {
-    info_ = new ::ComeTogether::marker_info(*from.info_);
+    info_ = new ::come_together_grpc::marker_info(*from.info_);
   } else {
     info_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.add_marker_request)
 }
 
 void add_marker_request::SharedCtor() {
@@ -9757,7 +10835,7 @@ void add_marker_request::SharedCtor() {
 }
 
 add_marker_request::~add_marker_request() {
-  // @@protoc_insertion_point(destructor:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(destructor:come_together_grpc.add_marker_request)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -9783,7 +10861,7 @@ const add_marker_request& add_marker_request::default_instance() {
 
 
 void add_marker_request::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.add_marker_request)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.add_marker_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9803,7 +10881,7 @@ const char* add_marker_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.marker_info info = 1;
+      // .come_together_grpc.marker_info info = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_info(), ptr);
@@ -9834,11 +10912,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* add_marker_request::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.add_marker_request)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.marker_info info = 1;
+  // .come_together_grpc.marker_info info = 1;
   if (this->has_info()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -9850,19 +10928,19 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.add_marker_request)
   return target;
 }
 
 size_t add_marker_request::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.add_marker_request)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.add_marker_request)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .ComeTogether.marker_info info = 1;
+  // .come_together_grpc.marker_info info = 1;
   if (this->has_info()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -9879,41 +10957,41 @@ size_t add_marker_request::ByteSizeLong() const {
 }
 
 void add_marker_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.add_marker_request)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.add_marker_request)
   GOOGLE_DCHECK_NE(&from, this);
   const add_marker_request* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<add_marker_request>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.add_marker_request)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.add_marker_request)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.add_marker_request)
     MergeFrom(*source);
   }
 }
 
 void add_marker_request::MergeFrom(const add_marker_request& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.add_marker_request)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.add_marker_request)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_info()) {
-    _internal_mutable_info()->::ComeTogether::marker_info::MergeFrom(from._internal_info());
+    _internal_mutable_info()->::come_together_grpc::marker_info::MergeFrom(from._internal_info());
   }
 }
 
 void add_marker_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.add_marker_request)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.add_marker_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void add_marker_request::CopyFrom(const add_marker_request& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.add_marker_request)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.add_marker_request)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -9946,7 +11024,7 @@ add_marker_response::add_marker_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.add_marker_response)
 }
 add_marker_response::add_marker_response(const add_marker_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -9962,7 +11040,7 @@ add_marker_response::add_marker_response(const add_marker_response& from)
       GetArena());
   }
   res_ = from.res_;
-  // @@protoc_insertion_point(copy_constructor:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.add_marker_response)
 }
 
 void add_marker_response::SharedCtor() {
@@ -9973,7 +11051,7 @@ void add_marker_response::SharedCtor() {
 }
 
 add_marker_response::~add_marker_response() {
-  // @@protoc_insertion_point(destructor:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(destructor:come_together_grpc.add_marker_response)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -10000,7 +11078,7 @@ const add_marker_response& add_marker_response::default_instance() {
 
 
 void add_marker_response::Clear() {
-// @@protoc_insertion_point(message_clear_start:ComeTogether.add_marker_response)
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.add_marker_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -10019,12 +11097,12 @@ const char* add_marker_response::_InternalParse(const char* ptr, ::PROTOBUF_NAME
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .ComeTogether.add_marker_response.result res = 1;
+      // .come_together_grpc.add_marker_response.result res = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_res(static_cast<::ComeTogether::add_marker_response_result>(val));
+          _internal_set_res(static_cast<::come_together_grpc::add_marker_response_result>(val));
         } else goto handle_unusual;
         continue;
       // string uuid = 2;
@@ -10032,7 +11110,7 @@ const char* add_marker_response::_InternalParse(const char* ptr, ::PROTOBUF_NAME
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.add_marker_response.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.add_marker_response.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -10041,7 +11119,7 @@ const char* add_marker_response::_InternalParse(const char* ptr, ::PROTOBUF_NAME
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_chat_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ComeTogether.add_marker_response.chat_uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.add_marker_response.chat_uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -10069,11 +11147,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* add_marker_response::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.add_marker_response)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .ComeTogether.add_marker_response.result res = 1;
+  // .come_together_grpc.add_marker_response.result res = 1;
   if (this->res() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -10085,7 +11163,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.add_marker_response.uuid");
+      "come_together_grpc.add_marker_response.uuid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_uuid(), target);
   }
@@ -10095,7 +11173,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chat_uuid().data(), static_cast<int>(this->_internal_chat_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ComeTogether.add_marker_response.chat_uuid");
+      "come_together_grpc.add_marker_response.chat_uuid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_chat_uuid(), target);
   }
@@ -10104,12 +11182,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.add_marker_response)
   return target;
 }
 
 size_t add_marker_response::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ComeTogether.add_marker_response)
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.add_marker_response)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -10130,7 +11208,7 @@ size_t add_marker_response::ByteSizeLong() const {
         this->_internal_chat_uuid());
   }
 
-  // .ComeTogether.add_marker_response.result res = 1;
+  // .come_together_grpc.add_marker_response.result res = 1;
   if (this->res() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
@@ -10146,22 +11224,22 @@ size_t add_marker_response::ByteSizeLong() const {
 }
 
 void add_marker_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ComeTogether.add_marker_response)
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.add_marker_response)
   GOOGLE_DCHECK_NE(&from, this);
   const add_marker_response* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<add_marker_response>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.add_marker_response)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ComeTogether.add_marker_response)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.add_marker_response)
     MergeFrom(*source);
   }
 }
 
 void add_marker_response::MergeFrom(const add_marker_response& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ComeTogether.add_marker_response)
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.add_marker_response)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -10179,14 +11257,14 @@ void add_marker_response::MergeFrom(const add_marker_response& from) {
 }
 
 void add_marker_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ComeTogether.add_marker_response)
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.add_marker_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void add_marker_response::CopyFrom(const add_marker_response& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ComeTogether.add_marker_response)
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.add_marker_response)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -10210,94 +11288,106 @@ void add_marker_response::InternalSwap(add_marker_response* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace ComeTogether
+}  // namespace come_together_grpc
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ComeTogether::image* Arena::CreateMaybeMessage< ::ComeTogether::image >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::image >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::image* Arena::CreateMaybeMessage< ::come_together_grpc::image >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::image >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::access_token* Arena::CreateMaybeMessage< ::ComeTogether::access_token >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::access_token >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::access_token* Arena::CreateMaybeMessage< ::come_together_grpc::access_token >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::access_token >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::ask_token_request* Arena::CreateMaybeMessage< ::ComeTogether::ask_token_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::ask_token_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::send_push_token_request* Arena::CreateMaybeMessage< ::come_together_grpc::send_push_token_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::send_push_token_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::ask_token_response* Arena::CreateMaybeMessage< ::ComeTogether::ask_token_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::ask_token_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::send_push_token_response* Arena::CreateMaybeMessage< ::come_together_grpc::send_push_token_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::send_push_token_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::verify_token_request* Arena::CreateMaybeMessage< ::ComeTogether::verify_token_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::verify_token_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::delete_marker_request* Arena::CreateMaybeMessage< ::come_together_grpc::delete_marker_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::delete_marker_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::verify_token_response* Arena::CreateMaybeMessage< ::ComeTogether::verify_token_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::verify_token_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::delete_marker_reponse* Arena::CreateMaybeMessage< ::come_together_grpc::delete_marker_reponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::delete_marker_reponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::update_info_request* Arena::CreateMaybeMessage< ::ComeTogether::update_info_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::update_info_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::ask_token_request* Arena::CreateMaybeMessage< ::come_together_grpc::ask_token_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::ask_token_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::update_info_response* Arena::CreateMaybeMessage< ::ComeTogether::update_info_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::update_info_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::ask_token_response* Arena::CreateMaybeMessage< ::come_together_grpc::ask_token_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::ask_token_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::event* Arena::CreateMaybeMessage< ::ComeTogether::event >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::event >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::verify_token_request* Arena::CreateMaybeMessage< ::come_together_grpc::verify_token_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::verify_token_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::chat_info* Arena::CreateMaybeMessage< ::ComeTogether::chat_info >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::chat_info >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::verify_token_response* Arena::CreateMaybeMessage< ::come_together_grpc::verify_token_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::verify_token_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::get_chat_messages_request* Arena::CreateMaybeMessage< ::ComeTogether::get_chat_messages_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::get_chat_messages_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::update_info_request* Arena::CreateMaybeMessage< ::come_together_grpc::update_info_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::update_info_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::chat_message* Arena::CreateMaybeMessage< ::ComeTogether::chat_message >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::chat_message >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::update_info_response* Arena::CreateMaybeMessage< ::come_together_grpc::update_info_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::update_info_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::send_chat_message_request* Arena::CreateMaybeMessage< ::ComeTogether::send_chat_message_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::send_chat_message_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::event* Arena::CreateMaybeMessage< ::come_together_grpc::event >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::event >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::send_chat_message_response* Arena::CreateMaybeMessage< ::ComeTogether::send_chat_message_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::send_chat_message_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::chat_info* Arena::CreateMaybeMessage< ::come_together_grpc::chat_info >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::chat_info >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::get_info_request* Arena::CreateMaybeMessage< ::ComeTogether::get_info_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::get_info_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::get_chat_messages_request* Arena::CreateMaybeMessage< ::come_together_grpc::get_chat_messages_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::get_chat_messages_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::get_info_response* Arena::CreateMaybeMessage< ::ComeTogether::get_info_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::get_info_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::chat_message* Arena::CreateMaybeMessage< ::come_together_grpc::chat_message >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::chat_message >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::get_images_request* Arena::CreateMaybeMessage< ::ComeTogether::get_images_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::get_images_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::send_chat_message_request* Arena::CreateMaybeMessage< ::come_together_grpc::send_chat_message_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::send_chat_message_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::manage_image_request* Arena::CreateMaybeMessage< ::ComeTogether::manage_image_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::manage_image_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::send_chat_message_response* Arena::CreateMaybeMessage< ::come_together_grpc::send_chat_message_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::send_chat_message_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::manage_image_response* Arena::CreateMaybeMessage< ::ComeTogether::manage_image_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::manage_image_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::get_info_request* Arena::CreateMaybeMessage< ::come_together_grpc::get_info_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::get_info_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::check_request* Arena::CreateMaybeMessage< ::ComeTogether::check_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::check_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::get_info_response* Arena::CreateMaybeMessage< ::come_together_grpc::get_info_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::get_info_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::check_response* Arena::CreateMaybeMessage< ::ComeTogether::check_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::check_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::get_images_request* Arena::CreateMaybeMessage< ::come_together_grpc::get_images_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::get_images_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::login_request* Arena::CreateMaybeMessage< ::ComeTogether::login_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::login_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::manage_image_request* Arena::CreateMaybeMessage< ::come_together_grpc::manage_image_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::manage_image_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::login_response* Arena::CreateMaybeMessage< ::ComeTogether::login_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::login_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::manage_image_response* Arena::CreateMaybeMessage< ::come_together_grpc::manage_image_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::manage_image_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::register_request* Arena::CreateMaybeMessage< ::ComeTogether::register_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::register_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::check_request* Arena::CreateMaybeMessage< ::come_together_grpc::check_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::check_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::register_response* Arena::CreateMaybeMessage< ::ComeTogether::register_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::register_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::check_response* Arena::CreateMaybeMessage< ::come_together_grpc::check_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::check_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::user_info* Arena::CreateMaybeMessage< ::ComeTogether::user_info >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::user_info >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::login_request* Arena::CreateMaybeMessage< ::come_together_grpc::login_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::login_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::marker_info* Arena::CreateMaybeMessage< ::ComeTogether::marker_info >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::marker_info >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::login_response* Arena::CreateMaybeMessage< ::come_together_grpc::login_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::login_response >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::add_marker_request* Arena::CreateMaybeMessage< ::ComeTogether::add_marker_request >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::add_marker_request >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::register_request* Arena::CreateMaybeMessage< ::come_together_grpc::register_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::register_request >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ComeTogether::add_marker_response* Arena::CreateMaybeMessage< ::ComeTogether::add_marker_response >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ComeTogether::add_marker_response >(arena);
+template<> PROTOBUF_NOINLINE ::come_together_grpc::register_response* Arena::CreateMaybeMessage< ::come_together_grpc::register_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::register_response >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::user_info* Arena::CreateMaybeMessage< ::come_together_grpc::user_info >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::user_info >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::marker_info* Arena::CreateMaybeMessage< ::come_together_grpc::marker_info >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::marker_info >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::add_marker_request* Arena::CreateMaybeMessage< ::come_together_grpc::add_marker_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::add_marker_request >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::add_marker_response* Arena::CreateMaybeMessage< ::come_together_grpc::add_marker_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::add_marker_response >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
