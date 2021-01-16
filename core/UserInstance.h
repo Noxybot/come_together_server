@@ -18,16 +18,18 @@ class UserInstance : public QueueEvents
     };
     CommonCallData m_data;
     std::atomic<state> m_state;
+    std::string m_access_token;
     std::mutex m_mtx;
     std::queue<event_ptr> m_events;
     instance_logoff_t m_on_logoff;
 public:
-    explicit UserInstance(CommonCallData&& data);
+    explicit UserInstance(CommonCallData&& data, std::string access_token);
     UserInstance(UserInstance&& r) noexcept;
     UserInstance& operator=(UserInstance&& r) noexcept;
     void ConnectToInstanceLogoff(instance_logoff_t callback);
     const std::string& GetAccessToken() const;
     void SendEvent(const event_ptr& event);
+private:
     void OnAsyncEventFinished() override;
     void OnFinished() override;
 };

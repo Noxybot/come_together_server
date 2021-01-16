@@ -4,14 +4,14 @@
 
 CommonCallData::CommonCallData()
     : m_ctx(std::make_unique<grpc::ServerContext>())
-    , m_token(std::make_unique<come_together_grpc::access_token>())
+    , m_application_id(std::make_unique<come_together_grpc::application_id>())
     , m_writer(std::make_unique<grpc::ServerAsyncWriter<come_together_grpc::event>>(m_ctx.get()))
     , m_state(false)
 {}
 
 CommonCallData::CommonCallData(CommonCallData&& r) noexcept
     : m_ctx(std::move(r.m_ctx))
-    , m_token(std::move(r.m_token))
+    , m_application_id(std::move(r.m_application_id))
     , m_writer(std::move(r.m_writer))
     , m_state(r.m_state.load())
 {}
@@ -21,7 +21,7 @@ CommonCallData& CommonCallData::operator=(CommonCallData&& r) noexcept
     if (this != &r)
     {
         m_ctx = std::move(r.m_ctx);
-        m_token = std::move(r.m_token);
+        m_application_id = std::move(r.m_application_id);
         m_writer = std::move(r.m_writer);
         m_state = r.m_state.load();
     }

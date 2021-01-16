@@ -14,6 +14,8 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_access_token_come_5ftogether_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_application_id_come_5ftogether_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_chat_info_come_5ftogether_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_chat_message_come_5ftogether_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_come_5ftogether_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_marker_info_come_5ftogether_2eproto;
@@ -27,6 +29,18 @@ class access_tokenDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<access_token> _instance;
 } _access_token_default_instance_;
+class application_idDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<application_id> _instance;
+} _application_id_default_instance_;
+class logout_requestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<logout_request> _instance;
+} _logout_request_default_instance_;
+class logout_responseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<logout_response> _instance;
+} _logout_response_default_instance_;
 class send_push_token_requestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<send_push_token_request> _instance;
@@ -206,6 +220,20 @@ static void InitDefaultsscc_info_add_marker_response_come_5ftogether_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_add_marker_response_come_5ftogether_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_add_marker_response_come_5ftogether_2eproto}, {}};
 
+static void InitDefaultsscc_info_application_id_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_application_id_default_instance_;
+    new (ptr) ::come_together_grpc::application_id();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::application_id::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_application_id_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_application_id_come_5ftogether_2eproto}, {}};
+
 static void InitDefaultsscc_info_ask_token_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -315,8 +343,9 @@ static void InitDefaultsscc_info_delete_marker_request_come_5ftogether_2eproto()
   ::come_together_grpc::delete_marker_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_delete_marker_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_delete_marker_request_come_5ftogether_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_delete_marker_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_delete_marker_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,}};
 
 static void InitDefaultsscc_info_event_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -360,8 +389,9 @@ static void InitDefaultsscc_info_get_images_request_come_5ftogether_2eproto() {
   ::come_together_grpc::get_images_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_get_images_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_get_images_request_come_5ftogether_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_get_images_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_get_images_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,}};
 
 static void InitDefaultsscc_info_get_info_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -419,8 +449,10 @@ static void InitDefaultsscc_info_login_request_come_5ftogether_2eproto() {
   ::come_together_grpc::login_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_login_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_login_request_come_5ftogether_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_login_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_login_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,
+      &scc_info_application_id_come_5ftogether_2eproto.base,}};
 
 static void InitDefaultsscc_info_login_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -433,9 +465,39 @@ static void InitDefaultsscc_info_login_response_come_5ftogether_2eproto() {
   ::come_together_grpc::login_response::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_login_response_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_login_response_come_5ftogether_2eproto}, {
-      &scc_info_user_info_come_5ftogether_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_login_response_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_login_response_come_5ftogether_2eproto}, {
+      &scc_info_user_info_come_5ftogether_2eproto.base,
+      &scc_info_access_token_come_5ftogether_2eproto.base,}};
+
+static void InitDefaultsscc_info_logout_request_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_logout_request_default_instance_;
+    new (ptr) ::come_together_grpc::logout_request();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::logout_request::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_logout_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_logout_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,}};
+
+static void InitDefaultsscc_info_logout_response_come_5ftogether_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::come_together_grpc::_logout_response_default_instance_;
+    new (ptr) ::come_together_grpc::logout_response();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::come_together_grpc::logout_response::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_logout_response_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_logout_response_come_5ftogether_2eproto}, {}};
 
 static void InitDefaultsscc_info_manage_image_request_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -448,8 +510,9 @@ static void InitDefaultsscc_info_manage_image_request_come_5ftogether_2eproto() 
   ::come_together_grpc::manage_image_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_manage_image_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_manage_image_request_come_5ftogether_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_manage_image_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_manage_image_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,}};
 
 static void InitDefaultsscc_info_manage_image_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -519,8 +582,9 @@ static void InitDefaultsscc_info_send_chat_message_request_come_5ftogether_2epro
   ::come_together_grpc::send_chat_message_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_send_chat_message_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_send_chat_message_request_come_5ftogether_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_send_chat_message_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_send_chat_message_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,
       &scc_info_chat_message_come_5ftogether_2eproto.base,}};
 
 static void InitDefaultsscc_info_send_chat_message_response_come_5ftogether_2eproto() {
@@ -548,8 +612,9 @@ static void InitDefaultsscc_info_send_push_token_request_come_5ftogether_2eproto
   ::come_together_grpc::send_push_token_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_send_push_token_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_send_push_token_request_come_5ftogether_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_send_push_token_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_send_push_token_request_come_5ftogether_2eproto}, {
+      &scc_info_application_id_come_5ftogether_2eproto.base,}};
 
 static void InitDefaultsscc_info_send_push_token_response_come_5ftogether_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -576,8 +641,9 @@ static void InitDefaultsscc_info_update_info_request_come_5ftogether_2eproto() {
   ::come_together_grpc::update_info_request::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_update_info_request_come_5ftogether_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_update_info_request_come_5ftogether_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_update_info_request_come_5ftogether_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_update_info_request_come_5ftogether_2eproto}, {
+      &scc_info_access_token_come_5ftogether_2eproto.base,
       &scc_info_marker_info_come_5ftogether_2eproto.base,
       &scc_info_user_info_come_5ftogether_2eproto.base,}};
 
@@ -637,8 +703,8 @@ static void InitDefaultsscc_info_verify_token_response_come_5ftogether_2eproto()
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_verify_token_response_come_5ftogether_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_verify_token_response_come_5ftogether_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_come_5ftogether_2eproto[33];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_come_5ftogether_2eproto[20];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_come_5ftogether_2eproto[36];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_come_5ftogether_2eproto[22];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_come_5ftogether_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -655,13 +721,31 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::access_token, token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::access_token, value_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::application_id, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::application_id, id_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::logout_request, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::logout_request, token_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::logout_response, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::logout_response, res_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, app_id_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_request, push_token_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_push_token_response, _internal_metadata_),
@@ -674,7 +758,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_request, marker_uuid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::delete_marker_reponse, _internal_metadata_),
@@ -712,7 +796,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::update_info_request, type_),
   offsetof(::come_together_grpc::update_info_requestDefaultTypeInternal, m_info_),
   offsetof(::come_together_grpc::update_info_requestDefaultTypeInternal, u_info_),
@@ -747,7 +831,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, chat_uuid_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, page_size_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_chat_messages_request, page_number_),
@@ -770,7 +854,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_request, message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::send_chat_message_response, _internal_metadata_),
@@ -786,7 +870,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, info_type_),
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_request, target_uuid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_info_response, _internal_metadata_),
@@ -804,7 +888,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, image_type_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, target_uuid_),
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, amount_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, hash_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::get_images_request, starting_sequence_number_),
@@ -814,7 +898,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, act_),
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, token_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::manage_image_request, target_uuid_),
   offsetof(::come_together_grpc::manage_image_requestDefaultTypeInternal, image_),
   offsetof(::come_together_grpc::manage_image_requestDefaultTypeInternal, image_uuid_),
@@ -845,8 +929,11 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, typ_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, login_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, password_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_request, app_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -854,7 +941,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, res_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, info_),
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, access_token_),
+  PROTOBUF_FIELD_OFFSET(::come_together_grpc::login_response, token_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_request, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -868,7 +955,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, res_),
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, user_uuid_),
-  PROTOBUF_FIELD_OFFSET(::come_together_grpc::register_response, access_token_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::come_together_grpc::user_info, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -918,42 +1004,48 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_come_5ftogether_2eproto::offse
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::come_together_grpc::image)},
   { 8, -1, sizeof(::come_together_grpc::access_token)},
-  { 14, -1, sizeof(::come_together_grpc::send_push_token_request)},
-  { 21, -1, sizeof(::come_together_grpc::send_push_token_response)},
-  { 27, -1, sizeof(::come_together_grpc::delete_marker_request)},
-  { 34, -1, sizeof(::come_together_grpc::delete_marker_reponse)},
-  { 40, -1, sizeof(::come_together_grpc::ask_token_request)},
-  { 46, -1, sizeof(::come_together_grpc::ask_token_response)},
-  { 52, -1, sizeof(::come_together_grpc::verify_token_request)},
-  { 59, -1, sizeof(::come_together_grpc::verify_token_response)},
-  { 65, -1, sizeof(::come_together_grpc::update_info_request)},
-  { 75, -1, sizeof(::come_together_grpc::update_info_response)},
-  { 81, -1, sizeof(::come_together_grpc::event)},
-  { 91, -1, sizeof(::come_together_grpc::chat_info)},
-  { 100, -1, sizeof(::come_together_grpc::get_chat_messages_request)},
-  { 110, -1, sizeof(::come_together_grpc::chat_message)},
-  { 123, -1, sizeof(::come_together_grpc::send_chat_message_request)},
-  { 130, -1, sizeof(::come_together_grpc::send_chat_message_response)},
-  { 138, -1, sizeof(::come_together_grpc::get_info_request)},
-  { 146, -1, sizeof(::come_together_grpc::get_info_response)},
-  { 155, -1, sizeof(::come_together_grpc::get_images_request)},
-  { 166, -1, sizeof(::come_together_grpc::manage_image_request)},
-  { 177, -1, sizeof(::come_together_grpc::manage_image_response)},
-  { 185, -1, sizeof(::come_together_grpc::check_request)},
-  { 192, -1, sizeof(::come_together_grpc::check_response)},
-  { 198, -1, sizeof(::come_together_grpc::login_request)},
-  { 205, -1, sizeof(::come_together_grpc::login_response)},
-  { 213, -1, sizeof(::come_together_grpc::register_request)},
-  { 219, -1, sizeof(::come_together_grpc::register_response)},
-  { 227, -1, sizeof(::come_together_grpc::user_info)},
-  { 240, -1, sizeof(::come_together_grpc::marker_info)},
-  { 258, -1, sizeof(::come_together_grpc::add_marker_request)},
-  { 264, -1, sizeof(::come_together_grpc::add_marker_response)},
+  { 14, -1, sizeof(::come_together_grpc::application_id)},
+  { 20, -1, sizeof(::come_together_grpc::logout_request)},
+  { 26, -1, sizeof(::come_together_grpc::logout_response)},
+  { 32, -1, sizeof(::come_together_grpc::send_push_token_request)},
+  { 39, -1, sizeof(::come_together_grpc::send_push_token_response)},
+  { 45, -1, sizeof(::come_together_grpc::delete_marker_request)},
+  { 52, -1, sizeof(::come_together_grpc::delete_marker_reponse)},
+  { 58, -1, sizeof(::come_together_grpc::ask_token_request)},
+  { 64, -1, sizeof(::come_together_grpc::ask_token_response)},
+  { 70, -1, sizeof(::come_together_grpc::verify_token_request)},
+  { 77, -1, sizeof(::come_together_grpc::verify_token_response)},
+  { 83, -1, sizeof(::come_together_grpc::update_info_request)},
+  { 93, -1, sizeof(::come_together_grpc::update_info_response)},
+  { 99, -1, sizeof(::come_together_grpc::event)},
+  { 109, -1, sizeof(::come_together_grpc::chat_info)},
+  { 118, -1, sizeof(::come_together_grpc::get_chat_messages_request)},
+  { 128, -1, sizeof(::come_together_grpc::chat_message)},
+  { 141, -1, sizeof(::come_together_grpc::send_chat_message_request)},
+  { 148, -1, sizeof(::come_together_grpc::send_chat_message_response)},
+  { 156, -1, sizeof(::come_together_grpc::get_info_request)},
+  { 164, -1, sizeof(::come_together_grpc::get_info_response)},
+  { 173, -1, sizeof(::come_together_grpc::get_images_request)},
+  { 184, -1, sizeof(::come_together_grpc::manage_image_request)},
+  { 195, -1, sizeof(::come_together_grpc::manage_image_response)},
+  { 203, -1, sizeof(::come_together_grpc::check_request)},
+  { 210, -1, sizeof(::come_together_grpc::check_response)},
+  { 216, -1, sizeof(::come_together_grpc::login_request)},
+  { 226, -1, sizeof(::come_together_grpc::login_response)},
+  { 234, -1, sizeof(::come_together_grpc::register_request)},
+  { 240, -1, sizeof(::come_together_grpc::register_response)},
+  { 247, -1, sizeof(::come_together_grpc::user_info)},
+  { 260, -1, sizeof(::come_together_grpc::marker_info)},
+  { 278, -1, sizeof(::come_together_grpc::add_marker_request)},
+  { 284, -1, sizeof(::come_together_grpc::add_marker_response)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_image_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_access_token_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_application_id_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_logout_request_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_logout_response_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_send_push_token_request_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_send_push_token_response_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::come_together_grpc::_delete_marker_request_default_instance_),
@@ -991,194 +1083,213 @@ const char descriptor_table_protodef_come_5ftogether_2eproto[] PROTOBUF_SECTION_
   "\n\023come_together.proto\022\022come_together_grp"
   "c\"<\n\005image\022\014\n\004data\030\001 \001(\014\022\014\n\004uuid\030\002 \001(\t\022\027"
   "\n\017sequence_number\030\003 \001(\005\"\035\n\014access_token\022"
-  "\r\n\005token\030\001 \001(\t\"C\n\027send_push_token_reques"
-  "t\022\024\n\014access_token\030\001 \001(\t\022\022\n\npush_token\030\002 "
-  "\001(\t\"\236\001\n\030send_push_token_response\022@\n\003res\030"
-  "\001 \001(\01623.come_together_grpc.send_push_tok"
-  "en_response.result\"@\n\006result\022\013\n\007NOT_SET\020"
-  "\000\022\006\n\002OK\020\001\022\026\n\022USER_NOT_LOGGED_IN\020\002\022\t\n\005OTH"
-  "ER\020\003\"B\n\025delete_marker_request\022\024\n\014access_"
-  "token\030\001 \001(\t\022\023\n\013marker_uuid\030\002 \001(\t\"\264\001\n\025del"
-  "ete_marker_reponse\022=\n\003res\030\001 \001(\01620.come_t"
-  "ogether_grpc.delete_marker_reponse.resul"
-  "t\"\\\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSU"
-  "FFICIENT_PERMISIONS\020\002\022\024\n\020MARKER_NOT_FOUN"
-  "D\020\003\022\n\n\005OTHER\020\347\007\"\"\n\021ask_token_request\022\r\n\005"
-  "email\030\001 \001(\t\"\222\001\n\022ask_token_response\022:\n\003re"
-  "s\030\001 \001(\0162-.come_together_grpc.ask_token_r"
-  "esponse.result\"@\n\006result\022\013\n\007NOT_SET\020\000\022\006\n"
-  "\002OK\020\001\022\025\n\021MAIL_WAS_NOT_SENT\020\002\022\n\n\005OTHER\020\347\007"
-  "\"4\n\024verify_token_request\022\r\n\005email\030\001 \001(\t\022"
-  "\r\n\005token\030\002 \001(\t\"\247\001\n\025verify_token_response"
-  "\022=\n\003res\030\001 \001(\01620.come_together_grpc.verif"
-  "y_token_response.result\"O\n\006result\022\013\n\007NOT"
-  "_SET\020\000\022\006\n\002OK\020\001\022\023\n\017EMAIL_NOT_FOUND\020\002\022\017\n\013W"
-  "RONG_TOKEN\020\003\022\n\n\005OTHER\020\347\007\"\214\002\n\023update_info"
-  "_request\022\024\n\014access_token\030\001 \001(\t\022A\n\004type\030\002"
-  " \001(\01623.come_together_grpc.update_info_re"
-  "quest.update_type\0221\n\006m_info\030\003 \001(\0132\037.come"
-  "_together_grpc.marker_infoH\000\022/\n\006u_info\030\004"
-  " \001(\0132\035.come_together_grpc.user_infoH\000\"0\n"
-  "\013update_type\022\013\n\007NOT_SET\020\000\022\n\n\006MARKER\020\001\022\010\n"
-  "\004USER\020\002B\006\n\004data\"\234\001\n\024update_info_response"
-  "\022<\n\003res\030\001 \001(\0162/.come_together_grpc.updat"
-  "e_info_response.result\"F\n\006result\022\013\n\007NOT_"
-  "SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIONS"
-  "\020\002\022\n\n\005OTHER\020\347\007\"\242\003\n\005event\0222\n\nevent_type\030\001"
-  " \001(\0162\036.come_together_grpc.event.type\0221\n\006"
-  "m_info\030\002 \001(\0132\037.come_together_grpc.marker"
-  "_infoH\000\0225\n\tc_message\030\003 \001(\0132 .come_togeth"
-  "er_grpc.chat_messageH\000\022/\n\006u_info\030\004 \001(\0132\035"
-  ".come_together_grpc.user_infoH\000\"\301\001\n\004type"
-  "\022\013\n\007NOT_SET\020\000\022\020\n\014MARKER_ADDED\020\001\022\021\n\rMARKE"
-  "R_EDITED\020\002\022\032\n\026MARKER_DELETED_BY_USER\020\003\022\035"
-  "\n\031MARKER_DELETED_BY_TIMEOUT\020\004\022\021\n\rMESSAGE"
-  "_ADDED\020\005\022\022\n\016MESSAGE_EDITED\020\006\022\023\n\017MESSAGE_"
-  "DELETED\020\007\022\020\n\014USER_UPDATED\020\010B\006\n\004data\"a\n\tc"
-  "hat_info\022\014\n\004uuid\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\031\n"
-  "\021participants_uuid\030\003 \003(\t\022\034\n\024last_visible"
-  "_message\030\004 \001(\t\"z\n\031get_chat_messages_requ"
-  "est\022\024\n\014access_token\030\001 \001(\t\022\021\n\tchat_uuid\030\002"
-  " \001(\t\022\021\n\tpage_size\030\003 \001(\005\022\023\n\013page_number\030\004"
-  " \001(\005\022\014\n\004hash\030\005 \001(\t\"\202\002\n\014chat_message\022F\n\014c"
-  "ontent_type\030\001 \001(\01620.come_together_grpc.c"
-  "hat_message.message_content\022\023\n\013sender_uu"
-  "id\030\002 \001(\t\022\016\n\004text\030\003 \001(\tH\000\022\026\n\016sent_unix_ti"
-  "me\030\004 \001(\003\022\021\n\tchat_uuid\030\005 \001(\t\022\027\n\017sequence_"
-  "number\030\006 \001(\003\022\014\n\004uuid\030\007 \001(\t\"(\n\017message_co"
-  "ntent\022\013\n\007NOT_SET\020\000\022\010\n\004TEXT\020\001B\t\n\007content\""
-  "d\n\031send_chat_message_request\022\024\n\014access_t"
-  "oken\030\001 \001(\t\0221\n\007message\030\002 \001(\0132 .come_toget"
-  "her_grpc.chat_message\"\220\002\n\032send_chat_mess"
-  "age_response\022B\n\003res\030\001 \001(\01625.come_togethe"
-  "r_grpc.send_chat_message_response.result"
-  "\022\036\n\026actual_sequence_number\030\002 \001(\003\022\024\n\014mess"
-  "age_uuid\030\004 \001(\t\"x\n\006result\022\013\n\007NOT_SET\020\000\022\006\n"
-  "\002OK\020\001\022\027\n\023CHAT_DOES_NOT_EXIST\020\002\022\027\n\023USER_D"
-  "OES_NOT_EXIST\020\003\022\033\n\027INSUFFICIENT_PERMISIO"
-  "NS\020\004\022\n\n\005OTHER\020\347\007\"\260\001\n\020get_info_request\022<\n"
-  "\tinfo_type\030\001 \001(\0162).come_together_grpc.ge"
-  "t_info_request.type\022\024\n\014access_token\030\002 \001("
-  "\t\022\023\n\013target_uuid\030\003 \001(\t\"3\n\004type\022\013\n\007NOT_SE"
-  "T\020\000\022\010\n\004USER\020\001\022\n\n\006MARKER\020\002\022\010\n\004CHAT\020\003\"\260\001\n\021"
-  "get_info_response\022/\n\006u_info\030\001 \001(\0132\035.come"
-  "_together_grpc.user_infoH\000\0221\n\006m_info\030\002 \001"
-  "(\0132\037.come_together_grpc.marker_infoH\000\022/\n"
-  "\006c_info\030\003 \001(\0132\035.come_together_grpc.chat_"
-  "infoH\000B\006\n\004data\"\353\001\n\022get_images_request\022\?\n"
-  "\nimage_type\030\001 \001(\0162+.come_together_grpc.g"
-  "et_images_request.type\022\023\n\013target_uuid\030\002 "
-  "\001(\t\022\024\n\014access_token\030\003 \001(\t\022\016\n\006amount\030\004 \001("
-  "\005\022\014\n\004hash\030\005 \001(\t\022 \n\030starting_sequence_num"
-  "ber\030\006 \001(\005\")\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004USER\020\001"
-  "\022\n\n\006MARKER\020\002\"\245\002\n\024manage_image_request\022<\n"
-  "\003act\030\001 \001(\0162/.come_together_grpc.manage_i"
-  "mage_request.action\022\024\n\014access_token\030\002 \001("
-  "\t\022\023\n\013target_uuid\030\003 \001(\t\022\017\n\005image\030\004 \001(\014H\000\022"
-  "\024\n\nimage_uuid\030\005 \001(\tH\000\"u\n\006action\022\013\n\007NOT_S"
-  "ET\020\000\022\025\n\021UPLOAD_USER_IMAGE\020\001\022\025\n\021DELETE_US"
-  "ER_IMAGE\020\002\022\027\n\023UPLOAD_MARKER_IMAGE\020\003\022\027\n\023D"
-  "ELETE_MARKER_IMAGE\020\004B\006\n\004data\"\321\001\n\025manage_"
-  "image_response\022=\n\003res\030\001 \001(\01620.come_toget"
-  "her_grpc.manage_image_response.result\022\022\n"
-  "\nimage_uuid\030\002 \001(\t\022\035\n\025image_sequence_numb"
-  "er\030\003 \001(\005\"F\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022"
-  "\033\n\027INSUFFICIENT_PERMISIONS\020\002\022\n\n\005OTHER\020\347\007"
-  "\"\204\001\n\rcheck_request\022:\n\ncheck_type\030\001 \001(\0162&"
-  ".come_together_grpc.check_request.type\022\014"
-  "\n\004data\030\002 \001(\t\")\n\004type\022\013\n\007NOT_SET\020\000\022\t\n\005EMA"
-  "IL\020\001\022\t\n\005LOGIN\020\002\"\205\001\n\016check_response\0226\n\003re"
-  "s\030\001 \001(\0162).come_together_grpc.check_respo"
-  "nse.result\";\n\006result\022\013\n\007NOT_SET\020\000\022\r\n\tAVA"
-  "ILABLE\020\001\022\t\n\005TAKEN\020\002\022\n\n\005OTHER\020\347\007\"0\n\rlogin"
-  "_request\022\r\n\005login\030\001 \001(\t\022\020\n\010password\030\002 \001("
-  "\t\"\336\001\n\016login_response\0226\n\003res\030\001 \001(\0162).come"
-  "_together_grpc.login_response.result\022+\n\004"
-  "info\030\002 \001(\0132\035.come_together_grpc.user_inf"
-  "o\022\024\n\014access_token\030\003 \001(\t\"Q\n\006result\022\013\n\007NOT"
-  "_SET\020\000\022\006\n\002OK\020\001\022\022\n\016USER_NOT_FOUND\020\002\022\022\n\016WR"
-  "ONG_PASSWORD\020\003\022\n\n\005OTHER\020\347\007\"\?\n\020register_r"
-  "equest\022+\n\004info\030\001 \001(\0132\035.come_together_grp"
-  "c.user_info\"\324\001\n\021register_response\0229\n\003res"
-  "\030\001 \001(\0162,.come_together_grpc.register_res"
-  "ponse.result\022\021\n\tuser_uuid\030\002 \001(\t\022\024\n\014acces"
-  "s_token\030\003 \001(\t\"[\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002"
-  "OK\020\001\022\027\n\023EMAIL_ALREADY_TAKEN\020\002\022\027\n\023LOGIN_A"
-  "LREADY_TAKEN\020\003\022\n\n\005OTHER\020\347\007\"\236\001\n\tuser_info"
-  "\022\014\n\004uuid\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022\r\n\005login\030\003"
-  " \001(\t\022\020\n\010password\030\004 \001(\t\022\022\n\nfirst_name\030\005 \001"
-  "(\t\022\021\n\tlast_name\030\006 \001(\t\022\023\n\013images_uuid\030\007 \003"
-  "(\t\022\027\n\017other_info_json\030\010 \001(\t\"\234\005\n\013marker_i"
-  "nfo\0225\n\003cat\030\001 \001(\0162(.come_together_grpc.ma"
-  "rker_info.category\0229\n\013marker_type\030\002 \001(\0162"
-  "$.come_together_grpc.marker_info.type\022\026\n"
-  "\016from_unix_time\030\003 \001(\003\022\024\n\014to_unix_time\030\004 "
-  "\001(\003\022\032\n\022creation_unix_time\030\005 \001(\003\022\024\n\014creat"
-  "or_uuid\030\006 \001(\t\022\024\n\014display_name\030\007 \001(\t\022\020\n\010l"
-  "atitude\030\t \001(\001\022\021\n\tlongitude\030\n \001(\001\022\014\n\004uuid"
-  "\030\013 \001(\t\022\021\n\tchat_uuid\030\014 \001(\t\022\023\n\013images_uuid"
-  "\030\r \003(\t\022\027\n\017other_data_json\030\016 \001(\t\"\367\001\n\010cate"
-  "gory\022\013\n\007NOT_SET\020\000\022\013\n\007CYCLING\020\001\022\014\n\010FOOTBA"
-  "LL\020\002\022\016\n\nBASKETBALL\020\003\022\013\n\007RUNNING\020\004\022\007\n\003GYM"
-  "\020\005\022\013\n\007GALLERY\020\006\022\r\n\tEXCURSION\020\007\022\013\n\007THEATE"
-  "R\020\010\022\n\n\006CINEMA\020\t\022\007\n\003BAR\020\n\022\016\n\nRESTAURANT\020\013"
-  "\022\016\n\nNIGTH_CLUB\020\014\022\n\n\006HOOKAH\020\r\022\010\n\004CAFE\020\016\022\010"
-  "\n\004WALK\020\017\022\013\n\007CONCERT\020\020\022\t\n\005QUEST\020\021\022\007\n\003ZOO\020"
-  "\022\"7\n\004type\022\027\n\023NOT_SET_MARKER_TYPE\020\000\022\013\n\007PR"
-  "IVATE\020\001\022\t\n\005GROUP\020\002\"C\n\022add_marker_request"
-  "\022-\n\004info\030\001 \001(\0132\037.come_together_grpc.mark"
-  "er_info\"\327\001\n\023add_marker_response\022;\n\003res\030\001"
-  " \001(\0162..come_together_grpc.add_marker_res"
-  "ponse.result\022\014\n\004uuid\030\002 \001(\t\022\021\n\tchat_uuid\030"
-  "\003 \001(\t\"b\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027"
-  "TIME_INTERVAL_TOO_SMALL\020\002\022\032\n\026CREATION_TI"
-  "ME_OUTDATED\020\003\022\n\n\005OTHER\020\347\0072\217\014\n\014MainEndpoi"
-  "nt\022[\n\010AskToken\022%.come_together_grpc.ask_"
-  "token_request\032&.come_together_grpc.ask_t"
-  "oken_response\"\000\022d\n\013VerifyToken\022(.come_to"
-  "gether_grpc.verify_token_request\032).come_"
-  "together_grpc.verify_token_response\"\000\022P\n"
-  "\005Check\022!.come_together_grpc.check_reques"
-  "t\032\".come_together_grpc.check_response\"\000\022"
-  "]\n\014RegisterUser\022$.come_together_grpc.reg"
-  "ister_request\032%.come_together_grpc.regis"
-  "ter_response\"\000\022T\n\tLoginUser\022!.come_toget"
-  "her_grpc.login_request\032\".come_together_g"
-  "rpc.login_response\"\000\022^\n\tAddMarker\022&.come"
-  "_together_grpc.add_marker_request\032\'.come"
-  "_together_grpc.add_marker_response\"\000\022f\n\014"
-  "DeleteMarker\022).come_together_grpc.delete"
-  "_marker_request\032).come_together_grpc.del"
-  "ete_marker_reponse\"\000\022V\n\rGetAllMarkers\022 ."
-  "come_together_grpc.access_token\032\037.come_t"
-  "ogether_grpc.marker_info\"\0000\001\022X\n\007GetInfo\022"
-  "$.come_together_grpc.get_info_request\032%."
-  "come_together_grpc.get_info_response\"\000\022a"
-  "\n\nUpdateInfo\022\'.come_together_grpc.update"
-  "_info_request\032(.come_together_grpc.updat"
-  "e_info_response\"\000\022d\n\013ManageImage\022(.come_"
-  "together_grpc.manage_image_request\032).com"
-  "e_together_grpc.manage_image_response\"\000\022"
-  "R\n\tGetImages\022&.come_together_grpc.get_im"
-  "ages_request\032\031.come_together_grpc.image\""
-  "\0000\001\022r\n\017SendChatMessage\022-.come_together_g"
-  "rpc.send_chat_message_request\032..come_tog"
-  "ether_grpc.send_chat_message_response\"\000\022"
-  "f\n\017GetChatMessages\022-.come_together_grpc."
-  "get_chat_messages_request\032 .come_togethe"
-  "r_grpc.chat_message\"\0000\001\022T\n\021SubscribeToEv"
-  "ents\022 .come_together_grpc.access_token\032\031"
-  ".come_together_grpc.event\"\0000\001\022l\n\rSendPus"
-  "hToken\022+.come_together_grpc.send_push_to"
-  "ken_request\032,.come_together_grpc.send_pu"
-  "sh_token_response\"\000b\006proto3"
+  "\r\n\005value\030\001 \001(\t\"\034\n\016application_id\022\n\n\002id\030\001"
+  " \001(\t\"A\n\016logout_request\022/\n\005token\030\001 \001(\0132 ."
+  "come_together_grpc.access_token\"\212\001\n\017logo"
+  "ut_response\0227\n\003res\030\001 \001(\0162*.come_together"
+  "_grpc.logout_response.result\">\n\006result\022\013"
+  "\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\023\n\017TOKEN_NOT_FOUND\020\002"
+  "\022\n\n\005OTHER\020\347\007\"a\n\027send_push_token_request\022"
+  "2\n\006app_id\030\001 \001(\0132\".come_together_grpc.app"
+  "lication_id\022\022\n\npush_token\030\002 \001(\t\"\236\001\n\030send"
+  "_push_token_response\022@\n\003res\030\001 \001(\01623.come"
+  "_together_grpc.send_push_token_response."
+  "result\"@\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\026\n"
+  "\022USER_NOT_LOGGED_IN\020\002\022\t\n\005OTHER\020\003\"]\n\025dele"
+  "te_marker_request\022/\n\005token\030\001 \001(\0132 .come_"
+  "together_grpc.access_token\022\023\n\013marker_uui"
+  "d\030\002 \001(\t\"\264\001\n\025delete_marker_reponse\022=\n\003res"
+  "\030\001 \001(\01620.come_together_grpc.delete_marke"
+  "r_reponse.result\"\\\n\006result\022\013\n\007NOT_SET\020\000\022"
+  "\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIONS\020\002\022\024\n\020"
+  "MARKER_NOT_FOUND\020\003\022\n\n\005OTHER\020\347\007\"\"\n\021ask_to"
+  "ken_request\022\r\n\005email\030\001 \001(\t\"\222\001\n\022ask_token"
+  "_response\022:\n\003res\030\001 \001(\0162-.come_together_g"
+  "rpc.ask_token_response.result\"@\n\006result\022"
+  "\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\025\n\021MAIL_WAS_NOT_SEN"
+  "T\020\002\022\n\n\005OTHER\020\347\007\"4\n\024verify_token_request\022"
+  "\r\n\005email\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\"\247\001\n\025verify"
+  "_token_response\022=\n\003res\030\001 \001(\01620.come_toge"
+  "ther_grpc.verify_token_response.result\"O"
+  "\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\023\n\017EMAIL_N"
+  "OT_FOUND\020\002\022\017\n\013WRONG_TOKEN\020\003\022\n\n\005OTHER\020\347\007\""
+  "\247\002\n\023update_info_request\022/\n\005token\030\001 \001(\0132 "
+  ".come_together_grpc.access_token\022A\n\004type"
+  "\030\002 \001(\01623.come_together_grpc.update_info_"
+  "request.update_type\0221\n\006m_info\030\003 \001(\0132\037.co"
+  "me_together_grpc.marker_infoH\000\022/\n\006u_info"
+  "\030\004 \001(\0132\035.come_together_grpc.user_infoH\000\""
+  "0\n\013update_type\022\013\n\007NOT_SET\020\000\022\n\n\006MARKER\020\001\022"
+  "\010\n\004USER\020\002B\006\n\004data\"\234\001\n\024update_info_respon"
+  "se\022<\n\003res\030\001 \001(\0162/.come_together_grpc.upd"
+  "ate_info_response.result\"F\n\006result\022\013\n\007NO"
+  "T_SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSUFFICIENT_PERMISIO"
+  "NS\020\002\022\n\n\005OTHER\020\347\007\"\242\003\n\005event\0222\n\nevent_type"
+  "\030\001 \001(\0162\036.come_together_grpc.event.type\0221"
+  "\n\006m_info\030\002 \001(\0132\037.come_together_grpc.mark"
+  "er_infoH\000\0225\n\tc_message\030\003 \001(\0132 .come_toge"
+  "ther_grpc.chat_messageH\000\022/\n\006u_info\030\004 \001(\013"
+  "2\035.come_together_grpc.user_infoH\000\"\301\001\n\004ty"
+  "pe\022\013\n\007NOT_SET\020\000\022\020\n\014MARKER_ADDED\020\001\022\021\n\rMAR"
+  "KER_EDITED\020\002\022\032\n\026MARKER_DELETED_BY_USER\020\003"
+  "\022\035\n\031MARKER_DELETED_BY_TIMEOUT\020\004\022\021\n\rMESSA"
+  "GE_ADDED\020\005\022\022\n\016MESSAGE_EDITED\020\006\022\023\n\017MESSAG"
+  "E_DELETED\020\007\022\020\n\014USER_UPDATED\020\010B\006\n\004data\"a\n"
+  "\tchat_info\022\014\n\004uuid\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022"
+  "\031\n\021participants_uuid\030\003 \003(\t\022\034\n\024last_visib"
+  "le_message\030\004 \001(\t\"s\n\031get_chat_messages_re"
+  "quest\022\r\n\005token\030\001 \001(\t\022\021\n\tchat_uuid\030\002 \001(\t\022"
+  "\021\n\tpage_size\030\003 \001(\005\022\023\n\013page_number\030\004 \001(\005\022"
+  "\014\n\004hash\030\005 \001(\t\"\202\002\n\014chat_message\022F\n\014conten"
+  "t_type\030\001 \001(\01620.come_together_grpc.chat_m"
+  "essage.message_content\022\023\n\013sender_uuid\030\002 "
+  "\001(\t\022\016\n\004text\030\003 \001(\tH\000\022\026\n\016sent_unix_time\030\004 "
+  "\001(\003\022\021\n\tchat_uuid\030\005 \001(\t\022\027\n\017sequence_numbe"
+  "r\030\006 \001(\003\022\014\n\004uuid\030\007 \001(\t\"(\n\017message_content"
+  "\022\013\n\007NOT_SET\020\000\022\010\n\004TEXT\020\001B\t\n\007content\"\177\n\031se"
+  "nd_chat_message_request\022/\n\005token\030\001 \001(\0132 "
+  ".come_together_grpc.access_token\0221\n\007mess"
+  "age\030\002 \001(\0132 .come_together_grpc.chat_mess"
+  "age\"\220\002\n\032send_chat_message_response\022B\n\003re"
+  "s\030\001 \001(\01625.come_together_grpc.send_chat_m"
+  "essage_response.result\022\036\n\026actual_sequenc"
+  "e_number\030\002 \001(\003\022\024\n\014message_uuid\030\004 \001(\t\"x\n\006"
+  "result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\027\n\023CHAT_DOES"
+  "_NOT_EXIST\020\002\022\027\n\023USER_DOES_NOT_EXIST\020\003\022\033\n"
+  "\027INSUFFICIENT_PERMISIONS\020\004\022\n\n\005OTHER\020\347\007\"\251"
+  "\001\n\020get_info_request\022<\n\tinfo_type\030\001 \001(\0162)"
+  ".come_together_grpc.get_info_request.typ"
+  "e\022\r\n\005token\030\002 \001(\t\022\023\n\013target_uuid\030\003 \001(\t\"3\n"
+  "\004type\022\013\n\007NOT_SET\020\000\022\010\n\004USER\020\001\022\n\n\006MARKER\020\002"
+  "\022\010\n\004CHAT\020\003\"\260\001\n\021get_info_response\022/\n\006u_in"
+  "fo\030\001 \001(\0132\035.come_together_grpc.user_infoH"
+  "\000\0221\n\006m_info\030\002 \001(\0132\037.come_together_grpc.m"
+  "arker_infoH\000\022/\n\006c_info\030\003 \001(\0132\035.come_toge"
+  "ther_grpc.chat_infoH\000B\006\n\004data\"\206\002\n\022get_im"
+  "ages_request\022\?\n\nimage_type\030\001 \001(\0162+.come_"
+  "together_grpc.get_images_request.type\022\023\n"
+  "\013target_uuid\030\002 \001(\t\022/\n\005token\030\003 \001(\0132 .come"
+  "_together_grpc.access_token\022\016\n\006amount\030\004 "
+  "\001(\005\022\014\n\004hash\030\005 \001(\t\022 \n\030starting_sequence_n"
+  "umber\030\006 \001(\005\")\n\004type\022\013\n\007NOT_SET\020\000\022\010\n\004USER"
+  "\020\001\022\n\n\006MARKER\020\002\"\300\002\n\024manage_image_request\022"
+  "<\n\003act\030\001 \001(\0162/.come_together_grpc.manage"
+  "_image_request.action\022/\n\005token\030\002 \001(\0132 .c"
+  "ome_together_grpc.access_token\022\023\n\013target"
+  "_uuid\030\003 \001(\t\022\017\n\005image\030\004 \001(\014H\000\022\024\n\nimage_uu"
+  "id\030\005 \001(\tH\000\"u\n\006action\022\013\n\007NOT_SET\020\000\022\025\n\021UPL"
+  "OAD_USER_IMAGE\020\001\022\025\n\021DELETE_USER_IMAGE\020\002\022"
+  "\027\n\023UPLOAD_MARKER_IMAGE\020\003\022\027\n\023DELETE_MARKE"
+  "R_IMAGE\020\004B\006\n\004data\"\321\001\n\025manage_image_respo"
+  "nse\022=\n\003res\030\001 \001(\01620.come_together_grpc.ma"
+  "nage_image_response.result\022\022\n\nimage_uuid"
+  "\030\002 \001(\t\022\035\n\025image_sequence_number\030\003 \001(\005\"F\n"
+  "\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033\n\027INSUFFIC"
+  "IENT_PERMISIONS\020\002\022\n\n\005OTHER\020\347\007\"\204\001\n\rcheck_"
+  "request\022:\n\ncheck_type\030\001 \001(\0162&.come_toget"
+  "her_grpc.check_request.type\022\014\n\004data\030\002 \001("
+  "\t\")\n\004type\022\013\n\007NOT_SET\020\000\022\t\n\005EMAIL\020\001\022\t\n\005LOG"
+  "IN\020\002\"\205\001\n\016check_response\0226\n\003res\030\001 \001(\0162).c"
+  "ome_together_grpc.check_response.result\""
+  ";\n\006result\022\013\n\007NOT_SET\020\000\022\r\n\tAVAILABLE\020\001\022\t\n"
+  "\005TAKEN\020\002\022\n\n\005OTHER\020\347\007\"\213\002\n\rlogin_request\0223"
+  "\n\003typ\030\001 \001(\0162&.come_together_grpc.login_r"
+  "equest.type\022\r\n\005login\030\002 \001(\t\022\020\n\010password\030\003"
+  " \001(\t\022/\n\005token\030\004 \001(\0132 .come_together_grpc"
+  ".access_token\0222\n\006app_id\030\005 \001(\0132\".come_tog"
+  "ether_grpc.application_id\"\?\n\004type\022\013\n\007NOT"
+  "_SET\020\000\022\025\n\021BY_LOGIN_PASSWORD\020\001\022\023\n\017BY_ACCE"
+  "SS_TOKEN\020\002\"\225\002\n\016login_response\0226\n\003res\030\001 \001"
+  "(\0162).come_together_grpc.login_response.r"
+  "esult\022+\n\004info\030\002 \001(\0132\035.come_together_grpc"
+  ".user_info\022/\n\005token\030\003 \001(\0132 .come_togethe"
+  "r_grpc.access_token\"m\n\006result\022\013\n\007NOT_SET"
+  "\020\000\022\006\n\002OK\020\001\022\022\n\016USER_NOT_FOUND\020\002\022\022\n\016WRONG_"
+  "PASSWORD\020\003\022\032\n\026ACCESS_TOKEN_NOT_FOUND\020\004\022\n"
+  "\n\005OTHER\020\347\007\"\?\n\020register_request\022+\n\004info\030\001"
+  " \001(\0132\035.come_together_grpc.user_info\"\276\001\n\021"
+  "register_response\0229\n\003res\030\001 \001(\0162,.come_to"
+  "gether_grpc.register_response.result\022\021\n\t"
+  "user_uuid\030\002 \001(\t\"[\n\006result\022\013\n\007NOT_SET\020\000\022\006"
+  "\n\002OK\020\001\022\027\n\023EMAIL_ALREADY_TAKEN\020\002\022\027\n\023LOGIN"
+  "_ALREADY_TAKEN\020\003\022\n\n\005OTHER\020\347\007\"\236\001\n\tuser_in"
+  "fo\022\014\n\004uuid\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022\r\n\005login"
+  "\030\003 \001(\t\022\020\n\010password\030\004 \001(\t\022\022\n\nfirst_name\030\005"
+  " \001(\t\022\021\n\tlast_name\030\006 \001(\t\022\023\n\013images_uuid\030\007"
+  " \003(\t\022\027\n\017other_info_json\030\010 \001(\t\"\234\005\n\013marker"
+  "_info\0225\n\003cat\030\001 \001(\0162(.come_together_grpc."
+  "marker_info.category\0229\n\013marker_type\030\002 \001("
+  "\0162$.come_together_grpc.marker_info.type\022"
+  "\026\n\016from_unix_time\030\003 \001(\003\022\024\n\014to_unix_time\030"
+  "\004 \001(\003\022\032\n\022creation_unix_time\030\005 \001(\003\022\024\n\014cre"
+  "ator_uuid\030\006 \001(\t\022\024\n\014display_name\030\007 \001(\t\022\020\n"
+  "\010latitude\030\t \001(\001\022\021\n\tlongitude\030\n \001(\001\022\014\n\004uu"
+  "id\030\013 \001(\t\022\021\n\tchat_uuid\030\014 \001(\t\022\023\n\013images_uu"
+  "id\030\r \003(\t\022\027\n\017other_data_json\030\016 \001(\t\"\367\001\n\010ca"
+  "tegory\022\013\n\007NOT_SET\020\000\022\013\n\007CYCLING\020\001\022\014\n\010FOOT"
+  "BALL\020\002\022\016\n\nBASKETBALL\020\003\022\013\n\007RUNNING\020\004\022\007\n\003G"
+  "YM\020\005\022\013\n\007GALLERY\020\006\022\r\n\tEXCURSION\020\007\022\013\n\007THEA"
+  "TER\020\010\022\n\n\006CINEMA\020\t\022\007\n\003BAR\020\n\022\016\n\nRESTAURANT"
+  "\020\013\022\016\n\nNIGTH_CLUB\020\014\022\n\n\006HOOKAH\020\r\022\010\n\004CAFE\020\016"
+  "\022\010\n\004WALK\020\017\022\013\n\007CONCERT\020\020\022\t\n\005QUEST\020\021\022\007\n\003ZO"
+  "O\020\022\"7\n\004type\022\027\n\023NOT_SET_MARKER_TYPE\020\000\022\013\n\007"
+  "PRIVATE\020\001\022\t\n\005GROUP\020\002\"C\n\022add_marker_reque"
+  "st\022-\n\004info\030\001 \001(\0132\037.come_together_grpc.ma"
+  "rker_info\"\327\001\n\023add_marker_response\022;\n\003res"
+  "\030\001 \001(\0162..come_together_grpc.add_marker_r"
+  "esponse.result\022\014\n\004uuid\030\002 \001(\t\022\021\n\tchat_uui"
+  "d\030\003 \001(\t\"b\n\006result\022\013\n\007NOT_SET\020\000\022\006\n\002OK\020\001\022\033"
+  "\n\027TIME_INTERVAL_TOO_SMALL\020\002\022\032\n\026CREATION_"
+  "TIME_OUTDATED\020\003\022\n\n\005OTHER\020\347\0072\352\014\n\014MainEndp"
+  "oint\022[\n\010AskToken\022%.come_together_grpc.as"
+  "k_token_request\032&.come_together_grpc.ask"
+  "_token_response\"\000\022d\n\013VerifyToken\022(.come_"
+  "together_grpc.verify_token_request\032).com"
+  "e_together_grpc.verify_token_response\"\000\022"
+  "P\n\005Check\022!.come_together_grpc.check_requ"
+  "est\032\".come_together_grpc.check_response\""
+  "\000\022]\n\014RegisterUser\022$.come_together_grpc.r"
+  "egister_request\032%.come_together_grpc.reg"
+  "ister_response\"\000\022T\n\tLoginUser\022!.come_tog"
+  "ether_grpc.login_request\032\".come_together"
+  "_grpc.login_response\"\000\022W\n\nLogoutUser\022\".c"
+  "ome_together_grpc.logout_request\032#.come_"
+  "together_grpc.logout_response\"\000\022^\n\tAddMa"
+  "rker\022&.come_together_grpc.add_marker_req"
+  "uest\032\'.come_together_grpc.add_marker_res"
+  "ponse\"\000\022f\n\014DeleteMarker\022).come_together_"
+  "grpc.delete_marker_request\032).come_togeth"
+  "er_grpc.delete_marker_reponse\"\000\022V\n\rGetAl"
+  "lMarkers\022 .come_together_grpc.access_tok"
+  "en\032\037.come_together_grpc.marker_info\"\0000\001\022"
+  "X\n\007GetInfo\022$.come_together_grpc.get_info"
+  "_request\032%.come_together_grpc.get_info_r"
+  "esponse\"\000\022a\n\nUpdateInfo\022\'.come_together_"
+  "grpc.update_info_request\032(.come_together"
+  "_grpc.update_info_response\"\000\022d\n\013ManageIm"
+  "age\022(.come_together_grpc.manage_image_re"
+  "quest\032).come_together_grpc.manage_image_"
+  "response\"\000\022R\n\tGetImages\022&.come_together_"
+  "grpc.get_images_request\032\031.come_together_"
+  "grpc.image\"\0000\001\022r\n\017SendChatMessage\022-.come"
+  "_together_grpc.send_chat_message_request"
+  "\032..come_together_grpc.send_chat_message_"
+  "response\"\000\022f\n\017GetChatMessages\022-.come_tog"
+  "ether_grpc.get_chat_messages_request\032 .c"
+  "ome_together_grpc.chat_message\"\0000\001\022V\n\021Su"
+  "bscribeToEvents\022\".come_together_grpc.app"
+  "lication_id\032\031.come_together_grpc.event\"\000"
+  "0\001\022l\n\rSendPushToken\022+.come_together_grpc"
+  ".send_push_token_request\032,.come_together"
+  "_grpc.send_push_token_response\"\000b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_come_5ftogether_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_come_5ftogether_2eproto_sccs[33] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_come_5ftogether_2eproto_sccs[36] = {
   &scc_info_access_token_come_5ftogether_2eproto.base,
   &scc_info_add_marker_request_come_5ftogether_2eproto.base,
   &scc_info_add_marker_response_come_5ftogether_2eproto.base,
+  &scc_info_application_id_come_5ftogether_2eproto.base,
   &scc_info_ask_token_request_come_5ftogether_2eproto.base,
   &scc_info_ask_token_response_come_5ftogether_2eproto.base,
   &scc_info_chat_info_come_5ftogether_2eproto.base,
@@ -1195,6 +1306,8 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_com
   &scc_info_image_come_5ftogether_2eproto.base,
   &scc_info_login_request_come_5ftogether_2eproto.base,
   &scc_info_login_response_come_5ftogether_2eproto.base,
+  &scc_info_logout_request_come_5ftogether_2eproto.base,
+  &scc_info_logout_response_come_5ftogether_2eproto.base,
   &scc_info_manage_image_request_come_5ftogether_2eproto.base,
   &scc_info_manage_image_response_come_5ftogether_2eproto.base,
   &scc_info_marker_info_come_5ftogether_2eproto.base,
@@ -1212,18 +1325,43 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_com
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_come_5ftogether_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_come_5ftogether_2eproto = {
-  false, false, descriptor_table_protodef_come_5ftogether_2eproto, "come_together.proto", 7347,
-  &descriptor_table_come_5ftogether_2eproto_once, descriptor_table_come_5ftogether_2eproto_sccs, descriptor_table_come_5ftogether_2eproto_deps, 33, 0,
+  false, false, descriptor_table_protodef_come_5ftogether_2eproto, "come_together.proto", 8080,
+  &descriptor_table_come_5ftogether_2eproto_once, descriptor_table_come_5ftogether_2eproto_sccs, descriptor_table_come_5ftogether_2eproto_deps, 36, 0,
   schemas, file_default_instances, TableStruct_come_5ftogether_2eproto::offsets,
-  file_level_metadata_come_5ftogether_2eproto, 33, file_level_enum_descriptors_come_5ftogether_2eproto, file_level_service_descriptors_come_5ftogether_2eproto,
+  file_level_metadata_come_5ftogether_2eproto, 36, file_level_enum_descriptors_come_5ftogether_2eproto, file_level_service_descriptors_come_5ftogether_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_come_5ftogether_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_come_5ftogether_2eproto)), true);
 namespace come_together_grpc {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* send_push_token_response_result_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* logout_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
   return file_level_enum_descriptors_come_5ftogether_2eproto[0];
+}
+bool logout_response_result_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 999:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr logout_response_result logout_response::NOT_SET;
+constexpr logout_response_result logout_response::OK;
+constexpr logout_response_result logout_response::TOKEN_NOT_FOUND;
+constexpr logout_response_result logout_response::OTHER;
+constexpr logout_response_result logout_response::result_MIN;
+constexpr logout_response_result logout_response::result_MAX;
+constexpr int logout_response::result_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* send_push_token_response_result_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
+  return file_level_enum_descriptors_come_5ftogether_2eproto[1];
 }
 bool send_push_token_response_result_IsValid(int value) {
   switch (value) {
@@ -1248,7 +1386,7 @@ constexpr int send_push_token_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* delete_marker_reponse_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[1];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[2];
 }
 bool delete_marker_reponse_result_IsValid(int value) {
   switch (value) {
@@ -1275,7 +1413,7 @@ constexpr int delete_marker_reponse::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ask_token_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[2];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[3];
 }
 bool ask_token_response_result_IsValid(int value) {
   switch (value) {
@@ -1300,7 +1438,7 @@ constexpr int ask_token_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* verify_token_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[3];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[4];
 }
 bool verify_token_response_result_IsValid(int value) {
   switch (value) {
@@ -1327,7 +1465,7 @@ constexpr int verify_token_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* update_info_request_update_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[4];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[5];
 }
 bool update_info_request_update_type_IsValid(int value) {
   switch (value) {
@@ -1350,7 +1488,7 @@ constexpr int update_info_request::update_type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* update_info_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[5];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[6];
 }
 bool update_info_response_result_IsValid(int value) {
   switch (value) {
@@ -1375,7 +1513,7 @@ constexpr int update_info_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* event_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[6];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[7];
 }
 bool event_type_IsValid(int value) {
   switch (value) {
@@ -1410,7 +1548,7 @@ constexpr int event::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* chat_message_message_content_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[7];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[8];
 }
 bool chat_message_message_content_IsValid(int value) {
   switch (value) {
@@ -1431,7 +1569,7 @@ constexpr int chat_message::message_content_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* send_chat_message_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[8];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[9];
 }
 bool send_chat_message_response_result_IsValid(int value) {
   switch (value) {
@@ -1460,7 +1598,7 @@ constexpr int send_chat_message_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_info_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[9];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[10];
 }
 bool get_info_request_type_IsValid(int value) {
   switch (value) {
@@ -1485,7 +1623,7 @@ constexpr int get_info_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* get_images_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[10];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[11];
 }
 bool get_images_request_type_IsValid(int value) {
   switch (value) {
@@ -1508,7 +1646,7 @@ constexpr int get_images_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* manage_image_request_action_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[11];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[12];
 }
 bool manage_image_request_action_IsValid(int value) {
   switch (value) {
@@ -1535,7 +1673,7 @@ constexpr int manage_image_request::action_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* manage_image_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[12];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[13];
 }
 bool manage_image_response_result_IsValid(int value) {
   switch (value) {
@@ -1560,7 +1698,7 @@ constexpr int manage_image_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* check_request_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[13];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[14];
 }
 bool check_request_type_IsValid(int value) {
   switch (value) {
@@ -1583,7 +1721,7 @@ constexpr int check_request::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* check_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[14];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[15];
 }
 bool check_response_result_IsValid(int value) {
   switch (value) {
@@ -1606,9 +1744,32 @@ constexpr check_response_result check_response::result_MIN;
 constexpr check_response_result check_response::result_MAX;
 constexpr int check_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* login_request_type_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
+  return file_level_enum_descriptors_come_5ftogether_2eproto[16];
+}
+bool login_request_type_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr login_request_type login_request::NOT_SET;
+constexpr login_request_type login_request::BY_LOGIN_PASSWORD;
+constexpr login_request_type login_request::BY_ACCESS_TOKEN;
+constexpr login_request_type login_request::type_MIN;
+constexpr login_request_type login_request::type_MAX;
+constexpr int login_request::type_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* login_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[15];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[17];
 }
 bool login_response_result_IsValid(int value) {
   switch (value) {
@@ -1616,6 +1777,7 @@ bool login_response_result_IsValid(int value) {
     case 1:
     case 2:
     case 3:
+    case 4:
     case 999:
       return true;
     default:
@@ -1628,6 +1790,7 @@ constexpr login_response_result login_response::NOT_SET;
 constexpr login_response_result login_response::OK;
 constexpr login_response_result login_response::USER_NOT_FOUND;
 constexpr login_response_result login_response::WRONG_PASSWORD;
+constexpr login_response_result login_response::ACCESS_TOKEN_NOT_FOUND;
 constexpr login_response_result login_response::OTHER;
 constexpr login_response_result login_response::result_MIN;
 constexpr login_response_result login_response::result_MAX;
@@ -1635,7 +1798,7 @@ constexpr int login_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* register_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[16];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[18];
 }
 bool register_response_result_IsValid(int value) {
   switch (value) {
@@ -1662,7 +1825,7 @@ constexpr int register_response::result_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_category_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[17];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[19];
 }
 bool marker_info_category_IsValid(int value) {
   switch (value) {
@@ -1717,7 +1880,7 @@ constexpr int marker_info::category_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* marker_info_type_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[18];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[20];
 }
 bool marker_info_type_IsValid(int value) {
   switch (value) {
@@ -1740,7 +1903,7 @@ constexpr int marker_info::type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* add_marker_response_result_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_come_5ftogether_2eproto);
-  return file_level_enum_descriptors_come_5ftogether_2eproto[19];
+  return file_level_enum_descriptors_come_5ftogether_2eproto[21];
 }
 bool add_marker_response_result_IsValid(int value) {
   switch (value) {
@@ -2052,9 +2215,9 @@ access_token::access_token(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 access_token::access_token(const access_token& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_token().empty()) {
-    token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
+  value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_value().empty()) {
+    value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_value(),
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:come_together_grpc.access_token)
@@ -2062,7 +2225,7 @@ access_token::access_token(const access_token& from)
 
 void access_token::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_access_token_come_5ftogether_2eproto.base);
-  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 access_token::~access_token() {
@@ -2073,7 +2236,7 @@ access_token::~access_token() {
 
 void access_token::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  value_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void access_token::ArenaDtor(void* object) {
@@ -2097,7 +2260,7 @@ void access_token::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  value_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2109,12 +2272,12 @@ const char* access_token::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string token = 1;
+      // string value = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_token();
+          auto str = _internal_mutable_value();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.access_token.token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.access_token.value"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2146,14 +2309,14 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string token = 1;
-  if (this->token().size() > 0) {
+  // string value = 1;
+  if (this->value().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
+      this->_internal_value().data(), static_cast<int>(this->_internal_value().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.access_token.token");
+      "come_together_grpc.access_token.value");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_token(), target);
+        1, this->_internal_value(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2172,11 +2335,11 @@ size_t access_token::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string token = 1;
-  if (this->token().size() > 0) {
+  // string value = 1;
+  if (this->value().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_token());
+        this->_internal_value());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2210,8 +2373,8 @@ void access_token::MergeFrom(const access_token& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.token().size() > 0) {
-    _internal_set_token(from._internal_token());
+  if (from.value().size() > 0) {
+    _internal_set_value(from._internal_value());
   }
 }
 
@@ -2236,7 +2399,7 @@ bool access_token::IsInitialized() const {
 void access_token::InternalSwap(access_token* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  token_.Swap(&other->token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  value_.Swap(&other->value_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata access_token::GetMetadata() const {
@@ -2246,12 +2409,641 @@ void access_token::InternalSwap(access_token* other) {
 
 // ===================================================================
 
-void send_push_token_request::InitAsDefaultInstance() {
+void application_id::InitAsDefaultInstance() {
 }
-class send_push_token_request::_Internal {
+class application_id::_Internal {
  public:
 };
 
+application_id::application_id(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.application_id)
+}
+application_id::application_id(const application_id& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_id().empty()) {
+    id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_id(),
+      GetArena());
+  }
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.application_id)
+}
+
+void application_id::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_application_id_come_5ftogether_2eproto.base);
+  id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+application_id::~application_id() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.application_id)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void application_id::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void application_id::ArenaDtor(void* object) {
+  application_id* _this = reinterpret_cast< application_id* >(object);
+  (void)_this;
+}
+void application_id::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void application_id::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const application_id& application_id::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_application_id_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void application_id::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.application_id)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* application_id::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.application_id.id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* application_id::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.application_id)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (this->id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "come_together_grpc.application_id.id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_id(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.application_id)
+  return target;
+}
+
+size_t application_id::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.application_id)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string id = 1;
+  if (this->id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void application_id::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.application_id)
+  GOOGLE_DCHECK_NE(&from, this);
+  const application_id* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<application_id>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.application_id)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.application_id)
+    MergeFrom(*source);
+  }
+}
+
+void application_id::MergeFrom(const application_id& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.application_id)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.id().size() > 0) {
+    _internal_set_id(from._internal_id());
+  }
+}
+
+void application_id::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.application_id)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void application_id::CopyFrom(const application_id& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.application_id)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool application_id::IsInitialized() const {
+  return true;
+}
+
+void application_id::InternalSwap(application_id* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  id_.Swap(&other->id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata application_id::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void logout_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_logout_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
+}
+class logout_request::_Internal {
+ public:
+  static const ::come_together_grpc::access_token& token(const logout_request* msg);
+};
+
+const ::come_together_grpc::access_token&
+logout_request::_Internal::token(const logout_request* msg) {
+  return *msg->token_;
+}
+logout_request::logout_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.logout_request)
+}
+logout_request::logout_request(const logout_request& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.logout_request)
+}
+
+void logout_request::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_logout_request_come_5ftogether_2eproto.base);
+  token_ = nullptr;
+}
+
+logout_request::~logout_request() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.logout_request)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void logout_request::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete token_;
+}
+
+void logout_request::ArenaDtor(void* object) {
+  logout_request* _this = reinterpret_cast< logout_request* >(object);
+  (void)_this;
+}
+void logout_request::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void logout_request::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const logout_request& logout_request::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_logout_request_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void logout_request::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.logout_request)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* logout_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .come_together_grpc.access_token token = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* logout_request::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.logout_request)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::token(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.logout_request)
+  return target;
+}
+
+size_t logout_request::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.logout_request)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void logout_request::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.logout_request)
+  GOOGLE_DCHECK_NE(&from, this);
+  const logout_request* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<logout_request>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.logout_request)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.logout_request)
+    MergeFrom(*source);
+  }
+}
+
+void logout_request::MergeFrom(const logout_request& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.logout_request)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
+  }
+}
+
+void logout_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.logout_request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void logout_request::CopyFrom(const logout_request& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.logout_request)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool logout_request::IsInitialized() const {
+  return true;
+}
+
+void logout_request::InternalSwap(logout_request* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(token_, other->token_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata logout_request::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void logout_response::InitAsDefaultInstance() {
+}
+class logout_response::_Internal {
+ public:
+};
+
+logout_response::logout_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:come_together_grpc.logout_response)
+}
+logout_response::logout_response(const logout_response& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  res_ = from.res_;
+  // @@protoc_insertion_point(copy_constructor:come_together_grpc.logout_response)
+}
+
+void logout_response::SharedCtor() {
+  res_ = 0;
+}
+
+logout_response::~logout_response() {
+  // @@protoc_insertion_point(destructor:come_together_grpc.logout_response)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void logout_response::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void logout_response::ArenaDtor(void* object) {
+  logout_response* _this = reinterpret_cast< logout_response* >(object);
+  (void)_this;
+}
+void logout_response::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void logout_response::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const logout_response& logout_response::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_logout_response_come_5ftogether_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void logout_response::Clear() {
+// @@protoc_insertion_point(message_clear_start:come_together_grpc.logout_response)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  res_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* logout_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .come_together_grpc.logout_response.result res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_res(static_cast<::come_together_grpc::logout_response_result>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* logout_response::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:come_together_grpc.logout_response)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .come_together_grpc.logout_response.result res = 1;
+  if (this->res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_res(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:come_together_grpc.logout_response)
+  return target;
+}
+
+size_t logout_response::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:come_together_grpc.logout_response)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .come_together_grpc.logout_response.result res = 1;
+  if (this->res() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_res());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void logout_response::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:come_together_grpc.logout_response)
+  GOOGLE_DCHECK_NE(&from, this);
+  const logout_response* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<logout_response>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:come_together_grpc.logout_response)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:come_together_grpc.logout_response)
+    MergeFrom(*source);
+  }
+}
+
+void logout_response::MergeFrom(const logout_response& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:come_together_grpc.logout_response)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.res() != 0) {
+    _internal_set_res(from._internal_res());
+  }
+}
+
+void logout_response::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:come_together_grpc.logout_response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void logout_response::CopyFrom(const logout_response& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:come_together_grpc.logout_response)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool logout_response::IsInitialized() const {
+  return true;
+}
+
+void logout_response::InternalSwap(logout_response* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(res_, other->res_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata logout_response::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void send_push_token_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_send_push_token_request_default_instance_._instance.get_mutable()->app_id_ = const_cast< ::come_together_grpc::application_id*>(
+      ::come_together_grpc::application_id::internal_default_instance());
+}
+class send_push_token_request::_Internal {
+ public:
+  static const ::come_together_grpc::application_id& app_id(const send_push_token_request* msg);
+};
+
+const ::come_together_grpc::application_id&
+send_push_token_request::_Internal::app_id(const send_push_token_request* msg) {
+  return *msg->app_id_;
+}
 send_push_token_request::send_push_token_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -2261,23 +3053,23 @@ send_push_token_request::send_push_token_request(::PROTOBUF_NAMESPACE_ID::Arena*
 send_push_token_request::send_push_token_request(const send_push_token_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
-  }
   push_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_push_token().empty()) {
     push_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_push_token(),
       GetArena());
+  }
+  if (from._internal_has_app_id()) {
+    app_id_ = new ::come_together_grpc::application_id(*from.app_id_);
+  } else {
+    app_id_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:come_together_grpc.send_push_token_request)
 }
 
 void send_push_token_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_send_push_token_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   push_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  app_id_ = nullptr;
 }
 
 send_push_token_request::~send_push_token_request() {
@@ -2288,8 +3080,8 @@ send_push_token_request::~send_push_token_request() {
 
 void send_push_token_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   push_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete app_id_;
 }
 
 void send_push_token_request::ArenaDtor(void* object) {
@@ -2313,8 +3105,11 @@ void send_push_token_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   push_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && app_id_ != nullptr) {
+    delete app_id_;
+  }
+  app_id_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2326,12 +3121,10 @@ const char* send_push_token_request::_InternalParse(const char* ptr, ::PROTOBUF_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string access_token = 1;
+      // .come_together_grpc.application_id app_id = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.send_push_token_request.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_app_id(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2372,14 +3165,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.send_push_token_request.access_token");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_access_token(), target);
+  // .come_together_grpc.application_id app_id = 1;
+  if (this->has_app_id()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::app_id(this), target, stream);
   }
 
   // string push_token = 2;
@@ -2408,18 +3199,18 @@ size_t send_push_token_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
-  }
-
   // string push_token = 2;
   if (this->push_token().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_push_token());
+  }
+
+  // .come_together_grpc.application_id app_id = 1;
+  if (this->has_app_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *app_id_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2453,11 +3244,11 @@ void send_push_token_request::MergeFrom(const send_push_token_request& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
-  }
   if (from.push_token().size() > 0) {
     _internal_set_push_token(from._internal_push_token());
+  }
+  if (from.has_app_id()) {
+    _internal_mutable_app_id()->::come_together_grpc::application_id::MergeFrom(from._internal_app_id());
   }
 }
 
@@ -2482,8 +3273,8 @@ bool send_push_token_request::IsInitialized() const {
 void send_push_token_request::InternalSwap(send_push_token_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   push_token_.Swap(&other->push_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(app_id_, other->app_id_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata send_push_token_request::GetMetadata() const {
@@ -2692,11 +3483,18 @@ void send_push_token_response::InternalSwap(send_push_token_response* other) {
 // ===================================================================
 
 void delete_marker_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_delete_marker_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
 }
 class delete_marker_request::_Internal {
  public:
+  static const ::come_together_grpc::access_token& token(const delete_marker_request* msg);
 };
 
+const ::come_together_grpc::access_token&
+delete_marker_request::_Internal::token(const delete_marker_request* msg) {
+  return *msg->token_;
+}
 delete_marker_request::delete_marker_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -2706,23 +3504,23 @@ delete_marker_request::delete_marker_request(::PROTOBUF_NAMESPACE_ID::Arena* are
 delete_marker_request::delete_marker_request(const delete_marker_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
-  }
   marker_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_marker_uuid().empty()) {
     marker_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_marker_uuid(),
       GetArena());
+  }
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:come_together_grpc.delete_marker_request)
 }
 
 void delete_marker_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_delete_marker_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   marker_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  token_ = nullptr;
 }
 
 delete_marker_request::~delete_marker_request() {
@@ -2733,8 +3531,8 @@ delete_marker_request::~delete_marker_request() {
 
 void delete_marker_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   marker_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete token_;
 }
 
 void delete_marker_request::ArenaDtor(void* object) {
@@ -2758,8 +3556,11 @@ void delete_marker_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   marker_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2771,12 +3572,10 @@ const char* delete_marker_request::_InternalParse(const char* ptr, ::PROTOBUF_NA
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string access_token = 1;
+      // .come_together_grpc.access_token token = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.delete_marker_request.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2817,14 +3616,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.delete_marker_request.access_token");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_access_token(), target);
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::token(this), target, stream);
   }
 
   // string marker_uuid = 2;
@@ -2853,18 +3650,18 @@ size_t delete_marker_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
-  }
-
   // string marker_uuid = 2;
   if (this->marker_uuid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_marker_uuid());
+  }
+
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2898,11 +3695,11 @@ void delete_marker_request::MergeFrom(const delete_marker_request& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
-  }
   if (from.marker_uuid().size() > 0) {
     _internal_set_marker_uuid(from._internal_marker_uuid());
+  }
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
   }
 }
 
@@ -2927,8 +3724,8 @@ bool delete_marker_request::IsInitialized() const {
 void delete_marker_request::InternalSwap(delete_marker_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   marker_uuid_.Swap(&other->marker_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(token_, other->token_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata delete_marker_request::GetMetadata() const {
@@ -3989,6 +4786,8 @@ void verify_token_response::InternalSwap(verify_token_response* other) {
 // ===================================================================
 
 void update_info_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_update_info_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
   ::come_together_grpc::_update_info_request_default_instance_.m_info_ = const_cast< ::come_together_grpc::marker_info*>(
       ::come_together_grpc::marker_info::internal_default_instance());
   ::come_together_grpc::_update_info_request_default_instance_.u_info_ = const_cast< ::come_together_grpc::user_info*>(
@@ -3996,10 +4795,15 @@ void update_info_request::InitAsDefaultInstance() {
 }
 class update_info_request::_Internal {
  public:
+  static const ::come_together_grpc::access_token& token(const update_info_request* msg);
   static const ::come_together_grpc::marker_info& m_info(const update_info_request* msg);
   static const ::come_together_grpc::user_info& u_info(const update_info_request* msg);
 };
 
+const ::come_together_grpc::access_token&
+update_info_request::_Internal::token(const update_info_request* msg) {
+  return *msg->token_;
+}
 const ::come_together_grpc::marker_info&
 update_info_request::_Internal::m_info(const update_info_request* msg) {
   return *msg->data_.m_info_;
@@ -4047,10 +4851,10 @@ update_info_request::update_info_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 update_info_request::update_info_request(const update_info_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
   }
   type_ = from.type_;
   clear_has_data();
@@ -4072,8 +4876,9 @@ update_info_request::update_info_request(const update_info_request& from)
 
 void update_info_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_update_info_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  type_ = 0;
+  ::memset(&token_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&type_) -
+      reinterpret_cast<char*>(&token_)) + sizeof(type_));
   clear_has_data();
 }
 
@@ -4085,7 +4890,7 @@ update_info_request::~update_info_request() {
 
 void update_info_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete token_;
   if (has_data()) {
     clear_data();
   }
@@ -4135,7 +4940,10 @@ void update_info_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
   type_ = 0;
   clear_data();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -4149,12 +4957,10 @@ const char* update_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAME
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string access_token = 1;
+      // .come_together_grpc.access_token token = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.update_info_request.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4208,14 +5014,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.update_info_request.access_token");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_access_token(), target);
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::token(this), target, stream);
   }
 
   // .come_together_grpc.update_info_request.update_type type = 2;
@@ -4257,11 +5061,11 @@ size_t update_info_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
   }
 
   // .come_together_grpc.update_info_request.update_type type = 2;
@@ -4320,8 +5124,8 @@ void update_info_request::MergeFrom(const update_info_request& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
   }
   if (from.type() != 0) {
     _internal_set_type(from._internal_type());
@@ -4362,8 +5166,12 @@ bool update_info_request::IsInitialized() const {
 void update_info_request::InternalSwap(update_info_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(type_, other->type_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(update_info_request, type_)
+      + sizeof(update_info_request::type_)
+      - PROTOBUF_FIELD_OFFSET(update_info_request, token_)>(
+          reinterpret_cast<char*>(&token_),
+          reinterpret_cast<char*>(&other->token_));
   swap(data_, other->data_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
@@ -5317,9 +6125,9 @@ get_chat_messages_request::get_chat_messages_request(::PROTOBUF_NAMESPACE_ID::Ar
 get_chat_messages_request::get_chat_messages_request(const get_chat_messages_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
+  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_token().empty()) {
+    token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
       GetArena());
   }
   chat_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -5340,7 +6148,7 @@ get_chat_messages_request::get_chat_messages_request(const get_chat_messages_req
 
 void get_chat_messages_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_get_chat_messages_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   chat_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&page_size_, 0, static_cast<size_t>(
@@ -5356,7 +6164,7 @@ get_chat_messages_request::~get_chat_messages_request() {
 
 void get_chat_messages_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   chat_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   hash_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -5382,7 +6190,7 @@ void get_chat_messages_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   chat_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   hash_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&page_size_, 0, static_cast<size_t>(
@@ -5399,12 +6207,12 @@ const char* get_chat_messages_request::_InternalParse(const char* ptr, ::PROTOBU
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string access_token = 1;
+      // string token = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_access_token();
+          auto str = _internal_mutable_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_chat_messages_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_chat_messages_request.token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -5468,14 +6276,14 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
+  // string token = 1;
+  if (this->token().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
+      this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.get_chat_messages_request.access_token");
+      "come_together_grpc.get_chat_messages_request.token");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_access_token(), target);
+        1, this->_internal_token(), target);
   }
 
   // string chat_uuid = 2;
@@ -5526,11 +6334,11 @@ size_t get_chat_messages_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
+  // string token = 1;
+  if (this->token().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
+        this->_internal_token());
   }
 
   // string chat_uuid = 2;
@@ -5592,8 +6400,8 @@ void get_chat_messages_request::MergeFrom(const get_chat_messages_request& from)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
+  if (from.token().size() > 0) {
+    _internal_set_token(from._internal_token());
   }
   if (from.chat_uuid().size() > 0) {
     _internal_set_chat_uuid(from._internal_chat_uuid());
@@ -5630,7 +6438,7 @@ bool get_chat_messages_request::IsInitialized() const {
 void get_chat_messages_request::InternalSwap(get_chat_messages_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  token_.Swap(&other->token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   chat_uuid_.Swap(&other->chat_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   hash_.Swap(&other->hash_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
@@ -6093,14 +6901,21 @@ void chat_message::InternalSwap(chat_message* other) {
 // ===================================================================
 
 void send_chat_message_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_send_chat_message_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
   ::come_together_grpc::_send_chat_message_request_default_instance_._instance.get_mutable()->message_ = const_cast< ::come_together_grpc::chat_message*>(
       ::come_together_grpc::chat_message::internal_default_instance());
 }
 class send_chat_message_request::_Internal {
  public:
+  static const ::come_together_grpc::access_token& token(const send_chat_message_request* msg);
   static const ::come_together_grpc::chat_message& message(const send_chat_message_request* msg);
 };
 
+const ::come_together_grpc::access_token&
+send_chat_message_request::_Internal::token(const send_chat_message_request* msg) {
+  return *msg->token_;
+}
 const ::come_together_grpc::chat_message&
 send_chat_message_request::_Internal::message(const send_chat_message_request* msg) {
   return *msg->message_;
@@ -6114,10 +6929,10 @@ send_chat_message_request::send_chat_message_request(::PROTOBUF_NAMESPACE_ID::Ar
 send_chat_message_request::send_chat_message_request(const send_chat_message_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
   }
   if (from._internal_has_message()) {
     message_ = new ::come_together_grpc::chat_message(*from.message_);
@@ -6129,8 +6944,9 @@ send_chat_message_request::send_chat_message_request(const send_chat_message_req
 
 void send_chat_message_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_send_chat_message_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  message_ = nullptr;
+  ::memset(&token_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&message_) -
+      reinterpret_cast<char*>(&token_)) + sizeof(message_));
 }
 
 send_chat_message_request::~send_chat_message_request() {
@@ -6141,7 +6957,7 @@ send_chat_message_request::~send_chat_message_request() {
 
 void send_chat_message_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete token_;
   if (this != internal_default_instance()) delete message_;
 }
 
@@ -6166,7 +6982,10 @@ void send_chat_message_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
   if (GetArena() == nullptr && message_ != nullptr) {
     delete message_;
   }
@@ -6182,12 +7001,10 @@ const char* send_chat_message_request::_InternalParse(const char* ptr, ::PROTOBU
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string access_token = 1;
+      // .come_together_grpc.access_token token = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.send_chat_message_request.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6226,14 +7043,12 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.send_chat_message_request.access_token");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_access_token(), target);
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::token(this), target, stream);
   }
 
   // .come_together_grpc.chat_message message = 2;
@@ -6260,11 +7075,11 @@ size_t send_chat_message_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 1;
-  if (this->access_token().size() > 0) {
+  // .come_together_grpc.access_token token = 1;
+  if (this->has_token()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
   }
 
   // .come_together_grpc.chat_message message = 2;
@@ -6305,8 +7120,8 @@ void send_chat_message_request::MergeFrom(const send_chat_message_request& from)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
   }
   if (from.has_message()) {
     _internal_mutable_message()->::come_together_grpc::chat_message::MergeFrom(from._internal_message());
@@ -6334,8 +7149,12 @@ bool send_chat_message_request::IsInitialized() const {
 void send_chat_message_request::InternalSwap(send_chat_message_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(message_, other->message_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(send_chat_message_request, message_)
+      + sizeof(send_chat_message_request::message_)
+      - PROTOBUF_FIELD_OFFSET(send_chat_message_request, token_)>(
+          reinterpret_cast<char*>(&token_),
+          reinterpret_cast<char*>(&other->token_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata send_chat_message_request::GetMetadata() const {
@@ -6631,9 +7450,9 @@ get_info_request::get_info_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 get_info_request::get_info_request(const get_info_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
+  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_token().empty()) {
+    token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_token(),
       GetArena());
   }
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -6647,7 +7466,7 @@ get_info_request::get_info_request(const get_info_request& from)
 
 void get_info_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_get_info_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   info_type_ = 0;
 }
@@ -6660,7 +7479,7 @@ get_info_request::~get_info_request() {
 
 void get_info_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   target_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -6685,7 +7504,7 @@ void get_info_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   info_type_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -6707,12 +7526,12 @@ const char* get_info_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           _internal_set_info_type(static_cast<::come_together_grpc::get_info_request_type>(val));
         } else goto handle_unusual;
         continue;
-      // string access_token = 2;
+      // string token = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_access_token();
+          auto str = _internal_mutable_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_info_request.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_info_request.token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -6760,14 +7579,14 @@ failure:
       1, this->_internal_info_type(), target);
   }
 
-  // string access_token = 2;
-  if (this->access_token().size() > 0) {
+  // string token = 2;
+  if (this->token().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
+      this->_internal_token().data(), static_cast<int>(this->_internal_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.get_info_request.access_token");
+      "come_together_grpc.get_info_request.token");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_access_token(), target);
+        2, this->_internal_token(), target);
   }
 
   // string target_uuid = 3;
@@ -6796,11 +7615,11 @@ size_t get_info_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 2;
-  if (this->access_token().size() > 0) {
+  // string token = 2;
+  if (this->token().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
+        this->_internal_token());
   }
 
   // string target_uuid = 3;
@@ -6847,8 +7666,8 @@ void get_info_request::MergeFrom(const get_info_request& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
+  if (from.token().size() > 0) {
+    _internal_set_token(from._internal_token());
   }
   if (from.target_uuid().size() > 0) {
     _internal_set_target_uuid(from._internal_target_uuid());
@@ -6879,7 +7698,7 @@ bool get_info_request::IsInitialized() const {
 void get_info_request::InternalSwap(get_info_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  token_.Swap(&other->token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   target_uuid_.Swap(&other->target_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(info_type_, other->info_type_);
 }
@@ -7271,11 +8090,18 @@ void get_info_response::InternalSwap(get_info_response* other) {
 // ===================================================================
 
 void get_images_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_get_images_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
 }
 class get_images_request::_Internal {
  public:
+  static const ::come_together_grpc::access_token& token(const get_images_request* msg);
 };
 
+const ::come_together_grpc::access_token&
+get_images_request::_Internal::token(const get_images_request* msg) {
+  return *msg->token_;
+}
 get_images_request::get_images_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -7290,15 +8116,15 @@ get_images_request::get_images_request(const get_images_request& from)
     target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_target_uuid(),
       GetArena());
   }
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
-  }
   hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_hash().empty()) {
     hash_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_hash(),
       GetArena());
+  }
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
   }
   ::memcpy(&image_type_, &from.image_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&starting_sequence_number_) -
@@ -7309,11 +8135,10 @@ get_images_request::get_images_request(const get_images_request& from)
 void get_images_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_get_images_request_come_5ftogether_2eproto.base);
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   hash_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&image_type_, 0, static_cast<size_t>(
+  ::memset(&token_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&starting_sequence_number_) -
-      reinterpret_cast<char*>(&image_type_)) + sizeof(starting_sequence_number_));
+      reinterpret_cast<char*>(&token_)) + sizeof(starting_sequence_number_));
 }
 
 get_images_request::~get_images_request() {
@@ -7325,8 +8150,8 @@ get_images_request::~get_images_request() {
 void get_images_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   target_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   hash_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete token_;
 }
 
 void get_images_request::ArenaDtor(void* object) {
@@ -7351,8 +8176,11 @@ void get_images_request::Clear() {
   (void) cached_has_bits;
 
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   hash_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
   ::memset(&image_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&starting_sequence_number_) -
       reinterpret_cast<char*>(&image_type_)) + sizeof(starting_sequence_number_));
@@ -7384,12 +8212,10 @@ const char* get_images_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string access_token = 3;
+      // .come_together_grpc.access_token token = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.get_images_request.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7461,14 +8287,12 @@ failure:
         2, this->_internal_target_uuid(), target);
   }
 
-  // string access_token = 3;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.get_images_request.access_token");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_access_token(), target);
+  // .come_together_grpc.access_token token = 3;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::token(this), target, stream);
   }
 
   // int32 amount = 4;
@@ -7516,18 +8340,18 @@ size_t get_images_request::ByteSizeLong() const {
         this->_internal_target_uuid());
   }
 
-  // string access_token = 3;
-  if (this->access_token().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
-  }
-
   // string hash = 5;
   if (this->hash().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_hash());
+  }
+
+  // .come_together_grpc.access_token token = 3;
+  if (this->has_token()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
   }
 
   // .come_together_grpc.get_images_request.type image_type = 1;
@@ -7584,11 +8408,11 @@ void get_images_request::MergeFrom(const get_images_request& from) {
   if (from.target_uuid().size() > 0) {
     _internal_set_target_uuid(from._internal_target_uuid());
   }
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
-  }
   if (from.hash().size() > 0) {
     _internal_set_hash(from._internal_hash());
+  }
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
   }
   if (from.image_type() != 0) {
     _internal_set_image_type(from._internal_image_type());
@@ -7623,14 +8447,13 @@ void get_images_request::InternalSwap(get_images_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   target_uuid_.Swap(&other->target_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   hash_.Swap(&other->hash_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(get_images_request, starting_sequence_number_)
       + sizeof(get_images_request::starting_sequence_number_)
-      - PROTOBUF_FIELD_OFFSET(get_images_request, image_type_)>(
-          reinterpret_cast<char*>(&image_type_),
-          reinterpret_cast<char*>(&other->image_type_));
+      - PROTOBUF_FIELD_OFFSET(get_images_request, token_)>(
+          reinterpret_cast<char*>(&token_),
+          reinterpret_cast<char*>(&other->token_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata get_images_request::GetMetadata() const {
@@ -7641,6 +8464,8 @@ void get_images_request::InternalSwap(get_images_request* other) {
 // ===================================================================
 
 void manage_image_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_manage_image_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
   ::come_together_grpc::_manage_image_request_default_instance_.image_.UnsafeSetDefault(
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::come_together_grpc::_manage_image_request_default_instance_.image_uuid_.UnsafeSetDefault(
@@ -7648,8 +8473,13 @@ void manage_image_request::InitAsDefaultInstance() {
 }
 class manage_image_request::_Internal {
  public:
+  static const ::come_together_grpc::access_token& token(const manage_image_request* msg);
 };
 
+const ::come_together_grpc::access_token&
+manage_image_request::_Internal::token(const manage_image_request* msg) {
+  return *msg->token_;
+}
 manage_image_request::manage_image_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -7659,15 +8489,15 @@ manage_image_request::manage_image_request(::PROTOBUF_NAMESPACE_ID::Arena* arena
 manage_image_request::manage_image_request(const manage_image_request& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
-  }
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_target_uuid().empty()) {
     target_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_target_uuid(),
       GetArena());
+  }
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
   }
   act_ = from.act_;
   clear_has_data();
@@ -7689,9 +8519,10 @@ manage_image_request::manage_image_request(const manage_image_request& from)
 
 void manage_image_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_manage_image_request_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   target_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  act_ = 0;
+  ::memset(&token_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&act_) -
+      reinterpret_cast<char*>(&token_)) + sizeof(act_));
   clear_has_data();
 }
 
@@ -7703,8 +8534,8 @@ manage_image_request::~manage_image_request() {
 
 void manage_image_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   target_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete token_;
   if (has_data()) {
     clear_data();
   }
@@ -7750,8 +8581,11 @@ void manage_image_request::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   target_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
   act_ = 0;
   clear_data();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -7773,12 +8607,10 @@ const char* manage_image_request::_InternalParse(const char* ptr, ::PROTOBUF_NAM
           _internal_set_act(static_cast<::come_together_grpc::manage_image_request_action>(val));
         } else goto handle_unusual;
         continue;
-      // string access_token = 2;
+      // .come_together_grpc.access_token token = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.manage_image_request.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -7843,14 +8675,12 @@ failure:
       1, this->_internal_act(), target);
   }
 
-  // string access_token = 2;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.manage_image_request.access_token");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_access_token(), target);
+  // .come_together_grpc.access_token token = 2;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::token(this), target, stream);
   }
 
   // string target_uuid = 3;
@@ -7895,18 +8725,18 @@ size_t manage_image_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 2;
-  if (this->access_token().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
-  }
-
   // string target_uuid = 3;
   if (this->target_uuid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_target_uuid());
+  }
+
+  // .come_together_grpc.access_token token = 2;
+  if (this->has_token()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
   }
 
   // .come_together_grpc.manage_image_request.action act = 1;
@@ -7965,11 +8795,11 @@ void manage_image_request::MergeFrom(const manage_image_request& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
-  }
   if (from.target_uuid().size() > 0) {
     _internal_set_target_uuid(from._internal_target_uuid());
+  }
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
   }
   if (from.act() != 0) {
     _internal_set_act(from._internal_act());
@@ -8010,9 +8840,13 @@ bool manage_image_request::IsInitialized() const {
 void manage_image_request::InternalSwap(manage_image_request* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   target_uuid_.Swap(&other->target_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(act_, other->act_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(manage_image_request, act_)
+      + sizeof(manage_image_request::act_)
+      - PROTOBUF_FIELD_OFFSET(manage_image_request, token_)>(
+          reinterpret_cast<char*>(&token_),
+          reinterpret_cast<char*>(&other->token_));
   swap(data_, other->data_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }
@@ -8731,11 +9565,25 @@ void check_response::InternalSwap(check_response* other) {
 // ===================================================================
 
 void login_request::InitAsDefaultInstance() {
+  ::come_together_grpc::_login_request_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
+  ::come_together_grpc::_login_request_default_instance_._instance.get_mutable()->app_id_ = const_cast< ::come_together_grpc::application_id*>(
+      ::come_together_grpc::application_id::internal_default_instance());
 }
 class login_request::_Internal {
  public:
+  static const ::come_together_grpc::access_token& token(const login_request* msg);
+  static const ::come_together_grpc::application_id& app_id(const login_request* msg);
 };
 
+const ::come_together_grpc::access_token&
+login_request::_Internal::token(const login_request* msg) {
+  return *msg->token_;
+}
+const ::come_together_grpc::application_id&
+login_request::_Internal::app_id(const login_request* msg) {
+  return *msg->app_id_;
+}
 login_request::login_request(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -8755,6 +9603,17 @@ login_request::login_request(const login_request& from)
     password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_password(),
       GetArena());
   }
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
+  }
+  if (from._internal_has_app_id()) {
+    app_id_ = new ::come_together_grpc::application_id(*from.app_id_);
+  } else {
+    app_id_ = nullptr;
+  }
+  typ_ = from.typ_;
   // @@protoc_insertion_point(copy_constructor:come_together_grpc.login_request)
 }
 
@@ -8762,6 +9621,9 @@ void login_request::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_login_request_come_5ftogether_2eproto.base);
   login_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&token_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&typ_) -
+      reinterpret_cast<char*>(&token_)) + sizeof(typ_));
 }
 
 login_request::~login_request() {
@@ -8774,6 +9636,8 @@ void login_request::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   login_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   password_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete token_;
+  if (this != internal_default_instance()) delete app_id_;
 }
 
 void login_request::ArenaDtor(void* object) {
@@ -8799,6 +9663,15 @@ void login_request::Clear() {
 
   login_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   password_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
+  if (GetArena() == nullptr && app_id_ != nullptr) {
+    delete app_id_;
+  }
+  app_id_ = nullptr;
+  typ_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8810,21 +9683,43 @@ const char* login_request::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string login = 1;
+      // .come_together_grpc.login_request.type typ = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_typ(static_cast<::come_together_grpc::login_request_type>(val));
+        } else goto handle_unusual;
+        continue;
+      // string login = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_login();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.login_request.login"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string password = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+      // string password = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_password();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.login_request.password"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .come_together_grpc.access_token token = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .come_together_grpc.application_id app_id = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_app_id(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -8856,24 +9751,47 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string login = 1;
+  // .come_together_grpc.login_request.type typ = 1;
+  if (this->typ() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_typ(), target);
+  }
+
+  // string login = 2;
   if (this->login().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_login().data(), static_cast<int>(this->_internal_login().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "come_together_grpc.login_request.login");
     target = stream->WriteStringMaybeAliased(
-        1, this->_internal_login(), target);
+        2, this->_internal_login(), target);
   }
 
-  // string password = 2;
+  // string password = 3;
   if (this->password().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "come_together_grpc.login_request.password");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_password(), target);
+        3, this->_internal_password(), target);
+  }
+
+  // .come_together_grpc.access_token token = 4;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::token(this), target, stream);
+  }
+
+  // .come_together_grpc.application_id app_id = 5;
+  if (this->has_app_id()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::app_id(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8892,18 +9810,38 @@ size_t login_request::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string login = 1;
+  // string login = 2;
   if (this->login().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_login());
   }
 
-  // string password = 2;
+  // string password = 3;
   if (this->password().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_password());
+  }
+
+  // .come_together_grpc.access_token token = 4;
+  if (this->has_token()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
+  }
+
+  // .come_together_grpc.application_id app_id = 5;
+  if (this->has_app_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *app_id_);
+  }
+
+  // .come_together_grpc.login_request.type typ = 1;
+  if (this->typ() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_typ());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -8943,6 +9881,15 @@ void login_request::MergeFrom(const login_request& from) {
   if (from.password().size() > 0) {
     _internal_set_password(from._internal_password());
   }
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
+  }
+  if (from.has_app_id()) {
+    _internal_mutable_app_id()->::come_together_grpc::application_id::MergeFrom(from._internal_app_id());
+  }
+  if (from.typ() != 0) {
+    _internal_set_typ(from._internal_typ());
+  }
 }
 
 void login_request::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -8968,6 +9915,12 @@ void login_request::InternalSwap(login_request* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   login_.Swap(&other->login_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   password_.Swap(&other->password_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(login_request, typ_)
+      + sizeof(login_request::typ_)
+      - PROTOBUF_FIELD_OFFSET(login_request, token_)>(
+          reinterpret_cast<char*>(&token_),
+          reinterpret_cast<char*>(&other->token_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata login_request::GetMetadata() const {
@@ -8980,15 +9933,22 @@ void login_request::InternalSwap(login_request* other) {
 void login_response::InitAsDefaultInstance() {
   ::come_together_grpc::_login_response_default_instance_._instance.get_mutable()->info_ = const_cast< ::come_together_grpc::user_info*>(
       ::come_together_grpc::user_info::internal_default_instance());
+  ::come_together_grpc::_login_response_default_instance_._instance.get_mutable()->token_ = const_cast< ::come_together_grpc::access_token*>(
+      ::come_together_grpc::access_token::internal_default_instance());
 }
 class login_response::_Internal {
  public:
   static const ::come_together_grpc::user_info& info(const login_response* msg);
+  static const ::come_together_grpc::access_token& token(const login_response* msg);
 };
 
 const ::come_together_grpc::user_info&
 login_response::_Internal::info(const login_response* msg) {
   return *msg->info_;
+}
+const ::come_together_grpc::access_token&
+login_response::_Internal::token(const login_response* msg) {
+  return *msg->token_;
 }
 login_response::login_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
@@ -8999,15 +9959,15 @@ login_response::login_response(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 login_response::login_response(const login_response& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
-  }
   if (from._internal_has_info()) {
     info_ = new ::come_together_grpc::user_info(*from.info_);
   } else {
     info_ = nullptr;
+  }
+  if (from._internal_has_token()) {
+    token_ = new ::come_together_grpc::access_token(*from.token_);
+  } else {
+    token_ = nullptr;
   }
   res_ = from.res_;
   // @@protoc_insertion_point(copy_constructor:come_together_grpc.login_response)
@@ -9015,7 +9975,6 @@ login_response::login_response(const login_response& from)
 
 void login_response::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_login_response_come_5ftogether_2eproto.base);
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&info_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&res_) -
       reinterpret_cast<char*>(&info_)) + sizeof(res_));
@@ -9029,8 +9988,8 @@ login_response::~login_response() {
 
 void login_response::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete info_;
+  if (this != internal_default_instance()) delete token_;
 }
 
 void login_response::ArenaDtor(void* object) {
@@ -9054,11 +10013,14 @@ void login_response::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   if (GetArena() == nullptr && info_ != nullptr) {
     delete info_;
   }
   info_ = nullptr;
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
   res_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -9086,12 +10048,10 @@ const char* login_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string access_token = 3;
+      // .come_together_grpc.access_token token = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.login_response.access_token"));
+          ptr = ctx->ParseMessage(_internal_mutable_token(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9138,14 +10098,12 @@ failure:
         2, _Internal::info(this), target, stream);
   }
 
-  // string access_token = 3;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.login_response.access_token");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_access_token(), target);
+  // .come_together_grpc.access_token token = 3;
+  if (this->has_token()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::token(this), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -9164,18 +10122,18 @@ size_t login_response::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string access_token = 3;
-  if (this->access_token().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
-  }
-
   // .come_together_grpc.user_info info = 2;
   if (this->has_info()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *info_);
+  }
+
+  // .come_together_grpc.access_token token = 3;
+  if (this->has_token()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *token_);
   }
 
   // .come_together_grpc.login_response.result res = 1;
@@ -9215,11 +10173,11 @@ void login_response::MergeFrom(const login_response& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
-  }
   if (from.has_info()) {
     _internal_mutable_info()->::come_together_grpc::user_info::MergeFrom(from._internal_info());
+  }
+  if (from.has_token()) {
+    _internal_mutable_token()->::come_together_grpc::access_token::MergeFrom(from._internal_token());
   }
   if (from.res() != 0) {
     _internal_set_res(from._internal_res());
@@ -9247,7 +10205,6 @@ bool login_response::IsInitialized() const {
 void login_response::InternalSwap(login_response* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(login_response, res_)
       + sizeof(login_response::res_)
@@ -9498,11 +10455,6 @@ register_response::register_response(const register_response& from)
     user_uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_user_uuid(),
       GetArena());
   }
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_access_token().empty()) {
-    access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_access_token(),
-      GetArena());
-  }
   res_ = from.res_;
   // @@protoc_insertion_point(copy_constructor:come_together_grpc.register_response)
 }
@@ -9510,7 +10462,6 @@ register_response::register_response(const register_response& from)
 void register_response::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_register_response_come_5ftogether_2eproto.base);
   user_uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   res_ = 0;
 }
 
@@ -9523,7 +10474,6 @@ register_response::~register_response() {
 void register_response::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   user_uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void register_response::ArenaDtor(void* object) {
@@ -9548,7 +10498,6 @@ void register_response::Clear() {
   (void) cached_has_bits;
 
   user_uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   res_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -9575,15 +10524,6 @@ const char* register_response::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
           auto str = _internal_mutable_user_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.register_response.user_uuid"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string access_token = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_access_token();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "come_together_grpc.register_response.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -9632,16 +10572,6 @@ failure:
         2, this->_internal_user_uuid(), target);
   }
 
-  // string access_token = 3;
-  if (this->access_token().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "come_together_grpc.register_response.access_token");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_access_token(), target);
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -9663,13 +10593,6 @@ size_t register_response::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_user_uuid());
-  }
-
-  // string access_token = 3;
-  if (this->access_token().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_access_token());
   }
 
   // .come_together_grpc.register_response.result res = 1;
@@ -9712,9 +10635,6 @@ void register_response::MergeFrom(const register_response& from) {
   if (from.user_uuid().size() > 0) {
     _internal_set_user_uuid(from._internal_user_uuid());
   }
-  if (from.access_token().size() > 0) {
-    _internal_set_access_token(from._internal_access_token());
-  }
   if (from.res() != 0) {
     _internal_set_res(from._internal_res());
   }
@@ -9742,7 +10662,6 @@ void register_response::InternalSwap(register_response* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   user_uuid_.Swap(&other->user_uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  access_token_.Swap(&other->access_token_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(res_, other->res_);
 }
 
@@ -11295,6 +12214,15 @@ template<> PROTOBUF_NOINLINE ::come_together_grpc::image* Arena::CreateMaybeMess
 }
 template<> PROTOBUF_NOINLINE ::come_together_grpc::access_token* Arena::CreateMaybeMessage< ::come_together_grpc::access_token >(Arena* arena) {
   return Arena::CreateMessageInternal< ::come_together_grpc::access_token >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::application_id* Arena::CreateMaybeMessage< ::come_together_grpc::application_id >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::application_id >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::logout_request* Arena::CreateMaybeMessage< ::come_together_grpc::logout_request >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::logout_request >(arena);
+}
+template<> PROTOBUF_NOINLINE ::come_together_grpc::logout_response* Arena::CreateMaybeMessage< ::come_together_grpc::logout_response >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::come_together_grpc::logout_response >(arena);
 }
 template<> PROTOBUF_NOINLINE ::come_together_grpc::send_push_token_request* Arena::CreateMaybeMessage< ::come_together_grpc::send_push_token_request >(Arena* arena) {
   return Arena::CreateMessageInternal< ::come_together_grpc::send_push_token_request >(arena);

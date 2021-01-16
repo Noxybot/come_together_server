@@ -40,10 +40,10 @@ bool User::PostEventToInstance(const std::string& access_token, const event_ptr&
     return false;
 }
 
-bool User::LoginNewInstance(CommonCallData&& data)
+bool User::LoginNewInstance(CommonCallData&& data, std::string access_token)
 {
     std::lock_guard<decltype(m_instances_mutex)> _ {m_instances_mutex};
-    auto& instance = m_instances.emplace_back(std::move(data));
+    auto& instance = m_instances.emplace_back(std::move(data), std::move(access_token));
     instance.ConnectToInstanceLogoff(
         [this](std::string access_token) 
     {

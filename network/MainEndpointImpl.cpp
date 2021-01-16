@@ -34,6 +34,7 @@ MainEndpointImpl::MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerIn
     };
     for (auto i = 0u; i < 1u; ++i)
         m_event_senders.emplace_back(std::thread(cq_routine));
+    ///WaitForEventsSubscriptionAsync(); post_construct
 }
 
 MainEndpointImpl::~MainEndpointImpl()
@@ -78,13 +79,7 @@ MainEndpointImpl::~MainEndpointImpl()
     CT::register_response result;
     std::string user_uuid;
     result.set_res(m_db->RegisterUser(*request, user_uuid));
-    if (result.res() == CT::register_response_result_OK)
-    {
-        auto token = m_user_storage->LoginUser(user_uuid);
-        WaitForEventsSubscriptionAsync();
-        result.set_access_token(std::move(token));
-    }
-
+    result.set_user_uuid(std::move(user_uuid));
     *response = std::move(result);
     PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
     return grpc::Status::OK;
@@ -94,8 +89,8 @@ MainEndpointImpl::~MainEndpointImpl()
     CT::login_response* response)
 {
     CT::login_response result;
-    std::string user_uuid;
-    result.set_res(m_db->LoginUser(*request, user_uuid));
+    std::string user_uuid, access_token;
+    result.set_res(m_db->LoginUser(*request, user_uuid, access_token));
     if (result.res() != CT::login_response_result_OK)
     {
         PLOG_INFO << context->peer() << ", login res=" << result.res();
@@ -103,13 +98,19 @@ MainEndpointImpl::~MainEndpointImpl()
         return grpc::Status::OK;
     }
     PLOG_ERROR_IF(user_uuid.empty()) << "empty user_uuid";
-    const auto user_info = new CT::user_info(m_db->GetUserInfo(user_uuid));
+    auto info = m_db->GetUserInfo(user_uuid);
+    result.set_allocated_info( new CT::user_info(std::move(info)));
+    auto token = new CT::access_token;
+    token->set_value(access_token);
+    result.set_allocated_token(token);
+    *response = std::move(result);
+    /*const auto user_info = new CT::user_info(m_db->GetUserInfo(user_uuid));
     result.set_allocated_info(user_info);
-    auto access_token = m_user_storage->LoginUser(user_uuid);
+    m_user_storage->LoginUser(user_uuid, access_token);
     WaitForEventsSubscriptionAsync();
     result.set_access_token(std::move(access_token));
     *response = std::move(result);
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();*/
     return grpc::Status::OK;
 }
 
@@ -185,10 +186,12 @@ MainEndpointImpl::~MainEndpointImpl()
 void MainEndpointImpl::WaitForEventsSubscriptionAsync()
 {
     auto common_call_data = new CommonCallData;
-    common_call_data->ConnectToNewSubscriber([storage = m_user_storage](CommonCallData&& data)
+    common_call_data->ConnectToNewSubscriber([this, storage = m_user_storage, w_this = weak_from_this()](CommonCallData&& data)
     {
         storage->OnNewEventsSubscriber(std::move(data));
+        if (const auto locked_this = w_this.lock())
+            WaitForEventsSubscriptionAsync();
     });
-    RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_token.get(),
+    RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_application_id.get(),
         common_call_data->m_writer.get(), m_cq.get(), m_cq.get(), common_call_data);
 }

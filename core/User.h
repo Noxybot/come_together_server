@@ -16,7 +16,7 @@ public:
     User(User&& r) noexcept;
     bool PostEvent(const event_ptr& event);
     bool PostEventToInstance(const std::string& access_token, const event_ptr& event);
-    bool LoginNewInstance(CommonCallData&& data);
-    const std::string& GetUuid() const;
+    bool LoginNewInstance(CommonCallData&& data, std::string access_token);
+    [[nodiscard]] const std::string& GetUuid() const;
     void ConnectToUserLogoff(user_logoff_t callback);
 };

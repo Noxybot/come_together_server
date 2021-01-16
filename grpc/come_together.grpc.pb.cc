@@ -27,6 +27,7 @@ static const char* MainEndpoint_method_names[] = {
   "/come_together_grpc.MainEndpoint/Check",
   "/come_together_grpc.MainEndpoint/RegisterUser",
   "/come_together_grpc.MainEndpoint/LoginUser",
+  "/come_together_grpc.MainEndpoint/LogoutUser",
   "/come_together_grpc.MainEndpoint/AddMarker",
   "/come_together_grpc.MainEndpoint/DeleteMarker",
   "/come_together_grpc.MainEndpoint/GetAllMarkers",
@@ -52,17 +53,18 @@ MainEndpoint::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_Check_(MainEndpoint_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_RegisterUser_(MainEndpoint_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_LoginUser_(MainEndpoint_method_names[4], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_AddMarker_(MainEndpoint_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_DeleteMarker_(MainEndpoint_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetAllMarkers_(MainEndpoint_method_names[7], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_GetInfo_(MainEndpoint_method_names[8], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_UpdateInfo_(MainEndpoint_method_names[9], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_ManageImage_(MainEndpoint_method_names[10], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetImages_(MainEndpoint_method_names[11], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_SendChatMessage_(MainEndpoint_method_names[12], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_GetChatMessages_(MainEndpoint_method_names[13], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_SubscribeToEvents_(MainEndpoint_method_names[14], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
-  , rpcmethod_SendPushToken_(MainEndpoint_method_names[15], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_LogoutUser_(MainEndpoint_method_names[5], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_AddMarker_(MainEndpoint_method_names[6], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_DeleteMarker_(MainEndpoint_method_names[7], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetAllMarkers_(MainEndpoint_method_names[8], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_GetInfo_(MainEndpoint_method_names[9], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_UpdateInfo_(MainEndpoint_method_names[10], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ManageImage_(MainEndpoint_method_names[11], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetImages_(MainEndpoint_method_names[12], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_SendChatMessage_(MainEndpoint_method_names[13], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_GetChatMessages_(MainEndpoint_method_names[14], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_SubscribeToEvents_(MainEndpoint_method_names[15], ::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  , rpcmethod_SendPushToken_(MainEndpoint_method_names[16], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status MainEndpoint::Stub::AskToken(::grpc::ClientContext* context, const ::come_together_grpc::ask_token_request& request, ::come_together_grpc::ask_token_response* response) {
@@ -203,6 +205,34 @@ void MainEndpoint::Stub::experimental_async::LoginUser(::grpc::ClientContext* co
 
 ::grpc::ClientAsyncResponseReader< ::come_together_grpc::login_response>* MainEndpoint::Stub::PrepareAsyncLoginUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::login_request& request, ::grpc::CompletionQueue* cq) {
   return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::come_together_grpc::login_response>::Create(channel_.get(), cq, rpcmethod_LoginUser_, context, request, false);
+}
+
+::grpc::Status MainEndpoint::Stub::LogoutUser(::grpc::ClientContext* context, const ::come_together_grpc::logout_request& request, ::come_together_grpc::logout_response* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_LogoutUser_, context, request, response);
+}
+
+void MainEndpoint::Stub::experimental_async::LogoutUser(::grpc::ClientContext* context, const ::come_together_grpc::logout_request* request, ::come_together_grpc::logout_response* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_LogoutUser_, context, request, response, std::move(f));
+}
+
+void MainEndpoint::Stub::experimental_async::LogoutUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::logout_response* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_LogoutUser_, context, request, response, std::move(f));
+}
+
+void MainEndpoint::Stub::experimental_async::LogoutUser(::grpc::ClientContext* context, const ::come_together_grpc::logout_request* request, ::come_together_grpc::logout_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_LogoutUser_, context, request, response, reactor);
+}
+
+void MainEndpoint::Stub::experimental_async::LogoutUser(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::come_together_grpc::logout_response* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_LogoutUser_, context, request, response, reactor);
+}
+
+::grpc::ClientAsyncResponseReader< ::come_together_grpc::logout_response>* MainEndpoint::Stub::AsyncLogoutUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::logout_request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::come_together_grpc::logout_response>::Create(channel_.get(), cq, rpcmethod_LogoutUser_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::come_together_grpc::logout_response>* MainEndpoint::Stub::PrepareAsyncLogoutUserRaw(::grpc::ClientContext* context, const ::come_together_grpc::logout_request& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::come_together_grpc::logout_response>::Create(channel_.get(), cq, rpcmethod_LogoutUser_, context, request, false);
 }
 
 ::grpc::Status MainEndpoint::Stub::AddMarker(::grpc::ClientContext* context, const ::come_together_grpc::add_marker_request& request, ::come_together_grpc::add_marker_response* response) {
@@ -421,19 +451,19 @@ void MainEndpoint::Stub::experimental_async::GetChatMessages(::grpc::ClientConte
   return ::grpc_impl::internal::ClientAsyncReaderFactory< ::come_together_grpc::chat_message>::Create(channel_.get(), cq, rpcmethod_GetChatMessages_, context, request, false, nullptr);
 }
 
-::grpc::ClientReader< ::come_together_grpc::event>* MainEndpoint::Stub::SubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request) {
+::grpc::ClientReader< ::come_together_grpc::event>* MainEndpoint::Stub::SubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::application_id& request) {
   return ::grpc_impl::internal::ClientReaderFactory< ::come_together_grpc::event>::Create(channel_.get(), rpcmethod_SubscribeToEvents_, context, request);
 }
 
-void MainEndpoint::Stub::experimental_async::SubscribeToEvents(::grpc::ClientContext* context, ::come_together_grpc::access_token* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::event>* reactor) {
+void MainEndpoint::Stub::experimental_async::SubscribeToEvents(::grpc::ClientContext* context, ::come_together_grpc::application_id* request, ::grpc::experimental::ClientReadReactor< ::come_together_grpc::event>* reactor) {
   ::grpc_impl::internal::ClientCallbackReaderFactory< ::come_together_grpc::event>::Create(stub_->channel_.get(), stub_->rpcmethod_SubscribeToEvents_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::come_together_grpc::event>* MainEndpoint::Stub::AsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq, void* tag) {
+::grpc::ClientAsyncReader< ::come_together_grpc::event>* MainEndpoint::Stub::AsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::application_id& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc_impl::internal::ClientAsyncReaderFactory< ::come_together_grpc::event>::Create(channel_.get(), cq, rpcmethod_SubscribeToEvents_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::come_together_grpc::event>* MainEndpoint::Stub::PrepareAsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::access_token& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncReader< ::come_together_grpc::event>* MainEndpoint::Stub::PrepareAsyncSubscribeToEventsRaw(::grpc::ClientContext* context, const ::come_together_grpc::application_id& request, ::grpc::CompletionQueue* cq) {
   return ::grpc_impl::internal::ClientAsyncReaderFactory< ::come_together_grpc::event>::Create(channel_.get(), cq, rpcmethod_SubscribeToEvents_, context, request, false, nullptr);
 }
 
@@ -519,6 +549,16 @@ MainEndpoint::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       MainEndpoint_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::logout_request, ::come_together_grpc::logout_response>(
+          [](MainEndpoint::Service* service,
+             ::grpc_impl::ServerContext* ctx,
+             const ::come_together_grpc::logout_request* req,
+             ::come_together_grpc::logout_response* resp) {
+               return service->LogoutUser(ctx, req, resp);
+             }, this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      MainEndpoint_method_names[6],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::add_marker_request, ::come_together_grpc::add_marker_response>(
           [](MainEndpoint::Service* service,
              ::grpc_impl::ServerContext* ctx,
@@ -527,7 +567,7 @@ MainEndpoint::Service::Service() {
                return service->AddMarker(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[6],
+      MainEndpoint_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::delete_marker_request, ::come_together_grpc::delete_marker_reponse>(
           [](MainEndpoint::Service* service,
@@ -537,7 +577,7 @@ MainEndpoint::Service::Service() {
                return service->DeleteMarker(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[7],
+      MainEndpoint_method_names[8],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< MainEndpoint::Service, ::come_together_grpc::access_token, ::come_together_grpc::marker_info>(
           [](MainEndpoint::Service* service,
@@ -547,7 +587,7 @@ MainEndpoint::Service::Service() {
                return service->GetAllMarkers(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[8],
+      MainEndpoint_method_names[9],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::get_info_request, ::come_together_grpc::get_info_response>(
           [](MainEndpoint::Service* service,
@@ -557,7 +597,7 @@ MainEndpoint::Service::Service() {
                return service->GetInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[9],
+      MainEndpoint_method_names[10],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::update_info_request, ::come_together_grpc::update_info_response>(
           [](MainEndpoint::Service* service,
@@ -567,7 +607,7 @@ MainEndpoint::Service::Service() {
                return service->UpdateInfo(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[10],
+      MainEndpoint_method_names[11],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::manage_image_request, ::come_together_grpc::manage_image_response>(
           [](MainEndpoint::Service* service,
@@ -577,7 +617,7 @@ MainEndpoint::Service::Service() {
                return service->ManageImage(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[11],
+      MainEndpoint_method_names[12],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< MainEndpoint::Service, ::come_together_grpc::get_images_request, ::come_together_grpc::image>(
           [](MainEndpoint::Service* service,
@@ -587,7 +627,7 @@ MainEndpoint::Service::Service() {
                return service->GetImages(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[12],
+      MainEndpoint_method_names[13],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::send_chat_message_request, ::come_together_grpc::send_chat_message_response>(
           [](MainEndpoint::Service* service,
@@ -597,7 +637,7 @@ MainEndpoint::Service::Service() {
                return service->SendChatMessage(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[13],
+      MainEndpoint_method_names[14],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
       new ::grpc::internal::ServerStreamingHandler< MainEndpoint::Service, ::come_together_grpc::get_chat_messages_request, ::come_together_grpc::chat_message>(
           [](MainEndpoint::Service* service,
@@ -607,17 +647,17 @@ MainEndpoint::Service::Service() {
                return service->GetChatMessages(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[14],
+      MainEndpoint_method_names[15],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< MainEndpoint::Service, ::come_together_grpc::access_token, ::come_together_grpc::event>(
+      new ::grpc::internal::ServerStreamingHandler< MainEndpoint::Service, ::come_together_grpc::application_id, ::come_together_grpc::event>(
           [](MainEndpoint::Service* service,
              ::grpc_impl::ServerContext* ctx,
-             const ::come_together_grpc::access_token* req,
+             const ::come_together_grpc::application_id* req,
              ::grpc_impl::ServerWriter<::come_together_grpc::event>* writer) {
                return service->SubscribeToEvents(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      MainEndpoint_method_names[15],
+      MainEndpoint_method_names[16],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< MainEndpoint::Service, ::come_together_grpc::send_push_token_request, ::come_together_grpc::send_push_token_response>(
           [](MainEndpoint::Service* service,
@@ -660,6 +700,13 @@ MainEndpoint::Service::~Service() {
 }
 
 ::grpc::Status MainEndpoint::Service::LoginUser(::grpc::ServerContext* context, const ::come_together_grpc::login_request* request, ::come_together_grpc::login_response* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status MainEndpoint::Service::LogoutUser(::grpc::ServerContext* context, const ::come_together_grpc::logout_request* request, ::come_together_grpc::logout_response* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -729,7 +776,7 @@ MainEndpoint::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status MainEndpoint::Service::SubscribeToEvents(::grpc::ServerContext* context, const ::come_together_grpc::access_token* request, ::grpc::ServerWriter< ::come_together_grpc::event>* writer) {
+::grpc::Status MainEndpoint::Service::SubscribeToEvents(::grpc::ServerContext* context, const ::come_together_grpc::application_id* request, ::grpc::ServerWriter< ::come_together_grpc::event>* writer) {
   (void) context;
   (void) request;
   (void) writer;

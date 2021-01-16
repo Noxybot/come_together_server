@@ -10,7 +10,7 @@ class UserStorageInterface
 public:
     virtual ~UserStorageInterface() = default;
     //returns access token
-    virtual std::string LoginUser(std::string user_uuid) = 0;
+    virtual void LoginUser(std::string user_uuid, std::string access_token, std::string app_id) = 0;
     virtual bool PostEventToUser(const std::string& user_uuid, const std::shared_ptr<come_together_grpc::event>& evt) = 0;
     virtual bool PostEventToInstance(const std::string& user_uuid, const std::string& access_token, const std::shared_ptr<come_together_grpc::event>& evt) = 0;
     virtual void OnNewEventsSubscriber(CommonCallData&& data) = 0;

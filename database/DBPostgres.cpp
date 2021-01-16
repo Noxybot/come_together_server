@@ -9,8 +9,21 @@
 
 #include <array>
 
+std::vector<std::string> parse_array(pqxx::array_parser parser)
+{
+    std::vector<std::string> results;
+    auto elem = parser.get_next();
+    while (elem.first != pqxx::array_parser::done)
+    {
+        if (elem.first == pqxx::array_parser::string_value)
+            results.push_back(std::move(elem.second));
+        elem = parser.get_next();
+    }
+    return results;
+}
+
 DBPostgres::DBPostgres(const std::string& connection_string)
-    : m_pool(std::make_shared<ConnectionPool>(connection_string, 1))
+    : m_pool(std::make_shared<ConnectionPool>(connection_string, 10))
 {}
 
 // ReSharper disable once CppNotAllPathsReturnValue
@@ -75,23 +88,60 @@ CT::register_response::result DBPostgres::RegisterUser(const CT::register_reques
 }
 CATCH_ALL(CT::register_response_result_OTHER)
 
-CT::login_response::result DBPostgres::LoginUser(const CT::login_request& req, std::string& out_uuid) try
+CT::login_response::result DBPostgres::LoginUser(const CT::login_request& req, std::string& out_uuid, std::string& out_access_token) try
 {
     const auto conn = m_pool->AcquireConnection();
     pqxx::work work(*conn);
-    const auto query =
-        fmt::format(QueryManager::Get(Query::LOGIN_USER),
-        fmt::arg("login", work.quote(req.login())),
-        fmt::arg("password_md5", work.quote(req.password())));
+    std::string query;
+    switch (req.typ())
+    {
+    case CT::login_request_type_BY_LOGIN_PASSWORD:
+        query =
+            fmt::format(QueryManager::Get(Query::LOGIN_USER_BY_PASS),
+            fmt::arg("login", work.quote(req.login())),
+            fmt::arg("password_md5", work.quote(req.password())),
+            fmt::arg("app_id", work.quote(req.app_id().id())));
+        break;
+    case CT::login_request_type_BY_ACCESS_TOKEN:
+        query =
+            fmt::format(QueryManager::Get(Query::LOGIN_USER_BY_TOKEN),
+            fmt::arg("access_token", work.quote(req.token().value())));
+        break;
+    default:
+        PLOG_ERROR << "Unsupported login type";
+        return CT::login_response::result::login_response_result_OTHER;
+    }
     const auto res = work.exec1(query);
     work.commit();
-    auto uuid = res[0].as<std::string>();
+    if (req.typ() == CT::login_request_type_BY_ACCESS_TOKEN)
+    {
+        auto val = res[0].as<std::string>();
+        if (val == "1")
+        {
+            PLOG_INFO << "access token not found";
+            return CT::login_response::result::login_response_result_ACCESS_TOKEN_NOT_FOUND;
+        }
+        out_uuid = std::move(val);
+        out_access_token = req.token().value();
+        return CT::login_response_result_OK;
+    }
+    std::vector<std::string> results = parse_array(res[0].as_array());
+    if (results.empty())
+    {
+        PLOG_ERROR << "db schema changed";
+        return CT::login_response_result_OTHER;
+    }
+    auto& uuid = results[0];
     if (uuid == "1")
         return CT::login_response_result_USER_NOT_FOUND;
     if (uuid == "2")
         return CT::login_response_result_WRONG_PASSWORD;
     PLOG_ERROR_IF(uuid.empty()) << "empty uuid from db";
     out_uuid = std::move(uuid);
+    if (results.size() == 2)
+        out_access_token = std::move(results[1]);
+    else
+        PLOG_ERROR << "db schema changed";
     return CT::login_response_result_OK;
 }
 CATCH_ALL(CT::login_response_result_OTHER)
@@ -214,6 +264,24 @@ std::vector<CT::marker_info> DBPostgres::GetAllMarkers() try
         info.set_latitude(marker_row[8].as<double>());
         info.set_longitude(marker_row[9].as<double>());
         res.push_back(std::move(info));
+    }
+    return res;
+}
+CATCH_ALL({})
+
+std::multimap<std::string, std::string> DBPostgres::GetAllPushTokens() try
+{
+    std::multimap<std::string, std::string> res;
+    const auto conn = m_pool->AcquireConnection();
+    pqxx::work work(*conn);
+    const auto result = work.exec(std::string(QueryManager::Get(Query::GET_ALL_PUSH_TOKENS)));
+    work.commit();
+    for (const auto& row: result)
+    {
+        if (row.size() == 2)
+            res.emplace(row[0].as<std::string>(), row[1].as<std::string>());
+        else
+            PLOG_ERROR << "db schema changed";
     }
     return res;
 }

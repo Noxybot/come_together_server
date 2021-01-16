@@ -48,7 +48,7 @@ struct TableStruct_come_5ftogether_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[33]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[36]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -65,6 +65,9 @@ extern add_marker_requestDefaultTypeInternal _add_marker_request_default_instanc
 class add_marker_response;
 class add_marker_responseDefaultTypeInternal;
 extern add_marker_responseDefaultTypeInternal _add_marker_response_default_instance_;
+class application_id;
+class application_idDefaultTypeInternal;
+extern application_idDefaultTypeInternal _application_id_default_instance_;
 class ask_token_request;
 class ask_token_requestDefaultTypeInternal;
 extern ask_token_requestDefaultTypeInternal _ask_token_request_default_instance_;
@@ -113,6 +116,12 @@ extern login_requestDefaultTypeInternal _login_request_default_instance_;
 class login_response;
 class login_responseDefaultTypeInternal;
 extern login_responseDefaultTypeInternal _login_response_default_instance_;
+class logout_request;
+class logout_requestDefaultTypeInternal;
+extern logout_requestDefaultTypeInternal _logout_request_default_instance_;
+class logout_response;
+class logout_responseDefaultTypeInternal;
+extern logout_responseDefaultTypeInternal _logout_response_default_instance_;
 class manage_image_request;
 class manage_image_requestDefaultTypeInternal;
 extern manage_image_requestDefaultTypeInternal _manage_image_request_default_instance_;
@@ -160,6 +169,7 @@ PROTOBUF_NAMESPACE_OPEN
 template<> ::come_together_grpc::access_token* Arena::CreateMaybeMessage<::come_together_grpc::access_token>(Arena*);
 template<> ::come_together_grpc::add_marker_request* Arena::CreateMaybeMessage<::come_together_grpc::add_marker_request>(Arena*);
 template<> ::come_together_grpc::add_marker_response* Arena::CreateMaybeMessage<::come_together_grpc::add_marker_response>(Arena*);
+template<> ::come_together_grpc::application_id* Arena::CreateMaybeMessage<::come_together_grpc::application_id>(Arena*);
 template<> ::come_together_grpc::ask_token_request* Arena::CreateMaybeMessage<::come_together_grpc::ask_token_request>(Arena*);
 template<> ::come_together_grpc::ask_token_response* Arena::CreateMaybeMessage<::come_together_grpc::ask_token_response>(Arena*);
 template<> ::come_together_grpc::chat_info* Arena::CreateMaybeMessage<::come_together_grpc::chat_info>(Arena*);
@@ -176,6 +186,8 @@ template<> ::come_together_grpc::get_info_response* Arena::CreateMaybeMessage<::
 template<> ::come_together_grpc::image* Arena::CreateMaybeMessage<::come_together_grpc::image>(Arena*);
 template<> ::come_together_grpc::login_request* Arena::CreateMaybeMessage<::come_together_grpc::login_request>(Arena*);
 template<> ::come_together_grpc::login_response* Arena::CreateMaybeMessage<::come_together_grpc::login_response>(Arena*);
+template<> ::come_together_grpc::logout_request* Arena::CreateMaybeMessage<::come_together_grpc::logout_request>(Arena*);
+template<> ::come_together_grpc::logout_response* Arena::CreateMaybeMessage<::come_together_grpc::logout_response>(Arena*);
 template<> ::come_together_grpc::manage_image_request* Arena::CreateMaybeMessage<::come_together_grpc::manage_image_request>(Arena*);
 template<> ::come_together_grpc::manage_image_response* Arena::CreateMaybeMessage<::come_together_grpc::manage_image_response>(Arena*);
 template<> ::come_together_grpc::marker_info* Arena::CreateMaybeMessage<::come_together_grpc::marker_info>(Arena*);
@@ -193,6 +205,33 @@ template<> ::come_together_grpc::verify_token_response* Arena::CreateMaybeMessag
 PROTOBUF_NAMESPACE_CLOSE
 namespace come_together_grpc {
 
+enum logout_response_result : int {
+  logout_response_result_NOT_SET = 0,
+  logout_response_result_OK = 1,
+  logout_response_result_TOKEN_NOT_FOUND = 2,
+  logout_response_result_OTHER = 999,
+  logout_response_result_logout_response_result_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  logout_response_result_logout_response_result_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool logout_response_result_IsValid(int value);
+constexpr logout_response_result logout_response_result_result_MIN = logout_response_result_NOT_SET;
+constexpr logout_response_result logout_response_result_result_MAX = logout_response_result_OTHER;
+constexpr int logout_response_result_result_ARRAYSIZE = logout_response_result_result_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* logout_response_result_descriptor();
+template<typename T>
+inline const std::string& logout_response_result_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, logout_response_result>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function logout_response_result_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    logout_response_result_descriptor(), enum_t_value);
+}
+inline bool logout_response_result_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, logout_response_result* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<logout_response_result>(
+    logout_response_result_descriptor(), name, value);
+}
 enum send_push_token_response_result : int {
   send_push_token_response_result_NOT_SET = 0,
   send_push_token_response_result_OK = 1,
@@ -603,11 +642,38 @@ inline bool check_response_result_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<check_response_result>(
     check_response_result_descriptor(), name, value);
 }
+enum login_request_type : int {
+  login_request_type_NOT_SET = 0,
+  login_request_type_BY_LOGIN_PASSWORD = 1,
+  login_request_type_BY_ACCESS_TOKEN = 2,
+  login_request_type_login_request_type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  login_request_type_login_request_type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool login_request_type_IsValid(int value);
+constexpr login_request_type login_request_type_type_MIN = login_request_type_NOT_SET;
+constexpr login_request_type login_request_type_type_MAX = login_request_type_BY_ACCESS_TOKEN;
+constexpr int login_request_type_type_ARRAYSIZE = login_request_type_type_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* login_request_type_descriptor();
+template<typename T>
+inline const std::string& login_request_type_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, login_request_type>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function login_request_type_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    login_request_type_descriptor(), enum_t_value);
+}
+inline bool login_request_type_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, login_request_type* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<login_request_type>(
+    login_request_type_descriptor(), name, value);
+}
 enum login_response_result : int {
   login_response_result_NOT_SET = 0,
   login_response_result_OK = 1,
   login_response_result_USER_NOT_FOUND = 2,
   login_response_result_WRONG_PASSWORD = 3,
+  login_response_result_ACCESS_TOKEN_NOT_FOUND = 4,
   login_response_result_OTHER = 999,
   login_response_result_login_response_result_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   login_response_result_login_response_result_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
@@ -1043,22 +1109,22 @@ class access_token PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTokenFieldNumber = 1,
+    kValueFieldNumber = 1,
   };
-  // string token = 1;
-  void clear_token();
-  const std::string& token() const;
-  void set_token(const std::string& value);
-  void set_token(std::string&& value);
-  void set_token(const char* value);
-  void set_token(const char* value, size_t size);
-  std::string* mutable_token();
-  std::string* release_token();
-  void set_allocated_token(std::string* token);
+  // string value = 1;
+  void clear_value();
+  const std::string& value() const;
+  void set_value(const std::string& value);
+  void set_value(std::string&& value);
+  void set_value(const char* value);
+  void set_value(const char* value, size_t size);
+  std::string* mutable_value();
+  std::string* release_value();
+  void set_allocated_value(std::string* value);
   private:
-  const std::string& _internal_token() const;
-  void _internal_set_token(const std::string& value);
-  std::string* _internal_mutable_token();
+  const std::string& _internal_value() const;
+  void _internal_set_value(const std::string& value);
+  std::string* _internal_mutable_value();
   public:
 
   // @@protoc_insertion_point(class_scope:come_together_grpc.access_token)
@@ -1068,7 +1134,468 @@ class access_token PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
+class application_id PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.application_id) */ {
+ public:
+  inline application_id() : application_id(nullptr) {}
+  virtual ~application_id();
+
+  application_id(const application_id& from);
+  application_id(application_id&& from) noexcept
+    : application_id() {
+    *this = ::std::move(from);
+  }
+
+  inline application_id& operator=(const application_id& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline application_id& operator=(application_id&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const application_id& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const application_id* internal_default_instance() {
+    return reinterpret_cast<const application_id*>(
+               &_application_id_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(application_id& a, application_id& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(application_id* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(application_id* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline application_id* New() const final {
+    return CreateMaybeMessage<application_id>(nullptr);
+  }
+
+  application_id* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<application_id>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const application_id& from);
+  void MergeFrom(const application_id& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(application_id* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.application_id";
+  }
+  protected:
+  explicit application_id(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIdFieldNumber = 1,
+  };
+  // string id = 1;
+  void clear_id();
+  const std::string& id() const;
+  void set_id(const std::string& value);
+  void set_id(std::string&& value);
+  void set_id(const char* value);
+  void set_id(const char* value, size_t size);
+  std::string* mutable_id();
+  std::string* release_id();
+  void set_allocated_id(std::string* id);
+  private:
+  const std::string& _internal_id() const;
+  void _internal_set_id(const std::string& value);
+  std::string* _internal_mutable_id();
+  public:
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.application_id)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
+class logout_request PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.logout_request) */ {
+ public:
+  inline logout_request() : logout_request(nullptr) {}
+  virtual ~logout_request();
+
+  logout_request(const logout_request& from);
+  logout_request(logout_request&& from) noexcept
+    : logout_request() {
+    *this = ::std::move(from);
+  }
+
+  inline logout_request& operator=(const logout_request& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline logout_request& operator=(logout_request&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const logout_request& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const logout_request* internal_default_instance() {
+    return reinterpret_cast<const logout_request*>(
+               &_logout_request_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(logout_request& a, logout_request& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(logout_request* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(logout_request* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline logout_request* New() const final {
+    return CreateMaybeMessage<logout_request>(nullptr);
+  }
+
+  logout_request* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<logout_request>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const logout_request& from);
+  void MergeFrom(const logout_request& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(logout_request* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.logout_request";
+  }
+  protected:
+  explicit logout_request(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTokenFieldNumber = 1,
+  };
+  // .come_together_grpc.access_token token = 1;
+  bool has_token() const;
+  private:
+  bool _internal_has_token() const;
+  public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.logout_request)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::come_together_grpc::access_token* token_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_come_5ftogether_2eproto;
+};
+// -------------------------------------------------------------------
+
+class logout_response PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:come_together_grpc.logout_response) */ {
+ public:
+  inline logout_response() : logout_response(nullptr) {}
+  virtual ~logout_response();
+
+  logout_response(const logout_response& from);
+  logout_response(logout_response&& from) noexcept
+    : logout_response() {
+    *this = ::std::move(from);
+  }
+
+  inline logout_response& operator=(const logout_response& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline logout_response& operator=(logout_response&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const logout_response& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const logout_response* internal_default_instance() {
+    return reinterpret_cast<const logout_response*>(
+               &_logout_response_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(logout_response& a, logout_response& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(logout_response* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(logout_response* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline logout_response* New() const final {
+    return CreateMaybeMessage<logout_response>(nullptr);
+  }
+
+  logout_response* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<logout_response>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const logout_response& from);
+  void MergeFrom(const logout_response& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(logout_response* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "come_together_grpc.logout_response";
+  }
+  protected:
+  explicit logout_response(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_come_5ftogether_2eproto);
+    return ::descriptor_table_come_5ftogether_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  typedef logout_response_result result;
+  static constexpr result NOT_SET =
+    logout_response_result_NOT_SET;
+  static constexpr result OK =
+    logout_response_result_OK;
+  static constexpr result TOKEN_NOT_FOUND =
+    logout_response_result_TOKEN_NOT_FOUND;
+  static constexpr result OTHER =
+    logout_response_result_OTHER;
+  static inline bool result_IsValid(int value) {
+    return logout_response_result_IsValid(value);
+  }
+  static constexpr result result_MIN =
+    logout_response_result_result_MIN;
+  static constexpr result result_MAX =
+    logout_response_result_result_MAX;
+  static constexpr int result_ARRAYSIZE =
+    logout_response_result_result_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  result_descriptor() {
+    return logout_response_result_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& result_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, result>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function result_Name.");
+    return logout_response_result_Name(enum_t_value);
+  }
+  static inline bool result_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      result* value) {
+    return logout_response_result_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResFieldNumber = 1,
+  };
+  // .come_together_grpc.logout_response.result res = 1;
+  void clear_res();
+  ::come_together_grpc::logout_response_result res() const;
+  void set_res(::come_together_grpc::logout_response_result value);
+  private:
+  ::come_together_grpc::logout_response_result _internal_res() const;
+  void _internal_set_res(::come_together_grpc::logout_response_result value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:come_together_grpc.logout_response)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int res_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
@@ -1116,7 +1643,7 @@ class send_push_token_request PROTOBUF_FINAL :
                &_send_push_token_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    5;
 
   friend void swap(send_push_token_request& a, send_push_token_request& b) {
     a.Swap(&b);
@@ -1187,25 +1714,9 @@ class send_push_token_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 1,
     kPushTokenFieldNumber = 2,
+    kAppIdFieldNumber = 1,
   };
-  // string access_token = 1;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
-  private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
-  public:
-
   // string push_token = 2;
   void clear_push_token();
   const std::string& push_token() const;
@@ -1222,6 +1733,24 @@ class send_push_token_request PROTOBUF_FINAL :
   std::string* _internal_mutable_push_token();
   public:
 
+  // .come_together_grpc.application_id app_id = 1;
+  bool has_app_id() const;
+  private:
+  bool _internal_has_app_id() const;
+  public:
+  void clear_app_id();
+  const ::come_together_grpc::application_id& app_id() const;
+  ::come_together_grpc::application_id* release_app_id();
+  ::come_together_grpc::application_id* mutable_app_id();
+  void set_allocated_app_id(::come_together_grpc::application_id* app_id);
+  private:
+  const ::come_together_grpc::application_id& _internal_app_id() const;
+  ::come_together_grpc::application_id* _internal_mutable_app_id();
+  public:
+  void unsafe_arena_set_allocated_app_id(
+      ::come_together_grpc::application_id* app_id);
+  ::come_together_grpc::application_id* unsafe_arena_release_app_id();
+
   // @@protoc_insertion_point(class_scope:come_together_grpc.send_push_token_request)
  private:
   class _Internal;
@@ -1229,8 +1758,8 @@ class send_push_token_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr push_token_;
+  ::come_together_grpc::application_id* app_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
@@ -1278,7 +1807,7 @@ class send_push_token_response PROTOBUF_FINAL :
                &_send_push_token_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    6;
 
   friend void swap(send_push_token_response& a, send_push_token_response& b) {
     a.Swap(&b);
@@ -1449,7 +1978,7 @@ class delete_marker_request PROTOBUF_FINAL :
                &_delete_marker_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    7;
 
   friend void swap(delete_marker_request& a, delete_marker_request& b) {
     a.Swap(&b);
@@ -1520,25 +2049,9 @@ class delete_marker_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 1,
     kMarkerUuidFieldNumber = 2,
+    kTokenFieldNumber = 1,
   };
-  // string access_token = 1;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
-  private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
-  public:
-
   // string marker_uuid = 2;
   void clear_marker_uuid();
   const std::string& marker_uuid() const;
@@ -1555,6 +2068,24 @@ class delete_marker_request PROTOBUF_FINAL :
   std::string* _internal_mutable_marker_uuid();
   public:
 
+  // .come_together_grpc.access_token token = 1;
+  bool has_token() const;
+  private:
+  bool _internal_has_token() const;
+  public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
+
   // @@protoc_insertion_point(class_scope:come_together_grpc.delete_marker_request)
  private:
   class _Internal;
@@ -1562,8 +2093,8 @@ class delete_marker_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr marker_uuid_;
+  ::come_together_grpc::access_token* token_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
@@ -1611,7 +2142,7 @@ class delete_marker_reponse PROTOBUF_FINAL :
                &_delete_marker_reponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    8;
 
   friend void swap(delete_marker_reponse& a, delete_marker_reponse& b) {
     a.Swap(&b);
@@ -1784,7 +2315,7 @@ class ask_token_request PROTOBUF_FINAL :
                &_ask_token_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    9;
 
   friend void swap(ask_token_request& a, ask_token_request& b) {
     a.Swap(&b);
@@ -1928,7 +2459,7 @@ class ask_token_response PROTOBUF_FINAL :
                &_ask_token_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    10;
 
   friend void swap(ask_token_response& a, ask_token_response& b) {
     a.Swap(&b);
@@ -2099,7 +2630,7 @@ class verify_token_request PROTOBUF_FINAL :
                &_verify_token_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    11;
 
   friend void swap(verify_token_request& a, verify_token_request& b) {
     a.Swap(&b);
@@ -2261,7 +2792,7 @@ class verify_token_response PROTOBUF_FINAL :
                &_verify_token_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    12;
 
   friend void swap(verify_token_response& a, verify_token_response& b) {
     a.Swap(&b);
@@ -2440,7 +2971,7 @@ class update_info_request PROTOBUF_FINAL :
                &_update_info_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    13;
 
   friend void swap(update_info_request& a, update_info_request& b) {
     a.Swap(&b);
@@ -2543,26 +3074,28 @@ class update_info_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 1,
+    kTokenFieldNumber = 1,
     kTypeFieldNumber = 2,
     kMInfoFieldNumber = 3,
     kUInfoFieldNumber = 4,
   };
-  // string access_token = 1;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
+  // .come_together_grpc.access_token token = 1;
+  bool has_token() const;
   private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
+  bool _internal_has_token() const;
   public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
 
   // .come_together_grpc.update_info_request.update_type type = 2;
   void clear_type();
@@ -2623,7 +3156,7 @@ class update_info_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
+  ::come_together_grpc::access_token* token_;
   int type_;
   union DataUnion {
     DataUnion() {}
@@ -2679,7 +3212,7 @@ class update_info_response PROTOBUF_FINAL :
                &_update_info_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    14;
 
   friend void swap(update_info_response& a, update_info_response& b) {
     a.Swap(&b);
@@ -2857,7 +3390,7 @@ class event PROTOBUF_FINAL :
                &_event_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    15;
 
   friend void swap(event& a, event& b) {
     a.Swap(&b);
@@ -3111,7 +3644,7 @@ class chat_info PROTOBUF_FINAL :
                &_chat_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    16;
 
   friend void swap(chat_info& a, chat_info& b) {
     a.Swap(&b);
@@ -3317,7 +3850,7 @@ class get_chat_messages_request PROTOBUF_FINAL :
                &_get_chat_messages_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    17;
 
   friend void swap(get_chat_messages_request& a, get_chat_messages_request& b) {
     a.Swap(&b);
@@ -3388,26 +3921,26 @@ class get_chat_messages_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 1,
+    kTokenFieldNumber = 1,
     kChatUuidFieldNumber = 2,
     kHashFieldNumber = 5,
     kPageSizeFieldNumber = 3,
     kPageNumberFieldNumber = 4,
   };
-  // string access_token = 1;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
+  // string token = 1;
+  void clear_token();
+  const std::string& token() const;
+  void set_token(const std::string& value);
+  void set_token(std::string&& value);
+  void set_token(const char* value);
+  void set_token(const char* value, size_t size);
+  std::string* mutable_token();
+  std::string* release_token();
+  void set_allocated_token(std::string* token);
   private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
+  const std::string& _internal_token() const;
+  void _internal_set_token(const std::string& value);
+  std::string* _internal_mutable_token();
   public:
 
   // string chat_uuid = 2;
@@ -3467,7 +4000,7 @@ class get_chat_messages_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr chat_uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hash_;
   ::PROTOBUF_NAMESPACE_ID::int32 page_size_;
@@ -3524,7 +4057,7 @@ class chat_message PROTOBUF_FINAL :
                &_chat_message_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    18;
 
   friend void swap(chat_message& a, chat_message& b) {
     a.Swap(&b);
@@ -3799,7 +4332,7 @@ class send_chat_message_request PROTOBUF_FINAL :
                &_send_chat_message_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    19;
 
   friend void swap(send_chat_message_request& a, send_chat_message_request& b) {
     a.Swap(&b);
@@ -3870,24 +4403,26 @@ class send_chat_message_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 1,
+    kTokenFieldNumber = 1,
     kMessageFieldNumber = 2,
   };
-  // string access_token = 1;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
+  // .come_together_grpc.access_token token = 1;
+  bool has_token() const;
   private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
+  bool _internal_has_token() const;
   public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
 
   // .come_together_grpc.chat_message message = 2;
   bool has_message() const;
@@ -3914,7 +4449,7 @@ class send_chat_message_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
+  ::come_together_grpc::access_token* token_;
   ::come_together_grpc::chat_message* message_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
@@ -3963,7 +4498,7 @@ class send_chat_message_response PROTOBUF_FINAL :
                &_send_chat_message_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    20;
 
   friend void swap(send_chat_message_response& a, send_chat_message_response& b) {
     a.Swap(&b);
@@ -4167,7 +4702,7 @@ class get_info_request PROTOBUF_FINAL :
                &_get_info_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    21;
 
   friend void swap(get_info_request& a, get_info_request& b) {
     a.Swap(&b);
@@ -4272,24 +4807,24 @@ class get_info_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 2,
+    kTokenFieldNumber = 2,
     kTargetUuidFieldNumber = 3,
     kInfoTypeFieldNumber = 1,
   };
-  // string access_token = 2;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
+  // string token = 2;
+  void clear_token();
+  const std::string& token() const;
+  void set_token(const std::string& value);
+  void set_token(std::string&& value);
+  void set_token(const char* value);
+  void set_token(const char* value, size_t size);
+  std::string* mutable_token();
+  std::string* release_token();
+  void set_allocated_token(std::string* token);
   private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
+  const std::string& _internal_token() const;
+  void _internal_set_token(const std::string& value);
+  std::string* _internal_mutable_token();
   public:
 
   // string target_uuid = 3;
@@ -4324,7 +4859,7 @@ class get_info_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr target_uuid_;
   int info_type_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -4381,7 +4916,7 @@ class get_info_response PROTOBUF_FINAL :
                &_get_info_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    22;
 
   friend void swap(get_info_response& a, get_info_response& b) {
     a.Swap(&b);
@@ -4580,7 +5115,7 @@ class get_images_request PROTOBUF_FINAL :
                &_get_images_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    23;
 
   friend void swap(get_images_request& a, get_images_request& b) {
     a.Swap(&b);
@@ -4684,8 +5219,8 @@ class get_images_request PROTOBUF_FINAL :
 
   enum : int {
     kTargetUuidFieldNumber = 2,
-    kAccessTokenFieldNumber = 3,
     kHashFieldNumber = 5,
+    kTokenFieldNumber = 3,
     kImageTypeFieldNumber = 1,
     kAmountFieldNumber = 4,
     kStartingSequenceNumberFieldNumber = 6,
@@ -4706,22 +5241,6 @@ class get_images_request PROTOBUF_FINAL :
   std::string* _internal_mutable_target_uuid();
   public:
 
-  // string access_token = 3;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
-  private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
-  public:
-
   // string hash = 5;
   void clear_hash();
   const std::string& hash() const;
@@ -4737,6 +5256,24 @@ class get_images_request PROTOBUF_FINAL :
   void _internal_set_hash(const std::string& value);
   std::string* _internal_mutable_hash();
   public:
+
+  // .come_together_grpc.access_token token = 3;
+  bool has_token() const;
+  private:
+  bool _internal_has_token() const;
+  public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
 
   // .come_together_grpc.get_images_request.type image_type = 1;
   void clear_image_type();
@@ -4773,8 +5310,8 @@ class get_images_request PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr target_uuid_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr hash_;
+  ::come_together_grpc::access_token* token_;
   int image_type_;
   ::PROTOBUF_NAMESPACE_ID::int32 amount_;
   ::PROTOBUF_NAMESPACE_ID::int32 starting_sequence_number_;
@@ -4831,7 +5368,7 @@ class manage_image_request PROTOBUF_FINAL :
                &_manage_image_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    24;
 
   friend void swap(manage_image_request& a, manage_image_request& b) {
     a.Swap(&b);
@@ -4938,28 +5475,12 @@ class manage_image_request PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 2,
     kTargetUuidFieldNumber = 3,
+    kTokenFieldNumber = 2,
     kActFieldNumber = 1,
     kImageFieldNumber = 4,
     kImageUuidFieldNumber = 5,
   };
-  // string access_token = 2;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
-  private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
-  public:
-
   // string target_uuid = 3;
   void clear_target_uuid();
   const std::string& target_uuid() const;
@@ -4975,6 +5496,24 @@ class manage_image_request PROTOBUF_FINAL :
   void _internal_set_target_uuid(const std::string& value);
   std::string* _internal_mutable_target_uuid();
   public:
+
+  // .come_together_grpc.access_token token = 2;
+  bool has_token() const;
+  private:
+  bool _internal_has_token() const;
+  public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
 
   // .come_together_grpc.manage_image_request.action act = 1;
   void clear_act();
@@ -5037,8 +5576,8 @@ class manage_image_request PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr target_uuid_;
+  ::come_together_grpc::access_token* token_;
   int act_;
   union DataUnion {
     DataUnion() {}
@@ -5094,7 +5633,7 @@ class manage_image_response PROTOBUF_FINAL :
                &_manage_image_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    25;
 
   friend void swap(manage_image_response& a, manage_image_response& b) {
     a.Swap(&b);
@@ -5294,7 +5833,7 @@ class check_request PROTOBUF_FINAL :
                &_check_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    26;
 
   friend void swap(check_request& a, check_request& b) {
     a.Swap(&b);
@@ -5481,7 +6020,7 @@ class check_response PROTOBUF_FINAL :
                &_check_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    27;
 
   friend void swap(check_response& a, check_response& b) {
     a.Swap(&b);
@@ -5652,7 +6191,7 @@ class login_request PROTOBUF_FINAL :
                &_login_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    28;
 
   friend void swap(login_request& a, login_request& b) {
     a.Swap(&b);
@@ -5720,13 +6259,48 @@ class login_request PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
+  typedef login_request_type type;
+  static constexpr type NOT_SET =
+    login_request_type_NOT_SET;
+  static constexpr type BY_LOGIN_PASSWORD =
+    login_request_type_BY_LOGIN_PASSWORD;
+  static constexpr type BY_ACCESS_TOKEN =
+    login_request_type_BY_ACCESS_TOKEN;
+  static inline bool type_IsValid(int value) {
+    return login_request_type_IsValid(value);
+  }
+  static constexpr type type_MIN =
+    login_request_type_type_MIN;
+  static constexpr type type_MAX =
+    login_request_type_type_MAX;
+  static constexpr int type_ARRAYSIZE =
+    login_request_type_type_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  type_descriptor() {
+    return login_request_type_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& type_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, type>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function type_Name.");
+    return login_request_type_Name(enum_t_value);
+  }
+  static inline bool type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      type* value) {
+    return login_request_type_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
-    kLoginFieldNumber = 1,
-    kPasswordFieldNumber = 2,
+    kLoginFieldNumber = 2,
+    kPasswordFieldNumber = 3,
+    kTokenFieldNumber = 4,
+    kAppIdFieldNumber = 5,
+    kTypFieldNumber = 1,
   };
-  // string login = 1;
+  // string login = 2;
   void clear_login();
   const std::string& login() const;
   void set_login(const std::string& value);
@@ -5742,7 +6316,7 @@ class login_request PROTOBUF_FINAL :
   std::string* _internal_mutable_login();
   public:
 
-  // string password = 2;
+  // string password = 3;
   void clear_password();
   const std::string& password() const;
   void set_password(const std::string& value);
@@ -5758,6 +6332,51 @@ class login_request PROTOBUF_FINAL :
   std::string* _internal_mutable_password();
   public:
 
+  // .come_together_grpc.access_token token = 4;
+  bool has_token() const;
+  private:
+  bool _internal_has_token() const;
+  public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
+
+  // .come_together_grpc.application_id app_id = 5;
+  bool has_app_id() const;
+  private:
+  bool _internal_has_app_id() const;
+  public:
+  void clear_app_id();
+  const ::come_together_grpc::application_id& app_id() const;
+  ::come_together_grpc::application_id* release_app_id();
+  ::come_together_grpc::application_id* mutable_app_id();
+  void set_allocated_app_id(::come_together_grpc::application_id* app_id);
+  private:
+  const ::come_together_grpc::application_id& _internal_app_id() const;
+  ::come_together_grpc::application_id* _internal_mutable_app_id();
+  public:
+  void unsafe_arena_set_allocated_app_id(
+      ::come_together_grpc::application_id* app_id);
+  ::come_together_grpc::application_id* unsafe_arena_release_app_id();
+
+  // .come_together_grpc.login_request.type typ = 1;
+  void clear_typ();
+  ::come_together_grpc::login_request_type typ() const;
+  void set_typ(::come_together_grpc::login_request_type value);
+  private:
+  ::come_together_grpc::login_request_type _internal_typ() const;
+  void _internal_set_typ(::come_together_grpc::login_request_type value);
+  public:
+
   // @@protoc_insertion_point(class_scope:come_together_grpc.login_request)
  private:
   class _Internal;
@@ -5767,6 +6386,9 @@ class login_request PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr login_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+  ::come_together_grpc::access_token* token_;
+  ::come_together_grpc::application_id* app_id_;
+  int typ_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
 };
@@ -5814,7 +6436,7 @@ class login_response PROTOBUF_FINAL :
                &_login_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    26;
+    29;
 
   friend void swap(login_response& a, login_response& b) {
     a.Swap(&b);
@@ -5891,6 +6513,8 @@ class login_response PROTOBUF_FINAL :
     login_response_result_USER_NOT_FOUND;
   static constexpr result WRONG_PASSWORD =
     login_response_result_WRONG_PASSWORD;
+  static constexpr result ACCESS_TOKEN_NOT_FOUND =
+    login_response_result_ACCESS_TOKEN_NOT_FOUND;
   static constexpr result OTHER =
     login_response_result_OTHER;
   static inline bool result_IsValid(int value) {
@@ -5921,26 +6545,10 @@ class login_response PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kAccessTokenFieldNumber = 3,
     kInfoFieldNumber = 2,
+    kTokenFieldNumber = 3,
     kResFieldNumber = 1,
   };
-  // string access_token = 3;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
-  private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
-  public:
-
   // .come_together_grpc.user_info info = 2;
   bool has_info() const;
   private:
@@ -5959,6 +6567,24 @@ class login_response PROTOBUF_FINAL :
       ::come_together_grpc::user_info* info);
   ::come_together_grpc::user_info* unsafe_arena_release_info();
 
+  // .come_together_grpc.access_token token = 3;
+  bool has_token() const;
+  private:
+  bool _internal_has_token() const;
+  public:
+  void clear_token();
+  const ::come_together_grpc::access_token& token() const;
+  ::come_together_grpc::access_token* release_token();
+  ::come_together_grpc::access_token* mutable_token();
+  void set_allocated_token(::come_together_grpc::access_token* token);
+  private:
+  const ::come_together_grpc::access_token& _internal_token() const;
+  ::come_together_grpc::access_token* _internal_mutable_token();
+  public:
+  void unsafe_arena_set_allocated_token(
+      ::come_together_grpc::access_token* token);
+  ::come_together_grpc::access_token* unsafe_arena_release_token();
+
   // .come_together_grpc.login_response.result res = 1;
   void clear_res();
   ::come_together_grpc::login_response_result res() const;
@@ -5975,8 +6601,8 @@ class login_response PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   ::come_together_grpc::user_info* info_;
+  ::come_together_grpc::access_token* token_;
   int res_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
@@ -6025,7 +6651,7 @@ class register_request PROTOBUF_FINAL :
                &_register_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    27;
+    30;
 
   friend void swap(register_request& a, register_request& b) {
     a.Swap(&b);
@@ -6171,7 +6797,7 @@ class register_response PROTOBUF_FINAL :
                &_register_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    28;
+    31;
 
   friend void swap(register_response& a, register_response& b) {
     a.Swap(&b);
@@ -6279,7 +6905,6 @@ class register_response PROTOBUF_FINAL :
 
   enum : int {
     kUserUuidFieldNumber = 2,
-    kAccessTokenFieldNumber = 3,
     kResFieldNumber = 1,
   };
   // string user_uuid = 2;
@@ -6296,22 +6921,6 @@ class register_response PROTOBUF_FINAL :
   const std::string& _internal_user_uuid() const;
   void _internal_set_user_uuid(const std::string& value);
   std::string* _internal_mutable_user_uuid();
-  public:
-
-  // string access_token = 3;
-  void clear_access_token();
-  const std::string& access_token() const;
-  void set_access_token(const std::string& value);
-  void set_access_token(std::string&& value);
-  void set_access_token(const char* value);
-  void set_access_token(const char* value, size_t size);
-  std::string* mutable_access_token();
-  std::string* release_access_token();
-  void set_allocated_access_token(std::string* access_token);
-  private:
-  const std::string& _internal_access_token() const;
-  void _internal_set_access_token(const std::string& value);
-  std::string* _internal_mutable_access_token();
   public:
 
   // .come_together_grpc.register_response.result res = 1;
@@ -6331,7 +6940,6 @@ class register_response PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_uuid_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr access_token_;
   int res_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_come_5ftogether_2eproto;
@@ -6380,7 +6988,7 @@ class user_info PROTOBUF_FINAL :
                &_user_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    29;
+    32;
 
   friend void swap(user_info& a, user_info& b) {
     a.Swap(&b);
@@ -6658,7 +7266,7 @@ class marker_info PROTOBUF_FINAL :
                &_marker_info_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    30;
+    33;
 
   friend void swap(marker_info& a, marker_info& b) {
     a.Swap(&b);
@@ -7073,7 +7681,7 @@ class add_marker_request PROTOBUF_FINAL :
                &_add_marker_request_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    31;
+    34;
 
   friend void swap(add_marker_request& a, add_marker_request& b) {
     a.Swap(&b);
@@ -7219,7 +7827,7 @@ class add_marker_response PROTOBUF_FINAL :
                &_add_marker_response_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    32;
+    35;
 
   friend void swap(add_marker_response& a, add_marker_response& b) {
     a.Swap(&b);
@@ -7543,132 +8151,330 @@ inline void image::set_sequence_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
 
 // access_token
 
-// string token = 1;
-inline void access_token::clear_token() {
-  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string value = 1;
+inline void access_token::clear_value() {
+  value_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& access_token::token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.access_token.token)
-  return _internal_token();
+inline const std::string& access_token::value() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.access_token.value)
+  return _internal_value();
 }
-inline void access_token::set_token(const std::string& value) {
-  _internal_set_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.access_token.token)
+inline void access_token::set_value(const std::string& value) {
+  _internal_set_value(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.access_token.value)
 }
-inline std::string* access_token::mutable_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.access_token.token)
-  return _internal_mutable_token();
+inline std::string* access_token::mutable_value() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.access_token.value)
+  return _internal_mutable_value();
 }
-inline const std::string& access_token::_internal_token() const {
-  return token_.Get();
+inline const std::string& access_token::_internal_value() const {
+  return value_.Get();
 }
-inline void access_token::_internal_set_token(const std::string& value) {
+inline void access_token::_internal_set_value(const std::string& value) {
   
-  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void access_token::set_token(std::string&& value) {
+inline void access_token::set_value(std::string&& value) {
   
-  token_.Set(
+  value_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.access_token.token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.access_token.value)
 }
-inline void access_token::set_token(const char* value) {
+inline void access_token::set_value(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.access_token.token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.access_token.value)
 }
-inline void access_token::set_token(const char* value,
+inline void access_token::set_value(const char* value,
     size_t size) {
   
-  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  value_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.access_token.token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.access_token.value)
 }
-inline std::string* access_token::_internal_mutable_token() {
+inline std::string* access_token::_internal_mutable_value() {
   
-  return token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return value_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* access_token::release_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.access_token.token)
-  return token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* access_token::release_value() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.access_token.value)
+  return value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void access_token::set_allocated_token(std::string* token) {
-  if (token != nullptr) {
+inline void access_token::set_allocated_value(std::string* value) {
+  if (value != nullptr) {
     
   } else {
     
   }
-  token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), token,
+  value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.access_token.token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.access_token.value)
+}
+
+// -------------------------------------------------------------------
+
+// application_id
+
+// string id = 1;
+inline void application_id::clear_id() {
+  id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& application_id::id() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.application_id.id)
+  return _internal_id();
+}
+inline void application_id::set_id(const std::string& value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.application_id.id)
+}
+inline std::string* application_id::mutable_id() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.application_id.id)
+  return _internal_mutable_id();
+}
+inline const std::string& application_id::_internal_id() const {
+  return id_.Get();
+}
+inline void application_id::_internal_set_id(const std::string& value) {
+  
+  id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void application_id::set_id(std::string&& value) {
+  
+  id_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.application_id.id)
+}
+inline void application_id::set_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.application_id.id)
+}
+inline void application_id::set_id(const char* value,
+    size_t size) {
+  
+  id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.application_id.id)
+}
+inline std::string* application_id::_internal_mutable_id() {
+  
+  return id_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* application_id::release_id() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.application_id.id)
+  return id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void application_id::set_allocated_id(std::string* id) {
+  if (id != nullptr) {
+    
+  } else {
+    
+  }
+  id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), id,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.application_id.id)
+}
+
+// -------------------------------------------------------------------
+
+// logout_request
+
+// .come_together_grpc.access_token token = 1;
+inline bool logout_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
+}
+inline bool logout_request::has_token() const {
+  return _internal_has_token();
+}
+inline void logout_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
+}
+inline const ::come_together_grpc::access_token& logout_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
+}
+inline const ::come_together_grpc::access_token& logout_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.logout_request.token)
+  return _internal_token();
+}
+inline void logout_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.logout_request.token)
+}
+inline ::come_together_grpc::access_token* logout_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* logout_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.logout_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* logout_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* logout_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.logout_request.token)
+  return _internal_mutable_token();
+}
+inline void logout_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.logout_request.token)
+}
+
+// -------------------------------------------------------------------
+
+// logout_response
+
+// .come_together_grpc.logout_response.result res = 1;
+inline void logout_response::clear_res() {
+  res_ = 0;
+}
+inline ::come_together_grpc::logout_response_result logout_response::_internal_res() const {
+  return static_cast< ::come_together_grpc::logout_response_result >(res_);
+}
+inline ::come_together_grpc::logout_response_result logout_response::res() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.logout_response.res)
+  return _internal_res();
+}
+inline void logout_response::_internal_set_res(::come_together_grpc::logout_response_result value) {
+  
+  res_ = value;
+}
+inline void logout_response::set_res(::come_together_grpc::logout_response_result value) {
+  _internal_set_res(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.logout_response.res)
 }
 
 // -------------------------------------------------------------------
 
 // send_push_token_request
 
-// string access_token = 1;
-inline void send_push_token_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.application_id app_id = 1;
+inline bool send_push_token_request::_internal_has_app_id() const {
+  return this != internal_default_instance() && app_id_ != nullptr;
 }
-inline const std::string& send_push_token_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.send_push_token_request.access_token)
-  return _internal_access_token();
+inline bool send_push_token_request::has_app_id() const {
+  return _internal_has_app_id();
 }
-inline void send_push_token_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.send_push_token_request.access_token)
+inline void send_push_token_request::clear_app_id() {
+  if (GetArena() == nullptr && app_id_ != nullptr) {
+    delete app_id_;
+  }
+  app_id_ = nullptr;
 }
-inline std::string* send_push_token_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_push_token_request.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::application_id& send_push_token_request::_internal_app_id() const {
+  const ::come_together_grpc::application_id* p = app_id_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::application_id*>(
+      &::come_together_grpc::_application_id_default_instance_);
 }
-inline const std::string& send_push_token_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::application_id& send_push_token_request::app_id() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_push_token_request.app_id)
+  return _internal_app_id();
 }
-inline void send_push_token_request::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void send_push_token_request::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.send_push_token_request.access_token)
-}
-inline void send_push_token_request::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.send_push_token_request.access_token)
-}
-inline void send_push_token_request::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.send_push_token_request.access_token)
-}
-inline std::string* send_push_token_request::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* send_push_token_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.send_push_token_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void send_push_token_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void send_push_token_request::unsafe_arena_set_allocated_app_id(
+    ::come_together_grpc::application_id* app_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(app_id_);
+  }
+  app_id_ = app_id;
+  if (app_id) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_push_token_request.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.send_push_token_request.app_id)
+}
+inline ::come_together_grpc::application_id* send_push_token_request::release_app_id() {
+  
+  ::come_together_grpc::application_id* temp = app_id_;
+  app_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::application_id* send_push_token_request::unsafe_arena_release_app_id() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_push_token_request.app_id)
+  
+  ::come_together_grpc::application_id* temp = app_id_;
+  app_id_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::application_id* send_push_token_request::_internal_mutable_app_id() {
+  
+  if (app_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::application_id>(GetArena());
+    app_id_ = p;
+  }
+  return app_id_;
+}
+inline ::come_together_grpc::application_id* send_push_token_request::mutable_app_id() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_push_token_request.app_id)
+  return _internal_mutable_app_id();
+}
+inline void send_push_token_request::set_allocated_app_id(::come_together_grpc::application_id* app_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete app_id_;
+  }
+  if (app_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(app_id);
+    if (message_arena != submessage_arena) {
+      app_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, app_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  app_id_ = app_id;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_push_token_request.app_id)
 }
 
 // string push_token = 2;
@@ -7761,66 +8567,87 @@ inline void send_push_token_response::set_res(::come_together_grpc::send_push_to
 
 // delete_marker_request
 
-// string access_token = 1;
-inline void delete_marker_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.access_token token = 1;
+inline bool delete_marker_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
 }
-inline const std::string& delete_marker_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.delete_marker_request.access_token)
-  return _internal_access_token();
+inline bool delete_marker_request::has_token() const {
+  return _internal_has_token();
 }
-inline void delete_marker_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.delete_marker_request.access_token)
+inline void delete_marker_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
 }
-inline std::string* delete_marker_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.delete_marker_request.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::access_token& delete_marker_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
 }
-inline const std::string& delete_marker_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::access_token& delete_marker_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.delete_marker_request.token)
+  return _internal_token();
 }
-inline void delete_marker_request::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void delete_marker_request::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.delete_marker_request.access_token)
-}
-inline void delete_marker_request::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.delete_marker_request.access_token)
-}
-inline void delete_marker_request::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.delete_marker_request.access_token)
-}
-inline std::string* delete_marker_request::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* delete_marker_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.delete_marker_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void delete_marker_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void delete_marker_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.delete_marker_request.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.delete_marker_request.token)
+}
+inline ::come_together_grpc::access_token* delete_marker_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* delete_marker_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.delete_marker_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* delete_marker_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* delete_marker_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.delete_marker_request.token)
+  return _internal_mutable_token();
+}
+inline void delete_marker_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.delete_marker_request.token)
 }
 
 // string marker_uuid = 2;
@@ -8155,66 +8982,87 @@ inline void verify_token_response::set_res(::come_together_grpc::verify_token_re
 
 // update_info_request
 
-// string access_token = 1;
-inline void update_info_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.access_token token = 1;
+inline bool update_info_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
 }
-inline const std::string& update_info_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_request.access_token)
-  return _internal_access_token();
+inline bool update_info_request::has_token() const {
+  return _internal_has_token();
 }
-inline void update_info_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.update_info_request.access_token)
+inline void update_info_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
 }
-inline std::string* update_info_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.update_info_request.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::access_token& update_info_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
 }
-inline const std::string& update_info_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::access_token& update_info_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.update_info_request.token)
+  return _internal_token();
 }
-inline void update_info_request::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void update_info_request::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.update_info_request.access_token)
-}
-inline void update_info_request::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.update_info_request.access_token)
-}
-inline void update_info_request::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.update_info_request.access_token)
-}
-inline std::string* update_info_request::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* update_info_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.update_info_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void update_info_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void update_info_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.update_info_request.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.update_info_request.token)
+}
+inline ::come_together_grpc::access_token* update_info_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* update_info_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.update_info_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* update_info_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* update_info_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.update_info_request.token)
+  return _internal_mutable_token();
+}
+inline void update_info_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.update_info_request.token)
 }
 
 // .come_together_grpc.update_info_request.update_type type = 2;
@@ -8936,66 +9784,66 @@ inline void chat_info::set_allocated_last_visible_message(std::string* last_visi
 
 // get_chat_messages_request
 
-// string access_token = 1;
-inline void get_chat_messages_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string token = 1;
+inline void get_chat_messages_request::clear_token() {
+  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& get_chat_messages_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.access_token)
-  return _internal_access_token();
+inline const std::string& get_chat_messages_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_chat_messages_request.token)
+  return _internal_token();
 }
-inline void get_chat_messages_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.access_token)
+inline void get_chat_messages_request::set_token(const std::string& value) {
+  _internal_set_token(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_chat_messages_request.token)
 }
-inline std::string* get_chat_messages_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_chat_messages_request.access_token)
-  return _internal_mutable_access_token();
+inline std::string* get_chat_messages_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_chat_messages_request.token)
+  return _internal_mutable_token();
 }
-inline const std::string& get_chat_messages_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const std::string& get_chat_messages_request::_internal_token() const {
+  return token_.Get();
 }
-inline void get_chat_messages_request::_internal_set_access_token(const std::string& value) {
+inline void get_chat_messages_request::_internal_set_token(const std::string& value) {
   
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void get_chat_messages_request::set_access_token(std::string&& value) {
+inline void get_chat_messages_request::set_token(std::string&& value) {
   
-  access_token_.Set(
+  token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_chat_messages_request.token)
 }
-inline void get_chat_messages_request::set_access_token(const char* value) {
+inline void get_chat_messages_request::set_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_chat_messages_request.token)
 }
-inline void get_chat_messages_request::set_access_token(const char* value,
+inline void get_chat_messages_request::set_token(const char* value,
     size_t size) {
   
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_chat_messages_request.token)
 }
-inline std::string* get_chat_messages_request::_internal_mutable_access_token() {
+inline std::string* get_chat_messages_request::_internal_mutable_token() {
   
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* get_chat_messages_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.get_chat_messages_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* get_chat_messages_request::release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_chat_messages_request.token)
+  return token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void get_chat_messages_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void get_chat_messages_request::set_allocated_token(std::string* token) {
+  if (token != nullptr) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
+  token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_chat_messages_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_chat_messages_request.token)
 }
 
 // string chat_uuid = 2;
@@ -9531,66 +10379,87 @@ inline chat_message::ContentCase chat_message::content_case() const {
 
 // send_chat_message_request
 
-// string access_token = 1;
-inline void send_chat_message_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.access_token token = 1;
+inline bool send_chat_message_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
 }
-inline const std::string& send_chat_message_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_request.access_token)
-  return _internal_access_token();
+inline bool send_chat_message_request::has_token() const {
+  return _internal_has_token();
 }
-inline void send_chat_message_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.send_chat_message_request.access_token)
+inline void send_chat_message_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
 }
-inline std::string* send_chat_message_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_chat_message_request.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::access_token& send_chat_message_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
 }
-inline const std::string& send_chat_message_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::access_token& send_chat_message_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.send_chat_message_request.token)
+  return _internal_token();
 }
-inline void send_chat_message_request::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void send_chat_message_request::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.send_chat_message_request.access_token)
-}
-inline void send_chat_message_request::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.send_chat_message_request.access_token)
-}
-inline void send_chat_message_request::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.send_chat_message_request.access_token)
-}
-inline std::string* send_chat_message_request::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* send_chat_message_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.send_chat_message_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void send_chat_message_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void send_chat_message_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_chat_message_request.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.send_chat_message_request.token)
+}
+inline ::come_together_grpc::access_token* send_chat_message_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* send_chat_message_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.send_chat_message_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* send_chat_message_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* send_chat_message_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.send_chat_message_request.token)
+  return _internal_mutable_token();
+}
+inline void send_chat_message_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.send_chat_message_request.token)
 }
 
 // .come_together_grpc.chat_message message = 2;
@@ -9806,66 +10675,66 @@ inline void get_info_request::set_info_type(::come_together_grpc::get_info_reque
   // @@protoc_insertion_point(field_set:come_together_grpc.get_info_request.info_type)
 }
 
-// string access_token = 2;
-inline void get_info_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string token = 2;
+inline void get_info_request::clear_token() {
+  token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& get_info_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_request.access_token)
-  return _internal_access_token();
+inline const std::string& get_info_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_info_request.token)
+  return _internal_token();
 }
-inline void get_info_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.get_info_request.access_token)
+inline void get_info_request::set_token(const std::string& value) {
+  _internal_set_token(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.get_info_request.token)
 }
-inline std::string* get_info_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_request.access_token)
-  return _internal_mutable_access_token();
+inline std::string* get_info_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_info_request.token)
+  return _internal_mutable_token();
 }
-inline const std::string& get_info_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const std::string& get_info_request::_internal_token() const {
+  return token_.Get();
 }
-inline void get_info_request::_internal_set_access_token(const std::string& value) {
+inline void get_info_request::_internal_set_token(const std::string& value) {
   
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void get_info_request::set_access_token(std::string&& value) {
+inline void get_info_request::set_token(std::string&& value) {
   
-  access_token_.Set(
+  token_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_info_request.token)
 }
-inline void get_info_request::set_access_token(const char* value) {
+inline void get_info_request::set_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_info_request.token)
 }
-inline void get_info_request::set_access_token(const char* value,
+inline void get_info_request::set_token(const char* value,
     size_t size) {
   
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_info_request.token)
 }
-inline std::string* get_info_request::_internal_mutable_access_token() {
+inline std::string* get_info_request::_internal_mutable_token() {
   
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* get_info_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* get_info_request::release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_info_request.token)
+  return token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void get_info_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void get_info_request::set_allocated_token(std::string* token) {
+  if (token != nullptr) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
+  token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_request.access_token)
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_info_request.token)
 }
 
 // string target_uuid = 3;
@@ -10248,66 +11117,87 @@ inline void get_images_request::set_allocated_target_uuid(std::string* target_uu
   // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_images_request.target_uuid)
 }
 
-// string access_token = 3;
-inline void get_images_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.access_token token = 3;
+inline bool get_images_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
 }
-inline const std::string& get_images_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.access_token)
-  return _internal_access_token();
+inline bool get_images_request::has_token() const {
+  return _internal_has_token();
 }
-inline void get_images_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.get_images_request.access_token)
+inline void get_images_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
 }
-inline std::string* get_images_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_images_request.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::access_token& get_images_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
 }
-inline const std::string& get_images_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::access_token& get_images_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.get_images_request.token)
+  return _internal_token();
 }
-inline void get_images_request::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void get_images_request::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.get_images_request.access_token)
-}
-inline void get_images_request::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.get_images_request.access_token)
-}
-inline void get_images_request::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.get_images_request.access_token)
-}
-inline std::string* get_images_request::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* get_images_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.get_images_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void get_images_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void get_images_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_images_request.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.get_images_request.token)
+}
+inline ::come_together_grpc::access_token* get_images_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* get_images_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.get_images_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* get_images_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* get_images_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.get_images_request.token)
+  return _internal_mutable_token();
+}
+inline void get_images_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.get_images_request.token)
 }
 
 // int32 amount = 4;
@@ -10436,66 +11326,87 @@ inline void manage_image_request::set_act(::come_together_grpc::manage_image_req
   // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.act)
 }
 
-// string access_token = 2;
-inline void manage_image_request::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.access_token token = 2;
+inline bool manage_image_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
 }
-inline const std::string& manage_image_request::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.access_token)
-  return _internal_access_token();
+inline bool manage_image_request::has_token() const {
+  return _internal_has_token();
 }
-inline void manage_image_request::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.manage_image_request.access_token)
+inline void manage_image_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
 }
-inline std::string* manage_image_request::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_request.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::access_token& manage_image_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
 }
-inline const std::string& manage_image_request::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::access_token& manage_image_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.manage_image_request.token)
+  return _internal_token();
 }
-inline void manage_image_request::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void manage_image_request::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.manage_image_request.access_token)
-}
-inline void manage_image_request::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.manage_image_request.access_token)
-}
-inline void manage_image_request::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.manage_image_request.access_token)
-}
-inline std::string* manage_image_request::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* manage_image_request::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_request.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void manage_image_request::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void manage_image_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_request.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.manage_image_request.token)
+}
+inline ::come_together_grpc::access_token* manage_image_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* manage_image_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.manage_image_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* manage_image_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* manage_image_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.manage_image_request.token)
+  return _internal_mutable_token();
+}
+inline void manage_image_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.manage_image_request.token)
 }
 
 // string target_uuid = 3;
@@ -11001,7 +11912,27 @@ inline void check_response::set_res(::come_together_grpc::check_response_result 
 
 // login_request
 
-// string login = 1;
+// .come_together_grpc.login_request.type typ = 1;
+inline void login_request::clear_typ() {
+  typ_ = 0;
+}
+inline ::come_together_grpc::login_request_type login_request::_internal_typ() const {
+  return static_cast< ::come_together_grpc::login_request_type >(typ_);
+}
+inline ::come_together_grpc::login_request_type login_request::typ() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_request.typ)
+  return _internal_typ();
+}
+inline void login_request::_internal_set_typ(::come_together_grpc::login_request_type value) {
+  
+  typ_ = value;
+}
+inline void login_request::set_typ(::come_together_grpc::login_request_type value) {
+  _internal_set_typ(value);
+  // @@protoc_insertion_point(field_set:come_together_grpc.login_request.typ)
+}
+
+// string login = 2;
 inline void login_request::clear_login() {
   login_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -11063,7 +11994,7 @@ inline void login_request::set_allocated_login(std::string* login) {
   // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_request.login)
 }
 
-// string password = 2;
+// string password = 3;
 inline void login_request::clear_password() {
   password_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -11123,6 +12054,172 @@ inline void login_request::set_allocated_password(std::string* password) {
   password_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_request.password)
+}
+
+// .come_together_grpc.access_token token = 4;
+inline bool login_request::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
+}
+inline bool login_request::has_token() const {
+  return _internal_has_token();
+}
+inline void login_request::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
+}
+inline const ::come_together_grpc::access_token& login_request::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
+}
+inline const ::come_together_grpc::access_token& login_request::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_request.token)
+  return _internal_token();
+}
+inline void login_request::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.login_request.token)
+}
+inline ::come_together_grpc::access_token* login_request::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* login_request::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_request.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* login_request::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* login_request::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_request.token)
+  return _internal_mutable_token();
+}
+inline void login_request::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_request.token)
+}
+
+// .come_together_grpc.application_id app_id = 5;
+inline bool login_request::_internal_has_app_id() const {
+  return this != internal_default_instance() && app_id_ != nullptr;
+}
+inline bool login_request::has_app_id() const {
+  return _internal_has_app_id();
+}
+inline void login_request::clear_app_id() {
+  if (GetArena() == nullptr && app_id_ != nullptr) {
+    delete app_id_;
+  }
+  app_id_ = nullptr;
+}
+inline const ::come_together_grpc::application_id& login_request::_internal_app_id() const {
+  const ::come_together_grpc::application_id* p = app_id_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::application_id*>(
+      &::come_together_grpc::_application_id_default_instance_);
+}
+inline const ::come_together_grpc::application_id& login_request::app_id() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_request.app_id)
+  return _internal_app_id();
+}
+inline void login_request::unsafe_arena_set_allocated_app_id(
+    ::come_together_grpc::application_id* app_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(app_id_);
+  }
+  app_id_ = app_id;
+  if (app_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.login_request.app_id)
+}
+inline ::come_together_grpc::application_id* login_request::release_app_id() {
+  
+  ::come_together_grpc::application_id* temp = app_id_;
+  app_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::application_id* login_request::unsafe_arena_release_app_id() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_request.app_id)
+  
+  ::come_together_grpc::application_id* temp = app_id_;
+  app_id_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::application_id* login_request::_internal_mutable_app_id() {
+  
+  if (app_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::application_id>(GetArena());
+    app_id_ = p;
+  }
+  return app_id_;
+}
+inline ::come_together_grpc::application_id* login_request::mutable_app_id() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_request.app_id)
+  return _internal_mutable_app_id();
+}
+inline void login_request::set_allocated_app_id(::come_together_grpc::application_id* app_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete app_id_;
+  }
+  if (app_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(app_id);
+    if (message_arena != submessage_arena) {
+      app_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, app_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  app_id_ = app_id;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_request.app_id)
 }
 
 // -------------------------------------------------------------------
@@ -11232,66 +12329,87 @@ inline void login_response::set_allocated_info(::come_together_grpc::user_info* 
   // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_response.info)
 }
 
-// string access_token = 3;
-inline void login_response::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .come_together_grpc.access_token token = 3;
+inline bool login_response::_internal_has_token() const {
+  return this != internal_default_instance() && token_ != nullptr;
 }
-inline const std::string& login_response::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.login_response.access_token)
-  return _internal_access_token();
+inline bool login_response::has_token() const {
+  return _internal_has_token();
 }
-inline void login_response::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.login_response.access_token)
+inline void login_response::clear_token() {
+  if (GetArena() == nullptr && token_ != nullptr) {
+    delete token_;
+  }
+  token_ = nullptr;
 }
-inline std::string* login_response::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_response.access_token)
-  return _internal_mutable_access_token();
+inline const ::come_together_grpc::access_token& login_response::_internal_token() const {
+  const ::come_together_grpc::access_token* p = token_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::come_together_grpc::access_token*>(
+      &::come_together_grpc::_access_token_default_instance_);
 }
-inline const std::string& login_response::_internal_access_token() const {
-  return access_token_.Get();
+inline const ::come_together_grpc::access_token& login_response::token() const {
+  // @@protoc_insertion_point(field_get:come_together_grpc.login_response.token)
+  return _internal_token();
 }
-inline void login_response::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void login_response::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.login_response.access_token)
-}
-inline void login_response::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.login_response.access_token)
-}
-inline void login_response::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.login_response.access_token)
-}
-inline std::string* login_response::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* login_response::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.login_response.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void login_response::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
+inline void login_response::unsafe_arena_set_allocated_token(
+    ::come_together_grpc::access_token* token) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(token_);
+  }
+  token_ = token;
+  if (token) {
     
   } else {
     
   }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_response.access_token)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:come_together_grpc.login_response.token)
+}
+inline ::come_together_grpc::access_token* login_response::release_token() {
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::come_together_grpc::access_token* login_response::unsafe_arena_release_token() {
+  // @@protoc_insertion_point(field_release:come_together_grpc.login_response.token)
+  
+  ::come_together_grpc::access_token* temp = token_;
+  token_ = nullptr;
+  return temp;
+}
+inline ::come_together_grpc::access_token* login_response::_internal_mutable_token() {
+  
+  if (token_ == nullptr) {
+    auto* p = CreateMaybeMessage<::come_together_grpc::access_token>(GetArena());
+    token_ = p;
+  }
+  return token_;
+}
+inline ::come_together_grpc::access_token* login_response::mutable_token() {
+  // @@protoc_insertion_point(field_mutable:come_together_grpc.login_response.token)
+  return _internal_mutable_token();
+}
+inline void login_response::set_allocated_token(::come_together_grpc::access_token* token) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete token_;
+  }
+  if (token) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(token);
+    if (message_arena != submessage_arena) {
+      token = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, token, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  token_ = token;
+  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.login_response.token)
 }
 
 // -------------------------------------------------------------------
@@ -11465,68 +12583,6 @@ inline void register_response::set_allocated_user_uuid(std::string* user_uuid) {
   user_uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_uuid,
       GetArena());
   // @@protoc_insertion_point(field_set_allocated:come_together_grpc.register_response.user_uuid)
-}
-
-// string access_token = 3;
-inline void register_response::clear_access_token() {
-  access_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& register_response::access_token() const {
-  // @@protoc_insertion_point(field_get:come_together_grpc.register_response.access_token)
-  return _internal_access_token();
-}
-inline void register_response::set_access_token(const std::string& value) {
-  _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:come_together_grpc.register_response.access_token)
-}
-inline std::string* register_response::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:come_together_grpc.register_response.access_token)
-  return _internal_mutable_access_token();
-}
-inline const std::string& register_response::_internal_access_token() const {
-  return access_token_.Get();
-}
-inline void register_response::_internal_set_access_token(const std::string& value) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void register_response::set_access_token(std::string&& value) {
-  
-  access_token_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:come_together_grpc.register_response.access_token)
-}
-inline void register_response::set_access_token(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:come_together_grpc.register_response.access_token)
-}
-inline void register_response::set_access_token(const char* value,
-    size_t size) {
-  
-  access_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:come_together_grpc.register_response.access_token)
-}
-inline std::string* register_response::_internal_mutable_access_token() {
-  
-  return access_token_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* register_response::release_access_token() {
-  // @@protoc_insertion_point(field_release:come_together_grpc.register_response.access_token)
-  return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void register_response::set_allocated_access_token(std::string* access_token) {
-  if (access_token != nullptr) {
-    
-  } else {
-    
-  }
-  access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:come_together_grpc.register_response.access_token)
 }
 
 // -------------------------------------------------------------------
@@ -12871,6 +13927,12 @@ inline void add_marker_response::set_allocated_chat_uuid(std::string* chat_uuid)
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -12878,6 +13940,11 @@ inline void add_marker_response::set_allocated_chat_uuid(std::string* chat_uuid)
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::come_together_grpc::logout_response_result> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::logout_response_result>() {
+  return ::come_together_grpc::logout_response_result_descriptor();
+}
 template <> struct is_proto_enum< ::come_together_grpc::send_push_token_response_result> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::send_push_token_response_result>() {
@@ -12952,6 +14019,11 @@ template <> struct is_proto_enum< ::come_together_grpc::check_response_result> :
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::check_response_result>() {
   return ::come_together_grpc::check_response_result_descriptor();
+}
+template <> struct is_proto_enum< ::come_together_grpc::login_request_type> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::come_together_grpc::login_request_type>() {
+  return ::come_together_grpc::login_request_type_descriptor();
 }
 template <> struct is_proto_enum< ::come_together_grpc::login_response_result> : ::std::true_type {};
 template <>
