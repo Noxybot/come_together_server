@@ -1,6 +1,6 @@
 #include "inc/core/User.h"
 
-#include "../network/CommonCallData.h"
+#include "network/CommonCallData.h"
 
 #include <atomic>
 #include <queue>

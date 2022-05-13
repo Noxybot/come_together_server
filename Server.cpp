@@ -26,6 +26,6 @@ void Server::Start()
     auto cq = builder.AddCompletionQueue();
     m_main_ep = std::make_shared<MainEndpointImpl>(m_db, m_mailer, std::move(cq), m_user_storage, m_file_manager);
     builder.RegisterService(m_main_ep.get());
-    std::unique_ptr<grpc_impl::Server> server(builder.BuildAndStart());
+    std::unique_ptr<grpc::Server> server(builder.BuildAndStart());
     server->Wait();
 }

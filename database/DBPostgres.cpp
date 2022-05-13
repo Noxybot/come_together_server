@@ -13,9 +13,9 @@ std::vector<std::string> parse_array(pqxx::array_parser parser)
 {
     std::vector<std::string> results;
     auto elem = parser.get_next();
-    while (elem.first != pqxx::array_parser::done)
+    while (elem.first != pqxx::array_parser::juncture::done)
     {
-        if (elem.first == pqxx::array_parser::string_value)
+        if (elem.first == pqxx::array_parser::juncture::string_value)
             results.push_back(std::move(elem.second));
         elem = parser.get_next();
     }
@@ -162,18 +162,18 @@ CT::user_info DBPostgres::GetUserInfo(const std::string& user_uuid) try
     CT::user_info info;
     const auto& row = res[0];
     PLOG_ERROR_IF(row.size() != 8) << "db schema changed";
-    invoker(info, row,
+    /*invoker(info, row,
         cast_member(&CT::user_info::set_uuid),
         cast_member(&CT::user_info::set_email),
         cast_member(&CT::user_info::set_login),
         cast_member(&CT::user_info::set_password),
         cast_member(&CT::user_info::set_first_name),
-        cast_member(&CT::user_info::set_last_name));
+        cast_member(&CT::user_info::set_last_name));*/
     auto parser = row[6].as_array(); //image uuids
     auto elem = parser.get_next();
-    while (elem.first != pqxx::array_parser::done)
+    while (elem.first != pqxx::array_parser::juncture::done)
     {
-        if (elem.first == pqxx::array_parser::string_value)
+        if (elem.first == pqxx::array_parser::juncture::string_value)
             info.mutable_images_uuid()->Add(std::move(elem.second));
         elem = parser.get_next();
     }
@@ -206,9 +206,9 @@ std::vector<std::string> DBPostgres::GetAllImagesUuid(const CT::get_images_reque
     work.commit();
     auto parser = res[0].as_array();
     auto elem = parser.get_next();
-    while (elem.first != pqxx::array_parser::done)
+    while (elem.first != pqxx::array_parser::juncture::done)
     {
-        if (elem.first == pqxx::array_parser::string_value)
+        if (elem.first == pqxx::array_parser::juncture::string_value)
             result.push_back(std::move(elem.second));
         elem = parser.get_next();
     }
@@ -239,11 +239,11 @@ std::array<std::string, 2> DBPostgres::AddMarker(const CT::marker_info& info)try
     auto parser = result[0].as_array();
     auto elem = parser.get_next();
     auto i = 0u;
-    while (elem.first != pqxx::array_parser::done)
+    while (elem.first != pqxx::array_parser::juncture::done)
     {
         if (i >= 2)
             break;
-        if (elem.first == pqxx::array_parser::string_value)
+        if (elem.first == pqxx::array_parser::juncture::string_value)
             res[i++] = (std::move(elem.second)); 
         elem = parser.get_next();
     }

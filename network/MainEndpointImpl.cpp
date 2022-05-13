@@ -2,8 +2,8 @@
 #include "QueueEvents.h"
 #include "core/UserStorageInterface.h"
 #include "database/DBInterface.h"
-#include "grpc/come_together.grpc.pb.h"
-#include "grpc/come_together.pb.h"
+#include "come_together.grpc.pb.h"
+#include "come_together.pb.h"
 #include "utils/FileManager.h"
 #include "utils/MailerInteface.h"
 #include "CommonCallData.h"
@@ -11,7 +11,7 @@
 #include <plog/Log.h>
 
 MainEndpointImpl::MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerInterface> mailer,
-    std::unique_ptr<grpc_impl::ServerCompletionQueue> cq, std::shared_ptr<UserStorageInterface> storage,
+    std::unique_ptr<grpc::ServerCompletionQueue> cq, std::shared_ptr<UserStorageInterface> storage,
     std::shared_ptr<FileManager> file_manager)
     : m_db(std::move(db))
     , m_mailer(std::move(mailer))

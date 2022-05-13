@@ -4,4 +4,4 @@ file( GLOB component_SOURCES *.cpp )
 
 add_library( tests ${component_SOURCES} )
 
-target_link_libraries(tests PRIVATE plog gRPC::grpc++)
+target_link_libraries(tests PRIVATE plog protocol)

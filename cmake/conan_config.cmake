@@ -10,7 +10,7 @@ endif()
 
 include(${CMAKE_BINARY_DIR}/conan.cmake)
 
-conan_cmake_configure(REQUIRES libpqxx/7.7.3 grpc/1.45.2 protobuf/3.20.0
+conan_cmake_configure(REQUIRES libpqxx/7.7.3 grpc/1.45.2 protobuf/3.20.0 fmt/8.1.1 libcurl/7.83.0
                       GENERATORS cmake_find_package)
 
 conan_cmake_autodetect(settings)
@@ -23,3 +23,5 @@ conan_cmake_install(PATH_OR_REFERENCE .
 find_package(libpqxx)
 find_package(grpc)
 find_package(protobuf)
+find_package(fmt)
+find_package(CURL)

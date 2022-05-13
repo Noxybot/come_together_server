@@ -1,8 +1,8 @@
 #include "inc/core/UserStorageImpl.h"
-#include "User.h"
+#include "inc/core/User.h"
 
-#include "../network/CommonCallData.h"
-#include "../utils/random.h"
+#include "network/CommonCallData.h"
+#include "utils/random.h"
 
 #include <plog/Log.h>
 

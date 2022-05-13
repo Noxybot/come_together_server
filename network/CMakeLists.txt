@@ -5,6 +5,6 @@ file( GLOB component_SOURCES *.cpp )
 add_library( network ${component_SOURCES}  "inc/network/CommonCallData.h" "inc/network/MainEndpointImpl.h" "inc/network/QueueEvents.h")
 include_directories("inc/network")
 
-target_link_libraries(network PRIVATE database plog utils)
+target_link_libraries(network PRIVATE core database plog utils protocol)
 
-target_include_directories(database PUBLIC ${CMAKE_CURRENT_LIST_DIR}/inc)
+target_include_directories(network PUBLIC ${CMAKE_CURRENT_LIST_DIR}/inc)

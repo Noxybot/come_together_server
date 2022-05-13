@@ -2,8 +2,8 @@
 
 #include "database/DBInterface.h"
 
-#include "../grpc/come_together.grpc.pb.h"
-#include "../grpc/come_together.pb.h"
+#include "come_together.grpc.pb.h"
+#include "come_together.pb.h"
 
 #include <memory>
 #include <thread>
@@ -20,13 +20,13 @@ class MainEndpointImpl : public AsyncUpdatesEndpoint, std::enable_shared_from_th
 {
     const DBInterface::Ptr m_db;
     const std::shared_ptr<MailerInterface> m_mailer;
-    const std::unique_ptr<grpc_impl::ServerCompletionQueue> m_cq;
+    const std::unique_ptr<grpc::ServerCompletionQueue> m_cq;
     const std::shared_ptr<UserStorageInterface> m_user_storage;
     const std::shared_ptr<FileManager> m_file_manager;
     std::vector<std::thread> m_event_senders;
 public:
     explicit MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerInterface>,
-        std::unique_ptr<grpc_impl::ServerCompletionQueue> cq, std::shared_ptr<UserStorageInterface> storage,
+        std::unique_ptr<grpc::ServerCompletionQueue> cq, std::shared_ptr<UserStorageInterface> storage,
         std::shared_ptr<FileManager> file_manager);
     ~MainEndpointImpl() override;
     ::grpc::Status AskToken(::grpc::ServerContext* context, const CT::ask_token_request* request,
