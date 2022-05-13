@@ -1,5 +1,5 @@
-#include "FileManager.h"
-#include "random.h"
+#include "inc/utils/FileManager.h"
+#include "inc/utils/random.h"
 
 #include <algorithm>
 #include <cassert>

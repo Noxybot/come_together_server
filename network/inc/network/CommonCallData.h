@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../grpc/come_together.grpc.pb.h"
+#include "come_together.grpc.pb.h"
 #include "QueueEvents.h"
 #include <atomic>
 #include <memory>

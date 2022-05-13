@@ -1,9 +1,9 @@
 #pragma once
 
 #include <string>
-#include "../grpc/come_together.pb.h"
+#include "come_together.pb.h"
 
-namespace  CT = come_together_grpc;
+namespace CT = come_together_grpc;
 
 class MailerInterface
 {

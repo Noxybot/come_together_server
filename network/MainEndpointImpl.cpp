@@ -1,11 +1,11 @@
 #include "MainEndpointImpl.h"
 #include "QueueEvents.h"
-#include "../core/UserStorageInterface.h"
-#include "../database/DBInterface.h"
-#include "../grpc/come_together.grpc.pb.h"
-#include "../grpc/come_together.pb.h"
-#include "../utils/FileManager.h"
-#include "../utils/MailerInteface.h"
+#include "core/UserStorageInterface.h"
+#include "database/DBInterface.h"
+#include "grpc/come_together.grpc.pb.h"
+#include "grpc/come_together.pb.h"
+#include "utils/FileManager.h"
+#include "utils/MailerInteface.h"
 #include "CommonCallData.h"
 
 #include <plog/Log.h>

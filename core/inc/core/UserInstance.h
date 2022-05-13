@@ -1,6 +1,6 @@
 #pragma once
-#include "../network/QueueEvents.h"
-#include "../network/CommonCallData.h"
+#include "network/QueueEvents.h"
+#include "network/CommonCallData.h"
 #include <atomic>
 #include <mutex>
 #include <queue>

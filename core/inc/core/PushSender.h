@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../database/DBInterface.h"
+#include "database/DBInterface.h"
 
 #include <map>
 #include <memory>

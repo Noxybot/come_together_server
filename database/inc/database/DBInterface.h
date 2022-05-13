@@ -1,5 +1,10 @@
 #pragma once
-#include "../grpc/come_together.pb.h"
+#include <map>
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "come_together.pb.h"
 
 namespace CT = come_together_grpc;
 

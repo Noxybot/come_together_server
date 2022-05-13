@@ -1,5 +1,5 @@
-#include "ConnectionPool.h"
-#include "../utils/catch_all.h"
+#include "inc/database/ConnectionPool.h"
+#include "utils/catch_all.h"
 
 #include <plog/Log.h>
 

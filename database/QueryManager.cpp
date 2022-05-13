@@ -1,4 +1,4 @@
-#include "QueryManager.h"
+#include "inc/database/QueryManager.h"
 
 #define DB_NAME "dcfcatkkl391gn"
 

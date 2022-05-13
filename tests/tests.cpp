@@ -1,7 +1,7 @@
 #include "tests.h"
 
 #include <thread>
-#include "../grpc/come_together.grpc.pb.h"
+#include "come_together.grpc.pb.h"
 #include <grpc++/create_channel.h>
 #include <plog/Log.h>
 

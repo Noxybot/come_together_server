@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "../grpc/come_together.grpc.pb.h"
+#include "come_together.grpc.pb.h"
 struct CommonCallData;
 namespace  CT = come_together_grpc;
 

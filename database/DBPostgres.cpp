@@ -1,8 +1,8 @@
-#include "DBPostgres.h"
-#include "QueryManager.h"
-#include "ConnectionPool.h"
-#include "../utils/catch_all.h"
-#include "../utils/invoke.h"
+#include "inc/database/DBPostgres.h"
+#include "inc/database/QueryManager.h"
+#include "inc/database/ConnectionPool.h"
+#include "utils/catch_all.h"
+#include "utils/invoke.h"
 
 #include <fmt/format.h>
 #include <plog/Log.h>

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../database/DBInterface.h"
+#include "database/DBInterface.h"
 
 #include "../grpc/come_together.grpc.pb.h"
 #include "../grpc/come_together.pb.h"
