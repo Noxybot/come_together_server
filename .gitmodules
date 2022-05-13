@@ -1,6 +1,6 @@
 [submodule "come_together_common"]
 	path = come_together_common
-	url = git@github.com:Noxybot/come_together_common.git
+	url = https://github.com/Noxybot/come_together_common.git
 [submodule "plog"]
 	path = plog
 	url = https://github.com/SergiusTheBest/plog.git
