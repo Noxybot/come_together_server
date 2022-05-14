@@ -13,8 +13,8 @@ static const std::string SERVER_ADDRESS = "0.0.0.0:53681";
 void Server::Start()
 {
     m_db = std::make_shared<DBPostgres>
-    ("postgres://fzxmhwnqaxlqzo:fa9f5b5d940b09fcafc81de9daf27dfbb681c57c7e4a92222e00f8b2ef0f1d05"
-     "@ec2-52-208-175-161.eu-west-1.compute.amazonaws.com:5432/dcfcatkkl391gn?sslmode=require&application_name=server");
+    ("postgres://bmeeuzvrucmiqa:124bff1916f9cf3880657f5a1a12775dc677deda881f3c3d56d844b8577cf5ee@ec2-54-74-156-137.eu-west-1.compute.amazonaws.com:5432/d63s4rocms0rqn"
+			"?sslmode=require&application_name=server");
     //m_db->GetUserInfo("4b5f5a40-15b6-4e0c-91ad-6b0f729d00fc");
     m_mailer = std::make_shared<Mailer>("noreply@come_together_grpc.com", "eduard.voronkin@nure.ua", "Andyou33");
     m_user_storage = std::make_shared<UserStorageImpl>();

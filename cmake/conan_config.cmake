@@ -11,7 +11,8 @@ endif()
 include(${CMAKE_BINARY_DIR}/conan.cmake)
 
 conan_cmake_configure(REQUIRES libpqxx/7.7.3 grpc/1.45.2 protobuf/3.20.0 fmt/8.1.1 libcurl/7.83.0
-                      GENERATORS cmake_find_package)
+                      GENERATORS cmake_find_package
+                      OPTIONS libpq:with_openssl=True)
 
 conan_cmake_autodetect(settings)
 
