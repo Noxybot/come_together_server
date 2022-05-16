@@ -162,13 +162,13 @@ CT::user_info DBPostgres::GetUserInfo(const std::string& user_uuid) try
     CT::user_info info;
     const auto& row = res[0];
     PLOG_ERROR_IF(row.size() != 8) << "db schema changed";
-    /*invoker(info, row,
-        cast_member(&CT::user_info::set_uuid),
-        cast_member(&CT::user_info::set_email),
-        cast_member(&CT::user_info::set_login),
-        cast_member(&CT::user_info::set_password),
-        cast_member(&CT::user_info::set_first_name),
-        cast_member(&CT::user_info::set_last_name));*/
+    invoker(info, row,
+        cast_member(&CT::user_info::set_allocated_uuid),
+        cast_member(&CT::user_info::set_allocated_email),
+        cast_member(&CT::user_info::set_allocated_login),
+        cast_member(&CT::user_info::set_allocated_password),
+        cast_member(&CT::user_info::set_allocated_first_name),
+        cast_member(&CT::user_info::set_allocated_last_name));
     auto parser = row[6].as_array(); //image uuids
     auto elem = parser.get_next();
     while (elem.first != pqxx::array_parser::juncture::done)

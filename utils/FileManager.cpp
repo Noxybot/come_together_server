@@ -11,10 +11,10 @@
 FileManager::FileManager(std::string folder)
     : m_folder(std::move(folder))
 {
-    PLOG_ERROR_IF(std::filesystem::exists(folder) && !std::filesystem::is_directory(folder))
-        << "path=" << folder << " exists and is not directory";
-    PLOG_INFO << "folder=" << folder;
-    //std::filesystem::create_directory(folder);
+    PLOG_ERROR_IF(std::filesystem::exists(m_folder) && !std::filesystem::is_directory(m_folder))
+        << "path=" << m_folder << " exists and is not directory";
+    PLOG_INFO << "folder=" << m_folder;
+    std::filesystem::create_directory(m_folder);
 }
 
 std::string FileManager::SaveFile(const std::string& file)
