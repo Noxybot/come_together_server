@@ -15,6 +15,7 @@ UserInstance::UserInstance(UserInstance&& r) noexcept
     m_state = r.m_state.load();
     m_events = std::move(r.m_events);
     m_access_token = std::move(r.m_access_token);
+    m_on_logoff = std::move(r.m_on_logoff);
 }
 
 UserInstance& UserInstance::operator=(UserInstance&& r) noexcept
@@ -27,6 +28,7 @@ UserInstance& UserInstance::operator=(UserInstance&& r) noexcept
         m_state = r.m_state.load();
         m_events = std::move(r.m_events);
         m_access_token = std::move(r.m_access_token);
+        m_on_logoff = std::move(r.m_on_logoff);
     }
     return *this;
 }
