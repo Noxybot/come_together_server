@@ -10,7 +10,8 @@ endif()
 
 include(${CMAKE_BINARY_DIR}/conan.cmake)
 
-conan_cmake_configure(REQUIRES libpqxx/7.7.3 grpc/1.45.2 protobuf/3.20.0 fmt/8.1.1 libcurl/7.83.0
+conan_cmake_configure(REQUIRES openssl/1.1.1n libpqxx/7.7.3 grpc/1.45.2 protobuf/3.20.0 fmt/8.1.1
+                      libcurl/7.83.0 jwt-cpp/0.6.0 picojson/cci.20210117 mongo-cxx-driver/3.6.6 boost/1.78.0
                       GENERATORS cmake_find_package
                       OPTIONS libpq:with_openssl=True)
 
@@ -26,3 +27,7 @@ find_package(grpc)
 find_package(protobuf)
 find_package(fmt)
 find_package(CURL)
+find_package(jwt-cpp)
+find_package(picojson)
+find_package(mongocxx)
+find_package(Boost)

@@ -1,5 +1,6 @@
 #pragma once
 #include <plog/Log.h>
+#include <pqxx/pqxx>
 #define CATCH_ALL(ret) catch (pqxx::sql_error const &e)\
 {\
     PLOG_ERROR\

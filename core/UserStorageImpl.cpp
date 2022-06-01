@@ -25,6 +25,13 @@ void UserStorageImpl::LoginUser(std::string user_uuid, std::string access_token,
     }
 }
 
+void UserStorageImpl::PostToAllUsers(const std::shared_ptr<CT::event>& evt)
+{
+     std::lock_guard<decltype(m_mtx)> lock {m_mtx};
+    for (auto& user : m_users)
+        user.second.PostEvent(evt);
+}
+
 bool UserStorageImpl::PostEventToUser(const std::string& user_uuid, const event_ptr& evt)
 {
     std::lock_guard<decltype(m_mtx)> lock {m_mtx};

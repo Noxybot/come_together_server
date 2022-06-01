@@ -1,10 +1,12 @@
 #include "inc/database/DBPostgres.h"
-#include "inc/database/QueryManager.h"
 #include "inc/database/ConnectionPool.h"
+#include "inc/database/QueryManager.h"
 #include "utils/catch_all.h"
 #include "utils/invoke.h"
 
+#include <boost/property_tree/ptree.hpp>
 #include <fmt/format.h>
+#include <jwt-cpp/jwt.h>
 #include <plog/Log.h>
 
 #include <array>
@@ -22,8 +24,8 @@ std::vector<std::string> parse_array(pqxx::array_parser parser)
     return results;
 }
 
-DBPostgres::DBPostgres(const std::string& connection_string)
-    : m_pool(std::make_shared<ConnectionPool>(connection_string, 10))
+DBPostgres::DBPostgres(const boost::property_tree::ptree& config)
+    : m_pool(std::make_shared<ConnectionPool>(config.get<std::string>("postgres.connection_string"), 10))
 {}
 
 // ReSharper disable once CppNotAllPathsReturnValue

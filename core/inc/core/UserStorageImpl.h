@@ -16,6 +16,7 @@ class UserStorageImpl : public UserStorageInterface, public UserPresenceInterfac
     //std::map<std::string, std::string> m_tokens_waiting_subscription; //access_token -> user_uuid
 public:
     void LoginUser(std::string user_uuid, std::string access_token, std::string app_id) override;
+    void PostToAllUsers(const std::shared_ptr<CT::event>& evt) override;
     bool PostEventToUser(const std::string& user_uuid, const event_ptr& evt) override;
     bool PostEventToInstance(const std::string& user_uuid, const std::string& access_token,
         const std::shared_ptr<CT::event>& evt) override;

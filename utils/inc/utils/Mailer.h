@@ -6,6 +6,8 @@
 #include <mutex>
 #include <string_view>
 #include <string>
+#include <boost/property_tree/ptree_fwd.hpp>
+
 
 class Mailer : public MailerInterface
 {
@@ -15,7 +17,7 @@ class Mailer : public MailerInterface
     const std::string m_login;
     const std::string m_password;
     public:
-    explicit Mailer(std::string from, std::string login, std::string password);
+    explicit Mailer(const boost::property_tree::ptree& config);
     CT::ask_token_response_result SendToken(const std::string& to_email) override;
     CT::verify_token_response_result VerifyToken(const std::string& email, const std::string& token) override;
 private:

@@ -1,12 +1,13 @@
 #include "Mailer.h"
-#include <random>
-#include "random.h"
 #include <algorithm>
 #include <cstddef>
 #include <cstring>
+#include <random>
 #include <curl/curl.h>
 #include <fmt/format.h>
+#include "random.h"
 
+#include <boost/property_tree/ini_parser.hpp>
 #include <plog/Log.h>
 
 static const char *payload_text[] = {
@@ -64,10 +65,10 @@ size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp)
    return size * nmemb;
 }
 
-Mailer::Mailer(std::string from, std::string login, std::string password)
-    : m_from("<" + std::move(from) + ">")
-    , m_login(std::move(login))
-    , m_password(std::move(password))
+Mailer::Mailer(const boost::property_tree::ptree& config)
+    : m_from("<" + config.get<std::string>("mailer.from", "noreply@come_together_grpc.com") + ">")
+    , m_login(config.get<std::string>("mailer.login", ""))
+    , m_password(config.get<std::string>("mailer.password", ""))
 {}
 
 CT::ask_token_response_result Mailer::SendToken(const std::string& to_email)

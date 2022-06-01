@@ -3,6 +3,7 @@
 #include "DBInterface.h"
 
 #include <memory>
+#include <boost/property_tree/ptree_fwd.hpp>
 
 class ConnectionPool;
 
@@ -11,7 +12,7 @@ class DBPostgres : public DBInterface
     const std::shared_ptr<ConnectionPool> m_pool;
 public:
     ~DBPostgres() override = default;
-    explicit DBPostgres(const std::string& connection_string);
+    explicit DBPostgres(const boost::property_tree::ptree& config);
     CT::check_response::result Check(const CT::check_request& req) override;
     CT::register_response::result RegisterUser(const CT::register_request& req, std::string& out_uuid) override;
     CT::login_response::result LoginUser(const CT::login_request& req, std::string& out_uuid, std::string& out_access_token) override;

@@ -28,6 +28,7 @@ public:
     explicit MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerInterface>,
         std::unique_ptr<grpc::ServerCompletionQueue> cq, std::shared_ptr<UserStorageInterface> storage,
         std::shared_ptr<FileManager> file_manager);
+    void PostConstruct(); //todo: refactor
     ~MainEndpointImpl() override;
     ::grpc::Status AskToken(::grpc::ServerContext* context, const CT::ask_token_request* request,
         CT::ask_token_response* response) override;

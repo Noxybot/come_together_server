@@ -4,6 +4,6 @@ file( GLOB component_SOURCES *.cpp )
 
 add_library(core ${component_SOURCES}  "inc/core/PlacesStorageImpl.h" "inc/core/PlacesStorageInterface.h" "inc/core/PushSender.h" "inc/core/UserInstance.h" "inc/core/UserPresenceInterface.h" "inc/core/UserStorageImpl.h" "inc/core/UserStorageInterface.h" "inc/core/User.h")
 
-target_link_libraries(core PRIVATE plog database utils PUBLIC protocol network)
+target_link_libraries(core PRIVATE plog database utils PUBLIC protocol network Boost::program_options)
 
 target_include_directories(core PUBLIC ${CMAKE_CURRENT_LIST_DIR}/inc)

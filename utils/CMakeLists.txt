@@ -7,4 +7,4 @@ add_library(utils ${component_SOURCES}  "inc/utils/catch_all.h" "inc/utils/FileM
 include_directories("inc/utils")
 
 target_include_directories(utils PUBLIC ${CMAKE_CURRENT_LIST_DIR}/inc)
-target_link_libraries(utils PRIVATE plog protocol fmt::fmt CURL::libcurl)
+target_link_libraries(utils PRIVATE plog protocol fmt::fmt CURL::libcurl PUBLIC Boost::program_options)

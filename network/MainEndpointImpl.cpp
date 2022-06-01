@@ -34,7 +34,12 @@ MainEndpointImpl::MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerIn
     };
     for (auto i = 0u; i < 1u; ++i)
         m_event_senders.emplace_back(std::thread(cq_routine));
-    ///WaitForEventsSubscriptionAsync(); post_construct
+    //WaitForEventsSubscriptionAsync(); post_construct
+}
+
+void MainEndpointImpl::PostConstruct()
+{
+    WaitForEventsSubscriptionAsync();
 }
 
 MainEndpointImpl::~MainEndpointImpl()
@@ -88,6 +93,7 @@ MainEndpointImpl::~MainEndpointImpl()
 ::grpc::Status MainEndpointImpl::LoginUser(::grpc::ServerContext* context, const CT::login_request* request,
     CT::login_response* response)
 {
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
     CT::login_response result;
     std::string user_uuid, access_token;
     result.set_res(m_db->LoginUser(*request, user_uuid, access_token));
@@ -98,19 +104,24 @@ MainEndpointImpl::~MainEndpointImpl()
         return grpc::Status::OK;
     }
     PLOG_ERROR_IF(user_uuid.empty()) << "empty user_uuid";
-    auto info = m_db->GetUserInfo(user_uuid);
-    result.set_allocated_info( new CT::user_info(std::move(info)));
-    auto token = new CT::access_token;
-    token->set_value(access_token);
-    result.set_allocated_token(token);
     *response = std::move(result);
-    /*const auto user_info = new CT::user_info(m_db->GetUserInfo(user_uuid));
-    result.set_allocated_info(user_info);
-    m_user_storage->LoginUser(user_uuid, access_token);
+    m_user_storage->LoginUser(user_uuid, request->app_id().id(), request->app_id().id());
+
+    auto t = [&]
+    {
+        for (int i = 0; i < 10; ++i)
+        {
+            auto event_ = std::make_shared<CT::event>();
+            event_->set_event_type(CT::event_type_MARKER_ADDED);
+            auto info = new CT::marker_info;
+            info->set_display_name(std::string("some_name#") + std::to_string(i));
+            event_->set_allocated_m_info(info);
+            m_user_storage->PostToAllUsers(event_);
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+        }
+    };
+    std::thread {t}.detach();
     WaitForEventsSubscriptionAsync();
-    result.set_access_token(std::move(access_token));
-    *response = std::move(result);
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();*/
     return grpc::Status::OK;
 }
 
@@ -118,6 +129,15 @@ MainEndpointImpl::~MainEndpointImpl()
     CT::add_marker_response* response)
 {
     const auto res = m_db->AddMarker(request->info());
+    auto event_ = std::make_shared<CT::event>();
+    event_->set_event_type(CT::event_type_MARKER_ADDED);
+    const auto info_copy = new CT::marker_info(request->info());
+    info_copy->set_uuid(res[0]);
+    info_copy->set_chat_uuid(res[1]);
+    event_->set_allocated_m_info(info_copy);
+    m_user_storage->PostToAllUsers(event_);
+    response->set_uuid(res[0]);
+    response->set_chat_uuid(res[1]);
     return grpc::Status::OK;
 }
 
