@@ -11,13 +11,14 @@
 #include <plog/Log.h>
 
 MainEndpointImpl::MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerInterface> mailer,
-    std::unique_ptr<grpc::ServerCompletionQueue> cq, std::shared_ptr<UserStorageInterface> storage,
-    std::shared_ptr<FileManager> file_manager)
+                                   std::unique_ptr<grpc::ServerCompletionQueue> cq,
+                                   std::shared_ptr<UserStorageInterface> storage,
+                                   std::shared_ptr<FileManager> file_manager)
     : m_db(std::move(db))
-    , m_mailer(std::move(mailer))
-    , m_cq(std::move(cq))
-    , m_user_storage(std::move(storage))
-    , m_file_manager(std::move(file_manager))
+      , m_mailer(std::move(mailer))
+      , m_cq(std::move(cq))
+      , m_user_storage(std::move(storage))
+      , m_file_manager(std::move(file_manager))
 {
     const auto cq_routine = [&]
     {
@@ -34,7 +35,6 @@ MainEndpointImpl::MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerIn
     };
     for (auto i = 0u; i < 1u; ++i)
         m_event_senders.emplace_back(std::thread(cq_routine));
-    //WaitForEventsSubscriptionAsync(); post_construct
 }
 
 void MainEndpointImpl::PostConstruct()
@@ -44,56 +44,61 @@ void MainEndpointImpl::PostConstruct()
 
 MainEndpointImpl::~MainEndpointImpl()
 {
-    for(auto& thread : m_event_senders)
+    for (auto& thread : m_event_senders)
         thread.join();
 }
 
 ::grpc::Status MainEndpointImpl::AskToken(::grpc::ServerContext* context, const CT::ask_token_request* request,
-    CT::ask_token_response* response)
+                                          CT::ask_token_response* response)
 {
     CT::ask_token_response result;
     result.set_res(m_mailer->SendToken(request->email()));
     *response = std::move(result);
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->
+Utf8DebugString();
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::VerifyToken(::grpc::ServerContext* context, const CT::verify_token_request* request,
-    CT::verify_token_response* response)
+                                             CT::verify_token_response* response)
 {
     CT::verify_token_response result;
     result.set_res(m_mailer->VerifyToken(request->email(), request->token()));
     *response = std::move(result);
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->
+Utf8DebugString();
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::Check(::grpc::ServerContext* context, const CT::check_request* request,
-    CT::check_response* response)
+                                       CT::check_response* response)
 {
     CT::check_response result;
     result.set_res(m_db->Check(*request));
     *response = std::move(result);
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->
+Utf8DebugString();
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::RegisterUser(::grpc::ServerContext* context, const CT::register_request* request,
-    CT::register_response* response)
+                                              CT::register_response* response)
 {
     CT::register_response result;
     std::string user_uuid;
     result.set_res(m_db->RegisterUser(*request, user_uuid));
     result.set_user_uuid(std::move(user_uuid));
     *response = std::move(result);
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->
+Utf8DebugString();
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::LoginUser(::grpc::ServerContext* context, const CT::login_request* request,
-    CT::login_response* response)
+                                           CT::login_response* response)
 {
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->Utf8DebugString();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\n" << response->
+Utf8DebugString();
     CT::login_response result;
     std::string user_uuid, access_token;
     result.set_res(m_db->LoginUser(*request, user_uuid, access_token));
@@ -106,7 +111,7 @@ MainEndpointImpl::~MainEndpointImpl()
     PLOG_ERROR_IF(user_uuid.empty()) << "empty user_uuid";
     *response = std::move(result);
     m_user_storage->LoginUser(user_uuid, request->app_id().id(), request->app_id().id());
-
+    //test code
     auto t = [&]
     {
         for (int i = 0; i < 10; ++i)
@@ -120,13 +125,13 @@ MainEndpointImpl::~MainEndpointImpl()
             std::this_thread::sleep_for(std::chrono::seconds(2));
         }
     };
-    std::thread {t}.detach();
+    std::thread{t}.detach();
     WaitForEventsSubscriptionAsync();
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::AddMarker(::grpc::ServerContext* context, const CT::add_marker_request* request,
-    CT::add_marker_response* response)
+                                           CT::add_marker_response* response)
 {
     const auto res = m_db->AddMarker(request->info());
     auto event_ = std::make_shared<CT::event>();
@@ -142,7 +147,7 @@ MainEndpointImpl::~MainEndpointImpl()
 }
 
 ::grpc::Status MainEndpointImpl::GetAllMarkers(::grpc::ServerContext* context, const CT::access_token* request,
-    ::grpc::ServerWriter<CT::marker_info>* writer)
+                                               ::grpc::ServerWriter<CT::marker_info>* writer)
 {
     const auto markers = m_db->GetAllMarkers();
     for (const auto& marker : markers)
@@ -151,28 +156,29 @@ MainEndpointImpl::~MainEndpointImpl()
 }
 
 ::grpc::Status MainEndpointImpl::GetInfo(::grpc::ServerContext* context, const CT::get_info_request* request,
-    CT::get_info_response* response)
+                                         CT::get_info_response* response)
 {
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::UpdateInfo(::grpc::ServerContext* context, const CT::update_info_request* request,
-    CT::update_info_response* response)
+                                            CT::update_info_response* response)
 {
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::ManageImage(::grpc::ServerContext* context, const CT::manage_image_request* request,
-    CT::manage_image_response* response)
+                                             CT::manage_image_response* response)
 {
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::GetImages(::grpc::ServerContext* context, const CT::get_images_request* request,
-    ::grpc::ServerWriter<CT::image>* writer)
+                                           ::grpc::ServerWriter<CT::image>* writer)
 {
     const auto images_uuid = m_db->GetAllImagesUuid(*request);
-    PLOG_INFO_IF(images_uuid.empty()) << "no images for uuid=" << request->target_uuid() << ", req_type=" << request->image_type();
+    PLOG_INFO_IF(images_uuid.empty()) << "no images for uuid=" << request->target_uuid() << ", req_type=" << request->
+image_type();
     CT::image img;
     for (const auto& file_name : images_uuid)
     {
@@ -180,24 +186,28 @@ MainEndpointImpl::~MainEndpointImpl()
         img.set_data(m_file_manager->GetFile(file_name));
         writer->Write(img);
     }
-    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() << "\nOUT:\nimages_uuid.size()=" << images_uuid.size();
+    PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() <<
+ "\nOUT:\nimages_uuid.size()=" << images_uuid.size();
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::SendChatMessage(::grpc::ServerContext* context,
-    const CT::send_chat_message_request* request, CT::send_chat_message_response* response)
+                                                 const CT::send_chat_message_request* request,
+                                                 CT::send_chat_message_response* response)
 {
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::GetChatMessages(::grpc::ServerContext* context,
-    const CT::get_chat_messages_request* request, ::grpc::ServerWriter<CT::chat_message>* writer)
+                                                 const CT::get_chat_messages_request* request,
+                                                 ::grpc::ServerWriter<CT::chat_message>* writer)
 {
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::SendPushToken(::grpc::ServerContext* context,
-    const CT::send_push_token_request* request, CT::send_push_token_response* response)
+                                               const CT::send_push_token_request* request,
+                                               CT::send_push_token_response* response)
 {
     PLOG_FATAL << request->push_token();
     return grpc::Status::OK;
@@ -206,12 +216,13 @@ MainEndpointImpl::~MainEndpointImpl()
 void MainEndpointImpl::WaitForEventsSubscriptionAsync()
 {
     auto common_call_data = new CommonCallData;
-    common_call_data->ConnectToNewSubscriber([this, storage = m_user_storage, w_this = weak_from_this()](CommonCallData&& data)
-    {
-        storage->OnNewEventsSubscriber(std::move(data));
-        if (const auto locked_this = w_this.lock())
-            WaitForEventsSubscriptionAsync();
-    });
+    common_call_data->ConnectToNewSubscriber(
+        [this, storage = m_user_storage, w_this = weak_from_this()](CommonCallData&& data)
+        {
+            storage->OnNewEventsSubscriber(std::move(data));
+            if (const auto locked_this = w_this.lock())
+                WaitForEventsSubscriptionAsync();
+        });
     RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_application_id.get(),
-        common_call_data->m_writer.get(), m_cq.get(), m_cq.get(), common_call_data);
+                             common_call_data->m_writer.get(), m_cq.get(), m_cq.get(), common_call_data);
 }

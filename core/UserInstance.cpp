@@ -22,8 +22,9 @@ UserInstance& UserInstance::operator=(UserInstance&& r) noexcept
 {
     if (this != &r)
     {
-        std::lock_guard<decltype(m_mtx)> lock1{m_mtx};
-        std::lock_guard<decltype(r.m_mtx)> lock2{r.m_mtx};
+        std::lock(m_mtx, r.m_mtx);
+        std::lock_guard<decltype(m_mtx)> lock1{m_mtx, std::adopt_lock};
+        std::lock_guard<decltype(r.m_mtx)> lock2{r.m_mtx, std::adopt_lock};
         m_data = std::move(r.m_data);
         m_state = r.m_state.load();
         m_events = std::move(r.m_events);
