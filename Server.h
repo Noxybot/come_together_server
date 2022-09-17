@@ -2,6 +2,7 @@
 
 #include <memory>
 
+class VerificationServiceImpl;
 class DBInterface;
 class MailerInterface;
 class MainEndpointImpl;
@@ -13,6 +14,7 @@ class Server
     std::shared_ptr<DBInterface> m_db;
     std::shared_ptr<MailerInterface> m_mailer;
     std::shared_ptr<MainEndpointImpl> m_main_ep;
+    std::shared_ptr<VerificationServiceImpl> m_verif_service;
     std::shared_ptr<UserStorageInterface> m_user_storage;
     std::shared_ptr<FileManager> m_file_manager;
 public:

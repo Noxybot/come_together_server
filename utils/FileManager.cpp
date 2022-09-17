@@ -5,8 +5,25 @@
 #include <cassert>
 #include <filesystem>
 #include <fstream>
+#include <openssl/sha.h>
 
 #include <plog/Log.h>
+
+
+std::string GetSHA256(const std::string& str)
+{
+    char outputBuffer[65];
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    SHA256_CTX sha256;
+    SHA256_Init(&sha256);
+    SHA256_Update(&sha256, str.data(), str.size());
+    SHA256_Final(hash, &sha256);
+    for (int i = 0; i < SHA256_DIGEST_LENGTH; i++)
+        sprintf(outputBuffer + (i * 2), "%02x", hash[i]);
+    outputBuffer[64] = 0;
+    return outputBuffer;
+}
+
 
 FileManager::FileManager(std::string folder)
     : m_folder(std::move(folder))
@@ -19,12 +36,17 @@ FileManager::FileManager(std::string folder)
 
 std::string FileManager::SaveFile(const std::string& file)
 {
-    const auto file_name = generate_uuid_v4();
+	auto file_name = GetSHA256(file);
     const auto path_to_file = m_folder + file_name;
+    if (std::filesystem::exists(path_to_file))
+    {
+        PLOG_INFO << "file " << file_name << " already present";
+        return file_name;
+    }
     std::ofstream f {path_to_file, std::ios_base::binary};
     if (!f.is_open())
     {
-        LOG_ERROR << "could not open file=" << path_to_file;
+        PLOG_ERROR << "could not open file=" << path_to_file;
         return {};
     }
     f << file;

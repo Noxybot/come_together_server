@@ -59,6 +59,8 @@ public:
         ::grpc::ServerWriter<CT::chat_message>* writer) override;
     ::grpc::Status SendPushToken(::grpc::ServerContext* context, const CT::send_push_token_request* request,
         CT::send_push_token_response* response) override;
+    grpc::Status JoinChat(grpc::ServerContext* context, const come_together_grpc::join_request* request, come_together_grpc::join_response* response) override;
+	grpc::Status GetUserChats(grpc::ServerContext* context, const come_together_grpc::get_chats_request* request, grpc::ServerWriter<come_together_grpc::chat_info>* writer) override;
 private:
     void WaitForEventsSubscriptionAsync();
 };

@@ -21,4 +21,4 @@ add_subdirectory(utils)
 add_executable(server main.cpp Server.cpp config.ini)
 install(FILES config.ini DESTINATION etc/cfg COMPONENT config)
 
-target_link_libraries(server PRIVATE plog core database utils)
+target_link_libraries(server PRIVATE plog core database utils tests)

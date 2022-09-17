@@ -18,14 +18,30 @@ void RUN_ALL_TESTS_IMPL()
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
     test_stub = MainEndpoint::NewStub(
-    grpc::CreateChannel("127.0.0.1:53681", grpc::InsecureChannelCredentials()));
-    //test<check_response>("Check email", &decltype(test_stub)::element_type::Check, []
-    //{
-    //    check_request req;
-    //    req.set_check_type(check_request_type_EMAIL);
-    //    req.set_data("test@mail.com");
-    //    return req;
-    //});
+    grpc::CreateChannel("127.0.0.1:8080", grpc::InsecureChannelCredentials()));
+    grpc::ClientContext ctx;
+    get_chats_request req;
+    req.set_uuid("alisa.levadna@nure.ua");
+    const auto res = test_stub->GetUserChats(&ctx, req);
+    chat_info info;
+	while (res->Read(&info))
+	{
+        std::cout << "new chat: " << info.Utf8DebugString();
+	}
+
+    test<join_response>("Join chat", &decltype(test_stub)::element_type::JoinChat, []
+    {
+        join_request req;
+        req.set_chat_uuid("629fca772e600000ef001143");
+        req.set_user_uuid("test@mail.com");
+        return req;
+    });
+	test<get_info_response>("GetUserInfo", &decltype(test_stub)::element_type::GetInfo, []
+    {
+		get_info_request req;
+        req.set_target_uuid("alisa.levadna@nure.ua");
+        return req;
+    });
     //test<check_response>("Check login", &decltype(test_stub)::element_type::Check, []
     //{
     //    check_request req;
@@ -63,33 +79,33 @@ void RUN_ALL_TESTS_IMPL()
     //    req.set_allocated_info(marker_i);
     //    return req;
     //});
-    test<login_response>("Login user OK", &decltype(test_stub)::element_type::LoginUser, []
-    {
-        login_request req;
-        req.set_login("vasya_poopckin");
-        req.set_password("qweASD123");
-        return req;
-    }, [&](const login_response& res)
-    {
-        grpc::ClientContext ctx;
-        access_token token;
-       // auto test_token = res.access_token();
-        //token.set_token(test_token);
-       // auto client_reader = test_stub->SubscribeToEvents(&ctx, token);
-      //  event evt;
-      //  test_stub.reset();
-      ////  while(client_reader->Read(&evt))
-      //  {
-      //      PLOG_DEBUG << evt.Utf8DebugString();
-      //                  //client_reader->Finish();
-      //      test_stub.reset();
-      //      break;
-      //  };
-        
-        //ctx.TryCancel();
-       // client_reader->Finish();
-        PLOG_DEBUG << "TEST FINISHED!!!!!!!!!\n";
-    });
+    //test<login_response>("Login user OK", &decltype(test_stub)::element_type::LoginUser, []
+    //{
+    //    login_request req;
+    //    req.set_login("vasya_poopckin");
+    //    req.set_password("qweASD123");
+    //    return req;
+    //}, [&](const login_response& res)
+    //{
+    //    grpc::ClientContext ctx;
+    //    access_token token;
+    //    auto test_token = res.token();
+    //    token.set_value(test_token);
+    //    auto client_reader = test_stub->SubscribeToEvents(&ctx, token);
+    //    event evt;
+    //    test_stub.reset();
+    //    while(client_reader->Read(&evt))
+    //    {
+    //        PLOG_DEBUG << evt.Utf8DebugString();
+    //                    //client_reader->Finish();
+    //        test_stub.reset();
+    //        break;
+    //    };
+    //    
+    //    ctx.TryCancel();
+    //    client_reader->Finish();
+    //    PLOG_DEBUG << "TEST FINISHED!!!!!!!!!\n";
+    //});
    /* test<login_response>("Login user WRONG PASS", &decltype(test_stub)::element_type::LoginUser, []
     {
         login_request req;

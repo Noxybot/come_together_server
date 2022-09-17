@@ -21,4 +21,6 @@ public:
     std::array<std::string, 2> AddMarker(const CT::marker_info& info) override;
     std::vector<CT::marker_info> GetAllMarkers() override;
     std::multimap<std::string, std::string> GetAllPushTokens() override;
+    void UpdateVerifStatus(const std::string& email, CT::verification_result res) override;
+    CT::update_info_response::result UpdateInfo(const CT::update_info_request& req) override;
 };

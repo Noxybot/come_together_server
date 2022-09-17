@@ -175,8 +175,8 @@ CT::user_info DBPostgres::GetUserInfo(const std::string& user_uuid) try
     auto elem = parser.get_next();
     while (elem.first != pqxx::array_parser::juncture::done)
     {
-        if (elem.first == pqxx::array_parser::juncture::string_value)
-            info.mutable_images_uuid()->Add(std::move(elem.second));
+        //if (elem.first == pqxx::array_parser::juncture::string_value)
+            //info.mutable_images_uuid()->Add(std::move(elem.second));
         elem = parser.get_next();
     }
     info.set_other_info_json(row[7].as<std::string>());
@@ -288,3 +288,13 @@ std::multimap<std::string, std::string> DBPostgres::GetAllPushTokens() try
     return res;
 }
 CATCH_ALL({})
+
+void DBPostgres::UpdateVerifStatus(const std::string& email, CT::verification_result res)
+{
+
+}
+
+CT::update_info_response::result DBPostgres::UpdateInfo(const CT::update_info_request& req)
+{
+    return {};
+}

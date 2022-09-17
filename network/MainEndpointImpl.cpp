@@ -35,6 +35,34 @@ MainEndpointImpl::MainEndpointImpl(DBInterface::Ptr db, std::shared_ptr<MailerIn
     };
     for (auto i = 0u; i < 1u; ++i)
         m_event_senders.emplace_back(std::thread(cq_routine));
+    const auto markers_routing = [&]
+    {
+        std::this_thread::sleep_for(std::chrono::seconds(5));
+        auto markers = m_db->GetAllMarkers();
+        std::cout << "sending " << markers.size() << " markers\n";
+        for (auto& marker : markers) {
+            auto event_ = std::make_shared<CT::event>();
+            event_->set_event_type(CT::event_type_MARKER_ADDED);
+            (*event_->mutable_m_info()) = std::move(marker);
+            m_user_storage->PostToAllUsers(event_);
+        }
+    };
+    /*std::thread{[&]
+    {
+        while (true) {
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+        PLOG_INFO << "sending message";
+        auto evt = std::make_shared<CT::event>();
+        evt->set_event_type(CT::event_type_MESSAGE_ADDED);
+        CT::chat_message msg;
+        msg.set_text("HELLO ALISA");
+        msg.set_content_type(CT::chat_message_message_content_TEXT);
+        *(evt->mutable_c_message()) = std::move(msg);
+        m_user_storage->PostEventToUser("alisa.levadna@nure.ua", evt);
+            }
+    }
+        
+    }.detach();*/
 }
 
 void MainEndpointImpl::PostConstruct()
@@ -111,21 +139,21 @@ Utf8DebugString();
     PLOG_ERROR_IF(user_uuid.empty()) << "empty user_uuid";
     *response = std::move(result);
     m_user_storage->LoginUser(user_uuid, request->app_id().id(), request->app_id().id());
-    //test code
-    auto t = [&]
-    {
-        for (int i = 0; i < 10; ++i)
-        {
-            auto event_ = std::make_shared<CT::event>();
-            event_->set_event_type(CT::event_type_MARKER_ADDED);
-            auto info = new CT::marker_info;
-            info->set_display_name(std::string("some_name#") + std::to_string(i));
-            event_->set_allocated_m_info(info);
-            m_user_storage->PostToAllUsers(event_);
-            std::this_thread::sleep_for(std::chrono::seconds(2));
-        }
-    };
-    std::thread{t}.detach();
+    ////test code
+    //auto t = [&]
+    //{
+    //    for (int i = 0; i < 10; ++i)
+    //    {
+    //        auto event_ = std::make_shared<CT::event>();
+    //        event_->set_event_type(CT::event_type_MARKER_ADDED);
+    //        auto info = new CT::marker_info;
+    //        info->set_display_name(std::string("some_name#") + std::to_string(i));
+    //        event_->set_allocated_m_info(info);
+    //        m_user_storage->PostToAllUsers(event_);
+    //        std::this_thread::sleep_for(std::chrono::seconds(2));
+    //    }
+    //};
+    //std::thread{t}.detach();
     WaitForEventsSubscriptionAsync();
     return grpc::Status::OK;
 }
@@ -149,27 +177,63 @@ Utf8DebugString();
 ::grpc::Status MainEndpointImpl::GetAllMarkers(::grpc::ServerContext* context, const CT::access_token* request,
                                                ::grpc::ServerWriter<CT::marker_info>* writer)
 {
+    PLOG_INFO << "trying to get all markers";
     const auto markers = m_db->GetAllMarkers();
     for (const auto& marker : markers)
+    {
+        PLOG_INFO << "sending marker: " << marker.Utf8DebugString();
         writer->Write(marker);
+    }
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::GetInfo(::grpc::ServerContext* context, const CT::get_info_request* request,
                                          CT::get_info_response* response)
 {
+    *response->mutable_u_info() = m_db->GetUserInfo(request->target_uuid());
     return grpc::Status::OK;
 }
 
 ::grpc::Status MainEndpointImpl::UpdateInfo(::grpc::ServerContext* context, const CT::update_info_request* request,
                                             CT::update_info_response* response)
 {
+    CT::update_info_response res;
+    res.set_res(m_db->UpdateInfo(*request));
+    *response = std::move(res);
     return grpc::Status::OK;
+
 }
 
 ::grpc::Status MainEndpointImpl::ManageImage(::grpc::ServerContext* context, const CT::manage_image_request* request,
                                              CT::manage_image_response* response)
 {
+    const auto& token = request->token().value();
+    if (token.empty())
+    {
+        PLOG_ERROR << "empty access token";
+        return grpc::Status::CANCELLED;
+    }
+    const auto user = m_user_storage->GetUuidByAccessToken(token);
+    if (user.empty())
+    {
+        PLOG_ERROR << "user with token: " << token << " not subscribed to events";
+        return grpc::Status::CANCELLED;
+    }
+    PLOG_INFO << "trying to save image";
+    const auto& img = request->image();
+    if (img.empty())
+    {
+        PLOG_ERROR << "image is empty";
+        return grpc::Status::CANCELLED;
+    }
+    const auto file_uuid = m_file_manager->SaveFile(request->image());
+    PLOG_INFO << "image uuid: " << file_uuid;
+    if (request->act() == CT::manage_image_request_action_UPLOAD_USER_IMAGE)
+        m_db->AddUserImage(user, file_uuid);
+    else if (request->act() == CT::manage_image_request_action_UPLOAD_MARKER_IMAGE)
+        m_db->AddMarkerImage(request->target_uuid(), file_uuid);
+    response->set_res(CT::manage_image_response_result_OK);
+    response->set_image_uuid(file_uuid);
     return grpc::Status::OK;
 }
 
@@ -183,7 +247,8 @@ image_type();
     for (const auto& file_name : images_uuid)
     {
         img.set_uuid(file_name);
-        img.set_data(m_file_manager->GetFile(file_name));
+        img.set_typ(CT::image_type_BINARY);
+        img.set_binary(m_file_manager->GetFile(file_name));
         writer->Write(img);
     }
     PLOG_VERBOSE << "\npeer: " << context->peer() << "\nIN:\n" << request->Utf8DebugString() <<
@@ -195,6 +260,19 @@ image_type();
                                                  const CT::send_chat_message_request* request,
                                                  CT::send_chat_message_response* response)
 {
+    PLOG_INFO << request->Utf8DebugString();
+    if (request->message().chat_uuid().empty())
+    {
+        PLOG_ERROR << "chat id is empty";
+        return grpc::Status::CANCELLED;
+    }
+    m_db->SaveChatMessage(request->message());
+    const auto parts = m_db->GetChatParts(request->message().chat_uuid());
+    const auto evt = std::make_shared<CT::event>();
+    evt->set_event_type(CT::event_type_MESSAGE_ADDED);
+    *evt->mutable_c_message() = request->message();
+    for (const auto& part : parts)
+        m_user_storage->PostEventToUser(part, evt);
     return grpc::Status::OK;
 }
 
@@ -202,6 +280,12 @@ image_type();
                                                  const CT::get_chat_messages_request* request,
                                                  ::grpc::ServerWriter<CT::chat_message>* writer)
 {
+    const auto msgs = m_db->GetChatMessages(request->chat_uuid());
+    for (const auto& msg : msgs)
+    {
+        PLOG_INFO << "send msg from: " << msg.sender_uuid() << ", content: " << msg.text() << ", sent time: " << msg.sent_unix_time();
+        writer->Write(msg);
+    }
     return grpc::Status::OK;
 }
 
@@ -210,6 +294,36 @@ image_type();
                                                CT::send_push_token_response* response)
 {
     PLOG_FATAL << request->push_token();
+    return grpc::Status::OK;
+}
+
+grpc::Status MainEndpointImpl::JoinChat(grpc::ServerContext* context, const come_together_grpc::join_request* request,
+	come_together_grpc::join_response* response)
+{
+    CT::join_response res;
+    const auto user_uuid = m_user_storage->GetUuidByAccessToken(request->user_uuid());
+    if (m_db->AddUserToChat(request->chat_uuid(), user_uuid))
+        res.set_res(CT::join_response_result_OK);
+    else
+        res.set_res(CT::join_response_result_NOT_FOUND);
+    *response = std::move(res);
+    return grpc::Status::OK;
+}
+
+grpc::Status MainEndpointImpl::GetUserChats(grpc::ServerContext* context,
+	const come_together_grpc::get_chats_request* request, grpc::ServerWriter<come_together_grpc::chat_info>* writer)
+{
+    PLOG_INFO << "in: " << request->Utf8DebugString();
+    const auto& token = request->uuid();
+    const auto user = m_user_storage->GetUuidByAccessToken(token);
+    if (user.empty())
+    {
+        PLOG_ERROR << "cant find user for token: " << token;
+        return grpc::Status::CANCELLED;
+    }
+    const auto chats = m_db->GetUserChats(user);
+    for (const auto& chat : chats)
+        writer->Write(chat);
     return grpc::Status::OK;
 }
 
@@ -223,6 +337,6 @@ void MainEndpointImpl::WaitForEventsSubscriptionAsync()
             if (const auto locked_this = w_this.lock())
                 WaitForEventsSubscriptionAsync();
         });
-    RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_application_id.get(),
+    RequestSubscribeToEvents(common_call_data->m_ctx.get(), common_call_data->m_access_token.get(),
                              common_call_data->m_writer.get(), m_cq.get(), m_cq.get(), common_call_data);
 }

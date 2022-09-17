@@ -43,6 +43,13 @@ bool User::PostEventToInstance(const std::string& access_token, const event_ptr&
 bool User::LoginNewInstance(CommonCallData&& data, std::string access_token)
 {
     std::lock_guard<decltype(m_instances_mutex)> _ {m_instances_mutex};
+   const auto it = std::find_if(m_instances.begin(), m_instances.end(),
+        [&](const UserInstance& instance_) {return instance_.GetAccessToken() == access_token; });
+    if (it != std::end(m_instances))
+    {
+        PLOG_INFO << "there is instance with access token " << access_token << ", deleting it";
+        m_instances.erase(it);
+    }
     auto& instance = m_instances.emplace_back(std::move(data), std::move(access_token));
     instance.ConnectToInstanceLogoff(
         [this](std::string access_token) 
@@ -68,4 +75,15 @@ const std::string& User::GetUuid() const
 void User::ConnectToUserLogoff(user_logoff_t callback)
 {
     m_on_logoff = std::move(callback);
+}
+
+bool User::HasInstance(const std::string& access_token) const
+{
+    std::lock_guard lock { m_instances_mutex };
+    for (const auto& instance : m_instances)
+    {
+        if (instance.GetAccessToken() == access_token)
+            return true;
+    }
+    return false;
 }
